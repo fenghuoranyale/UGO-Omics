@@ -617,11 +617,28 @@ function renderGeneToUGO() {
   const el = document.getElementById('geneToUGOResults');
 
   if (!q) {
-    el.innerHTML = '<p class="small">Enter a gene ID, orthogroup ID, family name, or function keyword.</p>';
+    el.innerHTML = '<p class="small">Enter a gene ID, orthogroup ID, gene family, or function keyword. Example: XTH, hemoglobin, NAC, bHLH, OG0000154, Panicum.</p>';
     return;
   }
 
-  const rows = geneToUGO.filter(d => (d.search_text || '').toLowerCase().includes(q)).slice(0, 60);
+  const rows = geneToUGO
+    .filter(d => (d.search_text || '').toLowerCase().includes(q))
+    .filter(d => {
+      const title = clean(d.candidate_function);
+      const og = clean(d.mapped_11species_orthogroup);
+      const module = clean(d.benchmark_module);
+      if (!title) return false;
+      if (!og && ['orthogroup','candidate','benchmark',''].includes(module.toLowerCase())) return false;
+      return true;
+    })
+    .sort((a,b) => {
+      const aq = a.query_type === 'candidate_module' ? 0 : 1;
+      const bq = b.query_type === 'candidate_module' ? 0 : 1;
+      const as = parseFloat(a.ugo_score || 0);
+      const bs = parseFloat(b.ugo_score || 0);
+      return aq - bq || bs - as;
+    })
+    .slice(0, 40);
 
   if (!rows.length) {
     el.innerHTML = '<p>No UGO candidate or evidence-layer record matched your query.</p>';
@@ -636,7 +653,10 @@ function renderGeneToUGO() {
         ${d.ugo_score ? `<span class="tag green">UGO ${safe(d.ugo_score)}</span>` : ''}
         ${d.new_species_status ? `<span class="tag orange">${safe(d.new_species_status)}</span>` : ''}
         <h3>${safe(d.candidate_function)}</h3>
-        <p><b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)} | <b>Module:</b> ${safe(d.benchmark_module)}</p>
+        <p>
+          ${clean(d.mapped_11species_orthogroup) ? `<b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)} ` : ''}
+          ${clean(d.benchmark_module) ? `| <b>Module:</b> ${safe(d.benchmark_module)}` : ''}
+        </p>
         <p>${hits}</p>
         <p class="small">${safe(d.interpretation)}</p>
         <p class="small"><b>Next step:</b> ${safe(d.recommended_next_step)}</p>
