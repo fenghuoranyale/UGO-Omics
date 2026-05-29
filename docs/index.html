@@ -355,6 +355,94 @@
       nav { padding:12px 24px; }
     }
 
+
+    .example-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:10px 0 16px 0;
+      align-items:center;
+    }
+
+    .example-chip {
+      border:1px solid #c7d3df;
+      background:#ffffff;
+      color:#123a5a;
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12.5px;
+      font-weight:850;
+      cursor:pointer;
+      transition:0.15s;
+    }
+
+    .example-chip:hover {
+      background:#eaf4ff;
+      transform:translateY(-1px);
+      box-shadow:0 4px 12px rgba(16,32,51,0.08);
+    }
+
+    .helper-box {
+      background:#fbfdff;
+      border:1px solid #d7e5f2;
+      border-left:5px solid var(--blue2);
+      border-radius:14px;
+      padding:13px 15px;
+      margin:10px 0 16px 0;
+      color:#375066;
+      line-height:1.5;
+      font-size:14px;
+    }
+
+    .top-rank {
+      display:inline-block;
+      background:linear-gradient(90deg, #f59e0b, #facc15);
+      color:#4a3200;
+      padding:5px 9px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:950;
+      margin-right:6px;
+    }
+
+    .download-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .download-card {
+      background:white;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:15px;
+      box-shadow:0 5px 16px rgba(16,32,51,0.06);
+    }
+
+    .download-card h3 {
+      margin:0 0 7px 0;
+      color:var(--blue);
+      font-size:17px;
+    }
+
+    .download-card p {
+      margin:0 0 10px 0;
+      color:var(--muted);
+      line-height:1.45;
+      font-size:13.5px;
+    }
+
+    .download-card a {
+      font-weight:900;
+      color:var(--blue2);
+      text-decoration:none;
+    }
+
+    .download-card a:hover {
+      text-decoration:underline;
+    }
+
     footer {
       margin-top:50px;
       border-top:1px solid var(--line);
@@ -453,7 +541,20 @@
     </div>
   </div>
   <div class="panel">
+    <div class="helper-box">
+      Use this workflow when you already have a gene, gene family, annotation keyword, or orthogroup ID and want to know whether it belongs to a UGO candidate module.
+    </div>
     <input id="geneSearchInput" class="searchbar" placeholder="Try: XTH, hemoglobin, NAC, bHLH, OG0000154, Panicum..." oninput="renderGeneToUGO()">
+    <div class="example-row">
+      <span class="small"><b>Examples:</b></span>
+      <button class="example-chip" onclick="setGeneExample('XTH')">XTH</button>
+      <button class="example-chip" onclick="setGeneExample('hemoglobin')">hemoglobin</button>
+      <button class="example-chip" onclick="setGeneExample('NAC')">NAC</button>
+      <button class="example-chip" onclick="setGeneExample('bHLH')">bHLH</button>
+      <button class="example-chip" onclick="setGeneExample('OG0000154')">OG0000154</button>
+      <button class="example-chip" onclick="setGeneExample('Panicum')">Panicum</button>
+      <button class="example-chip" onclick="setGeneExample('Dioscorea')">Dioscorea</button>
+    </div>
     <div id="geneToUGOResults"></div>
   </div>
 </section>
@@ -466,10 +567,22 @@
     </div>
   </div>
   <div class="panel">
+    <div class="helper-box" id="organHelper">
+      Choose an organ type to see candidate modules prioritized for that underground-organ context.
+    </div>
     <select id="organSelect" onchange="renderOrganCandidates()">
       <option value="">Choose organ type</option>
     </select>
     <input id="organFilter" placeholder="Optional filter: TF, stress, cell wall..." oninput="renderOrganCandidates()">
+    <div class="example-row">
+      <span class="small"><b>Quick choices:</b></span>
+      <button class="example-chip" onclick="setOrganExample('rhizome')">rhizome</button>
+      <button class="example-chip" onclick="setOrganExample('tuber')">tuber</button>
+      <button class="example-chip" onclick="setOrganExample('storage_root')">storage root</button>
+      <button class="example-chip" onclick="setOrganExample('root_crown')">root crown</button>
+      <button class="example-chip" onclick="setOrganExample('bulb')">bulb</button>
+      <button class="example-chip" onclick="setOrganExample('stolon')">stolon</button>
+    </div>
     <div id="organCandidateResults"></div>
   </div>
 </section>
@@ -482,10 +595,20 @@
     </div>
   </div>
   <div class="panel">
+    <div class="helper-box">
+      Use this workflow when you work on a species and want to know which UGO candidate modules have homologous members in that species.
+    </div>
     <select id="speciesSelect" onchange="renderSpeciesCandidates()">
       <option value="">Choose species</option>
     </select>
     <input id="speciesFilter" placeholder="Optional filter: XTH, NAC, hormone..." oninput="renderSpeciesCandidates()">
+    <div class="example-row">
+      <span class="small"><b>Examples:</b></span>
+      <button class="example-chip" onclick="setSpeciesExample('Panicum_virgatum')">Panicum virgatum</button>
+      <button class="example-chip" onclick="setSpeciesExample('Dioscorea_rotundata')">Dioscorea rotundata</button>
+      <button class="example-chip" onclick="setSpeciesExample('Solanum_tuberosum')">Solanum tuberosum</button>
+      <button class="example-chip" onclick="setSpeciesExample('Zingiber_officinale')">Zingiber officinale</button>
+    </div>
     <div id="speciesCandidateResults"></div>
   </div>
 </section>
@@ -498,10 +621,21 @@
     </div>
   </div>
   <div class="panel">
+    <div class="helper-box">
+      This workflow ranks candidate modules for functional follow-up. These are computationally prioritized targets, not experimentally validated causal genes.
+    </div>
     <select id="validationClassFilter" onchange="renderValidationTargets()">
       <option value="">All priority classes</option>
     </select>
     <input id="validationFilter" placeholder="Optional filter: rhizome, tuber, TF, stress..." oninput="renderValidationTargets()">
+    <div class="example-row">
+      <span class="small"><b>Quick filters:</b></span>
+      <button class="example-chip" onclick="setValidationExample('cell wall')">cell wall</button>
+      <button class="example-chip" onclick="setValidationExample('meristem')">meristem</button>
+      <button class="example-chip" onclick="setValidationExample('stress')">stress</button>
+      <button class="example-chip" onclick="setValidationExample('TF')">TF</button>
+      <button class="example-chip" onclick="setValidationExample('hormone')">hormone</button>
+    </div>
     <div id="validationTargetResults"></div>
   </div>
 </section>
@@ -550,15 +684,48 @@
     </div>
   </div>
   <div class="panel">
-    <ul>
-      <li><a href="json/ugo_v1_8_gene_to_ugo_v1.json">Gene-to-UGO JSON</a></li>
-      <li><a href="json/ugo_v1_8_organ_to_candidates_v1.json">Organ-to-Candidates JSON</a></li>
-      <li><a href="json/ugo_v1_8_species_to_candidates_v1.json">Species-to-Candidates JSON</a></li>
-      <li><a href="json/ugo_v1_8_validation_targets_v1.json">Validation Targets JSON</a></li>
-      <li><a href="json/ugo_score_explorer_v1.json">UGO Score Explorer JSON</a></li>
-      <li><a href="json/candidate_expansion_traceability_v1.json">Candidate Expansion JSON</a></li>
-      <li><a href="json/species_browser_v1.json">Species Browser JSON</a></li>
-    </ul>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Gene-to-UGO</h3>
+        <p>Search layer for checking genes, annotations, families, and orthogroups against UGO candidate modules.</p>
+        <a href="json/ugo_v1_8_gene_to_ugo_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Organ-to-Candidates</h3>
+        <p>Application layer linking underground-organ types to prioritized candidate modules.</p>
+        <a href="json/ugo_v1_8_organ_to_candidates_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Species-to-Candidates</h3>
+        <p>Candidate modules with homologous members in each species of the 11-species transfer backbone.</p>
+        <a href="json/ugo_v1_8_species_to_candidates_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Validation Targets</h3>
+        <p>Prioritized candidate modules for functional follow-up, including suggested systems and assays.</p>
+        <a href="json/ugo_v1_8_validation_targets_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>UGO Score Explorer</h3>
+        <p>Evidence-integration layer for candidate ranking and traceability.</p>
+        <a href="json/ugo_score_explorer_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Candidate Expansion</h3>
+        <p>Traceability of prioritized candidates across expanded orthogroup backbones.</p>
+        <a href="json/candidate_expansion_traceability_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Species Browser</h3>
+        <p>51-species broad underground-organ resource layer.</p>
+        <a href="json/species_browser_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Application Summary</h3>
+        <p>Version metadata and summary for the v1.8 application-oriented layer.</p>
+        <a href="json/ugo_v1_8_application_dashboard_summary_v1.json">Download JSON</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -577,6 +744,39 @@ let scoreData = [];
 let speciesData = [];
 let benchmarkData = [];
 let orthogroupDetail = [];
+
+const organDescriptions = {
+  rhizome: 'Rhizome candidates emphasize meristem/regrowth, cell-wall remodeling, developmental transcription factors, and stress-resilience modules.',
+  tuber: 'Tuber candidates emphasize storage-organ expansion, hormone-related regulation, meristem activity, and cell-wall remodeling.',
+  storage_root: 'Storage-root candidates emphasize storage development, hormone regulation, cell-wall remodeling, and stress-related modules.',
+  bulb: 'Bulb candidates emphasize geophyte storage, meristem maintenance, hormone response, and regrowth-related modules.',
+  corm: 'Corm candidates emphasize storage-organ identity, regrowth, hormone response, and cell-wall-related expansion.',
+  root_crown: 'Root crown candidates emphasize perennial regrowth, bud/meristem activation, stress resilience, and developmental transcription factors.',
+  stolon: 'Stolon candidates emphasize clonal propagation, meristem activity, cell-wall remodeling, and hormone-related regulation.'
+};
+
+function setGeneExample(q) {
+  document.getElementById('geneSearchInput').value = q;
+  renderGeneToUGO();
+}
+
+function setOrganExample(q) {
+  document.getElementById('organSelect').value = q;
+  document.getElementById('organFilter').value = '';
+  renderOrganCandidates();
+}
+
+function setSpeciesExample(q) {
+  document.getElementById('speciesSelect').value = q;
+  document.getElementById('speciesFilter').value = '';
+  renderSpeciesCandidates();
+}
+
+function setValidationExample(q) {
+  document.getElementById('validationFilter').value = q;
+  renderValidationTargets();
+}
+
 
 async function fetchJSON(path) {
   const r = await fetch(path, {cache:'no-store'});
@@ -669,6 +869,10 @@ function renderOrganCandidates() {
   const organ = document.getElementById('organSelect').value;
   const q = document.getElementById('organFilter').value.toLowerCase().trim();
   const el = document.getElementById('organCandidateResults');
+  const helper = document.getElementById('organHelper');
+  if (helper) {
+    helper.innerHTML = organ && organDescriptions[organ] ? organDescriptions[organ] : 'Choose an organ type to see candidate modules prioritized for that underground-organ context.';
+  }
 
   if (!organ) {
     el.innerHTML = '<p class="small">Choose an organ type to view candidate modules.</p>';
@@ -747,10 +951,12 @@ function renderValidationTargets() {
     return;
   }
 
-  el.innerHTML = rows.map(d => {
+  el.innerHTML = rows.map((d, i) => {
     const tagClass = d.validation_priority_class.includes('Top') ? 'green' : (d.validation_priority_class.includes('Review') ? 'red' : 'orange');
+    const rankBadge = i < 3 ? `<span class="top-rank">Top ${i+1}</span>` : '';
     return `
       <div class="result">
+        ${rankBadge}
         <span class="tag ${tagClass}">${safe(d.validation_priority_class)}</span>
         <span class="tag">Score ${safe(d.validation_priority_score)}</span>
         <span class="tag orange">${safe(d.benchmark_module)}</span>
