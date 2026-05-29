@@ -35,3 +35,7 @@ UGO-Omics includes:
 ## Claim calibration
 
 UGO-Omics provides candidate prioritization, cross-species traceability, benchmark-module recovery, and hypothesis generation. It should not be interpreted as functional validation of individual genes.
+
+## Manuscript status
+
+This repository provides the public UGO-Omics website and supporting data layers. The manuscript text and submission materials are not included in this public repository during journal submission.
