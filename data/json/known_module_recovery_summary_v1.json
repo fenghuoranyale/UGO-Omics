@@ -1,0 +1,11 @@
+{
+  "generated_on": "2026-05-29 11:52:36",
+  "benchmark_modules_tested": 15,
+  "recovered_benchmark_modules": 11,
+  "not_recovered_benchmark_modules": 4,
+  "direct_module_recovery_modules": 1,
+  "module_level_recovery_modules": 10,
+  "candidate_benchmark_links": 30,
+  "claim_calibration": "Module-level benchmark recovery; not evidence of functionally validated candidate regulators.",
+  "key_result": "Prioritized UGO-Omics candidates recovered 11 of 15 curated benchmark modules at a conservative gene-family/pathway-module level."
+}

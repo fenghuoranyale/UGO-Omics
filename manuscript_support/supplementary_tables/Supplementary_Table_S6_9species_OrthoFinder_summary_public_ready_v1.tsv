@@ -1,0 +1,24 @@
+Section	Metric_or_species	Value_1	Value_2	Description
+Overall_9species_OrthoFinder_metric	Run_dir	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Orthogroups_tsv	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3/Results_May29/Orthogroups/Orthogroups.tsv		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Gene_count_tsv	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3/Results_May29/Orthogroups/Orthogroups.GeneCount.tsv		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Singlecopy_txt	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3/Results_May29/Orthogroups/Orthogroups_SingleCopyOrthologues.txt		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Statistics_overall	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3/Results_May29/Comparative_Genomics_Statistics/Statistics_Overall.tsv		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Statistics_per_species	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3/Results_May29/Comparative_Genomics_Statistics/Statistics_PerSpecies.tsv		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Species_tree	UGO-Omics_public_repository/18_species_broad_layer/UGO_expanded_orthogroups/orthofinder_runs/UGO_9species_pilot_run_v3/Results_May29/Species_Tree/SpeciesTree_rooted.txt		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Total_orthogroups	26459		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Single_copy_orthogroups	48		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Orthogroups_present_in_all_9_species	7346		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Orthogroups_present_in_at_least_8_species	10223		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Orthogroups_present_in_at_least_7_species	11059		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Orthogroups_present_in_at_least_6_species	11726		Summary metric from the 9-species expanded OrthoFinder backbone.
+Overall_9species_OrthoFinder_metric	Single_species_only_orthogroups	10341		Summary metric from the 9-species expanded OrthoFinder backbone.
+Species_representation	Beta_vulgaris	12498	23231	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Brassica_rapa	13716	39432	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Daucus_carota	13405	29203	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Manihot_esculenta	13784	30786	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Musa_acuminata	13532	31174	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Nelumbo_nucifera	12922	23429	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Oryza_longistaminata	12318	26906	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Solanum_tuberosum	13231	35843	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.
+Species_representation	Zingiber_officinale	16262	64644	Value_1 = orthogroups with species present; Value_2 = total genes assigned to orthogroups.

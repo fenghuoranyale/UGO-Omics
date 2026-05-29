@@ -1,0 +1,56 @@
+{
+  "project": "UGO-Omics",
+  "version": "UGO",
+  "table": "downloads_manifest_v2",
+  "generated_on": "2026-05-28 21:25:03",
+  "records": [
+    {
+      "label": "Updated main candidate table",
+      "file": "UGO-Omics_public_repository/13_benchmark/UGO_UGO_score_v2/UGO_updated_main_candidate_table_v1.tsv",
+      "format": "TSV",
+      "description": "Candidate table integrating v0.5-to-v0.6 mapping and lotus/ginger support."
+    },
+    {
+      "label": "Main candidate benchmark overlap v2",
+      "file": "UGO-Omics_public_repository/13_benchmark/UGO_known_gene_recovery/UGO_main_candidate_benchmark_overlap_v2_conservative.tsv",
+      "format": "TSV",
+      "description": "Conservative benchmark module recovery for updated main candidates."
+    },
+    {
+      "label": "Orthogroup rhizome support table",
+      "file": "UGO-Omics_public_repository/13_benchmark/UGO_UGO_score_v2/UGO_lotus_ginger_orthogroup_rhizome_support_v2.tsv",
+      "format": "TSV",
+      "description": "v0.6 orthogroup-level lotus/ginger rhizome support."
+    },
+    {
+      "label": "Supported orthogroup benchmark recovery v2",
+      "file": "UGO-Omics_public_repository/13_benchmark/UGO_known_gene_recovery/UGO_supported_orthogroup_benchmark_module_recovery_v2_conservative.tsv",
+      "format": "TSV",
+      "description": "Conservative benchmark module recovery for lotus/ginger-supported orthogroups."
+    },
+    {
+      "label": "Benchmark module summary v2",
+      "file": "UGO-Omics_public_repository/13_benchmark/UGO_known_gene_recovery/UGO_supported_benchmark_module_summary_v2_conservative.tsv",
+      "format": "TSV",
+      "description": "Module-level summary among lotus/ginger-supported orthogroups."
+    },
+    {
+      "label": "v0.5 to v0.6 orthogroup map",
+      "file": "UGO-Omics_public_repository/13_benchmark/UGO_UGO_score_v2/UGO_to_v0_6_orthogroup_overlap_map_v2.tsv",
+      "format": "TSV",
+      "description": "Orthogroup overlap mapping across UGO versions."
+    },
+    {
+      "label": "Lotus gene-level rhizome score",
+      "file": "UGO-Omics_public_repository/06_expression_data/08_organ_scores/UGO_lotus_ginger/Nelumbo_nucifera_rhizome_associated_gene_scores_v1.tsv",
+      "format": "TSV",
+      "description": "Gene-level rhizome-associated score table for Nelumbo nucifera."
+    },
+    {
+      "label": "Ginger gene-level rhizome score",
+      "file": "UGO-Omics_public_repository/06_expression_data/08_organ_scores/UGO_lotus_ginger/Zingiber_officinale_rhizome_associated_gene_scores_v1.tsv",
+      "format": "TSV",
+      "description": "Gene-level rhizome-associated score table for Zingiber officinale."
+    }
+  ]
+}

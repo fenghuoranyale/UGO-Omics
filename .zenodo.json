@@ -1,0 +1,24 @@
+{
+  "title": "UGO-Omics: an expression-backed orthogroup resource for comparative underground-organ biology",
+  "upload_type": "software",
+  "description": "UGO-Omics is an expression-backed orthogroup resource and static web platform for comparative underground-organ biology. The release includes a static website, JSON browser layers, candidate tables, orthogroup summaries, figure source tables, Supplementary Tables S6-S9, benchmark recovery outputs, and manuscript-supporting materials.",
+  "creators": [
+    {
+      "name": "Chen, Hongfei"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "underground organs",
+    "rhizome",
+    "tuber",
+    "storage root",
+    "orthogroups",
+    "plant omics",
+    "comparative transcriptomics",
+    "candidate genes",
+    "Molecular Plant"
+  ],
+  "version": "1.0.0",
+  "access_right": "open"
+}

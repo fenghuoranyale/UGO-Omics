@@ -1,0 +1,31 @@
+Page_or_layer	Type	File_or_path	Public_release_status	Description
+Home	Website_page	index.html	To_be_released	Landing page summarizing UGO-Omics resource layers.
+Species Browser	Website_page	index.html#species	To_be_released	Browser for the 51-species underground-organ resource layer.
+Candidate Expansion	Website_page	index.html#candidateExpansion	To_be_released	Page showing Figure 6 and candidate traceability across the 9-species expanded backbone.
+Benchmark Recovery	Website_page	index.html#benchmarkRecovery	To_be_released	Page showing Figure 7 and curated known-module benchmark recovery.
+Candidate Browser	Website_page	index.html#candidates	To_be_released	Browser for prioritized UGO candidate orthogroups.
+Benchmark Summary	Website_page	index.html#benchmarks	To_be_released	Browser for conservative benchmark module recovery.
+Top Orthogroups	Website_page	index.html#orthogroups	To_be_released	Browser for top rhizome-supported orthogroups.
+Downloads	Website_page	index.html#downloads	To_be_released	Download-oriented page for static JSON and tabular layers.
+benchmark_module_summary_v2.json	JSON_data_layer	json/benchmark_module_summary_v2.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+candidate_browser_v2.json	JSON_data_layer	json/candidate_browser_v2.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+candidate_expansion_traceability_summary_v1.json	JSON_data_layer	json/candidate_expansion_traceability_summary_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+candidate_expansion_traceability_v1.json	JSON_data_layer	json/candidate_expansion_traceability_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+downloads_manifest_v2.json	JSON_data_layer	json/downloads_manifest_v2.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+gene_browser_nelumbo_top_v1.json	JSON_data_layer	json/gene_browser_nelumbo_top_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+gene_browser_zingiber_top_v1.json	JSON_data_layer	json/gene_browser_zingiber_top_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+known_module_recovery_by_benchmark_module_v1.json	JSON_data_layer	json/known_module_recovery_by_benchmark_module_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+known_module_recovery_by_candidate_v1.json	JSON_data_layer	json/known_module_recovery_by_candidate_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+known_module_recovery_summary_v1.json	JSON_data_layer	json/known_module_recovery_summary_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+orthogroup_browser_top_v2.json	JSON_data_layer	json/orthogroup_browser_top_v2.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+species_browser_summary_v1.json	JSON_data_layer	json/species_browser_summary_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+species_browser_v1.json	JSON_data_layer	json/species_browser_v1.json	To_be_released	Static JSON data layer used by the UGO-Omics website.
+Figure_6_candidate_expansion_traceability_caption_v1.md	Figure_or_source_asset	figures/Figure_6_candidate_expansion_traceability_caption_v1.md	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+Figure_6_candidate_expansion_traceability_v1.pdf	Figure_or_source_asset	figures/Figure_6_candidate_expansion_traceability_v1.pdf	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+Figure_6_candidate_expansion_traceability_v1.png	Figure_or_source_asset	figures/Figure_6_candidate_expansion_traceability_v1.png	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+Figure_7_known_module_benchmark_recovery_caption_v1.md	Figure_or_source_asset	figures/Figure_7_known_module_benchmark_recovery_caption_v1.md	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+Figure_7_known_module_benchmark_recovery_source_v1.tsv	Figure_or_source_asset	figures/Figure_7_known_module_benchmark_recovery_source_v1.tsv	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+Figure_7_known_module_benchmark_recovery_v1.pdf	Figure_or_source_asset	figures/Figure_7_known_module_benchmark_recovery_v1.pdf	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+Figure_7_known_module_benchmark_recovery_v1.png	Figure_or_source_asset	figures/Figure_7_known_module_benchmark_recovery_v1.png	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+UGO_candidate_expansion_results_prose_v1.md	Figure_or_source_asset	figures/UGO_candidate_expansion_results_prose_v1.md	To_be_released	Figure, caption, source table, or results prose asset included in the website package.
+UGO_known_module_recovery_results_prose_v1.md	Figure_or_source_asset	figures/UGO_known_module_recovery_results_prose_v1.md	To_be_released	Figure, caption, source table, or results prose asset included in the website package.

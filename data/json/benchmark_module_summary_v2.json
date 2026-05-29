@@ -1,0 +1,73 @@
+{
+  "project": "UGO-Omics",
+  "version": "UGO",
+  "table": "benchmark_module_summary_v2",
+  "generated_on": "2026-05-28 21:25:03",
+  "description": "Conservative benchmark module summary among lotus/ginger high-confidence supported orthogroups.",
+  "records": [
+    {
+      "benchmark_module": "No_benchmark_keyword",
+      "supported_orthogroups": 6263,
+      "total_lotus_high_genes": 4995,
+      "total_ginger_high_genes": 5166,
+      "total_lotus_plus_ginger_high_genes": 10161,
+      "total_keyword_hits": 0
+    },
+    {
+      "benchmark_module": "Developmental_TF",
+      "supported_orthogroups": 260,
+      "total_lotus_high_genes": 291,
+      "total_ginger_high_genes": 237,
+      "total_lotus_plus_ginger_high_genes": 528,
+      "total_keyword_hits": 527
+    },
+    {
+      "benchmark_module": "Transport",
+      "supported_orthogroups": 126,
+      "total_lotus_high_genes": 109,
+      "total_ginger_high_genes": 100,
+      "total_lotus_plus_ginger_high_genes": 209,
+      "total_keyword_hits": 293
+    },
+    {
+      "benchmark_module": "Hormone_regulation",
+      "supported_orthogroups": 99,
+      "total_lotus_high_genes": 97,
+      "total_ginger_high_genes": 118,
+      "total_lotus_plus_ginger_high_genes": 215,
+      "total_keyword_hits": 319
+    },
+    {
+      "benchmark_module": "Stress_resilience",
+      "supported_orthogroups": 84,
+      "total_lotus_high_genes": 73,
+      "total_ginger_high_genes": 101,
+      "total_lotus_plus_ginger_high_genes": 174,
+      "total_keyword_hits": 193
+    },
+    {
+      "benchmark_module": "Cell_wall_remodeling",
+      "supported_orthogroups": 40,
+      "total_lotus_high_genes": 32,
+      "total_ginger_high_genes": 54,
+      "total_lotus_plus_ginger_high_genes": 86,
+      "total_keyword_hits": 86
+    },
+    {
+      "benchmark_module": "Storage_metabolism",
+      "supported_orthogroups": 37,
+      "total_lotus_high_genes": 43,
+      "total_ginger_high_genes": 20,
+      "total_lotus_plus_ginger_high_genes": 63,
+      "total_keyword_hits": 87
+    },
+    {
+      "benchmark_module": "Meristem_bud_regrowth",
+      "supported_orthogroups": 15,
+      "total_lotus_high_genes": 9,
+      "total_ginger_high_genes": 13,
+      "total_lotus_plus_ginger_high_genes": 22,
+      "total_keyword_hits": 27
+    }
+  ]
+}

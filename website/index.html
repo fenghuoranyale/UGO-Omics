@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UGO-Omics | Underground Organ Omics Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --blue: #174a7c;
+      --blue2: #2f75b5;
+      --green: #4f7d3a;
+      --green2: #6aa84f;
+      --light: #f5f8fb;
+      --line: #d9e2ec;
+      --text: #1f2933;
+      --muted: #52606d;
+      --orange: #c55a11;
+      --gold: #f6b26b;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(135deg, #174a7c 0%, #2e5f73 45%, #4f7d3a 100%);
+      color: white;
+      padding: 42px 52px 38px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 46px;
+      letter-spacing: 0.5px;
+    }
+
+    header .subtitle {
+      margin: 14px 0 0;
+      font-size: 21px;
+      max-width: 1180px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    header .subnote {
+      margin: 12px 0 0;
+      font-size: 15px;
+      max-width: 1050px;
+      line-height: 1.5;
+      opacity: 0.95;
+    }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      padding: 12px 52px;
+      background: #eef3f8;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--blue);
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    nav button.active {
+      background: var(--blue);
+      color: white;
+    }
+
+    main {
+      padding: 30px 52px 64px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: var(--blue);
+      margin-top: 0;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 9px;
+      font-size: 26px;
+    }
+
+    h3 {
+      color: var(--green);
+      margin-top: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .species-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 18px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(31, 78, 121, 0.06);
+    }
+
+    .species-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fbfdff;
+    }
+
+    .species-card b {
+      color: var(--blue);
+    }
+
+    .metric {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 5px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    input, select {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-width: 230px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f0f4f8;
+      color: var(--blue);
+      position: sticky;
+      top: 52px;
+      z-index: 5;
+    }
+
+    tr:hover {
+      background: #f9fbfd;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px;
+      background: #e6f2ff;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .tag.green {
+      background: #eaf6e5;
+      color: var(--green);
+    }
+
+    .tag.orange {
+      background: #fff2e6;
+      color: var(--orange);
+    }
+
+    .tag.gray {
+      background: #eef0f2;
+      color: #555;
+    }
+
+    .tag.gold {
+      background: #fff4d6;
+      color: #8a5a00;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .note {
+      background: #f7fbff;
+      border-left: 4px solid var(--blue2);
+      padding: 13px 15px;
+      margin: 16px 0;
+      line-height: 1.58;
+    }
+
+    .discovery {
+      background: linear-gradient(90deg, #f7fbff, #f3faef);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--green);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 18px 0;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .candidate-card {
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--blue);
+      border-radius: 13px;
+      padding: 16px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(31, 78, 121, 0.05);
+      margin-bottom: 12px;
+    }
+
+    .candidate-card h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+    }
+
+    .candidate-card .function {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .path {
+      font-family: Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #334e68;
+      word-break: break-all;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+  
+    .expansion-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .metric-card {
+      background: #ffffff;
+      border: 1px solid #d9e2ec;
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    }
+    .metric-card .metric {
+      font-size: 26px;
+      font-weight: 700;
+      color: #12355b;
+      margin-bottom: 4px;
+    }
+    .metric-card .label {
+      font-size: 13px;
+      color: #52616b;
+    }
+    .trace-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    .trace-table th, .trace-table td {
+      border: 1px solid #e2e8f0;
+      padding: 7px 8px;
+      text-align: center;
+    }
+    .trace-table th {
+      background: #f1f5f9;
+      color: #12355b;
+    }
+    .trace-table td.function {
+      text-align: left;
+      min-width: 220px;
+    }
+    .present-new {
+      background: #2e7d32;
+      color: white;
+      font-weight: 600;
+    }
+    .present-core {
+      background: #1565c0;
+      color: white;
+      font-weight: 600;
+    }
+    .absent {
+      background: #eeeeee;
+      color: #666666;
+    }
+    .figure-box {
+      background: #ffffff;
+      border: 1px solid #d9e2ec;
+      border-radius: 14px;
+      padding: 14px;
+      margin: 18px 0;
+    }
+    .figure-box img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+
+    .benchmark-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .benchmark-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    .benchmark-table th, .benchmark-table td {
+      border: 1px solid #e2e8f0;
+      padding: 7px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .benchmark-table th {
+      background: #f1f5f9;
+      color: #12355b;
+    }
+    .recovered {
+      color: #1b7837;
+      font-weight: 700;
+    }
+    .not-recovered {
+      color: #777777;
+      font-weight: 700;
+    }
+    .claim-note {
+      background: #fff7ed;
+      border-left: 4px solid #f97316;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin: 14px 0;
+      color: #7c2d12;
+    }
+
+</style>
+</head>
+
+<body>
+<header>
+  <h1>UGO-Omics</h1>
+  <p class="subtitle">
+    A cross-species atlas of underground organ gene modules
+  </p>
+  <p class="subnote">
+    Integrating orthogroups, organ-associated expression, benchmark module recovery,
+    and candidate prioritization across rhizome, tuber, storage-root, and regrowth systems.
+  </p>
+</header>
+
+<nav>
+  <button class="active" onclick="showSection('home', this)">Home</button>
+  <button onclick="showSection('species', this)">Species Browser</button>
+  <button onclick="showSection('candidateExpansion', this)">Candidate Expansion</button>
+  <button onclick="showSection('benchmarkRecovery', this)">Benchmark Recovery</button>
+  <button onclick="showSection('candidates', this)">Candidate Browser</button>
+  <button onclick="showSection('benchmark', this)">Benchmark Summary</button>
+  <button onclick="showSection('orthogroups', this)">Top Orthogroups</button>
+  <button onclick="showSection('downloads', this)">Downloads</button>
+</nav>
+
+<main>
+  <section id="home" class="active">
+    <h2>UGO-Omics P1 resource prototype</h2>
+
+    <div class="discovery">
+      <b>Main discovery:</b>
+      Six of eight prioritized underground-organ candidate orthogroups were independently
+      supported by lotus or ginger rhizome evidence, strengthening conserved modules in
+      cell-wall remodeling, developmental transcriptional regulation, meristem/regrowth,
+      and stress resilience.
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="metric">6</div>
+        <div class="label">core species in the current P1 v0.6 orthogroup backbone</div>
+      </div>
+      <div class="card">
+        <div class="metric">25,195</div>
+        <div class="label">v0.6 orthogroups from the six-species OrthoFinder analysis</div>
+      </div>
+      <div class="card">
+        <div class="metric">6 / 8</div>
+        <div class="label">v0.5 main candidates strengthened by lotus or ginger high-confidence rhizome support</div>
+      </div>
+      <div class="card">
+        <div class="metric">6,924</div>
+        <div class="label">orthogroups with lotus or ginger high-confidence rhizome support</div>
+      </div>
+    </div>
+
+    <h3>Species included</h3>
+    <div class="species-grid">
+      <div class="species-card"><b>Potato</b><br><span class="small"><i>Solanum tuberosum</i><br>tuber / stolon context</span></div>
+      <div class="species-card"><b>Cassava</b><br><span class="small"><i>Manihot esculenta</i><br>storage-root context</span></div>
+      <div class="species-card"><b>Carrot</b><br><span class="small"><i>Daucus carota</i><br>taproot / storage-root context</span></div>
+      <div class="species-card"><b>African wild rice</b><br><span class="small"><i>Oryza longistaminata</i><br>rhizome context</span></div>
+      <div class="species-card"><b>Lotus</b><br><span class="small"><i>Nelumbo nucifera</i><br>rhizome validation context</span></div>
+      <div class="species-card"><b>Ginger</b><br><span class="small"><i>Zingiber officinale</i><br>rhizome validation context</span></div>
+    </div>
+
+    <h3>Core evidence chain</h3>
+    <div class="grid">
+      <div class="card">
+        <b>1. Cross-species backbone</b>
+        <p class="small">Six-species orthogroup framework links major underground-organ systems.</p>
+      </div>
+      <div class="card">
+        <b>2. Rhizome validation</b>
+        <p class="small">Lotus and ginger provide independent rhizome-bearing systems for validating candidate orthogroups.</p>
+      </div>
+      <div class="card">
+        <b>3. Candidate hierarchy</b>
+        <p class="small">v0.5 candidates are mapped to v0.6 orthogroups and re-ranked by new support and benchmark recovery.</p>
+      </div>
+      <div class="card">
+        <b>4. Benchmark recovery</b>
+        <p class="small">Conservative recovery detects expected modules: cell wall, developmental TFs, hormone, stress, storage, and regrowth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="candidates">
+    <h2>Candidate Browser</h2>
+    <div class="note">
+      Prioritized UGO candidate orthogroups are shown as discovery cards. Each card links the original v0.5 orthogroup,
+      its best v0.6 match, lotus/ginger support, and conservative benchmark module recovery.
+    </div>
+
+    <div class="toolbar">
+      <input id="candidateSearch" placeholder="Search candidate, function, module..." oninput="renderCandidates()">
+      <select id="candidateTier" onchange="renderCandidates()">
+        <option value="">All tiers</option>
+      </select>
+    </div>
+
+    <div id="candidateCards"></div>
+  </section>
+
+  <section id="benchmark">
+    <h2>Benchmark Module Summary</h2>
+    <p class="small">
+      Conservative benchmark module recovery among lotus/ginger high-confidence supported orthogroups.
+      The large “No benchmark keyword” class represents poorly annotated or potentially novel rhizome-associated orthogroups.
+    </p>
+    <div id="benchmarkCards" class="grid"></div>
+    <div id="benchmarkTable"></div>
+  </section>
+
+  <section id="orthogroups">
+    <h2>Top Orthogroups</h2>
+    <div class="toolbar">
+      <input id="ogSearch" placeholder="Search orthogroup or module..." oninput="renderOrthogroups()">
+      <select id="ogModule" onchange="renderOrthogroups()">
+        <option value="">All benchmark modules</option>
+      </select>
+    </div>
+    <div class="note">
+      Showing the top 1500 orthogroups ranked by lotus/ginger rhizome support and conservative benchmark evidence.
+    </div>
+    <div id="orthogroupTable"></div>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <div class="note">
+      This is a local prototype. For deployment, the current HPC file paths should be converted to relative downloadable links.
+    </div>
+    <div id="downloadTable"></div>
+  </section>
+
+  <div class="footer">
+    UGO-Omics static prototype v0.2. Generated from compact JSON and the 51-species broad resource layer.
+  </div>
+</main>
+
+<script>
+let candidates = [];
+let benchmarks = [];
+let orthogroups = [];
+let downloads = [];
+
+async function loadJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error("Failed to load " + path);
+  return await res.json();
+}
+
+async function init() {
+  const candidateObj = await loadJSON("json/candidate_browser_v2.json");
+  const benchmarkObj = await loadJSON("json/benchmark_module_summary_v2.json");
+  const ogObj = await loadJSON("json/orthogroup_browser_top_v2.json");
+  const downloadsObj = await loadJSON("json/downloads_manifest_v2.json");
+
+  candidates = candidateObj.records;
+  benchmarks = benchmarkObj.records;
+  orthogroups = ogObj.records;
+  downloads = downloadsObj.records;
+
+  initFilters();
+  renderCandidates();
+  renderBenchmark();
+  renderOrthogroups();
+  renderDownloads();
+}
+
+function showSection(id, btn) {
+  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+function tag(text, cls="") {
+  if (!text && text !== 0) return "";
+  return `<span class="tag ${cls}">${text}</span>`;
+}
+
+function shortTier(tier) {
+  if (!tier) return "";
+  if (tier.includes("Tier_A_plus")) return "Tier A+";
+  if (tier.includes("Tier_A_core")) return "Tier A*";
+  if (tier.includes("Tier_A_supported")) return "Tier A";
+  if (tier.includes("Tier_B")) return "Tier B";
+  return tier;
+}
+
+function initFilters() {
+  const tierSelect = document.getElementById("candidateTier");
+  const tiers = [...new Set(candidates.map(d => d.candidate_tier))].sort();
+  tiers.forEach(t => {
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = t;
+    tierSelect.appendChild(opt);
+  });
+
+  const moduleSelect = document.getElementById("ogModule");
+  const modules = [...new Set(orthogroups.map(d => d.benchmark_module_v2))].sort();
+  modules.forEach(m => {
+    const opt = document.createElement("option");
+    opt.value = m;
+    opt.textContent = m;
+    moduleSelect.appendChild(opt);
+  });
+}
+
+function renderCandidates() {
+  const q = document.getElementById("candidateSearch").value.toLowerCase();
+  const tier = document.getElementById("candidateTier").value;
+
+  let rows = candidates.filter(d => {
+    const text = [
+      d.v0_5_orthogroup,
+      d.v0_6_orthogroup,
+      d.module_label,
+      d.representative_function,
+      d.benchmark_module_v2,
+      d.support_note,
+      d.candidate_tier
+    ].join(" ").toLowerCase();
+
+    return (!q || text.includes(q)) && (!tier || d.candidate_tier === tier);
+  });
+
+  let html = "";
+
+  rows.forEach(d => {
+    const tierClass = d.candidate_tier.includes("Tier_B") ? "gray" : "green";
+    html += `<div class="candidate-card">
+      <h3>${d.v0_5_orthogroup} → ${d.v0_6_orthogroup}</h3>
+      <div class="function">${d.representative_function}</div>
+      <div>
+        ${tag(shortTier(d.candidate_tier), tierClass)}
+        ${tag(d.benchmark_module_v2, "gold")}
+        ${tag("UGO " + d.v0_5_ugo_score, "gray")}
+        ${tag("overlap " + d.best_overlap_fraction, "gray")}
+      </div>
+      <p class="small"><b>Module:</b> ${d.module_label}</p>
+      <p>
+        ${tag("lotus high " + d.lotus_high_confidence_count, "green")}
+        ${tag("ginger high " + d.ginger_high_confidence_count, "green")}
+        ${tag("lotus mod " + d.lotus_moderate_count, "orange")}
+        ${tag("ginger mod " + d.ginger_moderate_count, "orange")}
+      </p>
+      <p class="small"><b>Support note:</b> ${d.support_note}</p>
+      <p class="small"><b>Benchmark keywords:</b> ${(d.matched_keywords_v2 || []).join("; ") || "none"}</p>
+      <p class="small"><b>Recommended status:</b> ${d.recommended_status}</p>
+    </div>`;
+  });
+
+  document.getElementById("candidateCards").innerHTML = html || "<p>No candidates found.</p>";
+}
+
+function renderBenchmark() {
+  let cards = "";
+  benchmarks.forEach(d => {
+    const cls = d.benchmark_module === "No_benchmark_keyword" ? "gray" : "green";
+    cards += `<div class="card">
+      <div class="metric">${d.supported_orthogroups}</div>
+      <div class="label"><b>${d.benchmark_module}</b><br>
+      lotus+ginger high genes: ${d.total_lotus_plus_ginger_high_genes}<br>
+      keyword hits: ${d.total_keyword_hits}</div>
+    </div>`;
+  });
+  document.getElementById("benchmarkCards").innerHTML = cards;
+
+  let html = `<table>
+    <thead>
+      <tr>
+        <th>Module</th>
+        <th>Supported OGs</th>
+        <th>Lotus high genes</th>
+        <th>Ginger high genes</th>
+        <th>Total high genes</th>
+        <th>Keyword hits</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  benchmarks.forEach(d => {
+    html += `<tr>
+      <td><b>${d.benchmark_module}</b></td>
+      <td>${d.supported_orthogroups}</td>
+      <td>${d.total_lotus_high_genes}</td>
+      <td>${d.total_ginger_high_genes}</td>
+      <td>${d.total_lotus_plus_ginger_high_genes}</td>
+      <td>${d.total_keyword_hits}</td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>`;
+  document.getElementById("benchmarkTable").innerHTML = html;
+}
+
+function renderOrthogroups() {
+  const q = document.getElementById("ogSearch").value.toLowerCase();
+  const module = document.getElementById("ogModule").value;
+
+  let rows = orthogroups.filter(d => {
+    const text = [
+      d.v0_6_orthogroup,
+      d.support_class,
+      d.benchmark_module_v2,
+      (d.matched_keywords_v2 || []).join(" ")
+    ].join(" ").toLowerCase();
+
+    return (!q || text.includes(q)) && (!module || d.benchmark_module_v2 === module);
+  });
+
+  rows = rows.slice(0, 300);
+
+  let html = `<table>
+    <thead>
+      <tr>
+        <th>Orthogroup</th>
+        <th>Support</th>
+        <th>Benchmark</th>
+        <th>High-confidence genes</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  rows.forEach(d => {
+    html += `<tr>
+      <td><b>${d.v0_6_orthogroup}</b><br><span class="small">${d.support_class}</span></td>
+      <td>
+        ${tag("lotus high " + d.lotus_high_confidence_count, "green")}
+        ${tag("ginger high " + d.ginger_high_confidence_count, "green")}
+        ${tag("lotus mod " + d.lotus_moderate_count, "orange")}
+        ${tag("ginger mod " + d.ginger_moderate_count, "orange")}
+      </td>
+      <td>
+        ${tag(d.benchmark_module_v2, "gray")}<br>
+        <span class="small">${(d.matched_keywords_v2 || []).join("; ")}</span><br>
+        <span class="small">score=${d.benchmark_evidence_score_v2}</span>
+      </td>
+      <td class="small">
+        lotus: ${(d.lotus_high_confidence_genes || []).slice(0, 5).join(", ")}<br>
+        ginger: ${(d.ginger_high_confidence_genes || []).slice(0, 5).join(", ")}
+      </td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>`;
+  document.getElementById("orthogroupTable").innerHTML = html;
+}
+
+function renderDownloads() {
+  let html = `<table>
+    <thead>
+      <tr>
+        <th>Label</th>
+        <th>Format</th>
+        <th>Description</th>
+        <th>Prototype source path</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  downloads.forEach(d => {
+    html += `<tr>
+      <td><b>${d.label}</b></td>
+      <td>${d.format}</td>
+      <td>${d.description}</td>
+      <td class="path">${d.file}</td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>`;
+  document.getElementById("downloadTable").innerHTML = html;
+}
+
+init().catch(err => {
+  document.body.innerHTML = "<pre style='padding:20px;color:red'>" + err + "</pre>";
+});
+
+let speciesData = [];
+let speciesSummary = {};
+
+async function loadSpeciesBrowser() {
+  try {
+    speciesData = await fetch('json/species_browser_v1.json').then(r => r.json());
+    speciesSummary = await fetch('json/species_browser_summary_v1.json').then(r => r.json());
+    populateSpeciesFilters();
+    renderSpeciesSummary();
+    renderSpeciesBrowser();
+  } catch (err) {
+    const grid = document.getElementById('speciesGrid');
+    if (grid) grid.innerHTML = '<p>Species Browser data could not be loaded.</p>';
+  }
+}
+
+function uniqueSortedSpecies(field) {
+  return [...new Set(speciesData.map(d => d[field]).filter(Boolean))].sort();
+}
+
+function fillSelect(id, values) {
+  const sel = document.getElementById(id);
+  if (!sel) return;
+  const first = sel.options[0].outerHTML;
+  sel.innerHTML = first + values.map(v => `<option value="${v}">${v}</option>`).join('');
+}
+
+function populateSpeciesFilters() {
+  fillSelect('speciesOrganFilter', uniqueSortedSpecies('underground_organ_category'));
+  fillSelect('speciesCladeFilter', uniqueSortedSpecies('major_clade'));
+  fillSelect('speciesTriageFilter', uniqueSortedSpecies('resource_triage_class'));
+  fillSelect('speciesUseFilter', uniqueSortedSpecies('candidate_use_case'));
+}
+
+function renderSpeciesSummary() {
+  const el = document.getElementById('speciesSummary');
+  if (!el || !speciesSummary.species_count) return;
+
+  el.innerHTML = `
+    <b>${speciesSummary.species_count}</b> species total |
+    <b>${speciesSummary.deep_core_count}</b> expression-backed core species |
+    <b>${speciesSummary.broad_layer_candidate_count}</b> broad-layer candidate species
+    <br>
+    Major clades: ${speciesSummary.major_clade_counts.map(x => `${x.category} (${x.count})`).join(', ')}
+  `;
+}
+
+function renderSpeciesBrowser() {
+  const grid = document.getElementById('speciesGrid');
+  const count = document.getElementById('speciesCount');
+  if (!grid) return;
+
+  const q = (document.getElementById('speciesSearch')?.value || '').toLowerCase();
+  const organ = document.getElementById('speciesOrganFilter')?.value || '';
+  const clade = document.getElementById('speciesCladeFilter')?.value || '';
+  const triage = document.getElementById('speciesTriageFilter')?.value || '';
+  const usecase = document.getElementById('speciesUseFilter')?.value || '';
+
+  const filtered = speciesData.filter(d => {
+    const hay = [
+      d.species, d.common_name, d.family, d.primary_underground_organ,
+      d.underground_organ_category, d.candidate_use_case, d.reason_for_inclusion
+    ].join(' ').toLowerCase();
+
+    return (!q || hay.includes(q)) &&
+      (!organ || d.underground_organ_category === organ) &&
+      (!clade || d.major_clade === clade) &&
+      (!triage || d.resource_triage_class === triage) &&
+      (!usecase || d.candidate_use_case === usecase);
+  });
+
+  if (count) count.innerHTML = `<p><b>${filtered.length}</b> species shown</p>`;
+
+  grid.innerHTML = filtered.map(d => `
+    <div class="species-card">
+      <h3><i>${d.species}</i></h3>
+      <div class="common">${d.common_name || ''} | ${d.family || ''}</div>
+      <span class="tag">${d.major_clade}</span>
+      <span class="tag green">${d.underground_organ_category}</span>
+      <span class="tag orange">${d.resource_triage_class}</span>
+      <p><b>Organ:</b> ${d.primary_underground_organ}</p>
+      <p><b>Use case:</b> ${d.candidate_use_case}</p>
+      <p><b>Priority:</b> ${d.priority_tier}; <b>resource likelihood:</b> ${d.expected_resource_likelihood}</p>
+      <p>${d.reason_for_inclusion}</p>
+    </div>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', loadSpeciesBrowser);
+
+
+let candidateExpansionData = [];
+let candidateExpansionSummary = {};
+
+async function loadCandidateExpansion() {
+  try {
+    candidateExpansionData = await fetch('json/candidate_expansion_traceability_v1.json').then(r => r.json());
+    candidateExpansionSummary = await fetch('json/candidate_expansion_traceability_summary_v1.json').then(r => r.json());
+    renderCandidateExpansionSummary();
+    renderCandidateExpansionTable();
+  } catch (err) {
+    const el = document.getElementById('candidateExpansionTable');
+    if (el) el.innerHTML = '<p>Candidate expansion data could not be loaded.</p>';
+  }
+}
+
+function renderCandidateExpansionSummary() {
+  const el = document.getElementById('candidateExpansionSummary');
+  if (!el || !candidateExpansionSummary.candidate_count) return;
+
+  const cards = [
+    ['8/8', 'prioritized candidates remapped'],
+    [candidateExpansionSummary.traceable_in_new_species_count + '/' + candidateExpansionSummary.candidate_count, 'traceable in new species'],
+    ['9', 'species in expanded backbone'],
+    ['3', 'new broad-layer species']
+  ];
+
+  el.innerHTML = cards.map(x => `
+    <div class="metric-card">
+      <div class="metric">${x[0]}</div>
+      <div class="label">${x[1]}</div>
+    </div>
+  `).join('');
+}
+
+function candidateCellClass(species, count) {
+  const newSpecies = ['Beta', 'Brassica', 'Musa'];
+  if (count <= 0) return 'absent';
+  if (newSpecies.includes(species)) return 'present-new';
+  return 'present-core';
+}
+
+function renderCandidateExpansionTable() {
+  const el = document.getElementById('candidateExpansionTable');
+  if (!el) return;
+
+  const species = ['Beta', 'Brassica', 'Musa', 'Carrot', 'Cassava', 'Lotus', 'Oryza', 'Potato', 'Ginger'];
+
+  let html = '<table class="trace-table">';
+  html += '<thead><tr><th>Candidate function</th><th>9-species OG</th><th>Module</th>';
+  species.forEach(sp => html += `<th>${sp}</th>`);
+  html += '</tr></thead><tbody>';
+
+  candidateExpansionData.forEach(d => {
+    html += '<tr>';
+    html += `<td class="function">${d.representative_function}</td>`;
+    html += `<td>${d.mapped_9species_orthogroup}</td>`;
+    html += `<td>${d.benchmark_module}</td>`;
+    species.forEach(sp => {
+      const n = d.species_gene_counts[sp] || 0;
+      html += `<td class="${candidateCellClass(sp, n)}">${n}</td>`;
+    });
+    html += '</tr>';
+  });
+
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', loadCandidateExpansion);
+
+
+let benchmarkRecoveryData = [];
+let benchmarkRecoverySummary = {};
+
+async function loadBenchmarkRecovery() {
+  try {
+    benchmarkRecoveryData = await fetch('json/known_module_recovery_by_benchmark_module_v1.json').then(r => r.json());
+    benchmarkRecoverySummary = await fetch('json/known_module_recovery_summary_v1.json').then(r => r.json());
+    renderBenchmarkRecoverySummary();
+    renderBenchmarkRecoveryTable();
+  } catch (err) {
+    const el = document.getElementById('benchmarkRecoveryTable');
+    if (el) el.innerHTML = '<p>Benchmark recovery data could not be loaded.</p>';
+  }
+}
+
+function renderBenchmarkRecoverySummary() {
+  const el = document.getElementById('benchmarkRecoverySummary');
+  if (!el || !benchmarkRecoverySummary.benchmark_modules_tested) return;
+
+  const cards = [
+    [benchmarkRecoverySummary.recovered_benchmark_modules + '/' + benchmarkRecoverySummary.benchmark_modules_tested, 'benchmark modules recovered'],
+    [benchmarkRecoverySummary.candidate_benchmark_links, 'candidate-benchmark links'],
+    [benchmarkRecoverySummary.direct_module_recovery_modules, 'direct module recoveries'],
+    [benchmarkRecoverySummary.module_level_recovery_modules, 'module-level recoveries']
+  ];
+
+  el.innerHTML = cards.map(x => `
+    <div class="metric-card">
+      <div class="metric">${x[0]}</div>
+      <div class="label">${x[1]}</div>
+    </div>
+  `).join('');
+}
+
+function renderBenchmarkRecoveryTable() {
+  const el = document.getElementById('benchmarkRecoveryTable');
+  if (!el) return;
+
+  let html = '<table class="benchmark-table">';
+  html += '<thead><tr><th>Benchmark module</th><th>Benchmark family/pathway</th><th>Status</th><th>Recovered candidate OGs</th><th>Recovery class</th></tr></thead><tbody>';
+
+  benchmarkRecoveryData.forEach(d => {
+    const statusClass = d.Recovery_status === 'Recovered' ? 'recovered' : 'not-recovered';
+    const statusText = d.Recovery_status === 'Recovered' ? 'Recovered' : 'Not recovered in prioritized candidates';
+    html += '<tr>';
+    html += `<td>${d.Benchmark_module.replaceAll('_', ' ')}</td>`;
+    html += `<td>${d.Benchmark_gene_or_family}</td>`;
+    html += `<td class="${statusClass}">${statusText}</td>`;
+    html += `<td>${d.Recovered_V0_6_Orthogroups || 'NA'}</td>`;
+    html += `<td>${d.Recovery_classes || 'NA'}</td>`;
+    html += '</tr>';
+  });
+
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', loadBenchmarkRecovery);
+
+</script>
+
+</body>
+</html>

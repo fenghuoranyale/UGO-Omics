@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "UGO-Omics: an expression-backed orthogroup resource for comparative underground-organ biology"
+message: "If you use UGO-Omics, please cite the archived release and associated manuscript."
+type: software
+authors:
+  - family-names: Chen
+    given-names: Hongfei
+repository-code: "https://github.com/fenghuoranyale/UGO-Omics"
+url: "https://fenghuoranyale.github.io/UGO-Omics/"
+license: MIT
+version: "1.0.0"
+date-released: "2026-05-29"
