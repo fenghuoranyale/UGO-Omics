@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UGO-Omics | Underground Organ Comparative Omics Platform</title>
+  <title>UGO-Omics | Application-oriented Underground Organ Candidate Platform</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -35,7 +35,7 @@
         radial-gradient(circle at 10% 20%, rgba(255,255,255,0.18), transparent 26%),
         linear-gradient(120deg, #0e3558, #1f6f8b 48%, #3b7a57);
       color:white;
-      padding:48px 60px 38px 60px;
+      padding:50px 60px 40px 60px;
     }
 
     .brand {
@@ -46,15 +46,15 @@
     }
 
     .logo {
-      width:58px;
-      height:58px;
+      width:60px;
+      height:60px;
       border-radius:18px;
       background:rgba(255,255,255,0.16);
       border:1px solid rgba(255,255,255,0.35);
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:30px;
+      font-size:31px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.18);
     }
 
@@ -66,16 +66,16 @@
 
     .subtitle {
       font-size:20px;
-      font-weight:800;
+      font-weight:850;
       margin:6px 0 0 0;
       opacity:0.96;
     }
 
     .hero-text {
-      max-width:1100px;
+      max-width:1120px;
       font-size:16px;
       line-height:1.6;
-      margin:16px 0 0 0;
+      margin:18px 0 0 0;
       opacity:0.96;
     }
 
@@ -92,7 +92,7 @@
       padding:8px 12px;
       border-radius:999px;
       font-size:13px;
-      font-weight:800;
+      font-weight:850;
     }
 
     nav {
@@ -114,7 +114,7 @@
       padding:10px 14px;
       border-radius:10px;
       cursor:pointer;
-      font-weight:800;
+      font-weight:850;
       font-size:13px;
       transition:0.15s;
     }
@@ -142,7 +142,7 @@
 
     .section-title h2 {
       margin:0;
-      font-size:28px;
+      font-size:29px;
       color:#103756;
     }
 
@@ -150,7 +150,7 @@
       margin:4px 0 0 0;
       color:var(--muted);
       line-height:1.45;
-      max-width:900px;
+      max-width:940px;
     }
 
     .grid {
@@ -160,11 +160,11 @@
       margin:18px 0;
     }
 
-    .grid-tight {
+    .workflow-grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-      gap:16px;
-      margin:18px 0;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px;
+      margin:22px 0;
     }
 
     .card, .panel {
@@ -177,9 +177,52 @@
 
     .panel { margin:18px 0; }
 
+    .workflow-card {
+      cursor:pointer;
+      transition:0.18s;
+      min-height:190px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .workflow-card:before {
+      content:"";
+      position:absolute;
+      right:-38px;
+      top:-38px;
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      background:rgba(31,111,139,0.10);
+    }
+
+    .workflow-card:hover {
+      transform:translateY(-4px);
+      border-color:#9cc3df;
+      box-shadow:0 18px 40px rgba(16,32,51,0.13);
+    }
+
+    .workflow-icon {
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .workflow-card h3 {
+      margin:0 0 8px 0;
+      color:var(--blue);
+      font-size:22px;
+    }
+
+    .workflow-card p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.48;
+      font-size:14px;
+    }
+
     .metric {
       font-size:32px;
-      font-weight:900;
+      font-weight:950;
       color:var(--blue2);
       margin-bottom:5px;
     }
@@ -188,32 +231,7 @@
       color:var(--muted);
       line-height:1.4;
       font-size:13.5px;
-      font-weight:650;
-    }
-
-    .app-card {
-      cursor:pointer;
-      transition:0.18s;
-      min-height:140px;
-    }
-
-    .app-card:hover {
-      transform:translateY(-3px);
-      border-color:#9cc3df;
-      box-shadow:0 16px 34px rgba(16,32,51,0.12);
-    }
-
-    .app-card h3 {
-      margin:0 0 8px 0;
-      color:var(--blue);
-      font-size:19px;
-    }
-
-    .app-card p {
-      margin:0;
-      color:var(--muted);
-      line-height:1.45;
-      font-size:14px;
+      font-weight:680;
     }
 
     .tag {
@@ -224,12 +242,13 @@
       color:#145484;
       font-size:12px;
       margin:4px 5px 4px 0;
-      font-weight:800;
+      font-weight:850;
     }
 
     .tag.green { background:#e8f5e9; color:#2e7d32; }
     .tag.orange { background:#fff4e5; color:#a45a00; }
     .tag.grey { background:#eef0f3; color:#55606b; }
+    .tag.red { background:#fee2e2; color:#991b1b; }
 
     input, select {
       padding:10px 12px;
@@ -238,11 +257,11 @@
       font-size:14px;
       margin:5px 8px 8px 0;
       background:white;
-      min-width:210px;
+      min-width:220px;
     }
 
     .searchbar {
-      width:min(800px, 100%);
+      width:min(820px, 100%);
       font-size:17px;
       padding:14px 16px;
       border:2px solid #bdd0df;
@@ -272,15 +291,30 @@
       font-weight:900;
     }
 
-    .ok { color:#1b7837; font-weight:900; }
-    .warn { color:#777; font-weight:800; }
-
-    .figure {
-      max-width:100%;
-      border:1px solid var(--line);
-      border-radius:16px;
+    .result {
+      border-left:5px solid var(--blue2);
+      padding:14px 16px;
+      margin:11px 0;
       background:white;
-      margin:12px 0 20px 0;
+      border-radius:12px;
+      box-shadow:0 4px 16px rgba(16,32,51,0.06);
+    }
+
+    .result h3 { margin:4px 0 6px 0; color:var(--blue); }
+    .result p { margin:4px 0; color:var(--muted); line-height:1.46; }
+
+    .scorebar {
+      height:10px;
+      background:#e7edf3;
+      border-radius:999px;
+      overflow:hidden;
+      margin-top:8px;
+    }
+
+    .scorefill {
+      height:100%;
+      background:linear-gradient(90deg, var(--green2), var(--blue2));
+      border-radius:999px;
     }
 
     .small {
@@ -298,44 +332,27 @@
       margin:12px 0;
     }
 
-    .result {
-      border-left:5px solid var(--blue2);
-      padding:13px 15px;
-      margin:10px 0;
+    .figure {
+      max-width:100%;
+      border:1px solid var(--line);
+      border-radius:16px;
       background:white;
-      border-radius:12px;
-      box-shadow:0 4px 16px rgba(16,32,51,0.06);
+      margin:12px 0 20px 0;
     }
 
-    .result h3 { margin:0 0 5px 0; color:var(--blue); }
-    .result p { margin:3px 0; color:var(--muted); line-height:1.45; }
-
-    .scorebar {
-      height:10px;
-      background:#e7edf3;
-      border-radius:999px;
-      overflow:hidden;
-      margin-top:8px;
-    }
-
-    .scorefill {
-      height:100%;
-      background:linear-gradient(90deg, var(--green2), var(--blue2));
-      border-radius:999px;
-    }
-
-    .split {
-      display:grid;
-      grid-template-columns:minmax(300px, 420px) 1fr;
-      gap:18px;
-      align-items:start;
+    .app-note {
+      background:#f7fbff;
+      border:1px solid #cfe0ef;
+      color:#284860;
+      padding:14px 16px;
+      border-radius:14px;
+      line-height:1.5;
     }
 
     @media (max-width: 900px) {
       header { padding:36px 24px; }
       main { padding:24px; }
       nav { padding:12px 24px; }
-      .split { grid-template-columns:1fr; }
     }
 
     footer {
@@ -354,235 +371,174 @@
     <div class="logo">🌱</div>
     <div>
       <h1>UGO-Omics</h1>
-      <div class="subtitle">Underground-organ comparative omics and candidate-transfer platform</div>
+      <div class="subtitle">Application-oriented candidate discovery platform for underground-organ biology</div>
     </div>
   </div>
   <p class="hero-text">
-    UGO-Omics is an expression-backed orthogroup resource for discovering, ranking, and transferring
-    candidate modules across rhizome, tuber/stolon, storage-root, bulb, corm, root-crown, and regrowth systems.
-    It combines species resources, candidate prioritization, expanded orthogroup traceability, known-module benchmark recovery,
-    and interactive exploration tools.
+    Start with your biological question. UGO-Omics helps users check whether a gene belongs to an underground-organ candidate module,
+    find candidate modules for a target organ or species, and prioritize validation-ready candidates for functional follow-up.
   </p>
   <div class="hero-badges">
+    <span class="hero-badge">11-species high-confidence transfer backbone</span>
     <span class="hero-badge">51-species resource layer</span>
-    <span class="hero-badge">9-species expanded backbone</span>
-    <span class="hero-badge">8/8 candidate traceability</span>
-    <span class="hero-badge">11/15 benchmark recovery</span>
-    <span class="hero-badge">Static GitHub Pages platform</span>
+    <span class="hero-badge">8/8 candidates remapped</span>
+    <span class="hero-badge">7/8 traceable in both new species</span>
+    <span class="hero-badge">Application-first interface</span>
   </div>
 </header>
 
 <nav>
-  <button class="active" onclick="showSection('home', this)">Dashboard</button>
-  <button onclick="showSection('globalSearch', this)">Global Search</button>
-  <button onclick="showSection('scoreExplorer', this)">UGO Score Explorer</button>
-  <button onclick="showSection('transferTool', this)">Candidate Transfer</button>
-  <button onclick="showSection('orthogroupDetail', this)">Orthogroup Detail</button>
-  <button onclick="showSection('species', this)">Species Browser</button>
-  <button onclick="showSection('candidateExpansion', this)">Candidate Expansion</button>
-  <button onclick="showSection('benchmarkRecovery', this)">Benchmark Recovery</button>
-  <button onclick="showSection('candidates', this)">Candidate Browser</button>
-  <button onclick="showSection('orthogroups', this)">Top Orthogroups</button>
-  <button onclick="showSection('tutorial', this)">Tutorial</button>
+  <button class="active" onclick="showSection('start', this)">Start Here</button>
+  <button onclick="showSection('checkGene', this)">Check a Gene</button>
+  <button onclick="showSection('organCandidates', this)">Find by Organ</button>
+  <button onclick="showSection('speciesCandidates', this)">Find by Species</button>
+  <button onclick="showSection('validationTargets', this)">Validation Targets</button>
+  <button onclick="showSection('evidence', this)">Explore Evidence</button>
   <button onclick="showSection('downloads', this)">Downloads</button>
 </nav>
 
 <main>
 
-<section id="home" class="section active">
+<section id="start" class="section active">
   <div class="section-title">
     <div>
-      <h2>UGO-Omics Dashboard</h2>
-      <p>A candidate-discovery and cross-species transfer platform for underground-organ biology.</p>
+      <h2>Start with your question</h2>
+      <p>UGO-Omics is organized around four practical discovery workflows.</p>
+    </div>
+  </div>
+
+  <div class="workflow-grid">
+    <div class="card workflow-card" onclick="showSection('checkGene', document.querySelectorAll('nav button')[1])">
+      <div class="workflow-icon">🔎</div>
+      <h3>I have a gene</h3>
+      <p>Search a gene ID, orthogroup, gene family, or annotation keyword to see whether it belongs to a UGO candidate module.</p>
+    </div>
+
+    <div class="card workflow-card" onclick="showSection('organCandidates', document.querySelectorAll('nav button')[2])">
+      <div class="workflow-icon">🌿</div>
+      <h3>I study an organ</h3>
+      <p>Select rhizome, tuber, storage root, bulb, corm, root crown, or stolon to identify top candidate modules.</p>
+    </div>
+
+    <div class="card workflow-card" onclick="showSection('speciesCandidates', document.querySelectorAll('nav button')[3])">
+      <div class="workflow-icon">🧬</div>
+      <h3>I study a species</h3>
+      <p>Choose a species and view UGO candidate modules with homologous members in that species.</p>
+    </div>
+
+    <div class="card workflow-card" onclick="showSection('validationTargets', document.querySelectorAll('nav button')[4])">
+      <div class="workflow-icon">✅</div>
+      <h3>I want validation targets</h3>
+      <p>Get a prioritized shortlist of candidate modules with suggested validation systems and assays.</p>
     </div>
   </div>
 
   <div class="grid">
-    <div class="card"><div class="metric" id="metricSpecies">51</div><div class="label">species in broad underground-organ resource layer</div></div>
-    <div class="card"><div class="metric">9</div><div class="label">species in expanded OrthoFinder backbone</div></div>
-    <div class="card"><div class="metric" id="metricCandidates">8/8</div><div class="label">prioritized candidate orthogroups remapped</div></div>
-    <div class="card"><div class="metric" id="metricBenchmark">11/15</div><div class="label">curated benchmark modules recovered</div></div>
+    <div class="card"><div class="metric">11</div><div class="label">species in high-confidence transfer backbone</div></div>
+    <div class="card"><div class="metric">30,121</div><div class="label">orthogroups in the 11-species backbone</div></div>
+    <div class="card"><div class="metric">8/8</div><div class="label">prioritized candidates remapped</div></div>
+    <div class="card"><div class="metric">7/8</div><div class="label">candidates traceable in both new species</div></div>
   </div>
 
-  <div class="grid-tight">
-    <div class="card app-card" onclick="showSection('globalSearch', document.querySelectorAll('nav button')[1])">
-      <h3>Global Search</h3>
-      <p>Search across species, candidate functions, orthogroups, benchmark modules, and downloadable resources.</p>
-    </div>
-    <div class="card app-card" onclick="showSection('scoreExplorer', document.querySelectorAll('nav button')[2])">
-      <h3>UGO Score Explorer</h3>
-      <p>Explore evidence-integrated ranking scores built from traceability, expansion support, benchmark recovery, and annotation interpretability.</p>
-    </div>
-    <div class="card app-card" onclick="showSection('transferTool', document.querySelectorAll('nav button')[3])">
-      <h3>Candidate Transfer Tool</h3>
-      <p>Select a target underground-organ category and identify transferable candidate modules.</p>
-    </div>
-    <div class="card app-card" onclick="showSection('orthogroupDetail', document.querySelectorAll('nav button')[4])">
-      <h3>Orthogroup Detail View</h3>
-      <p>Inspect candidate orthogroups, species distribution, benchmark evidence, and score components.</p>
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Claim calibration</h3>
-    <p class="small">
-      UGO-Omics provides candidate prioritization, cross-species traceability, benchmark-module recovery, and hypothesis generation.
-      It should not be interpreted as functional validation of individual genes.
-    </p>
+  <div class="panel app-note">
+    UGO-Omics outputs are designed for candidate prioritization and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
   </div>
 </section>
 
-<section id="globalSearch" class="section">
+<section id="checkGene" class="section">
   <div class="section-title">
     <div>
-      <h2>Global Search</h2>
-      <p>Search species, organ categories, candidate functions, orthogroups, benchmark modules, and resource layers.</p>
+      <h2>Check a Gene</h2>
+      <p>Search a gene ID, orthogroup ID, gene family, or annotation keyword.</p>
     </div>
   </div>
   <div class="panel">
-    <input id="globalSearchInput" class="searchbar" placeholder="Try: rhizome, NAC, hemoglobin, Cell_wall, Musa, OG..." oninput="renderGlobalSearch()">
-    <select id="globalTypeFilter" onchange="renderGlobalSearch()"><option value="">All record types</option></select>
-    <div id="globalSearchResults"></div>
+    <input id="geneSearchInput" class="searchbar" placeholder="Try: XTH, hemoglobin, NAC, bHLH, OG0000154, Panicum..." oninput="renderGeneToUGO()">
+    <div id="geneToUGOResults"></div>
   </div>
 </section>
 
-<section id="scoreExplorer" class="section">
+<section id="organCandidates" class="section">
   <div class="section-title">
     <div>
-      <h2>UGO Score Explorer</h2>
-      <p>Evidence-integrated candidate ranking. The score is a transparent ranking layer, not functional validation.</p>
+      <h2>Find Candidates by Organ</h2>
+      <p>Select an underground-organ type to retrieve prioritized candidate modules.</p>
     </div>
   </div>
   <div class="panel">
-    <select id="scoreModuleFilter" onchange="renderScoreExplorer()"><option value="">All benchmark modules</option></select>
-    <select id="scoreMinFilter" onchange="renderScoreExplorer()">
-      <option value="0">All scores</option>
-      <option value="0.5">UGO score ≥ 0.5</option>
-      <option value="0.7">UGO score ≥ 0.7</option>
-      <option value="0.85">UGO score ≥ 0.85</option>
+    <select id="organSelect" onchange="renderOrganCandidates()">
+      <option value="">Choose organ type</option>
     </select>
-    <div id="scoreExplorerResults"></div>
+    <input id="organFilter" placeholder="Optional filter: TF, stress, cell wall..." oninput="renderOrganCandidates()">
+    <div id="organCandidateResults"></div>
   </div>
 </section>
 
-<section id="transferTool" class="section">
+<section id="speciesCandidates" class="section">
   <div class="section-title">
     <div>
-      <h2>Candidate Transfer Tool</h2>
-      <p>Prioritize candidate modules for target underground-organ systems using module match and cross-species traceability.</p>
+      <h2>Find Candidates by Species</h2>
+      <p>Choose a species to see UGO candidate modules with homologous members in the 11-species backbone.</p>
     </div>
   </div>
   <div class="panel">
-    <select id="transferOrganSelect" onchange="renderTransferTool()"><option value="">Choose target organ category</option></select>
-    <input id="transferSearch" placeholder="Optional filter: function/module/orthogroup" oninput="renderTransferTool()">
-    <p class="small">Recommendations are based on candidate traceability and module-level matching. They are hypotheses for follow-up, not functional validation.</p>
-    <div id="transferResults"></div>
+    <select id="speciesSelect" onchange="renderSpeciesCandidates()">
+      <option value="">Choose species</option>
+    </select>
+    <input id="speciesFilter" placeholder="Optional filter: XTH, NAC, hormone..." oninput="renderSpeciesCandidates()">
+    <div id="speciesCandidateResults"></div>
   </div>
 </section>
 
-<section id="orthogroupDetail" class="section">
+<section id="validationTargets" class="section">
   <div class="section-title">
     <div>
-      <h2>Orthogroup Detail View</h2>
-      <p>Enter or select an orthogroup to inspect candidate expansion, benchmark recovery, and score evidence.</p>
-    </div>
-  </div>
-  <div class="split">
-    <div class="panel">
-      <input id="orthogroupInput" placeholder="Type orthogroup ID..." oninput="renderOrthogroupSuggestions()">
-      <div id="orthogroupSuggestions"></div>
-    </div>
-    <div id="orthogroupDetailResults" class="panel">Search or select an orthogroup to view details.</div>
-  </div>
-</section>
-
-<section id="species" class="section">
-  <div class="section-title">
-    <div>
-      <h2>Species Browser</h2>
-      <p>Explore the 51-species broad underground-organ resource layer.</p>
+      <h2>Prioritize Validation Targets</h2>
+      <p>Review candidate modules ranked for functional follow-up.</p>
     </div>
   </div>
   <div class="panel">
-    <input id="speciesSearch" placeholder="Search species, family, organ, notes..." oninput="renderSpecies()">
-    <select id="speciesOrgan" onchange="renderSpecies()"><option value="">All organ categories</option></select>
-    <select id="speciesClade" onchange="renderSpecies()"><option value="">All clades</option></select>
-    <select id="speciesTriage" onchange="renderSpecies()"><option value="">All resource classes</option></select>
-    <div id="speciesSummary" class="grid"></div>
-  </div>
-  <div id="speciesGrid" class="grid"></div>
-</section>
-
-<section id="candidateExpansion" class="section">
-  <div class="section-title">
-    <div>
-      <h2>Candidate Expansion</h2>
-      <p>Trace prioritized candidates from the six-species core into the 9-species expanded backbone.</p>
-    </div>
-  </div>
-  <div id="candidateExpansionSummary" class="grid"></div>
-  <div class="panel">
-    <h3>Candidate traceability in the 9-species expanded backbone</h3>
-    <img class="figure" src="figures/Figure_6_candidate_expansion_traceability_v1.png" alt="Candidate expansion traceability">
-    <div id="candidateExpansionTable"></div>
+    <select id="validationClassFilter" onchange="renderValidationTargets()">
+      <option value="">All priority classes</option>
+    </select>
+    <input id="validationFilter" placeholder="Optional filter: rhizome, tuber, TF, stress..." oninput="renderValidationTargets()">
+    <div id="validationTargetResults"></div>
   </div>
 </section>
 
-<section id="benchmarkRecovery" class="section">
+<section id="evidence" class="section">
   <div class="section-title">
     <div>
-      <h2>Benchmark Recovery</h2>
-      <p>Assess whether prioritized candidates recover curated underground-organ and storage-organ benchmark modules.</p>
+      <h2>Explore Evidence</h2>
+      <p>Evidence-oriented layers for users who want to inspect score components, orthogroups, benchmark recovery, and source data.</p>
     </div>
   </div>
-  <div id="benchmarkRecoverySummary" class="grid"></div>
-  <div class="panel">
-    <h3>Known-module benchmark recovery</h3>
-    <img class="figure" src="figures/Figure_7_known_module_benchmark_recovery_v1.png" alt="Known-module benchmark recovery">
-    <div id="benchmarkRecoveryTable"></div>
-  </div>
-</section>
 
-<section id="candidates" class="section">
-  <div class="section-title">
-    <div>
-      <h2>Candidate Browser</h2>
-      <p>Browse candidate records from UGO-Omics data layers.</p>
+  <div class="workflow-grid">
+    <div class="card workflow-card" onclick="openEvidencePage('score')">
+      <div class="workflow-icon">📊</div>
+      <h3>UGO Score Explorer</h3>
+      <p>View ranking evidence and traceability components.</p>
+    </div>
+    <div class="card workflow-card" onclick="openEvidencePage('orthogroup')">
+      <div class="workflow-icon">🧩</div>
+      <h3>Orthogroup Detail</h3>
+      <p>Inspect candidate orthogroups and species representation.</p>
+    </div>
+    <div class="card workflow-card" onclick="openEvidencePage('benchmark')">
+      <div class="workflow-icon">🎯</div>
+      <h3>Benchmark Recovery</h3>
+      <p>View known-module recovery evidence.</p>
+    </div>
+    <div class="card workflow-card" onclick="openEvidencePage('species')">
+      <div class="workflow-icon">🌍</div>
+      <h3>Species Browser</h3>
+      <p>Browse the 51-species broad resource layer.</p>
     </div>
   </div>
-  <div id="candidateBrowserTable" class="panel">Loading candidate data...</div>
-</section>
 
-<section id="orthogroups" class="section">
-  <div class="section-title">
-    <div>
-      <h2>Top Orthogroups</h2>
-      <p>Browse top orthogroup records from UGO-Omics.</p>
-    </div>
-  </div>
-  <div id="orthogroupTable" class="panel">Loading orthogroup data...</div>
-</section>
-
-<section id="tutorial" class="section">
-  <div class="section-title">
-    <div>
-      <h2>Tutorial / Example Use Case</h2>
-      <p>How to use UGO-Omics to find transferable candidate modules.</p>
-    </div>
-  </div>
-  <div class="panel">
-    <h3>Example: finding transferable rhizome candidate modules</h3>
-    <ol>
-      <li>Open <b>Candidate Transfer</b> and select a rhizome-related organ category.</li>
-      <li>Review candidates ranked by recommendation score and UGO score.</li>
-      <li>Open <b>UGO Score Explorer</b> to inspect traceability, expansion support, benchmark recovery, and annotation interpretability.</li>
-      <li>Use <b>Orthogroup Detail View</b> to inspect the mapped 9-species orthogroup and benchmark links.</li>
-      <li>Use <b>Species Browser</b> to identify relevant target species and resource status.</li>
-    </ol>
-    <p class="small">
-      This workflow is designed to generate testable hypotheses for comparative underground-organ biology.
-      It does not replace species-specific functional validation.
-    </p>
+  <div id="evidenceResults" class="panel">
+    Select an evidence layer above.
   </div>
 </section>
 
@@ -593,36 +549,34 @@
       <p>Download JSON and table layers used by the UGO-Omics platform.</p>
     </div>
   </div>
-  <div id="downloadsTable" class="panel">Loading downloads manifest...</div>
+  <div class="panel">
+    <ul>
+      <li><a href="json/ugo_v1_8_gene_to_ugo_v1.json">Gene-to-UGO JSON</a></li>
+      <li><a href="json/ugo_v1_8_organ_to_candidates_v1.json">Organ-to-Candidates JSON</a></li>
+      <li><a href="json/ugo_v1_8_species_to_candidates_v1.json">Species-to-Candidates JSON</a></li>
+      <li><a href="json/ugo_v1_8_validation_targets_v1.json">Validation Targets JSON</a></li>
+      <li><a href="json/ugo_score_explorer_v1.json">UGO Score Explorer JSON</a></li>
+      <li><a href="json/candidate_expansion_traceability_v1.json">Candidate Expansion JSON</a></li>
+      <li><a href="json/species_browser_v1.json">Species Browser JSON</a></li>
+    </ul>
+  </div>
 </section>
 
 <footer>
-  UGO-Omics v1.6 functional static platform. Data are loaded from JSON files in this repository.
+  UGO-Omics v1.8 application-oriented static platform. Outputs are candidate-prioritization resources, not functional validation.
 </footer>
 
 </main>
 
 <script>
-let speciesData = [];
-let candidateExpansionData = [];
-let candidateExpansionSummary = {};
-let benchmarkRecoveryData = [];
-let benchmarkRecoverySummary = {};
-let candidateBrowserData = [];
-let orthogroupData = [];
-let downloadsData = [];
-let globalSearchIndex = [];
+let geneToUGO = [];
+let organCandidates = [];
+let speciesCandidates = [];
+let validationTargets = [];
 let scoreData = [];
-let transferData = [];
-let orthogroupDetails = [];
-
-function showSection(id, btn) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-}
+let speciesData = [];
+let benchmarkData = [];
+let orthogroupDetail = [];
 
 async function fetchJSON(path) {
   const r = await fetch(path, {cache:'no-store'});
@@ -632,442 +586,244 @@ async function fetchJSON(path) {
 
 function safe(x) {
   if (x === undefined || x === null || x === '') return 'NA';
-  if (typeof x === 'object') return JSON.stringify(x);
   return String(x);
 }
 
-function uniqueSorted(arr) {
-  return [...new Set(arr.filter(x => x !== undefined && x !== null && x !== ''))].sort();
-}
-
-function extractRows(obj) {
-  if (Array.isArray(obj)) return obj;
-  if (obj && typeof obj === 'object') {
-    const preferred = ['data','records','items','rows','candidates','orthogroups','downloads','manifest','genes','modules'];
-    for (const k of preferred) if (Array.isArray(obj[k])) return obj[k];
-    for (const k of Object.keys(obj)) {
-      if (Array.isArray(obj[k]) && obj[k].length > 0 && typeof obj[k][0] === 'object') return obj[k];
-    }
-    const vals = Object.values(obj);
-    if (vals.length > 0 && vals.every(v => v && typeof v === 'object' && !Array.isArray(v))) return vals;
-  }
-  return [];
-}
-
-function fillSelect(id, values) {
-  const el = document.getElementById(id);
-  const first = el.querySelector('option').outerHTML;
-  el.innerHTML = first + values.map(v => `<option value="${v}">${v}</option>`).join('');
-}
-
-function genericTable(obj, maxRows=100) {
-  const rows = extractRows(obj);
-  if (!rows.length) return '<p>No rows found in this JSON layer.</p>';
-  const colSet = new Set();
-  rows.slice(0, 50).forEach(r => Object.keys(r).forEach(k => colSet.add(k)));
-  const cols = Array.from(colSet).slice(0, 10);
-  let html = `<p class="small">Loaded ${rows.length} rows. Showing first ${Math.min(maxRows, rows.length)}.</p>`;
-  html += '<table><thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>';
-  rows.slice(0, maxRows).forEach(r => {
-    html += '<tr>' + cols.map(c => `<td>${safe(r[c])}</td>`).join('') + '</tr>';
-  });
-  html += '</tbody></table>';
-  return html;
-}
-
-function cleanText(x) {
+function clean(x) {
   if (x === undefined || x === null || x === '' || x === 'NA') return '';
   return String(x);
 }
 
-function getRawField(raw, keys) {
-  if (!raw || typeof raw !== 'object') return '';
-  for (const k of keys) {
-    if (raw[k] !== undefined && raw[k] !== null && raw[k] !== '') return raw[k];
-  }
-  return '';
+function uniqueSorted(arr) {
+  return [...new Set(arr.filter(x => clean(x)))].sort();
 }
 
-function formatSearchBody(d) {
-  const raw = d.raw || {};
-  const type = d.type || '';
-
-  if (type === 'Candidate') {
-    const og = getRawField(raw, ['v0_6_orthogroup','V0_6_Orthogroup','orthogroup','Orthogroup','Mapped_9species_Orthogroup','mapped_9species_orthogroup']);
-    const module = getRawField(raw, ['module_label','Benchmark_module','benchmark_module']);
-    const tier = getRawField(raw, ['candidate_tier','Candidate_tier','v0_5_tier','v0_6_tier']);
-    const status = getRawField(raw, ['recommended_status','Expanded_traceability_status','expanded_traceability_status']);
-    return [
-      og ? `<b>Orthogroup:</b> ${safe(og)}` : '',
-      module ? `<b>Module:</b> ${safe(module)}` : '',
-      tier ? `<b>Tier:</b> ${safe(tier)}` : '',
-      status ? `<b>Status:</b> ${safe(status)}` : ''
-    ].filter(Boolean).join(' | ');
-  }
-
-  if (type === 'Candidate expansion') {
-    const og = getRawField(raw, ['mapped_9species_orthogroup','Mapped_9species_Orthogroup']);
-    const module = getRawField(raw, ['benchmark_module','Benchmark_module']);
-    const status = getRawField(raw, ['expanded_traceability_status','Expanded_traceability_status']);
-    return [
-      og ? `<b>9-species orthogroup:</b> ${safe(og)}` : '',
-      module ? `<b>Module:</b> ${safe(module)}` : '',
-      status ? `<b>Traceability:</b> ${safe(status)}` : ''
-    ].filter(Boolean).join(' | ');
-  }
-
-  if (type === 'Benchmark module') {
-    const status = getRawField(raw, ['Recovery_status','recovery_status']);
-    const cls = getRawField(raw, ['Recovery_classes','recovery_classes']);
-    return [
-      cleanText(d.body),
-      status ? `<b>Status:</b> ${safe(status)}` : '',
-      cls ? `<b>Recovery class:</b> ${safe(cls)}` : ''
-    ].filter(Boolean).join(' | ');
-  }
-
-  if (type === 'Species') {
-    const organ = getRawField(raw, ['primary_underground_organ','Primary_underground_organ']);
-    const category = getRawField(raw, ['underground_organ_category','Underground_organ_category']);
-    const usecase = getRawField(raw, ['candidate_use_case','Candidate_use_case']);
-    return [
-      organ ? `<b>Organ:</b> ${safe(organ)}` : '',
-      category ? `<b>Category:</b> ${safe(category)}` : '',
-      usecase ? `<b>Use case:</b> ${safe(usecase)}` : ''
-    ].filter(Boolean).join(' | ');
-  }
-
-  const body = cleanText(d.body);
-  if (body.startsWith('{') || body.startsWith('[')) return '';
-  return body.slice(0, 400);
+function showSection(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
 }
 
-function renderGlobalSearch() {
-  const q = document.getElementById('globalSearchInput').value.toLowerCase().trim();
-  const type = document.getElementById('globalTypeFilter').value;
-  let rows = globalSearchIndex.filter(d => {
-    if (type && d.type !== type) return false;
-    if (!q) return true;
-    return (d.search_text || '').toLowerCase().includes(q);
-  }).slice(0, 80);
+function scoreBar(score) {
+  let s = parseFloat(score || 0);
+  if (isNaN(s)) s = 0;
+  return `<div class="scorebar"><div class="scorefill" style="width:${Math.min(s*100,100)}%"></div></div>`;
+}
 
-  const el = document.getElementById('globalSearchResults');
+function renderGeneToUGO() {
+  const q = document.getElementById('geneSearchInput').value.toLowerCase().trim();
+  const el = document.getElementById('geneToUGOResults');
+
+  if (!q) {
+    el.innerHTML = '<p class="small">Enter a gene ID, orthogroup ID, family name, or function keyword.</p>';
+    return;
+  }
+
+  const rows = geneToUGO.filter(d => (d.search_text || '').toLowerCase().includes(q)).slice(0, 60);
+
   if (!rows.length) {
-    el.innerHTML = '<p>No records matched.</p>';
+    el.innerHTML = '<p>No UGO candidate or evidence-layer record matched your query.</p>';
     return;
   }
 
   el.innerHTML = rows.map(d => {
-    const subtitle = cleanText(d.subtitle);
-    const body = formatSearchBody(d);
+    const hits = (d.species_hits || []).slice(0, 8).map(h => `<span class="tag green">${h.species}: ${h.gene_count}</span>`).join('');
     return `
       <div class="result">
-        <span class="tag">${safe(d.type)}</span>
-        ${(d.tags || []).filter(t => cleanText(t)).slice(0,4).map(t => `<span class="tag green">${safe(t)}</span>`).join('')}
-        <h3>${safe(d.title)}</h3>
-        ${subtitle ? `<p><b>${safe(subtitle)}</b></p>` : ''}
-        ${body ? `<p>${body}</p>` : ''}
-      </div>
-    `;
-  }).join('');
-}
-
-function renderScoreExplorer() {
-  const module = document.getElementById('scoreModuleFilter').value;
-  const minScore = parseFloat(document.getElementById('scoreMinFilter').value || '0');
-
-  let rows = scoreData.filter(d => {
-    if (module && d.benchmark_module !== module) return false;
-    if ((d.ugo_score || 0) < minScore) return false;
-    return true;
-  });
-
-  const el = document.getElementById('scoreExplorerResults');
-  if (!rows.length) {
-    el.innerHTML = '<p>No candidates matched.</p>';
-    return;
-  }
-
-  el.innerHTML = rows.map(d => {
-    const score = Number(d.ugo_score || 0);
-    return `
-      <div class="result">
-        <span class="tag">UGO score ${score.toFixed(3)}</span>
-        <span class="tag green">${safe(d.benchmark_module)}</span>
-        <span class="tag orange">${safe(d.expanded_traceability_status)}</span>
+        <span class="tag">${safe(d.query_type)}</span>
+        ${d.ugo_score ? `<span class="tag green">UGO ${safe(d.ugo_score)}</span>` : ''}
+        ${d.new_species_status ? `<span class="tag orange">${safe(d.new_species_status)}</span>` : ''}
         <h3>${safe(d.candidate_function)}</h3>
-        <p><b>9-species orthogroup:</b> ${safe(d.orthogroup_9species)}</p>
-        <div class="scorebar"><div class="scorefill" style="width:${Math.min(score*100,100)}%"></div></div>
-        <p class="small">
-          Traceability: ${safe(d.traceability_component)} |
-          Expansion: ${safe(d.expansion_component)} |
-          Benchmark: ${safe(d.benchmark_component)} |
-          Species present: ${safe(d.species_present_9)}/9 |
-          New species present: ${safe(d.new_species_present_3)}/3
-        </p>
+        <p><b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)} | <b>Module:</b> ${safe(d.benchmark_module)}</p>
+        <p>${hits}</p>
+        <p class="small">${safe(d.interpretation)}</p>
+        <p class="small"><b>Next step:</b> ${safe(d.recommended_next_step)}</p>
       </div>
     `;
   }).join('');
 }
 
-function renderTransferTool() {
-  const organ = document.getElementById('transferOrganSelect').value;
-  const q = document.getElementById('transferSearch').value.toLowerCase().trim();
+function renderOrganCandidates() {
+  const organ = document.getElementById('organSelect').value;
+  const q = document.getElementById('organFilter').value.toLowerCase().trim();
+  const el = document.getElementById('organCandidateResults');
 
-  let rows = transferData.filter(d => {
-    if (organ && d.target_organ_category !== organ) return false;
-    if (q) {
-      const txt = Object.values(d).join(' ').toLowerCase();
-      if (!txt.includes(q)) return false;
-    }
-    return true;
-  }).sort((a,b) => (b.recommendation_score || 0) - (a.recommendation_score || 0)).slice(0, 60);
-
-  const el = document.getElementById('transferResults');
   if (!organ) {
-    el.innerHTML = '<p>Please choose a target organ category.</p>';
+    el.innerHTML = '<p class="small">Choose an organ type to view candidate modules.</p>';
     return;
   }
+
+  let rows = organCandidates.filter(d => d.organ_key === organ);
+  if (q) rows = rows.filter(d => Object.values(d).join(' ').toLowerCase().includes(q));
+  rows = rows.slice(0, 80);
+
   if (!rows.length) {
-    el.innerHTML = '<p>No transfer candidates matched.</p>';
+    el.innerHTML = '<p>No candidates matched this organ/filter combination.</p>';
     return;
   }
 
   el.innerHTML = rows.map(d => `
     <div class="result">
-      <span class="tag">Recommendation ${safe(d.recommendation_score)}</span>
-      <span class="tag green">UGO ${safe(d.ugo_score)}</span>
-      <span class="tag orange">${safe(d.matched_transfer_terms)}</span>
+      <span class="tag">${safe(d.organ_label)}</span>
+      <span class="tag green">Recommendation ${safe(d.recommendation_score)}</span>
+      <span class="tag orange">${safe(d.matched_terms)}</span>
       <h3>${safe(d.candidate_function)}</h3>
-      <p><b>Target organ:</b> ${safe(d.target_organ_category)} | <b>Module:</b> ${safe(d.benchmark_module)}</p>
-      <p><b>9-species orthogroup:</b> ${safe(d.orthogroup_9species)}</p>
-      <p class="small">${safe(d.interpretation)}</p>
+      <p><b>Module:</b> ${safe(d.benchmark_module)} | <b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)}</p>
+      <p><b>Species support:</b> ${safe(d.species_present_11)}/11 | <b>New species:</b> ${safe(d.new_species_present_2)}/2 | <b>UGO:</b> ${safe(d.ugo_score)}</p>
+      ${scoreBar(d.recommendation_score)}
+      <p class="small">${safe(d.why_recommended)}</p>
+      <p class="small"><b>Next step:</b> ${safe(d.recommended_next_step)}</p>
     </div>
   `).join('');
 }
 
-function renderOrthogroupSuggestions() {
-  const q = document.getElementById('orthogroupInput').value.toLowerCase().trim();
-  const sug = document.getElementById('orthogroupSuggestions');
+function renderSpeciesCandidates() {
+  const sp = document.getElementById('speciesSelect').value;
+  const q = document.getElementById('speciesFilter').value.toLowerCase().trim();
+  const el = document.getElementById('speciesCandidateResults');
 
-  if (!q) {
-    sug.innerHTML = '';
-    document.getElementById('orthogroupDetailResults').innerHTML = 'Search or select an orthogroup to view details.';
+  if (!sp) {
+    el.innerHTML = '<p class="small">Choose a species to view candidate modules.</p>';
     return;
   }
 
-  const rows = orthogroupDetails.filter(d => (d.orthogroup || '').toLowerCase().includes(q)).slice(0, 20);
+  let rows = speciesCandidates.filter(d => d.species_safe_name === sp);
+  if (q) rows = rows.filter(d => Object.values(d).join(' ').toLowerCase().includes(q));
+  rows = rows.slice(0, 80);
 
-  sug.innerHTML = rows.map(d => `<div class="result" onclick="showOrthogroupDetail('${d.orthogroup.replaceAll("'", "\\'")}')"><b>${safe(d.orthogroup)}</b></div>`).join('');
+  if (!rows.length) {
+    el.innerHTML = '<p>No UGO candidate modules found for this species/filter combination.</p>';
+    return;
+  }
 
-  if (rows.length === 1) showOrthogroupDetail(rows[0].orthogroup);
+  el.innerHTML = rows.map(d => `
+    <div class="result">
+      <span class="tag">${safe(d.species_display_name)}</span>
+      <span class="tag green">${safe(d.gene_count_in_species)} homologs</span>
+      <span class="tag orange">UGO ${safe(d.ugo_score)}</span>
+      <h3>${safe(d.candidate_function)}</h3>
+      <p><b>Module:</b> ${safe(d.benchmark_module)} | <b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)}</p>
+      <p><b>Organ category:</b> ${safe(d.underground_organ_category)} | <b>Use case:</b> ${safe(d.candidate_use_case)}</p>
+      <p class="small">${safe(d.interpretation)}</p>
+      <p class="small"><b>Next step:</b> ${safe(d.recommended_next_step)}</p>
+    </div>
+  `).join('');
 }
 
-function showOrthogroupDetail(og) {
-  const d = orthogroupDetails.find(x => x.orthogroup === og);
-  const el = document.getElementById('orthogroupDetailResults');
+function renderValidationTargets() {
+  const cls = document.getElementById('validationClassFilter').value;
+  const q = document.getElementById('validationFilter').value.toLowerCase().trim();
+  const el = document.getElementById('validationTargetResults');
 
-  if (!d) {
-    el.innerHTML = '<p>No detail record found.</p>';
+  let rows = validationTargets;
+  if (cls) rows = rows.filter(d => d.validation_priority_class === cls);
+  if (q) rows = rows.filter(d => Object.values(d).join(' ').toLowerCase().includes(q));
+  rows = rows.slice(0, 80);
+
+  if (!rows.length) {
+    el.innerHTML = '<p>No validation target matched this filter.</p>';
     return;
   }
 
-  const scores = d.score_records || [];
-  const expansions = d.candidate_expansion || [];
-  const benchmarks = d.benchmark_recovery || [];
-
-  let html = `<h3>${safe(d.orthogroup)}</h3>`;
-  html += `<p><span class="tag">${scores.length} score records</span><span class="tag green">${expansions.length} expansion records</span><span class="tag orange">${benchmarks.length} benchmark links</span></p>`;
-
-  if (scores.length) {
-    const s = scores[0];
-    html += `
-      <div class="panel">
-        <h3>${safe(s.candidate_function)}</h3>
-        <p><b>UGO score:</b> ${safe(s.ugo_score)} | <b>Module:</b> ${safe(s.benchmark_module)}</p>
-        <p class="small">Species present: ${safe(s.species_present_9)}/9 | New species present: ${safe(s.new_species_present_3)}/3 | ${safe(s.score_interpretation)}</p>
+  el.innerHTML = rows.map(d => {
+    const tagClass = d.validation_priority_class.includes('Top') ? 'green' : (d.validation_priority_class.includes('Review') ? 'red' : 'orange');
+    return `
+      <div class="result">
+        <span class="tag ${tagClass}">${safe(d.validation_priority_class)}</span>
+        <span class="tag">Score ${safe(d.validation_priority_score)}</span>
+        <span class="tag orange">${safe(d.benchmark_module)}</span>
+        <h3>${safe(d.candidate_function)}</h3>
+        <p><b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)} | <b>Species support:</b> ${safe(d.species_present_11)}/11 | <b>New species:</b> ${safe(d.new_species_present_2)}/2</p>
+        ${scoreBar(d.validation_priority_score)}
+        <p><b>Suggested system:</b> ${safe(d.suggested_validation_system)}</p>
+        <p><b>Suggested assay:</b> ${safe(d.suggested_assay)}</p>
+        <p class="small"><b>Why prioritized:</b> ${safe(d.why_prioritized)}</p>
+        <p class="small"><b>Caution:</b> ${safe(d.caution)}</p>
       </div>
     `;
+  }).join('');
+}
+
+function openEvidencePage(which) {
+  const el = document.getElementById('evidenceResults');
+
+  if (which === 'score') {
+    el.innerHTML = '<h3>UGO Score Explorer</h3>' + scoreData.slice(0, 30).map(d => `
+      <div class="result">
+        <span class="tag green">UGO ${safe(d.ugo_score)}</span>
+        <h3>${safe(d.candidate_function)}</h3>
+        <p><b>Orthogroup:</b> ${safe(d.orthogroup_9species)} | <b>Module:</b> ${safe(d.benchmark_module)}</p>
+      </div>
+    `).join('');
   }
 
-  if (expansions.length) html += '<h4>Candidate expansion records</h4>' + genericTable(expansions, 5);
-  if (benchmarks.length) html += '<h4>Benchmark recovery records</h4>' + genericTable(benchmarks, 10);
-
-  el.innerHTML = html;
-}
-
-function renderSpeciesSummary() {
-  const el = document.getElementById('speciesSummary');
-  const n = speciesData.length;
-  const deep = speciesData.filter(d => safe(d.current_role).includes('Deep_core')).length;
-  const broad = n - deep;
-  const organs = uniqueSorted(speciesData.map(d => d.underground_organ_category)).length;
-
-  document.getElementById('metricSpecies').innerText = n;
-
-  el.innerHTML = `
-    <div class="card"><div class="metric">${n}</div><div class="label">species total</div></div>
-    <div class="card"><div class="metric">${deep}</div><div class="label">deep-core species</div></div>
-    <div class="card"><div class="metric">${broad}</div><div class="label">broad-layer species</div></div>
-    <div class="card"><div class="metric">${organs}</div><div class="label">underground-organ categories</div></div>
-  `;
-}
-
-function renderSpecies() {
-  const search = document.getElementById('speciesSearch').value.toLowerCase();
-  const organ = document.getElementById('speciesOrgan').value;
-  const clade = document.getElementById('speciesClade').value;
-  const triage = document.getElementById('speciesTriage').value;
-
-  let rows = speciesData.filter(d => {
-    const txt = Object.values(d).join(' ').toLowerCase();
-    if (search && !txt.includes(search)) return false;
-    if (organ && d.underground_organ_category !== organ) return false;
-    if (clade && d.major_clade !== clade) return false;
-    if (triage && d.resource_triage_class !== triage) return false;
-    return true;
-  });
-
-  const grid = document.getElementById('speciesGrid');
-  grid.innerHTML = rows.map(d => `
-    <div class="card">
-      <h3><i>${safe(d.species)}</i></h3>
-      <div>${safe(d.common_name)} | ${safe(d.family)}</div>
-      <div>
-        <span class="tag">${safe(d.major_clade)}</span>
-        <span class="tag green">${safe(d.underground_organ_category)}</span>
-        <span class="tag orange">${safe(d.resource_triage_class)}</span>
+  if (which === 'benchmark') {
+    el.innerHTML = '<h3>Benchmark Recovery</h3>' + benchmarkData.slice(0, 40).map(d => `
+      <div class="result">
+        <span class="tag">${safe(d.Recovery_status || d.recovery_status)}</span>
+        <h3>${safe(d.Benchmark_module || d.benchmark_module)}</h3>
+        <p>${safe(d.Benchmark_gene_or_family || d.benchmark_gene_or_family)}</p>
       </div>
-      <p><b>Organ:</b> ${safe(d.primary_underground_organ)}</p>
-      <p><b>Use case:</b> ${safe(d.candidate_use_case)}</p>
-      <p class="small"><b>Next action:</b> ${safe(d.immediate_next_action)}</p>
-    </div>
-  `).join('');
+    `).join('');
+  }
 
-  if (!rows.length) grid.innerHTML = '<div class="panel">No species matched the current filters.</div>';
+  if (which === 'species') {
+    el.innerHTML = '<h3>Species Browser</h3>' + speciesData.slice(0, 80).map(d => `
+      <div class="result">
+        <span class="tag green">${safe(d.underground_organ_category)}</span>
+        <h3>${safe(d.species)}</h3>
+        <p><b>Organ:</b> ${safe(d.primary_underground_organ)} | <b>Use case:</b> ${safe(d.candidate_use_case)}</p>
+      </div>
+    `).join('');
+  }
+
+  if (which === 'orthogroup') {
+    el.innerHTML = '<h3>Orthogroup Detail</h3>' + orthogroupDetail.slice(0, 40).map(d => `
+      <div class="result">
+        <span class="tag">Orthogroup</span>
+        <h3>${safe(d.orthogroup)}</h3>
+        <p><b>Score records:</b> ${safe((d.score_records || []).length)} | <b>Benchmark records:</b> ${safe((d.benchmark_recovery || []).length)}</p>
+      </div>
+    `).join('');
+  }
 }
 
-function renderCandidateExpansion() {
-  const sum = candidateExpansionSummary || {};
-  document.getElementById('metricCandidates').innerText = `${safe(sum.mapped_candidate_count || sum.candidate_count || 8)}/${safe(sum.candidate_count || 8)}`;
-
-  document.getElementById('candidateExpansionSummary').innerHTML = `
-    <div class="card"><div class="metric">${safe(sum.mapped_candidate_count || 8)}/${safe(sum.candidate_count || 8)}</div><div class="label">prioritized candidates remapped</div></div>
-    <div class="card"><div class="metric">${safe(sum.traceable_in_new_species_count || 8)}/${safe(sum.candidate_count || 8)}</div><div class="label">traceable in newly added species</div></div>
-    <div class="card"><div class="metric">9</div><div class="label">species in expanded backbone</div></div>
-    <div class="card"><div class="metric">3</div><div class="label">new broad-layer species</div></div>
-  `;
-
-  const rows = candidateExpansionData;
-  const species = ['Beta','Brassica','Musa','Carrot','Cassava','Lotus','Oryza','Potato','Ginger'];
-
-  let html = '<table><thead><tr><th>Candidate function</th><th>9-species orthogroup</th><th>Module</th>';
-  species.forEach(s => html += `<th>${s}</th>`);
-  html += '</tr></thead><tbody>';
-
-  rows.forEach(d => {
-    const counts = d.species_gene_counts || {};
-    html += '<tr>';
-    html += `<td>${safe(d.representative_function || d.Representative_function)}</td>`;
-    html += `<td>${safe(d.mapped_9species_orthogroup || d.Mapped_9species_Orthogroup)}</td>`;
-    html += `<td>${safe(d.benchmark_module || d.Benchmark_module)}</td>`;
-    species.forEach(s => {
-      const n = counts[s] || d[s] || 0;
-      html += `<td class="${n > 0 ? 'ok' : 'warn'}">${n}</td>`;
-    });
-    html += '</tr>';
-  });
-
-  html += '</tbody></table>';
-  document.getElementById('candidateExpansionTable').innerHTML = html;
-}
-
-function renderBenchmarkRecovery() {
-  const sum = benchmarkRecoverySummary || {};
-  document.getElementById('metricBenchmark').innerText = `${safe(sum.recovered_benchmark_modules || 11)}/${safe(sum.benchmark_modules_tested || 15)}`;
-
-  document.getElementById('benchmarkRecoverySummary').innerHTML = `
-    <div class="card"><div class="metric">${safe(sum.recovered_benchmark_modules || 11)}/${safe(sum.benchmark_modules_tested || 15)}</div><div class="label">benchmark modules recovered</div></div>
-    <div class="card"><div class="metric">${safe(sum.candidate_benchmark_links || 30)}</div><div class="label">candidate-benchmark links</div></div>
-    <div class="card"><div class="metric">${safe(sum.direct_module_recovery_modules || 1)}</div><div class="label">direct module recovery</div></div>
-    <div class="card"><div class="metric">${safe(sum.module_level_recovery_modules || 10)}</div><div class="label">module-level recoveries</div></div>
-  `;
-
-  let html = '<table><thead><tr><th>Benchmark module</th><th>Benchmark family/pathway</th><th>Status</th><th>Recovered candidates</th><th>Recovery class</th></tr></thead><tbody>';
-
-  benchmarkRecoveryData.forEach(d => {
-    const status = d.Recovery_status || d.recovery_status;
-    html += '<tr>';
-    html += `<td>${safe(d.Benchmark_module || d.benchmark_module).replaceAll('_',' ')}</td>`;
-    html += `<td>${safe(d.Benchmark_gene_or_family || d.benchmark_gene_or_family)}</td>`;
-    html += `<td class="${status === 'Recovered' ? 'ok' : 'warn'}">${safe(status)}</td>`;
-    html += `<td>${safe(d.Recovered_V0_6_Orthogroups || d.recovered_orthogroups)}</td>`;
-    html += `<td>${safe(d.Recovery_classes || d.recovery_classes)}</td>`;
-    html += '</tr>';
-  });
-
-  html += '</tbody></table>';
-  document.getElementById('benchmarkRecoveryTable').innerHTML = html;
+function fillSelect(id, values, labeler=null) {
+  const el = document.getElementById(id);
+  const first = el.querySelector('option').outerHTML;
+  el.innerHTML = first + values.map(v => `<option value="${v}">${labeler ? labeler(v) : v}</option>`).join('');
 }
 
 async function init() {
   try {
-    speciesData = await fetchJSON('json/species_browser_v1.json');
-    fillSelect('speciesOrgan', uniqueSorted(speciesData.map(d => d.underground_organ_category)));
-    fillSelect('speciesClade', uniqueSorted(speciesData.map(d => d.major_clade)));
-    fillSelect('speciesTriage', uniqueSorted(speciesData.map(d => d.resource_triage_class)));
-    renderSpeciesSummary();
-    renderSpecies();
-  } catch (e) { document.getElementById('speciesGrid').innerHTML = `<div class="error">${e.message}</div>`; }
+    geneToUGO = await fetchJSON('json/ugo_v1_8_gene_to_ugo_v1.json');
+    organCandidates = await fetchJSON('json/ugo_v1_8_organ_to_candidates_v1.json');
+    speciesCandidates = await fetchJSON('json/ugo_v1_8_species_to_candidates_v1.json');
+    validationTargets = await fetchJSON('json/ugo_v1_8_validation_targets_v1.json');
 
-  try {
-    candidateExpansionData = await fetchJSON('json/candidate_expansion_traceability_v1.json');
-    candidateExpansionSummary = await fetchJSON('json/candidate_expansion_traceability_summary_v1.json').catch(() => ({}));
-    renderCandidateExpansion();
-  } catch (e) { document.getElementById('candidateExpansionTable').innerHTML = `<div class="error">${e.message}</div>`; }
+    scoreData = await fetchJSON('json/ugo_score_explorer_v1.json').catch(() => []);
+    speciesData = await fetchJSON('json/species_browser_v1.json').catch(() => []);
+    benchmarkData = await fetchJSON('json/known_module_recovery_by_benchmark_module_v1.json').catch(() => []);
+    orthogroupDetail = await fetchJSON('json/ugo_orthogroup_detail_v1.json').catch(() => []);
 
-  try {
-    benchmarkRecoveryData = await fetchJSON('json/known_module_recovery_by_benchmark_module_v1.json');
-    benchmarkRecoverySummary = await fetchJSON('json/known_module_recovery_summary_v1.json').catch(() => ({}));
-    renderBenchmarkRecovery();
-  } catch (e) { document.getElementById('benchmarkRecoveryTable').innerHTML = `<div class="error">${e.message}</div>`; }
+    fillSelect('organSelect', uniqueSorted(organCandidates.map(d => d.organ_key)), v => {
+      const rec = organCandidates.find(d => d.organ_key === v);
+      return rec ? rec.organ_label : v;
+    });
 
-  try {
-    globalSearchIndex = await fetchJSON('json/ugo_global_search_index_v1.json');
-    fillSelect('globalTypeFilter', uniqueSorted(globalSearchIndex.map(d => d.type)));
-    renderGlobalSearch();
-  } catch (e) { document.getElementById('globalSearchResults').innerHTML = `<div class="error">${e.message}</div>`; }
+    fillSelect('speciesSelect', uniqueSorted(speciesCandidates.map(d => d.species_safe_name)), v => v.replaceAll('_', ' '));
+    fillSelect('validationClassFilter', uniqueSorted(validationTargets.map(d => d.validation_priority_class)));
 
-  try {
-    scoreData = await fetchJSON('json/ugo_score_explorer_v1.json');
-    fillSelect('scoreModuleFilter', uniqueSorted(scoreData.map(d => d.benchmark_module)));
-    renderScoreExplorer();
-  } catch (e) { document.getElementById('scoreExplorerResults').innerHTML = `<div class="error">${e.message}</div>`; }
+    renderGeneToUGO();
+    renderOrganCandidates();
+    renderSpeciesCandidates();
+    renderValidationTargets();
 
-  try {
-    transferData = await fetchJSON('json/ugo_candidate_transfer_recommendations_v1.json');
-    fillSelect('transferOrganSelect', uniqueSorted(transferData.map(d => d.target_organ_category)));
-    renderTransferTool();
-  } catch (e) { document.getElementById('transferResults').innerHTML = `<div class="error">${e.message}</div>`; }
-
-  try {
-    orthogroupDetails = await fetchJSON('json/ugo_orthogroup_detail_v1.json');
-  } catch (e) { document.getElementById('orthogroupDetailResults').innerHTML = `<div class="error">${e.message}</div>`; }
-
-  try {
-    candidateBrowserData = await fetchJSON('json/candidate_browser_v2.json');
-    document.getElementById('candidateBrowserTable').innerHTML = genericTable(candidateBrowserData, 100);
-  } catch (e) { document.getElementById('candidateBrowserTable').innerHTML = `<div class="error">${e.message}</div>`; }
-
-  try {
-    orthogroupData = await fetchJSON('json/orthogroup_browser_top_v2.json');
-    document.getElementById('orthogroupTable').innerHTML = genericTable(orthogroupData, 100);
-  } catch (e) { document.getElementById('orthogroupTable').innerHTML = `<div class="error">${e.message}</div>`; }
-
-  try {
-    downloadsData = await fetchJSON('json/downloads_manifest_v2.json');
-    document.getElementById('downloadsTable').innerHTML = genericTable(downloadsData, 100);
-  } catch (e) { document.getElementById('downloadsTable').innerHTML = `<div class="error">${e.message}</div>`; }
+  } catch(e) {
+    document.body.insertAdjacentHTML('afterbegin', `<div class="error">${e.message}</div>`);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

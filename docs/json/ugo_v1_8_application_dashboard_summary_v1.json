@@ -1,0 +1,24 @@
+{
+  "generated_on": "2026-05-29 19:40:59",
+  "platform_version": "v1.8 application-oriented layer",
+  "main_user_workflows": [
+    "Check a Gene",
+    "Find Candidates by Organ",
+    "Find Candidates by Species",
+    "Prioritize Validation Targets"
+  ],
+  "v1_7_candidate_count": 8,
+  "v1_7_mapped_candidates": 8,
+  "v1_7_candidates_present_in_both_new_species": 7,
+  "v1_7_new_species": [
+    "Panicum_virgatum",
+    "Dioscorea_rotundata"
+  ],
+  "application_json_layers": [
+    "ugo_v1_8_gene_to_ugo_v1.json",
+    "ugo_v1_8_organ_to_candidates_v1.json",
+    "ugo_v1_8_species_to_candidates_v1.json",
+    "ugo_v1_8_validation_targets_v1.json"
+  ],
+  "claim_calibration": "Application outputs are candidate-prioritization and hypothesis-generation layers, not functional validation."
+}
