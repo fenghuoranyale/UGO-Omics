@@ -354,64 +354,15 @@ function fillSelect(id, values) {
   el.innerHTML = first + values.map(v => `<option value="${v}">${v}</option>`).join('');
 }
 
-function extractRows(obj) {
-  if (Array.isArray(obj)) return obj;
-
-  if (obj && typeof obj === 'object') {
-    const preferredKeys = [
-      'data',
-      'records',
-      'items',
-      'rows',
-      'candidates',
-      'orthogroups',
-      'downloads',
-      'manifest',
-      'genes',
-      'modules'
-    ];
-
-    for (const k of preferredKeys) {
-      if (Array.isArray(obj[k])) return obj[k];
-    }
-
-    for (const k of Object.keys(obj)) {
-      if (Array.isArray(obj[k]) && obj[k].length > 0 && typeof obj[k][0] === 'object') {
-        return obj[k];
-      }
-    }
-
-    // If it is a dictionary of records, convert values to rows.
-    const vals = Object.values(obj);
-    if (vals.length > 0 && vals.every(v => v && typeof v === 'object' && !Array.isArray(v))) {
-      return vals;
-    }
-  }
-
-  return [];
-}
-
-function genericTable(obj, maxRows = 100) {
-  const rows = extractRows(obj);
-  if (!Array.isArray(rows) || rows.length === 0) {
-    return '<p>No rows found in this JSON layer. The file loaded, but its structure is not tabular.</p>';
-  }
-
-  const colSet = new Set();
-  rows.slice(0, 50).forEach(r => {
-    Object.keys(r).forEach(k => colSet.add(k));
-  });
-
-  const cols = Array.from(colSet).slice(0, 10);
-
-  let html = '<p class="small">Loaded ' + rows.length + ' rows. Showing first ' + Math.min(maxRows, rows.length) + '.</p>';
-  html += '<table><thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>';
-
+function genericTable(rows, maxRows = 100) {
+  if (!Array.isArray(rows) || rows.length === 0) return '<p>No data available.</p>';
+  const cols = Object.keys(rows[0]).slice(0, 8);
+  let html = '<table><thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>';
   rows.slice(0, maxRows).forEach(r => {
     html += '<tr>' + cols.map(c => `<td>${safe(r[c])}</td>`).join('') + '</tr>';
   });
-
   html += '</tbody></table>';
+  if (rows.length > maxRows) html += `<p class="small">Showing first ${maxRows} of ${rows.length} rows.</p>`;
   return html;
 }
 
