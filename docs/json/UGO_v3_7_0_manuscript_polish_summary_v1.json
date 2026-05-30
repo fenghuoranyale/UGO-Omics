@@ -1,0 +1,14 @@
+{
+  "version": "v3.7.0 polished Abstract, Introduction, and Results opening",
+  "generated_on": "2026-05-30 18:27:04",
+  "purpose": "Polish the manuscript opening and early Results sections into a Molecular Plant-style narrative.",
+  "outputs": [
+    "UGO_v3_7_0_polished_abstract_v1.md",
+    "UGO_v3_7_0_polished_introduction_v1.md",
+    "UGO_v3_7_0_polished_results_opening_and_results_1_to_3_v1.md",
+    "UGO_v3_7_0_polished_abstract_intro_results_1_to_3_combined_v1.md",
+    "UGO_v3_7_0_claim_calibrated_phrase_bank_v1.tsv",
+    "UGO_v3_7_0_manuscript_polish_narrative_note_v1.md"
+  ],
+  "claim_calibration": "Text emphasizes platform value, evolutionary framework, module-level recurrence, and hypothesis generation while avoiding definitive origin or functional-validation claims."
+}
