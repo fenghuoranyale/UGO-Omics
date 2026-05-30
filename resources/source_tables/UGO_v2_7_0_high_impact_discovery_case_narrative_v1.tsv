@@ -1,0 +1,6 @@
+case_step	statement	supporting_output
+1_observation	Diverse underground organs are morphologically non-equivalent but share functional demands for persistence, regrowth, developmental switching, and tissue remodeling.	v2.4.0 integrated evolutionary framework Figure 2; species-associated organ annotations
+2_phylogenetic_context	The 11-species backbone spans monocot and eudicot representatives and provides an independent BUSCO-based phylogenetic context.	v2.3.1 BUSCO tree; v2.4.0 Figure 2
+3_module_recurrence	Four candidate modules show broad cross-lineage recurrence across all 11 backbone species, while cell-wall remodeling provides a more restricted but cross-lineage structural component.	v2.5.0 regeneration-resilience toolkit module index
+4_benchmark_support	The current-scope benchmark recovered expected biological categories linked to meristem/bud regrowth, stress survival, hormone switching, transcriptional regulation, and structural remodeling.	v2.6.0 known-category recovery benchmark
+5_evolutionary_model	UGO-Omics supports a hypothesis in which underground-organ diversification repeatedly recruits a conserved regeneration-resilience toolkit through module-level convergence and regulatory redeployment.	v2.7.0 high-impact biological discovery case

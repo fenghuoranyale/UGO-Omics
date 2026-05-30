@@ -1,0 +1,57 @@
+{
+  "version": "v2.7.0 high-impact biological discovery case",
+  "generated_on": "2026-05-30 17:33:27",
+  "case_name": "recurrent regeneration-resilience core toolkit across underground-organ systems",
+  "central_claim": "UGO-Omics identifies a candidate regeneration-resilience core composed of recurrent meristem/regrowth, stress-resilience, hormone-related, and developmental regulatory modules across phylogenetically divergent underground-organ species.",
+  "core_modules": [
+    {
+      "module_id": "developmental_tf",
+      "module_label": "Developmental TF",
+      "orthogroup": "OG0000273",
+      "integrated_discovery_score": 1.0,
+      "species_count": 11,
+      "major_clade_count": 2
+    },
+    {
+      "module_id": "hormone_regulation",
+      "module_label": "Hormone-related regulation",
+      "orthogroup": "OG0006937",
+      "integrated_discovery_score": 1.0,
+      "species_count": 11,
+      "major_clade_count": 2
+    },
+    {
+      "module_id": "meristem_regrowth",
+      "module_label": "Meristem / regrowth",
+      "orthogroup": "OG0000863",
+      "integrated_discovery_score": 1.0,
+      "species_count": 11,
+      "major_clade_count": 2
+    },
+    {
+      "module_id": "stress_resilience",
+      "module_label": "Stress resilience",
+      "orthogroup": "OG0004958",
+      "integrated_discovery_score": 1.0,
+      "species_count": 11,
+      "major_clade_count": 2
+    }
+  ],
+  "supporting_modules": [
+    {
+      "module_id": "cell_wall_remodeling",
+      "module_label": "Cell-wall remodeling",
+      "orthogroup": "OG0000154",
+      "integrated_discovery_score": 0.65,
+      "species_count": 4,
+      "major_clade_count": 2
+    }
+  ],
+  "input_layers": [
+    "v2.3.1 BUSCO phylogenetic context",
+    "v2.4.0 integrated evolutionary framework Figure 2",
+    "v2.5.0 evolutionary mechanism layer",
+    "v2.6.0 known-category recovery benchmark"
+  ],
+  "claim_calibration": "This discovery case is hypothesis-generating. It prioritizes candidate modules and a candidate evolutionary model, but does not demonstrate functional validation or definitive reconstruction of underground-organ origins."
+}

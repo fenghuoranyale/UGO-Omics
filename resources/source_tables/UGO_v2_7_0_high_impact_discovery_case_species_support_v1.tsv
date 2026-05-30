@@ -1,0 +1,12 @@
+species_safe_name	species_label	major_clade	underground_organ_category	core_module_count	core_modules_present	supporting_module_count	supporting_modules_present	case_support_interpretation
+Beta_vulgaris	Beta vulgaris	eudicot	storage_root	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	1	cell_wall_remodeling	supports cross-lineage regeneration-resilience core case
+Brassica_rapa	Brassica rapa	eudicot	root_hypocotyl_storage	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
+Daucus_carota	Daucus carota	eudicot	storage_root	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
+Dioscorea_rotundata	Dioscorea rotundata	monocot	tuber	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	1	cell_wall_remodeling	supports cross-lineage regeneration-resilience core case
+Manihot_esculenta	Manihot esculenta	eudicot	storage_root	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
+Musa_acuminata	Musa acuminata	monocot	corm_rhizome_like_stem	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	1	cell_wall_remodeling	supports cross-lineage regeneration-resilience core case
+Nelumbo_nucifera	Nelumbo nucifera	eudicot	rhizome	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
+Oryza_longistaminata	Oryza longistaminata	monocot	rhizome	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
+Panicum_virgatum	Panicum virgatum	monocot	rhizome	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	1	cell_wall_remodeling	supports cross-lineage regeneration-resilience core case
+Solanum_tuberosum	Solanum tuberosum	eudicot	tuber	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
+Zingiber_officinale	Zingiber officinale	monocot	rhizome	4	developmental_tf; hormone_regulation; meristem_regrowth; stress_resilience	0		supports cross-lineage regeneration-resilience core case
