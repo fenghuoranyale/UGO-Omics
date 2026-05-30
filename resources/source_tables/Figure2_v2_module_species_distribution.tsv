@@ -1,0 +1,56 @@
+module_id	module_label	short_label	orthogroup	species_safe_name	species_label	major_clade	underground_organ_category	presence	support_record_count	support_candidate_functions	support_orthogroups	support_modules	support_scores
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Beta_vulgaris	Beta vulgaris	eudicot	storage_root	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Brassica_rapa	Brassica rapa	eudicot	root_hypocotyl_storage	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Daucus_carota	Daucus carota	eudicot	storage_root	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Dioscorea_rotundata	Dioscorea rotundata	monocot	tuber	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Manihot_esculenta	Manihot esculenta	eudicot	storage_root	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Musa_acuminata	Musa acuminata	monocot	corm_rhizome_like_stem	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Nelumbo_nucifera	Nelumbo nucifera	eudicot	rhizome	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Oryza_longistaminata	Oryza longistaminata	monocot	rhizome	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Panicum_virgatum	Panicum virgatum	monocot	rhizome	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Solanum_tuberosum	Solanum tuberosum	eudicot	tuber	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	Zingiber_officinale	Zingiber officinale	monocot	rhizome	1	1	Early nodulin-like meristem/regrowth candidate	OG0000863	Meristem_bud_regrowth	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Beta_vulgaris	Beta vulgaris	eudicot	storage_root	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Brassica_rapa	Brassica rapa	eudicot	root_hypocotyl_storage	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Daucus_carota	Daucus carota	eudicot	storage_root	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Dioscorea_rotundata	Dioscorea rotundata	monocot	tuber	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Manihot_esculenta	Manihot esculenta	eudicot	storage_root	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Musa_acuminata	Musa acuminata	monocot	corm_rhizome_like_stem	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Nelumbo_nucifera	Nelumbo nucifera	eudicot	rhizome	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Oryza_longistaminata	Oryza longistaminata	monocot	rhizome	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Panicum_virgatum	Panicum virgatum	monocot	rhizome	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Solanum_tuberosum	Solanum tuberosum	eudicot	tuber	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+stress_resilience	Stress resilience	Stress	OG0004958	Zingiber_officinale	Zingiber officinale	monocot	rhizome	1	1	Non-symbiotic hemoglobin / stress-resilience candidate	OG0004958	Stress_resilience	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Beta_vulgaris	Beta vulgaris	eudicot	storage_root	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Brassica_rapa	Brassica rapa	eudicot	root_hypocotyl_storage	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Daucus_carota	Daucus carota	eudicot	storage_root	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Dioscorea_rotundata	Dioscorea rotundata	monocot	tuber	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Manihot_esculenta	Manihot esculenta	eudicot	storage_root	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Musa_acuminata	Musa acuminata	monocot	corm_rhizome_like_stem	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Nelumbo_nucifera	Nelumbo nucifera	eudicot	rhizome	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Oryza_longistaminata	Oryza longistaminata	monocot	rhizome	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Panicum_virgatum	Panicum virgatum	monocot	rhizome	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Solanum_tuberosum	Solanum tuberosum	eudicot	tuber	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	Zingiber_officinale	Zingiber officinale	monocot	rhizome	1	1	Carotenoid cleavage dioxygenase / hormone-related regulation	OG0006937	Hormone_regulation	1.0
+developmental_tf	Developmental TF	TF	OG0000273	Beta_vulgaris	Beta vulgaris	eudicot	storage_root	1	4	MYB-like transcriptional regulator; NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000139; OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Brassica_rapa	Brassica rapa	eudicot	root_hypocotyl_storage	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Daucus_carota	Daucus carota	eudicot	storage_root	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Dioscorea_rotundata	Dioscorea rotundata	monocot	tuber	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Manihot_esculenta	Manihot esculenta	eudicot	storage_root	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Musa_acuminata	Musa acuminata	monocot	corm_rhizome_like_stem	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Nelumbo_nucifera	Nelumbo nucifera	eudicot	rhizome	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Oryza_longistaminata	Oryza longistaminata	monocot	rhizome	1	2	bHLH-like transcriptional regulator	OG0000273; OG0000767	Developmental_TF	0.678
+developmental_tf	Developmental TF	TF	OG0000273	Panicum_virgatum	Panicum virgatum	monocot	rhizome	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Solanum_tuberosum	Solanum tuberosum	eudicot	tuber	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+developmental_tf	Developmental TF	TF	OG0000273	Zingiber_officinale	Zingiber officinale	monocot	rhizome	1	3	NAC-like transcriptional regulator; bHLH-like transcriptional regulator	OG0000273; OG0000767; OG0003725	Developmental_TF	0.678; 1.0
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Beta_vulgaris	Beta vulgaris	eudicot	storage_root	1	1	XTH / xyloglucan cell-wall remodeling	OG0000154	Cell_wall_remodeling	1.0
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Brassica_rapa	Brassica rapa	eudicot	root_hypocotyl_storage	0	0				
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Daucus_carota	Daucus carota	eudicot	storage_root	0	0				
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Dioscorea_rotundata	Dioscorea rotundata	monocot	tuber	1	1	XTH / xyloglucan cell-wall remodeling	OG0000154	Cell_wall_remodeling	1.0
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Manihot_esculenta	Manihot esculenta	eudicot	storage_root	0	0				
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Musa_acuminata	Musa acuminata	monocot	corm_rhizome_like_stem	1	1	XTH / xyloglucan cell-wall remodeling	OG0000154	Cell_wall_remodeling	1.0
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Nelumbo_nucifera	Nelumbo nucifera	eudicot	rhizome	0	0				
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Oryza_longistaminata	Oryza longistaminata	monocot	rhizome	0	0				
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Panicum_virgatum	Panicum virgatum	monocot	rhizome	1	1	XTH / xyloglucan cell-wall remodeling	OG0000154	Cell_wall_remodeling	1.0
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Solanum_tuberosum	Solanum tuberosum	eudicot	tuber	0	0				
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	Zingiber_officinale	Zingiber officinale	monocot	rhizome	0	0				

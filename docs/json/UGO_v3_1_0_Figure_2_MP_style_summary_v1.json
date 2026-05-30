@@ -1,0 +1,16 @@
+{
+  "version": "v3.1.0 Figure 2 MP-style polished version",
+  "generated_on": "2026-05-30 17:48:53",
+  "purpose": "Generate a polished MP-style Figure 2 integrating tiered species design, BUSCO phylogeny, and species-level module distribution.",
+  "outputs": [
+    "Figure_2_integrated_evolutionary_framework_v2_MP_style.png",
+    "Figure_2_integrated_evolutionary_framework_v2_MP_style.pdf"
+  ],
+  "input_layers": [
+    "v2.3.0 species design",
+    "v2.3.1 BUSCO phylogenetic context",
+    "v2.3.2 module phylogenetic distribution",
+    "v3.0.0 figure polishing strategy"
+  ],
+  "claim_calibration": "Figure shows species-level candidate module recurrence in phylogenetic context and avoids definitive origin or functional-validation claims."
+}
