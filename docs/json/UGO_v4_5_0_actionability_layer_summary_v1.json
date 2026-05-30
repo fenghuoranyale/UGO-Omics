@@ -1,0 +1,15 @@
+{
+  "version": "v4.5.0 UGO Actionability Layer",
+  "generated_on": "2026-05-30 19:04:05",
+  "purpose": "Elevate candidate-module discovery into practical candidate-family prioritization using known-gene anchors, actionability scoring, and species-specific use cases.",
+  "outputs": [
+    "UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+    "UGO_v4_5_0_known_anchor_project_text_scan_v1.tsv",
+    "UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv",
+    "UGO_v4_5_0_actionable_candidate_family_ranking_v1.tsv",
+    "UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+    "UGO_Omics_full_manuscript_draft_v4_5_0_actionability_layer.md",
+    "UGO_v4_5_0_actionability_layer_reviewer_note_v1.md"
+  ],
+  "claim_calibration": "This layer supports practical candidate-family prioritization and species-specific hypotheses, not experimental validation."
+}
