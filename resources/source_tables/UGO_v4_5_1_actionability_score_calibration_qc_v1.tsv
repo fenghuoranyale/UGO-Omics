@@ -1,0 +1,6 @@
+metric	value	details
+n_candidate_families	14	
+min_score	0.306	
+max_score	0.94	
+perfect_scores	0	should be 0
+tier_counts	"{""Future expansion candidate family"": 1, ""Tier 1 high-actionability candidate family"": 11, ""Tier 2 actionable candidate family"": 2}"	

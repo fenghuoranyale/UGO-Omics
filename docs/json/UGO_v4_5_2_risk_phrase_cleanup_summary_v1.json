@@ -1,0 +1,11 @@
+{
+  "version": "v4.5.2 risk-phrase cleanup",
+  "generated_on": "2026-05-30 19:10:59",
+  "purpose": "Clean flagged wording from v4.5.1 actionability manuscript and note while preserving claim calibration.",
+  "outputs": [
+    "UGO_Omics_full_manuscript_draft_v4_5_2_actionability_score_calibrated_risk_phrase_clean.md",
+    "UGO_v4_5_2_actionability_score_calibration_note_risk_phrase_clean_v1.md",
+    "UGO_v4_5_2_risk_phrase_patch_qc_v1.tsv"
+  ],
+  "claim_calibration": "Wording now uses direct functional evidence language and avoids overclaiming."
+}

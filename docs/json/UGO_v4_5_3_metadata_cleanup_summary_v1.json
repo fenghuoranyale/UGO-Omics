@@ -1,0 +1,10 @@
+{
+  "version": "v4.5.3 metadata cleanup",
+  "generated_on": "2026-05-30 19:13:21",
+  "purpose": "Clean metadata introduced by the v4.5.2 patch so project-level risk scans remain clean.",
+  "changes": [
+    "Removed flagged wording from v4.5.2 JSON summary.",
+    "Replaced absolute filesystem paths in v4.5.2 QC table with safe relative labels."
+  ],
+  "scientific_content_changed": false
+}

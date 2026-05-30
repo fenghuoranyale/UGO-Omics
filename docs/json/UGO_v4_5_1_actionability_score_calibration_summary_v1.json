@@ -1,0 +1,21 @@
+{
+  "version": "v4.5.1 actionability score calibration patch",
+  "generated_on": "2026-05-30 19:08:51",
+  "purpose": "Recalibrate actionability scores to avoid artificial perfect-score saturation while preserving the candidate-family prioritization framework.",
+  "n_candidate_families": 14,
+  "min_score": 0.306,
+  "max_score": 0.94,
+  "perfect_scores": 0,
+  "tier_counts": {
+    "Tier 1 high-actionability candidate family": 11,
+    "Tier 2 actionable candidate family": 2,
+    "Future expansion candidate family": 1
+  },
+  "outputs": [
+    "UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+    "UGO_v4_5_1_actionability_score_calibration_qc_v1.tsv",
+    "UGO_Omics_full_manuscript_draft_v4_5_1_actionability_score_calibrated.md",
+    "UGO_v4_5_1_actionability_score_calibration_note_v1.md"
+  ],
+  "claim_calibration": "The ranking supports candidate-family prioritization and does not imply experimental validation."
+}
