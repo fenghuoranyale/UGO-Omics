@@ -1,0 +1,6 @@
+used_alignments	531
+skipped_alignments	0
+supermatrix_length	279498
+species_count	11
+missing_data_policy	missing species for each locus filled with gap characters
+marker_threshold	BUSCO loci present as single-copy in at least 9 of 11 species

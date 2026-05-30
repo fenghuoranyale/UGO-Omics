@@ -1,0 +1,22 @@
+{
+  "version": "v2.3.1 BUSCO-based independent species phylogeny",
+  "main_tree": {
+    "matrix": "relaxed 9-of-11 BUSCO",
+    "busco_loci": 531,
+    "supermatrix_length_aa": 279498,
+    "species_count": 11,
+    "missing_data_policy": "Missing species for each locus were coded as gap characters",
+    "iqtree_model": "Q.PLANT+F+R4",
+    "role": "Main independent phylogenetic context tree"
+  },
+  "sensitivity_tree": {
+    "matrix": "relaxed 10-of-11 BUSCO",
+    "busco_loci": 81,
+    "supermatrix_length_aa": 40848,
+    "species_count": 11,
+    "missing_data_policy": "Missing species for each locus were coded as gap characters",
+    "iqtree_model": "Q.PLANT+F+I+R4",
+    "role": "Sensitivity analysis"
+  },
+  "interpretation": "The BUSCO tree provides an independent phylogenetic context for interpreting cross-lineage recurrence of UGO candidate modules. It is not intended as a definitive reconstruction of underground-organ origins."
+}
