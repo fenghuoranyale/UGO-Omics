@@ -1,0 +1,12 @@
+{
+  "version": "v3.9.0 full polished manuscript draft assembly",
+  "generated_on": "2026-05-30 18:33:50",
+  "title": "UGO-Omics reveals a recurrent regeneration\u2013resilience toolkit across underground-organ systems",
+  "purpose": "Assemble polished Abstract, Introduction, Results, Discussion, Methods, Data availability, Limitations, Figure captions, and Supplementary table list into one manuscript draft.",
+  "main_outputs": [
+    "UGO_Omics_full_polished_manuscript_draft_v3_9_0.md",
+    "UGO_Omics_full_polished_manuscript_draft_v3_9_0_no_captions.md",
+    "UGO_v3_9_0_full_manuscript_section_qc_v1.tsv"
+  ],
+  "claim_calibration": "Draft preserves candidate-module and hypothesis-generating language and avoids definitive origin or functional-validation claims."
+}
