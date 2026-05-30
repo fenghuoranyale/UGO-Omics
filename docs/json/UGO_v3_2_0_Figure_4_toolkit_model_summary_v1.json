@@ -1,0 +1,15 @@
+{
+  "version": "v3.2.0 Figure 4 regeneration-resilience toolkit model",
+  "generated_on": "2026-05-30 17:53:14",
+  "purpose": "Generate MP-style conceptual Figure 4 showing recurrent modular reactivation of a regeneration-resilience toolkit across non-equivalent underground-organ contexts.",
+  "outputs": [
+    "Figure_4_regeneration_resilience_toolkit_model_v1.png",
+    "Figure_4_regeneration_resilience_toolkit_model_v1.pdf"
+  ],
+  "input_layers": [
+    "v2.5.0 evolutionary mechanism layer",
+    "v2.7.0 high-impact biological discovery case",
+    "v3.0.0 figure polishing plan"
+  ],
+  "claim_calibration": "Conceptual model is hypothesis-generating and avoids definitive origin or functional-validation claims."
+}
