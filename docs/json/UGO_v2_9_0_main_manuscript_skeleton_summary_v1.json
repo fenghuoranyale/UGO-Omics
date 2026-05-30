@@ -1,0 +1,12 @@
+{
+  "version": "v2.9.0 main manuscript skeleton",
+  "generated_on": "2026-05-30 17:40:21",
+  "title": "UGO-Omics reveals a recurrent regeneration\u2013resilience toolkit across underground-organ systems",
+  "purpose": "Create a unified manuscript skeleton integrating UGO-Omics platform, evolutionary framework, benchmark, and biological discovery case.",
+  "main_outputs": [
+    "UGO_v2_9_0_main_manuscript_skeleton_v1.md",
+    "UGO_v2_9_0_MP_positioning_paragraph_v1.md",
+    "UGO_v2_9_0_manuscript_skeleton_checklist_v1.md"
+  ],
+  "claim_calibration": "Manuscript skeleton uses hypothesis-generating language and avoids definitive origin reconstruction or functional-validation claims."
+}
