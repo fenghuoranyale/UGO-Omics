@@ -1,0 +1,33 @@
+{
+  "version": "v2.0.5",
+  "entries": [
+    {
+      "entry_point": "I have a protein sequence",
+      "workflow": "Sequence-to-UGO",
+      "what_it_does": "Maps a protein FASTA query to UGO orthogroups, candidate modules, UGO scores, biological discovery cases, and validation-priority annotations.",
+      "best_for": "Researchers starting from a cloned gene, protein sequence, homolog candidate, or protein FASTA from a non-model species.",
+      "website_section": "Sequence-to-UGO"
+    },
+    {
+      "entry_point": "I have a DEG/QTL/GWAS gene list",
+      "workflow": "Gene-list-to-UGO",
+      "what_it_does": "Maps user gene lists to UGO candidate modules and ranked module summaries.",
+      "best_for": "Researchers with RNA-seq DEGs, QTL interval genes, GWAS peak candidates, or manually curated candidate lists.",
+      "website_section": "Gene-list-to-UGO"
+    },
+    {
+      "entry_point": "I study a species",
+      "workflow": "Resource Finder",
+      "what_it_does": "Provides species-centered resource cards with available candidate modules, resource layers, and recommended next steps.",
+      "best_for": "Researchers who want to know what UGO-Omics can provide for a target species.",
+      "website_section": "Resource Finder"
+    },
+    {
+      "entry_point": "I study an underground organ",
+      "workflow": "Organ Kits",
+      "what_it_does": "Provides organ-centered candidate modules, biological overview, suggested validation focus, and recommended workflows.",
+      "best_for": "Researchers studying rhizome, tuber, storage root, bulb, corm, root crown, or stolon systems.",
+      "website_section": "Organ Kits"
+    }
+  ]
+}

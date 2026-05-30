@@ -1,0 +1,41 @@
+{
+  "version": "v2.0.5",
+  "demos": [
+    {
+      "demo": "Protein sequence to UGO module",
+      "input": "Example protein FASTA",
+      "output": "example_sequence_to_UGO_result.tsv",
+      "result_summary": "The example maps protein queries to candidate UGO orthogroups and returns candidate function, benchmark module, UGO score, validation-priority class, biological discovery case, suggested validation system, and interpretation.",
+      "input_link": "toolkits/P2_v2_0_1_sequence_to_ugo/examples/example_query_proteins.fa",
+      "output_link": "toolkits/P2_v2_0_1_sequence_to_ugo/example_results/example_sequence_to_UGO_result.tsv",
+      "workflow": "Sequence-to-UGO"
+    },
+    {
+      "demo": "Gene list to ranked module summary",
+      "input": "Example gene list",
+      "output": "example_gene_list_to_UGO.module_summary.tsv",
+      "result_summary": "The example maps user input IDs to prioritized UGO candidate modules and produces a ranked module summary with input-gene support, UGO score, validation-priority class, and suggested validation system.",
+      "input_link": "toolkits/P2_v2_0_2_gene_list_to_ugo/examples/example_gene_list.txt",
+      "output_link": "toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv",
+      "workflow": "Gene-list-to-UGO"
+    },
+    {
+      "demo": "Species to candidate resource card",
+      "input": "Species selection",
+      "output": "Resource Finder card",
+      "result_summary": "The Resource Finder summarizes available UGO candidate modules and recommended workflows for a selected species.",
+      "input_link": "json/ugo_v2_0_3_species_resource_finder_v1.json",
+      "output_link": "json/ugo_v2_0_3_species_resource_finder_v1.json",
+      "workflow": "Resource Finder"
+    },
+    {
+      "demo": "Organ context to candidate kit",
+      "input": "Organ selection",
+      "output": "Organ Kit",
+      "result_summary": "Organ Kits summarize biological context, prioritized modules, recommended workflow, and validation focus for each underground-organ type.",
+      "input_link": "json/ugo_v2_0_3_organ_kits_v1.json",
+      "output_link": "json/ugo_v2_0_3_organ_kits_v1.json",
+      "workflow": "Organ Kits"
+    }
+  ]
+}

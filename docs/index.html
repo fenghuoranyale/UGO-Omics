@@ -472,6 +472,48 @@
       color: #174a73;
     }
 
+
+    .usability-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .usability-card {
+      border: 1px solid #dce6f0;
+      border-radius: 18px;
+      padding: 18px;
+      background: #ffffff;
+      box-shadow: 0 6px 20px rgba(18, 58, 90, 0.08);
+    }
+
+    .usability-card h3 {
+      margin-top: 0;
+      color: #123a5a;
+    }
+
+    .demo-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e9f5ef;
+      color: #18623a;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .mini-command {
+      white-space: pre-wrap;
+      background: #f8fafc;
+      border: 1px solid #dce6f0;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 13px;
+      overflow-x: auto;
+    }
+
 </style>
 </head>
 
@@ -500,6 +542,9 @@
 <nav>
   <button class="active" onclick="showSection('start', this)">Start Here</button>
   <button onclick="showSection('checkGene', this)">Check a Gene</button>
+  <button onclick="showSection('quickStartGuide', this)">Quick Guide</button>
+  <button onclick="showSection('demoResults', this)">Demo Results</button>
+  <button onclick="showSection('useCases', this)">Use Cases</button>
   <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
   <button onclick="showSection('geneListToUGO', this)">Gene-list-to-UGO</button>
   <button onclick="showSection('resourceFinder', this)">Resource Finder</button>
@@ -560,6 +605,166 @@
   </div>
 </section>
 
+
+
+<section id="quickStartGuide" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Quick Guide</h2>
+      <p>Choose the entry point that matches your data. UGO-Omics is designed for sequence, gene-list, species, and organ-centered candidate discovery.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    First-time users and reviewers can use this page to understand what UGO-Omics does within 30 seconds.
+  </div>
+
+  <div class="usability-grid">
+    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('sequenceToUGO'); return false;">
+      <span class="demo-badge">Protein sequence</span>
+      <h3>I have a protein sequence</h3>
+      <p>Use Sequence-to-UGO to map protein FASTA queries to UGO orthogroups, candidate modules, UGO scores, and validation-priority annotations.</p>
+      <span class="card-action">Go to Sequence-to-UGO →</span>
+    </a>
+
+    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('geneListToUGO'); return false;">
+      <span class="demo-badge">Gene list</span>
+      <h3>I have DEG/QTL/GWAS genes</h3>
+      <p>Use Gene-list-to-UGO to map gene lists to prioritized candidate modules and ranked module summaries.</p>
+      <span class="card-action">Go to Gene-list-to-UGO →</span>
+    </a>
+
+    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('resourceFinder'); return false;">
+      <span class="demo-badge">Species</span>
+      <h3>I study a species</h3>
+      <p>Use Resource Finder to retrieve species-centered candidate modules, resource layers, and recommended workflows.</p>
+      <span class="card-action">Go to Resource Finder →</span>
+    </a>
+
+    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('organKits'); return false;">
+      <span class="demo-badge">Organ system</span>
+      <h3>I study an underground organ</h3>
+      <p>Use Organ Kits to retrieve organ-centered modules, workflows, and validation-focused hypotheses.</p>
+      <span class="card-action">Go to Organ Kits →</span>
+    </a>
+  </div>
+
+  <div class="panel">
+    <h3>30-second reviewer route</h3>
+    <p><b>Step 1.</b> Open Demo Results to see example inputs and outputs.</p>
+    <p><b>Step 2.</b> Open Resource Finder or Organ Kits to test species- and organ-centered browsing.</p>
+    <p><b>Step 3.</b> Open Sequence-to-UGO or Gene-list-to-UGO to see how users can bring their own data into the platform.</p>
+  </div>
+</section>
+
+
+<section id="demoResults" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Demo Results</h2>
+      <p>Use these demos to quickly verify how UGO-Omics transforms user inputs into candidate modules and validation-priority outputs.</p>
+    </div>
+  </div>
+
+  <div class="usability-grid">
+    <div class="usability-card">
+      <span class="demo-badge">Demo 1</span>
+      <h3>Protein sequence → UGO module</h3>
+      <p><b>Input:</b> example protein FASTA</p>
+      <p><b>Output:</b> sequence-to-UGO result table with orthogroup, candidate module, UGO score, validation-priority class, and suggested validation system.</p>
+      <p><a href="toolkits/P2_v2_0_1_sequence_to_ugo/examples/example_query_proteins.fa" target="_blank">Open input FASTA</a></p>
+      <p><a href="toolkits/P2_v2_0_1_sequence_to_ugo/example_results/example_sequence_to_UGO_result.tsv" target="_blank">Open demo output</a></p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Demo 2</span>
+      <h3>Gene list → ranked module summary</h3>
+      <p><b>Input:</b> example DEG/QTL/GWAS-style gene list</p>
+      <p><b>Output:</b> matched genes, unmatched genes, and ranked UGO module summary.</p>
+      <p><a href="toolkits/P2_v2_0_2_gene_list_to_ugo/examples/example_gene_list.txt" target="_blank">Open input gene list</a></p>
+      <p><a href="toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv" target="_blank">Open module summary</a></p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Demo 3</span>
+      <h3>Species → resource card</h3>
+      <p><b>Input:</b> species selection</p>
+      <p><b>Output:</b> species-centered candidate modules, resource layers, and recommended workflow.</p>
+      <p><a href="json/ugo_v2_0_3_species_resource_finder_v1.json" target="_blank">Open species resource JSON</a></p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Demo 4</span>
+      <h3>Organ → organ kit</h3>
+      <p><b>Input:</b> underground-organ type</p>
+      <p><b>Output:</b> biological overview, top modules, suggested workflow, and validation focus.</p>
+      <p><a href="json/ugo_v2_0_3_organ_kits_v1.json" target="_blank">Open organ kit JSON</a></p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Example commands</h3>
+    <div class="mini-command">bash scripts/run_sequence_to_UGO.sh examples/example_query_proteins.fa example_results/example_query</div>
+    <br>
+    <div class="mini-command">bash scripts/run_gene_list_to_UGO.sh examples/example_gene_list.txt example_results/example_gene_list_to_UGO</div>
+  </div>
+</section>
+
+
+<section id="useCases" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Use Cases</h2>
+      <p>Example research questions that UGO-Omics is designed to support.</p>
+    </div>
+  </div>
+
+  <div class="usability-grid">
+    <div class="usability-card">
+      <span class="demo-badge">Use case</span>
+      <h3>Prioritize candidates from rhizome RNA-seq</h3>
+      <p><b>Question:</b> I have DEGs from rhizome initiation. Which genes should I prioritize?</p>
+      <p><b>Entry point:</b> Gene-list-to-UGO</p>
+      <p><b>Output:</b> ranked UGO module summary with UGO scores and validation-priority classes.</p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Use case</span>
+      <h3>Interpret a potato tuber candidate</h3>
+      <p><b>Question:</b> Is my tuber candidate part of a conserved underground-organ module?</p>
+      <p><b>Entry point:</b> Sequence-to-UGO or Gene-list-to-UGO</p>
+      <p><b>Output:</b> orthogroup, candidate module, biological discovery case, and suggested validation system.</p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Use case</span>
+      <h3>Start from a species</h3>
+      <p><b>Question:</b> What resources and candidate modules are available for my target species?</p>
+      <p><b>Entry point:</b> Resource Finder</p>
+      <p><b>Output:</b> species-centered resource card and recommended workflow.</p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Use case</span>
+      <h3>Start from an underground organ</h3>
+      <p><b>Question:</b> Which modules are most relevant to rhizome, tuber, storage root, or root crown biology?</p>
+      <p><b>Entry point:</b> Organ Kits</p>
+      <p><b>Output:</b> organ-specific candidate modules, workflow, and validation focus.</p>
+    </div>
+
+    <div class="usability-card">
+      <span class="demo-badge">Use case</span>
+      <h3>Select validation-ready candidates</h3>
+      <p><b>Question:</b> Which candidates have the strongest support for follow-up validation?</p>
+      <p><b>Entry point:</b> Validation Targets and Biological Discovery Case</p>
+      <p><b>Output:</b> validation-ready shortlist and conserved module discovery cases.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    UGO-Omics prioritizes hypotheses. It does not treat candidate matches as functional validation.
+  </div>
+</section>
 
 <section id="sequenceToUGO" class="section">
   <div class="section-title">
@@ -1477,6 +1682,15 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+function gotoUGOSection(sectionId) {
+  const btn = Array.from(document.querySelectorAll('button')).find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(sectionId));
+  if (typeof showSection === 'function') {
+    showSection(sectionId, btn || null);
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+}
+
 </script>
 </body>
 </html>

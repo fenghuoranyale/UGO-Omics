@@ -1,0 +1,17 @@
+{
+  "toolkit_version": "v2.0.5 Reviewer-facing usability layer",
+  "generated_on": "2026-05-29 22:11:22",
+  "purpose": "Help editors, reviewers, and first-time users understand how to use UGO-Omics within 30 seconds.",
+  "pages_added": [
+    "Start Here",
+    "Demo Results",
+    "Use Cases"
+  ],
+  "entry_points": [
+    "Sequence-to-UGO",
+    "Gene-list-to-UGO",
+    "Resource Finder",
+    "Organ Kits"
+  ],
+  "claim_calibration": "All outputs are framed as candidate-prioritization and hypothesis-generation resources, not functional validation."
+}

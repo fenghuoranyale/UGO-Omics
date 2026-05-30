@@ -25,3 +25,13 @@ UGO-Omics outputs are designed for candidate prioritization and hypothesis gener
 ## Large files
 
 The public GitHub repository stores the website, JSON layers, lightweight toolkits, compact lookup tables, and example files. Large search databases are distributed through the full release archive and are intended for archival deposition.
+
+## Reviewer-facing usability pages
+
+To help first-time users and reviewers understand the platform quickly, the website also includes:
+
+- Start Here
+- Demo Results
+- Use Cases
+
+These pages explain how users can start from protein sequences, gene lists, species, or underground-organ systems.

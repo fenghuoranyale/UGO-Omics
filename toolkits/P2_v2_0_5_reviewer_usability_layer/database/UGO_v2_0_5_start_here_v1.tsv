@@ -1,0 +1,5 @@
+entry_point	workflow	what_it_does	best_for	website_section
+I have a protein sequence	Sequence-to-UGO	Maps a protein FASTA query to UGO orthogroups, candidate modules, UGO scores, biological discovery cases, and validation-priority annotations.	Researchers starting from a cloned gene, protein sequence, homolog candidate, or protein FASTA from a non-model species.	Sequence-to-UGO
+I have a DEG/QTL/GWAS gene list	Gene-list-to-UGO	Maps user gene lists to UGO candidate modules and ranked module summaries.	Researchers with RNA-seq DEGs, QTL interval genes, GWAS peak candidates, or manually curated candidate lists.	Gene-list-to-UGO
+I study a species	Resource Finder	Provides species-centered resource cards with available candidate modules, resource layers, and recommended next steps.	Researchers who want to know what UGO-Omics can provide for a target species.	Resource Finder
+I study an underground organ	Organ Kits	Provides organ-centered candidate modules, biological overview, suggested validation focus, and recommended workflows.	Researchers studying rhizome, tuber, storage root, bulb, corm, root crown, or stolon systems.	Organ Kits

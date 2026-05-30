@@ -1,0 +1,40 @@
+{
+  "version": "v2.0.5",
+  "use_cases": [
+    {
+      "use_case": "Prioritize candidates from rhizome RNA-seq",
+      "user_question": "I have DEGs from rhizome initiation. Which genes should I prioritize?",
+      "recommended_entry": "Gene-list-to-UGO",
+      "expected_output": "Matched UGO modules, ranked module summary, candidate functions, UGO scores, and validation-priority classes.",
+      "interpretation": "Modules with multiple matched input genes and high validation-priority scores represent stronger follow-up hypotheses."
+    },
+    {
+      "use_case": "Interpret a potato tuber candidate",
+      "user_question": "I found a candidate gene in potato tuber RNA-seq. Is it part of a conserved underground-organ module?",
+      "recommended_entry": "Sequence-to-UGO or Gene-list-to-UGO",
+      "expected_output": "UGO orthogroup match, candidate module annotation, UGO score, biological discovery case, and suggested validation system.",
+      "interpretation": "A match to a prioritized module supports cross-system candidate prioritization, not functional proof."
+    },
+    {
+      "use_case": "Start a study in a non-model underground-organ species",
+      "user_question": "I study a species with limited functional data. What UGO resources are available?",
+      "recommended_entry": "Resource Finder",
+      "expected_output": "Species-centered resource card with available candidate modules and recommended next analytical steps.",
+      "interpretation": "The Resource Finder helps users decide whether to start from homolog search, gene-list mapping, or organ-centered module prioritization."
+    },
+    {
+      "use_case": "Compare candidate modules across organ systems",
+      "user_question": "Which modules are shared across rhizome, tuber, storage root, and root crown contexts?",
+      "recommended_entry": "Organ Kits",
+      "expected_output": "Organ-specific candidate modules, recommended workflows, validation focus, and module-level biological interpretation.",
+      "interpretation": "Shared modules provide hypotheses for conserved underground-organ developmental and stress-resilience programs."
+    },
+    {
+      "use_case": "Select validation-ready candidates",
+      "user_question": "Which candidates have the strongest support for follow-up validation?",
+      "recommended_entry": "Validation Targets and Biological Discovery Case",
+      "expected_output": "Validation-ready shortlist, conserved module discovery cases, and suggested validation systems.",
+      "interpretation": "Top candidates are prioritized for follow-up but still require experimental validation."
+    }
+  ]
+}
