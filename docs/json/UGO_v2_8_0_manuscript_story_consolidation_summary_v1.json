@@ -1,0 +1,24 @@
+{
+  "version": "v2.8.0 manuscript story consolidation",
+  "generated_on": "2026-05-30 17:37:11",
+  "recommended_title": "UGO-Omics reveals a recurrent regeneration\u2013resilience toolkit across underground-organ systems",
+  "central_story": "UGO-Omics is a cross-species, evolution-informed discovery platform that identifies a recurrent regeneration-resilience toolkit across underground-organ systems.",
+  "primary_contribution": [
+    "51-species underground-organ atlas",
+    "11-species high-confidence analytical backbone",
+    "independent BUSCO phylogenetic context",
+    "researcher-facing query tools",
+    "conserved module recurrence",
+    "regeneration-resilience toolkit model",
+    "known-category recovery benchmark",
+    "high-impact biological discovery case"
+  ],
+  "recommended_figure_order": [
+    "Figure 1: UGO-Omics platform architecture and data layers",
+    "Figure 2: Integrated evolutionary framework of UGO-Omics",
+    "Figure 3: Researcher-facing UGO discovery workflows",
+    "Figure 4: Regeneration\u2013resilience toolkit model",
+    "Figure 5: Known-category recovery and biological discovery case"
+  ],
+  "claim_calibration": "Use mechanism-forward but hypothesis-generating language. Avoid definitive origin reconstruction or functional validation claims."
+}

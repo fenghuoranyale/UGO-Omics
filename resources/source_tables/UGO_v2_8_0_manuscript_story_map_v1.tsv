@@ -1,0 +1,9 @@
+story_step	core_message	manuscript_role
+1_problem	Underground organs are central to perenniality, storage, vegetative propagation, and post-disturbance regrowth, but the field lacks a cross-species omics framework.	Introduction opening and rationale
+2_resource_gap	Existing studies are often species-specific or organ-specific, making it difficult to compare rhizomes, tubers, storage roots, corm-like stems, and related underground structures.	Defines why UGO-Omics is needed
+3_platform	UGO-Omics integrates a 51-species underground-organ atlas with an 11-species high-confidence analytical backbone.	Results 1 / Figure 1
+4_evolutionary_context	An independent BUSCO-based phylogenetic framework places the 11-species backbone into an evolutionary context.	Results 2 / Figure 2
+5_usability	Sequence-to-UGO, Gene-list-to-UGO, Resource Finder, Organ Kits, demo results, and use cases make the platform directly usable by researchers.	Results 3 / Figure 3
+6_mechanism	UGO-Omics identifies a recurrent regeneration–resilience core toolkit spanning meristem/regrowth, stress resilience, hormone-related regulation, and developmental regulatory modules.	Results 4 / Figure 4
+7_benchmark	Known-category recovery shows that the current module layer recovers expected biological categories relevant to underground-organ development and persistence.	Results 5 / Figure 5 or Supplementary
+8_discovery_case	The integrated discovery case supports a module-level convergence model in which diverse underground organs repeatedly recruit a conserved regeneration–resilience toolkit.	Final Results / Discussion transition

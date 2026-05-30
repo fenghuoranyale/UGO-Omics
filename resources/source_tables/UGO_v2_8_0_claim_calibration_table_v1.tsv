@@ -1,0 +1,6 @@
+claim_level	recommended_wording	avoid_wording	reason
+strong_claim	UGO-Omics provides a cross-species, evolution-informed discovery platform for underground-organ biology.	UGO-Omics proves the evolutionary origin of underground organs.	Platform and discovery framework are supported; definitive origin reconstruction is not.
+strong_claim	UGO-Omics identifies candidate signals consistent with recurrent recruitment of a regeneration–resilience toolkit.	UGO-Omics demonstrates repeated causal deployment of the same genes.	Module recurrence supports hypothesis generation, not functional validation.
+moderate_claim	The 11-species BUSCO tree provides an independent phylogenetic context for interpreting module recurrence.	The BUSCO tree reconstructs the definitive evolutionary history of underground organs.	Tree is a context framework, not an ancestral-state reconstruction.
+moderate_claim	The known-category benchmark supports the credibility of module-level candidate prioritization.	The benchmark validates the function of individual genes.	Benchmark is category/module-level, not experimental validation.
+safe_limitation	Functional testing will be required to determine the roles of individual candidate genes.	The prioritized genes are validated regulators.	Avoids overclaiming.
