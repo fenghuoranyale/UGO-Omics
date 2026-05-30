@@ -786,6 +786,94 @@
     }
 
 </style>
+
+<style id="ugo-v5-final-polish-style">
+  .ugo-v5-hero-strip {
+    margin: 22px 0 8px 0;
+    padding: 22px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(21, 94, 117, 0.92));
+    color: white;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.18);
+  }
+  .ugo-v5-hero-strip h2 {
+    margin: 0 0 10px 0;
+    font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    line-height: 1.12;
+    color: white;
+  }
+  .ugo-v5-hero-strip p {
+    margin: 0;
+    max-width: 980px;
+    line-height: 1.58;
+    color: rgba(255,255,255,0.88);
+  }
+  .ugo-v5-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .ugo-v5-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-weight: 700;
+    font-size: 0.86rem;
+    border: 1px solid rgba(255,255,255,0.16);
+  }
+  .ugo-v5-value-grid,
+  .ugo-v5-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .ugo-v5-card {
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 20px;
+    padding: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.98));
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  }
+  .ugo-v5-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.02rem;
+  }
+  .ugo-v5-card p {
+    margin: 0 0 10px 0;
+    color: #475569;
+    line-height: 1.48;
+  }
+  .ugo-v5-card a {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .ugo-v5-badge {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+    font-size: 0.78rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .ugo-v5-badge-blue {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0369a1;
+  }
+  .ugo-v5-badge-amber {
+    background: rgba(245, 158, 11, 0.14);
+    color: #92400e;
+  }
+</style>
+
 </head>
 
 <body>
@@ -859,6 +947,119 @@
 
 
 <main>
+
+<section id="ugo-v5-homepage-narrative" class="ugo-v5-hero-strip">
+  <h2>UGO-Omics: a cross-species discovery platform for underground-organ biology</h2>
+  <p>
+    UGO-Omics integrates a 51-species underground-organ atlas, an 11-species high-confidence
+    analytical backbone, BUSCO phylogenetic context, researcher-facing workflows, benchmark recovery,
+    and an actionability layer that translates recurrent modules into practical candidate-family hypotheses.
+  </p>
+  <div class="ugo-v5-pill-row">
+    <span class="ugo-v5-pill">51-species atlas</span>
+    <span class="ugo-v5-pill">11-species backbone</span>
+    <span class="ugo-v5-pill">BUSCO phylogeny</span>
+    <span class="ugo-v5-pill">interactive workflows</span>
+    <span class="ugo-v5-pill">benchmark recovery</span>
+    <span class="ugo-v5-pill">actionable candidates</span>
+  </div>
+</section>
+
+
+<section id="platform-value" class="section">
+  <div class="section-header">
+    <span class="eyebrow">Platform logic</span>
+    <h2>Atlas breadth, analytical depth, evolutionary context, and practical actionability</h2>
+    <p>
+      UGO-Omics is designed as a discovery platform rather than a static file collection.
+      It connects underground-organ resources to cross-species modules, phylogenetic interpretation,
+      benchmark-supported discovery, and practical candidate-family prioritization.
+    </p>
+  </div>
+
+  <div class="ugo-v5-value-grid">
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge ugo-v5-badge-blue">Atlas</span>
+      <h3>51-species underground-organ atlas</h3>
+      <p>Broad resource coverage across rhizomes, tubers, storage roots, corm-like systems, root crowns, and related underground organs.</p>
+    </div>
+
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge ugo-v5-badge-blue">Backbone</span>
+      <h3>11-species analytical backbone</h3>
+      <p>A curated high-confidence panel for orthogroup transfer, candidate-module analysis, and comparative interpretation.</p>
+    </div>
+
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge ugo-v5-badge-blue">Evolution</span>
+      <h3>BUSCO phylogenetic context</h3>
+      <p>An independent evolutionary scaffold for interpreting recurrent module signals across phylogenetically divergent species.</p>
+    </div>
+
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge ugo-v5-badge-amber">Discovery</span>
+      <h3>Benchmark + actionability</h3>
+      <p>Known-category recovery and calibrated candidate-family ranking turn module recurrence into practical hypotheses.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="actionability-layer" class="section">
+  <div class="section-header">
+    <span class="eyebrow">Actionability layer</span>
+    <h2>From recurrent modules to practical candidate-family hypotheses</h2>
+    <p>
+      The UGO actionability layer links recurrent underground-organ modules to known-gene anchors,
+      calibrated candidate-family ranking, and species-specific examples for rhizome, tuber,
+      and storage-root systems.
+    </p>
+  </div>
+
+  <div class="ugo-v5-entry-grid">
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge">Known-gene anchors</span>
+      <h3>Known-gene anchor panel</h3>
+      <p>
+        Connects UGO modules to familiar developmental, hormonal, stress-response,
+        regulatory, cell-wall, and storage-related gene families.
+      </p>
+      <a href="../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
+    </div>
+
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge">Calibrated ranking</span>
+      <h3>Actionable candidate families</h3>
+      <p>
+        Ranks candidate families using module support, species breadth, cross-clade support,
+        benchmark recovery, anchor specificity, and use-case relevance.
+      </p>
+      <a href="../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download calibrated ranking</a>
+    </div>
+
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge">Use cases</span>
+      <h3>Species-specific use cases</h3>
+      <p>
+        Practical examples for Oryza rhizome, Solanum tuber, Manihot storage root,
+        and Beta storage-root/hypocotyl systems.
+      </p>
+      <a href="../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
+    </div>
+
+    <div class="ugo-v5-card">
+      <span class="ugo-v5-badge">Module interpretation</span>
+      <h3>Module-to-anchor summary</h3>
+      <p>
+        Summarizes how core and supporting UGO modules connect to candidate-family
+        hypotheses and future storage-metabolism expansion.
+      </p>
+      <a href="../resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv">Download module summary</a>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="start" class="section active">
   <div class="section-title">
@@ -1117,6 +1318,7 @@ MASS..."></textarea>
         <div class="wizard-button-row">
           <button class="wizard-btn primary" onclick="seqWizardLoadDemoOutput()">Show demo output</button>
           <a class="wizard-btn" href="toolkits/P2_v2_0_1_sequence_to_ugo/example_results/example_sequence_to_UGO_result.tsv" target="_blank" rel="noopener">Open TSV</a>
+          <a class="button" href="#actionability-layer">Explore actionable candidates</a>
         </div>
         <div id="seqWizardDemoOutput" class="wizard-note">Demo output will appear here.</div>
       </div>

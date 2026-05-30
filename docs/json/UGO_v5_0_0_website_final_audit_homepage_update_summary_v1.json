@@ -1,0 +1,21 @@
+{
+  "version": "v5.0.0 website final audit and homepage narrative update",
+  "generated_on": "2026-05-30 19:20:41",
+  "purpose": "Update website homepage narrative to present UGO-Omics as a cross-species underground-organ discovery platform and add actionability entries.",
+  "core_message": "atlas + backbone + phylogeny + workflows + benchmark + actionability",
+  "new_entries": [
+    "Actionable Candidates",
+    "Species Use Cases",
+    "Known-gene Anchors",
+    "Calibrated Candidate-family Ranking"
+  ],
+  "broken_local_links": 0,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "outputs": [
+    "UGO_v5_0_0_website_final_audit_v1.tsv",
+    "UGO_v5_0_0_website_broken_local_links_v1.tsv"
+  ]
+}

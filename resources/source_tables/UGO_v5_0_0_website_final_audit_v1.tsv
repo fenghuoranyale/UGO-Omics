@@ -1,0 +1,15 @@
+check_type	item	status
+homepage_narrative_text	cross-species discovery platform	present
+homepage_narrative_text	51-species underground-organ atlas	present
+homepage_narrative_text	11-species high-confidence	present
+homepage_narrative_text	BUSCO phylogenetic context	present
+homepage_narrative_text	benchmark recovery	present
+homepage_narrative_text	actionability layer	present
+homepage_narrative_text	Actionable candidate families	present
+homepage_narrative_text	Known-gene anchor panel	present
+homepage_narrative_text	Species-specific use cases	present
+actionability_link	../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv	present_and_file_exists
+actionability_link	../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv	present_and_file_exists
+actionability_link	../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv	present_and_file_exists
+actionability_link	../resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv	present_and_file_exists
+local_href_audit	broken_local_links	0
