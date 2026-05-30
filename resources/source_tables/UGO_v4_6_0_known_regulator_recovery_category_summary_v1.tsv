@@ -1,0 +1,7 @@
+UGO_module	known_regulator_items	recovered_by_anchor_panel	recovered_by_actionability_ranking	tier1_items	tier2_items	future_expansion_items	module_recovery_rate
+cell_wall_remodeling	2	2	2	0	2	0	1.0
+developmental_tf	2	2	2	2	0	0	1.0
+future_storage_metabolism	1	1	1	0	0	1	1.0
+hormone_regulation	4	4	4	4	0	0	1.0
+meristem_regrowth	3	3	3	3	0	0	1.0
+stress_resilience	2	2	2	2	0	0	1.0

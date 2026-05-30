@@ -1,0 +1,21 @@
+{
+  "version": "v4.6.0 known-regulator recovery benchmark",
+  "generated_on": "2026-05-30 19:33:19",
+  "purpose": "Add a known-regulator and gene-family recovery benchmark to strengthen the UGO actionability layer.",
+  "known_regulator_items": 14,
+  "recovered_by_known_anchor_panel": 14,
+  "recovered_by_calibrated_actionability_ranking": 14,
+  "tier1_items": 11,
+  "tier2_items": 2,
+  "future_expansion_items": 1,
+  "outputs": [
+    "UGO_v4_6_0_known_regulator_recovery_panel_v1.tsv",
+    "UGO_v4_6_0_known_regulator_to_UGO_anchor_mapping_v1.tsv",
+    "UGO_v4_6_0_known_regulator_recovery_summary_v1.tsv",
+    "UGO_v4_6_0_known_regulator_recovery_category_summary_v1.tsv",
+    "UGO_v4_6_0_known_regulator_recovery_qc_v1.tsv",
+    "UGO_Omics_full_manuscript_draft_v4_6_0_known_regulator_recovery.md",
+    "UGO_v4_6_0_known_regulator_recovery_benchmark_note_v1.md"
+  ],
+  "claim_calibration": "Known-regulator recovery supports candidate-family prioritization and does not claim direct functional evidence."
+}
