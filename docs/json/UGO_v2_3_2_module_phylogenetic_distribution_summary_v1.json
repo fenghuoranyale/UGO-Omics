@@ -1,6 +1,6 @@
 {
-  "version": "v2.3.2.1 module phylogenetic distribution patch",
-  "generated_on": "2026-05-30 16:59:46",
+  "version": "v2.3.2.2 module phylogenetic distribution text-cleanup patch",
+  "generated_on": "2026-05-30 17:06:08",
   "purpose": "Overlay conserved UGO candidate modules onto the 11-species BUSCO phylogenetic context and species-associated underground-organ categories.",
   "input_layers": [
     "v2.3.1 BUSCO-based 11-species phylogeny",
@@ -73,5 +73,6 @@
     "figure": "Figure_UGO_v2_3_2_module_phylogenetic_distribution_v1.png/pdf"
   },
   "claim_calibration": "These outputs describe species-level candidate-module recurrence across the BUSCO phylogenetic context. They are hypothesis-generating and do not demonstrate functional validation or definitive underground-organ evolutionary reconstruction.",
-  "patch_note": "Species-level module distribution is retained. Underground-organ categories are treated as species-associated annotations. The organ-level recurrence table is retained as a source table but is not used for manuscript-level organ recurrence claims in v2.3.2.1."
+  "patch_note": "Species-level module distribution is retained. Underground-organ categories are treated as species-associated annotations. The organ-level recurrence table is retained as a source table but is not used for manuscript-level organ recurrence claims in v2.3.2.1.",
+  "text_cleanup_note": "Corrected typographical errors in Methods, Results, and Figure caption after local reruns of the v2.3.2.1 patch."
 }
