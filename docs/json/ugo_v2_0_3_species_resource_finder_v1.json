@@ -1,0 +1,973 @@
+{
+  "version": "v2.0.3 Resource Finder",
+  "generated_on": "2026-05-29 21:21:26",
+  "interpretation": "Species resource cards summarize available UGO candidate modules and recommended workflows.",
+  "species_count": 11,
+  "species_cards": [
+    {
+      "species_safe_name": "Beta_vulgaris",
+      "species_label": "Beta vulgaris",
+      "candidate_module_count": 7,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "MYB-like transcriptional regulator",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "XTH / xyloglucan cell-wall remodeling",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience",
+        "Cell_wall_remodeling"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "MYB-like transcriptional regulator",
+          "orthogroup": "OG0000139",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.173",
+          "validation_priority_class": "Review before validation",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Dioscorea_rotundata",
+      "species_label": "Dioscorea rotundata",
+      "candidate_module_count": 6,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "XTH / xyloglucan cell-wall remodeling",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience",
+        "Cell_wall_remodeling"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+          "orthogroup": "OG0000154",
+          "benchmark_module": "Cell_wall_remodeling",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.791",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Cell-wall remodeling module",
+          "suggested_validation_system": "rhizome elongation or tuber/storage-organ expansion system"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Musa_acuminata",
+      "species_label": "Musa acuminata",
+      "candidate_module_count": 6,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "XTH / xyloglucan cell-wall remodeling",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience",
+        "Cell_wall_remodeling"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+          "orthogroup": "OG0000154",
+          "benchmark_module": "Cell_wall_remodeling",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.791",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Cell-wall remodeling module",
+          "suggested_validation_system": "rhizome elongation or tuber/storage-organ expansion system"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Panicum_virgatum",
+      "species_label": "Panicum virgatum",
+      "candidate_module_count": 6,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "XTH / xyloglucan cell-wall remodeling",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience",
+        "Cell_wall_remodeling"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+          "orthogroup": "OG0000154",
+          "benchmark_module": "Cell_wall_remodeling",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.791",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Cell-wall remodeling module",
+          "suggested_validation_system": "rhizome elongation or tuber/storage-organ expansion system"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Brassica_rapa",
+      "species_label": "Brassica rapa",
+      "candidate_module_count": 5,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000767",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Daucus_carota",
+      "species_label": "Daucus carota",
+      "candidate_module_count": 5,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000273",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Manihot_esculenta",
+      "species_label": "Manihot esculenta",
+      "candidate_module_count": 5,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000273",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Nelumbo_nucifera",
+      "species_label": "Nelumbo nucifera",
+      "candidate_module_count": 5,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000273",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Solanum_tuberosum",
+      "species_label": "Solanum tuberosum",
+      "candidate_module_count": 5,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000273",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Zingiber_officinale",
+      "species_label": "Zingiber officinale",
+      "candidate_module_count": 5,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "NAC-like transcriptional regulator",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Developmental_TF",
+        "Stress_resilience"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "NAC-like transcriptional regulator",
+          "orthogroup": "OG0003725",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.867",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000273",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    },
+    {
+      "species_safe_name": "Oryza_longistaminata",
+      "species_label": "Oryza longistaminata",
+      "candidate_module_count": 4,
+      "candidate_functions": [
+        "Carotenoid cleavage dioxygenase / hormone-related regulation",
+        "Early nodulin-like meristem/regrowth candidate",
+        "Non-symbiotic hemoglobin / stress-resilience candidate",
+        "bHLH-like transcriptional regulator"
+      ],
+      "benchmark_modules": [
+        "Hormone_regulation",
+        "Meristem_bud_regrowth",
+        "Stress_resilience",
+        "Developmental_TF"
+      ],
+      "top_candidates": [
+        {
+          "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+          "orthogroup": "OG0006937",
+          "benchmark_module": "Hormone_regulation",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.89",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Hormone-related regulation module",
+          "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system"
+        },
+        {
+          "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+          "orthogroup": "OG0000863",
+          "benchmark_module": "Meristem_bud_regrowth",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Meristem and regrowth module",
+          "suggested_validation_system": "rhizome bud, root crown, or regrowth system"
+        },
+        {
+          "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+          "orthogroup": "OG0004958",
+          "benchmark_module": "Stress_resilience",
+          "ugo_score": "1.0",
+          "recommendation_score": "",
+          "validation_priority_score": "0.95",
+          "validation_priority_class": "Top validation-ready candidate",
+          "biological_discovery_case": "Stress-resilience module",
+          "suggested_validation_system": "regrowth or stress-resilience underground-organ system"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000273",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        },
+        {
+          "candidate_function": "bHLH-like transcriptional regulator",
+          "orthogroup": "OG0000767",
+          "benchmark_module": "Developmental_TF",
+          "ugo_score": "0.678",
+          "recommendation_score": "",
+          "validation_priority_score": "0.821",
+          "validation_priority_class": "Strong validation candidate",
+          "biological_discovery_case": "Developmental transcription-factor module",
+          "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage"
+        }
+      ],
+      "available_resource_layers": [
+        "species-to-candidates",
+        "candidate module lookup",
+        "Gene-list-to-UGO compact mode",
+        "Sequence-to-UGO release archive if full database is downloaded"
+      ],
+      "recommended_workflow": "Use Find by Species to identify homologous candidate modules, then use Gene-list-to-UGO for species-specific DEG/QTL/GWAS lists or Sequence-to-UGO for protein sequences.",
+      "download_files": [
+        "json/ugo_v1_8_species_to_candidates_v1.json",
+        "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+        "toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md"
+      ]
+    }
+  ]
+}

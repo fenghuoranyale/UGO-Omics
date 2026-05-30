@@ -1,0 +1,15 @@
+{
+  "toolkit_version": "v2.0.3 Resource Finder + Organ Kits",
+  "species_resource_count": 11,
+  "organ_kit_count": 7,
+  "organ_module_recommendation_count": 42,
+  "github_pages_files": {
+    "species_resource_json": "json/ugo_v2_0_3_species_resource_finder_v1.json",
+    "organ_kits_json": "json/ugo_v2_0_3_organ_kits_v1.json",
+    "resource_summary_json": "json/ugo_v2_0_3_resource_finder_summary_v1.json",
+    "species_resource_tsv": "toolkits/P2_v2_0_3_resource_finder_organ_kits/database/UGO_v2_0_3_species_resource_finder_v1.tsv",
+    "organ_kits_tsv": "toolkits/P2_v2_0_3_resource_finder_organ_kits/database/UGO_v2_0_3_organ_kits_v1.tsv",
+    "organ_module_recommendations_tsv": "toolkits/P2_v2_0_3_resource_finder_organ_kits/database/UGO_v2_0_3_organ_module_recommendations_v1.tsv"
+  },
+  "interpretation": "Resource Finder and Organ Kits provide species- and organ-centered entry points for candidate prioritization and hypothesis generation."
+}

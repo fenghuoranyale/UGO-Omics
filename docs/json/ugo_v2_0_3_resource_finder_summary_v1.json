@@ -1,0 +1,9 @@
+{
+  "version": "v2.0.3 Resource Finder + Organ Kits",
+  "generated_on": "2026-05-29 21:21:26",
+  "species_resource_count": 11,
+  "organ_kit_count": 7,
+  "organ_module_recommendation_count": 42,
+  "purpose": "Provide one-stop species and organ entry points for underground-organ candidate discovery.",
+  "claim_calibration": "Resource Finder and Organ Kits provide candidate-prioritization and hypothesis-generation outputs, not functional validation."
+}

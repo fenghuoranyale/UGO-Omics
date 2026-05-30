@@ -502,6 +502,8 @@
   <button onclick="showSection('checkGene', this)">Check a Gene</button>
   <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
   <button onclick="showSection('geneListToUGO', this)">Gene-list-to-UGO</button>
+  <button onclick="showSection('resourceFinder', this)">Resource Finder</button>
+  <button onclick="showSection('organKits', this)">Organ Kits</button>
   <button onclick="showSection('organCandidates', this)">Find by Organ</button>
   <button onclick="showSection('speciesCandidates', this)">Find by Species</button>
   <button onclick="showSection('validationTargets', this)">Validation Targets</button>
@@ -979,6 +981,8 @@ let speciesCandidates = [];
 let validationTargets = [];
 let biologicalDiscoveryCases = [];
 let discoveryShortlist = [];
+let resourceFinderData = null;
+let organKitsData = null;
 let scoreData = [];
 let speciesData = [];
 let benchmarkData = [];
@@ -1015,6 +1019,7 @@ function setValidationExample(q) {
   document.getElementById('validationFilter').value = q;
   renderValidationTargets();
     renderBiologicalDiscovery();
+    populateResourceFinderSelectors();
 }
 
 
@@ -1177,6 +1182,103 @@ function renderSpeciesCandidates() {
 }
 
 
+
+function populateResourceFinderSelectors() {
+  const speciesSelect = document.getElementById('resourceSpeciesSelect');
+  if (speciesSelect && resourceFinderData && resourceFinderData.species_cards) {
+    speciesSelect.innerHTML = '<option value="">Choose a species...</option>' + resourceFinderData.species_cards
+      .map(d => `<option value="${safe(d.species_safe_name)}">${safe(d.species_label)}</option>`)
+      .join('');
+  }
+
+  const organSelect = document.getElementById('organKitSelect');
+  if (organSelect && organKitsData && organKitsData.organ_kits) {
+    organSelect.innerHTML = '<option value="">Choose an organ...</option>' + organKitsData.organ_kits
+      .map(d => `<option value="${safe(d.organ_key)}">${safe(d.organ_label)}</option>`)
+      .join('');
+  }
+}
+
+function renderResourceFinder() {
+  const sel = document.getElementById('resourceSpeciesSelect');
+  const el = document.getElementById('resourceFinderResults');
+  if (!sel || !el) return;
+
+  const sp = sel.value;
+  if (!sp) {
+    el.innerHTML = '<p class="small">Choose a species to see resource cards and candidate-module recommendations.</p>';
+    return;
+  }
+
+  const card = (resourceFinderData.species_cards || []).find(d => d.species_safe_name === sp);
+  if (!card) {
+    el.innerHTML = '<p>No resource card found for this species.</p>';
+    return;
+  }
+
+  const tops = (card.top_candidates || []).map(d => `
+    <div class="result">
+      <span class="tag green">${safe(d.candidate_function)}</span>
+      <span class="tag">UGO ${safe(d.ugo_score)}</span>
+      <span class="tag">Priority ${safe(d.validation_priority_score)}</span>
+      <p><b>Orthogroup:</b> ${safe(d.orthogroup)} | <b>Module:</b> ${safe(d.benchmark_module)}</p>
+      <p><b>Suggested system:</b> ${safe(d.suggested_validation_system)}</p>
+      <p class="small"><b>Discovery case:</b> ${safe(d.biological_discovery_case) || 'Not assigned'}</p>
+    </div>
+  `).join('');
+
+  el.innerHTML = `
+    <div class="result">
+      <h3>${safe(card.species_label)}</h3>
+      <p><b>Candidate modules available:</b> ${safe(card.candidate_module_count)}</p>
+      <p><b>Recommended workflow:</b> ${safe(card.recommended_workflow)}</p>
+      <p><b>Resource layers:</b> ${(card.available_resource_layers || []).map(safe).join('; ')}</p>
+    </div>
+    <h3>Top candidate modules</h3>
+    ${tops || '<p>No candidate modules available.</p>'}
+  `;
+}
+
+function renderOrganKit() {
+  const sel = document.getElementById('organKitSelect');
+  const el = document.getElementById('organKitResults');
+  if (!sel || !el) return;
+
+  const organ = sel.value;
+  if (!organ) {
+    el.innerHTML = '<p class="small">Choose an organ type to see an organ-specific candidate kit.</p>';
+    return;
+  }
+
+  const kit = (organKitsData.organ_kits || []).find(d => d.organ_key === organ);
+  if (!kit) {
+    el.innerHTML = '<p>No organ kit found for this organ.</p>';
+    return;
+  }
+
+  const modules = (kit.top_modules || []).map(d => `
+    <div class="result">
+      <span class="tag green">${safe(d.candidate_function)}</span>
+      <span class="tag">UGO ${safe(d.ugo_score)}</span>
+      <span class="tag">Priority ${safe(d.validation_priority_score)}</span>
+      <p><b>Orthogroup:</b> ${safe(d.orthogroup)} | <b>Module:</b> ${safe(d.benchmark_module)}</p>
+      <p><b>Suggested validation system:</b> ${safe(d.suggested_validation_system)}</p>
+      <p class="small"><b>Discovery case:</b> ${safe(d.biological_discovery_case) || 'Not assigned'}</p>
+    </div>
+  `).join('');
+
+  el.innerHTML = `
+    <div class="result">
+      <h3>${safe(kit.organ_label)} Kit</h3>
+      <p>${safe(kit.overview)}</p>
+      <p><b>Recommended workflow:</b> ${safe(kit.recommended_workflow)}</p>
+      <p><b>Suggested validation focus:</b> ${safe(kit.suggested_validation_focus)}</p>
+    </div>
+    <h3>Top candidate modules</h3>
+    ${modules || '<p>No candidate modules available.</p>'}
+  `;
+}
+
 function renderBiologicalDiscovery() {
   const el = document.getElementById('biologicalDiscoveryResults');
   if (!el) return;
@@ -1299,6 +1401,8 @@ async function init() {
     validationTargets = await fetchJSON('json/ugo_v1_8_validation_targets_v1.json');
     biologicalDiscoveryCases = await fetchJSON('json/ugo_v1_9_biological_discovery_cases_v1.json').catch(() => []);
     discoveryShortlist = await fetchJSON('json/ugo_v1_9_validation_ready_shortlist_v1.json').catch(() => []);
+    resourceFinderData = await fetchJSON('json/ugo_v2_0_3_species_resource_finder_v1.json').catch(() => null);
+    organKitsData = await fetchJSON('json/ugo_v2_0_3_organ_kits_v1.json').catch(() => null);
 
     scoreData = await fetchJSON('json/ugo_score_explorer_v1.json').catch(() => []);
     speciesData = await fetchJSON('json/species_browser_v1.json').catch(() => []);
@@ -1318,6 +1422,7 @@ async function init() {
     renderSpeciesCandidates();
     renderValidationTargets();
     renderBiologicalDiscovery();
+    populateResourceFinderSelectors();
 
   } catch(e) {
     document.body.insertAdjacentHTML('afterbegin', `<div class="error">${e.message}</div>`);
