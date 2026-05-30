@@ -1,0 +1,42 @@
+{
+  "version": "v4.0.0 citation integration and reference framework",
+  "generated_on": "2026-05-30 18:38:52",
+  "purpose": "Add structured citation placeholders, reference framework, methods/software citation checklist, data/resource citation placeholders, and citation QC to the full manuscript draft.",
+  "main_outputs": [
+    "UGO_Omics_full_polished_manuscript_draft_v4_0_0_with_citation_placeholders.md",
+    "UGO_Omics_full_polished_manuscript_draft_v4_0_0_with_citation_placeholders_no_captions.md",
+    "UGO_v4_0_0_reference_placeholder_framework_v1.tsv",
+    "UGO_v4_0_0_reference_stub_list_v1.tsv",
+    "UGO_v4_0_0_citation_integration_qc_v1.tsv",
+    "UGO_v4_0_0_methods_citation_checklist_v1.md"
+  ],
+  "citation_markers_used": [
+    "REF_BUSCO_01",
+    "REF_CELL_WALL_REMODELING_01",
+    "REF_DATA_SOURCES_01",
+    "REF_DIAMOND_01",
+    "REF_HORMONE_DORMANCY_01",
+    "REF_ORGAN_NON_EQUIVALENCE_01",
+    "REF_PLANT_REGENERATION_01",
+    "REF_STRESS_RESILIENCE_01",
+    "REF_UGO_REPOSITORY_01"
+  ],
+  "undefined_markers_used": [],
+  "defined_markers_not_yet_used": [
+    "REF_BUD_BANK_REGENERATION_01",
+    "REF_COMPARATIVE_GENOMICS_01",
+    "REF_CONVERGENCE_01",
+    "REF_DEEP_HOMOLOGY_01",
+    "REF_IQTREE_01",
+    "REF_MAFFT_01",
+    "REF_MODELFINDER_01",
+    "REF_ORTHOFINDER_01",
+    "REF_REGULATORY_REDEPLOYMENT_01",
+    "REF_RHIZOME_REVIEW_01",
+    "REF_STORAGE_ORGANS_01",
+    "REF_TRIMAL_01",
+    "REF_UFBOOT_01",
+    "REF_UNDERGROUND_IMPORTANCE_01"
+  ],
+  "claim_calibration": "Citation placeholders support background, theory, methods, datasets, and resource availability without changing scientific claims."
+}

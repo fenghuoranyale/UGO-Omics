@@ -1,0 +1,12 @@
+citation_id	reference_stub	needs_action
+REF_RHIZOME_REVIEW_01	Chen, H. and Coughlan, J.M. The genetic and developmental enigma of rhizomes: crucial traits with limited understanding. Theoretical and Applied Genetics. Final volume/pages/DOI to be inserted.	Insert final DOI and exact bibliographic details.
+REF_DEEP_HOMOLOGY_01	Shubin, N., Tabin, C., and Carroll, S. Deep homology and the origins of evolutionary novelty. Nature. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_ORTHOFINDER_01	Emms, D.M. and Kelly, S. OrthoFinder: phylogenetic orthology inference for comparative genomics. Genome Biology. Exact details to be verified.	Verify year, volume, article number, DOI.
+REF_BUSCO_01	Manni, M. et al. BUSCO update: novel and streamlined workflows along with broader and deeper phylogenetic coverage. Molecular Biology and Evolution. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_IQTREE_01	Minh, B.Q. et al. IQ-TREE 2: new models and efficient methods for phylogenetic inference in the genomic era. Molecular Biology and Evolution. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_MODELFINDER_01	Kalyaanamoorthy, S. et al. ModelFinder: fast model selection for accurate phylogenetic estimates. Nature Methods. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_UFBOOT_01	Hoang, D.T. et al. UFBoot2: improving the ultrafast bootstrap approximation. Molecular Biology and Evolution. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_MAFFT_01	Katoh, K. and Standley, D.M. MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular Biology and Evolution. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_TRIMAL_01	Capella-Gutierrez, S., Silla-Martinez, J.M., and Gabaldon, T. trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_DIAMOND_01	Buchfink, B., Reuter, K., and Drost, H.G. Sensitive protein alignments at tree-of-life scale using DIAMOND. Nature Methods. Exact details to be verified.	Verify year, volume, pages, DOI.
+REF_UGO_REPOSITORY_01	UGO-Omics GitHub repository and Zenodo archive. DOI to be inserted after final Zenodo deposition.	Insert repository URL and Zenodo DOI before submission.
