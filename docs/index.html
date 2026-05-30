@@ -514,6 +514,126 @@
       overflow-x: auto;
     }
 
+
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding: 14px 28px;
+      background: #eef4f8;
+      border-bottom: 1px solid #d4e1ec;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav-bar button,
+    .nav-dropbtn {
+      border: 1px solid #bfd0df;
+      background: #ffffff;
+      color: #0d3557;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 10px 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(18, 58, 90, 0.06);
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+      font-size: 14px;
+    }
+
+    .nav-bar button:hover,
+    .nav-dropbtn:hover {
+      background: #f7fbff;
+      border-color: #2b6f8a;
+      transform: translateY(-1px);
+    }
+
+    .nav-bar button.active,
+    .nav-dropbtn.active {
+      background: #123a5a;
+      color: #ffffff;
+      border-color: #123a5a;
+    }
+
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-dropbtn::after {
+      content: " ▾";
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .nav-dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 230px;
+      background: #ffffff;
+      border: 1px solid #d4e1ec;
+      border-radius: 14px;
+      box-shadow: 0 14px 34px rgba(18, 58, 90, 0.18);
+      padding: 8px;
+      z-index: 50;
+    }
+
+    .nav-dropdown-content button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 700;
+      color: #0d3557;
+    }
+
+    .nav-dropdown-content button:hover {
+      background: #eef7fb;
+      transform: none;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-content,
+    .nav-dropdown:focus-within .nav-dropdown-content {
+      display: block;
+    }
+
+    .nav-group-note {
+      display: block;
+      font-size: 11px;
+      color: #6b7c8f;
+      padding: 6px 12px 4px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 800;
+    }
+
+    @media (max-width: 760px) {
+      .nav-bar {
+        padding: 10px 14px;
+        gap: 8px;
+      }
+
+      .nav-bar button,
+      .nav-dropbtn {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+
+      .nav-dropdown-content {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        min-width: auto;
+      }
+    }
+
 </style>
 </head>
 
@@ -539,23 +659,53 @@
   </div>
 </header>
 
-<nav>
+
+<nav class="nav-bar">
   <button class="active" onclick="showSection('start', this)">Start Here</button>
-  <button onclick="showSection('checkGene', this)">Check a Gene</button>
-  <button onclick="showSection('quickStartGuide', this)">Quick Guide</button>
-  <button onclick="showSection('demoResults', this)">Demo Results</button>
-  <button onclick="showSection('useCases', this)">Use Cases</button>
-  <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
-  <button onclick="showSection('geneListToUGO', this)">Gene-list-to-UGO</button>
-  <button onclick="showSection('resourceFinder', this)">Resource Finder</button>
-  <button onclick="showSection('organKits', this)">Organ Kits</button>
-  <button onclick="showSection('organCandidates', this)">Find by Organ</button>
-  <button onclick="showSection('speciesCandidates', this)">Find by Species</button>
-  <button onclick="showSection('validationTargets', this)">Validation Targets</button>
-  <button onclick="showSection('biologicalDiscovery', this)">Biological Discovery</button>
-  <button onclick="showSection('evidence', this)">Explore Evidence</button>
-  <button onclick="showSection('downloads', this)">Downloads</button>
+
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Analyze Your Data</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">Bring your own data</span>
+      <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
+      <button onclick="showSection('geneListToUGO', this)">Gene-list-to-UGO</button>
+      <button onclick="showSection('checkGene', this)">Check a Gene</button>
+    </div>
+  </div>
+
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Explore Resources</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">Species and organs</span>
+      <button onclick="showSection('resourceFinder', this)">Resource Finder</button>
+      <button onclick="showSection('organKits', this)">Organ Kits</button>
+      <button onclick="showSection('findOrgan', this)">Find by Organ</button>
+      <button onclick="showSection('findSpecies', this)">Find by Species</button>
+    </div>
+  </div>
+
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Evidence & Discovery</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">Prioritization layers</span>
+      <button onclick="showSection('validationTargets', this)">Validation Targets</button>
+      <button onclick="showSection('biologicalDiscovery', this)">Biological Discovery</button>
+      <button onclick="showSection('exploreEvidence', this)">Explore Evidence</button>
+    </div>
+  </div>
+
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Help & Downloads</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">First-time users</span>
+      <button onclick="showSection('quickStartGuide', this)">Quick Guide</button>
+      <button onclick="showSection('demoResults', this)">Demo Results</button>
+      <button onclick="showSection('useCases', this)">Use Cases</button>
+      <button onclick="showSection('downloads', this)">Downloads</button>
+    </div>
+  </div>
 </nav>
+
 
 <main>
 
@@ -1297,10 +1447,22 @@ function uniqueSorted(arr) {
 
 function showSection(id, btn) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+
+  document.querySelectorAll('.nav-bar button, .nav-dropbtn').forEach(b => b.classList.remove('active'));
+
+  if (btn) {
+    const dropdown = btn.closest ? btn.closest('.nav-dropdown') : null;
+    if (dropdown) {
+      const dropbtn = dropdown.querySelector('.nav-dropbtn');
+      if (dropbtn) dropbtn.classList.add('active');
+    } else {
+      btn.classList.add('active');
+    }
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function scoreBar(score) {
