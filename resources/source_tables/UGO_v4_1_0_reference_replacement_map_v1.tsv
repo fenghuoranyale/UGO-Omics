@@ -1,0 +1,24 @@
+marker	replacement
+REF_BUD_BANK_REGENERATION_01	Klimešová and Klimeš, 2008; Ott et al., 2019
+REF_BUSCO_01	Manni et al., 2021
+REF_CELL_WALL_REMODELING_01	Cosgrove, 2005; Cosgrove, 2016; Le Gall et al., 2015
+REF_COMPARATIVE_GENOMICS_01	Gabaldón and Koonin, 2013; Fernández et al., 2020
+REF_CONVERGENCE_01	Stern, 2013; Martin and Orgogozo, 2013
+REF_DATA_SOURCES_01	public dataset accessions listed in Table S1
+REF_DEEP_HOMOLOGY_01	Shubin et al., 2009
+REF_DIAMOND_01	Buchfink et al., 2021
+REF_HORMONE_DORMANCY_01	Leyser, 2009; Rameau et al., 2015; Kucera et al., 2005
+REF_IQTREE_01	Minh et al., 2020
+REF_MAFFT_01	Katoh and Standley, 2013
+REF_MODELFINDER_01	Kalyaanamoorthy et al., 2017
+REF_ORGAN_NON_EQUIVALENCE_01	Esau, 1977; Evert, 2006; Chen and Coughlan, 2026
+REF_ORTHOFINDER_01	Emms and Kelly, 2019
+REF_PLANT_REGENERATION_01	Ikeuchi et al., 2016; Ikeuchi et al., 2019
+REF_REGULATORY_REDEPLOYMENT_01	Carroll, 2008; Prud’homme et al., 2007
+REF_RHIZOME_REVIEW_01	Chen and Coughlan, 2026
+REF_STORAGE_ORGANS_01	Fernie and Willmitzer, 2001; Sonnewald and Sonnewald, 2014; Ravi et al., 2014
+REF_STRESS_RESILIENCE_01	Bailey-Serres and Voesenek, 2008; Zhu, 2016
+REF_TRIMAL_01	Capella-Gutiérrez et al., 2009
+REF_UFBOOT_01	Hoang et al., 2018
+REF_UGO_REPOSITORY_01	UGO-Omics repository and Zenodo archive, DOI pending final deposition
+REF_UNDERGROUND_IMPORTANCE_01	Klimešová and Klimeš, 2008; Ott et al., 2019; Klimešová et al., 2021

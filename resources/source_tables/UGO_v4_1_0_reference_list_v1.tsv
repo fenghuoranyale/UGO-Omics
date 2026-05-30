@@ -1,0 +1,35 @@
+citation	reference	status
+Bailey-Serres, J. and Voesenek, L.A.C.J. (2008).	Flooding stress: acclimations and genetic diversity. Annual Review of Plant Biology 59:313–339.	verify_final_format
+Buchfink, B., Reuter, K., and Drost, H.G. (2021).	Sensitive protein alignments at tree-of-life scale using DIAMOND. Nature Methods 18:366–368.	verified_core_software
+Capella-Gutiérrez, S., Silla-Martínez, J.M., and Gabaldón, T. (2009).	trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics 25:1972–1973.	verified_core_software
+Carroll, S.B. (2008).	Evo-devo and an expanding evolutionary synthesis: a genetic theory of morphological evolution. Cell 134:25–36.	verify_final_format
+Chen, H. and Coughlan, J.M. (2026).	The genetic and developmental enigma of rhizomes: crucial traits with limited understanding. Theoretical and Applied Genetics. DOI: 10.1007/s00122-026-05229-2.	user_project_reference_verify_final_pages
+Cosgrove, D.J. (2005).	Growth of the plant cell wall. Nature Reviews Molecular Cell Biology 6:850–861.	verify_final_format
+Cosgrove, D.J. (2016).	Plant cell wall extensibility: connecting plant cell growth with cell wall structure, mechanics, and the action of wall-modifying enzymes. Journal of Experimental Botany 67:463–476.	verify_final_format
+Emms, D.M. and Kelly, S. (2019).	OrthoFinder: phylogenetic orthology inference for comparative genomics. Genome Biology 20:238. DOI: 10.1186/s13059-019-1832-y.	verified_core_software
+Esau, K. (1977).	Anatomy of Seed Plants, 2nd ed. Wiley.	book_reference_verify
+Evert, R.F. (2006).	Esau's Plant Anatomy: Meristems, Cells, and Tissues of the Plant Body. Wiley.	book_reference_verify
+Fernández, R., Gabaldón, T., and Dessimoz, C. (2020).	Orthology: definitions, inference, and impact on species phylogeny inference. Methods in Molecular Biology 2112:1–21.	verify_final_format
+Fernie, A.R. and Willmitzer, L. (2001).	Molecular and biochemical triggers of potato tuber development. Plant Physiology 127:1459–1465.	verify_final_format
+Gabaldón, T. and Koonin, E.V. (2013).	Functional and evolutionary implications of gene orthology. Nature Reviews Genetics 14:360–366.	verify_final_format
+Hoang, D.T., Chernomor, O., von Haeseler, A., Minh, B.Q., and Vinh, L.S. (2018).	UFBoot2: improving the ultrafast bootstrap approximation. Molecular Biology and Evolution 35:518–522.	verified_core_software
+Ikeuchi, M., Ogawa, Y., Iwase, A., and Sugimoto, K. (2016).	Plant regeneration: cellular origins and molecular mechanisms. Development 143:1442–1451. DOI: 10.1242/dev.134668.	verified_core_biology
+Ikeuchi, M., Favero, D.S., Sakamoto, Y., Iwase, A., Coleman, D., Rymen, B., and Sugimoto, K. (2019).	Molecular mechanisms of plant regeneration. Annual Review of Plant Biology 70:377–406.	verified_core_biology
+Kalyaanamoorthy, S., Minh, B.Q., Wong, T.K.F., von Haeseler, A., and Jermiin, L.S. (2017).	ModelFinder: fast model selection for accurate phylogenetic estimates. Nature Methods 14:587–589.	verified_core_software
+Katoh, K. and Standley, D.M. (2013).	MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular Biology and Evolution 30:772–780.	verified_core_software
+Klimešová, J. and Klimeš, L. (2008).	Clonal growth diversity and bud banks of plants in the Czech flora: an evaluation using the CLO-PLA3 database. Preslia 80:255–275.	verified_background
+Klimešová, J., Martínková, J., and Pausas, J.G. (2021).	Incorporating clonality into the plant ecology research agenda. Trends in Plant Science 26:1234–1245.	verify_final_format
+Kucera, B., Cohn, M.A., and Leubner-Metzger, G. (2005).	Plant hormone interactions during seed dormancy release and germination. Seed Science Research 15:281–307.	verify_final_format
+Le Gall, H., Philippe, F., Domon, J.M., Gillet, F., Pelloux, J., and Rayon, C. (2015).	Cell wall metabolism in response to abiotic stress. Plants 4:112–166.	verify_final_format
+Leyser, O. (2009).	The control of shoot branching: an example of plant information processing. Plant, Cell & Environment 32:694–703.	verify_final_format
+Manni, M., Berkeley, M.R., Seppey, M., Simão, F.A., and Zdobnov, E.M. (2021).	BUSCO update: novel and streamlined workflows along with broader and deeper phylogenetic coverage. Molecular Biology and Evolution 38:4647–4654.	verified_core_software
+Martin, A. and Orgogozo, V. (2013).	The loci of repeated evolution: a catalog of genetic hotspots of phenotypic variation. Evolution 67:1235–1250.	verify_final_format
+Minh, B.Q., Schmidt, H.A., Chernomor, O., Schrempf, D., Woodhams, M.D., von Haeseler, A., and Lanfear, R. (2020).	IQ-TREE 2: new models and efficient methods for phylogenetic inference in the genomic era. Molecular Biology and Evolution 37:1530–1534. DOI: 10.1093/molbev/msaa015.	verified_core_software
+Ott, J.P., Klimešová, J., and Hartnett, D.C. (2019).	The ecology and significance of below-ground bud banks in plants. Annals of Botany 123:1099–1118.	verified_background
+Prud’homme, B., Gompel, N., and Carroll, S.B. (2007).	Emerging principles of regulatory evolution. Proceedings of the National Academy of Sciences USA 104:8605–8612.	verify_final_format
+Rameau, C., Bertheloot, J., Leduc, N., Andrieu, B., Foucher, F., and Sakr, S. (2015).	Multiple pathways regulate shoot branching. Frontiers in Plant Science 5:741.	verify_final_format
+Ravi, V., Chakrabarti, S.K., Makeshkumar, T., Saravanan, R., and Jeeva, M.L. (2014).	Molecular regulation of storage root formation and development in sweetpotato. Horticultural Reviews 42:157–208.	verify_final_format
+Shubin, N., Tabin, C., and Carroll, S. (2009).	Deep homology and the origins of evolutionary novelty. Nature 457:818–823. DOI: 10.1038/nature07891.	verified_core_theory
+Sonnewald, S. and Sonnewald, U. (2014).	Regulation of potato tuber sprouting. Planta 239:27–38.	verify_final_format
+Stern, D.L. (2013).	The genetic causes of convergent evolution. Nature Reviews Genetics 14:751–764.	verify_final_format
+Zhu, J.K. (2016).	Abiotic stress signaling and responses in plants. Cell 167:313–324.	verify_final_format

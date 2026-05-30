@@ -1,0 +1,15 @@
+{
+  "version": "v4.1.0 real reference replacement",
+  "generated_on": "2026-05-30 18:51:07",
+  "purpose": "Replace structured REF placeholders with real author-year citations and add a reference list.",
+  "remaining_REF_placeholders": [],
+  "reference_entries": 34,
+  "outputs": [
+    "UGO_Omics_full_manuscript_draft_v4_1_0_real_references.md",
+    "UGO_Omics_full_manuscript_draft_v4_1_0_real_references_no_captions.md",
+    "UGO_v4_1_0_reference_replacement_map_v1.tsv",
+    "UGO_v4_1_0_reference_list_v1.tsv",
+    "UGO_v4_1_0_reference_replacement_qc_v1.tsv"
+  ],
+  "important_note": "Final journal-style reference formatting and DOI cross-check should still be performed before submission."
+}
