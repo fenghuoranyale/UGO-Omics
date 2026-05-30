@@ -1,0 +1,7 @@
+metric	value	interpretation
+total_benchmark_items	10	all curated benchmark seed items
+recovered_benchmark_items	9	items recovered by current five-module UGO mechanism layer
+overall_recovery_rate	0.9	includes one future storage-metabolism expansion item
+current_scope_benchmark_items	9	benchmark items expected to be covered by current five-module layer
+current_scope_recovered_items	9	current-scope items recovered by current five-module layer
+current_scope_recovery_rate	1.0	benchmark recovery rate excluding future storage-metabolism expansion item

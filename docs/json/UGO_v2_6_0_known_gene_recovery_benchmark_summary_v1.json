@@ -1,0 +1,14 @@
+{
+  "version": "v2.6.0 known-gene recovery benchmark seed layer",
+  "generated_on": "2026-05-30 17:28:16",
+  "purpose": "Evaluate whether the current UGO module mechanism layer recovers expected known biological categories related to underground-organ development, regeneration, persistence, and structural remodeling.",
+  "benchmark_scope": "category-level known-gene/family recovery, not single-gene functional validation",
+  "total_benchmark_items": 10,
+  "recovered_benchmark_items": 9,
+  "overall_recovery_rate": 0.9,
+  "current_scope_benchmark_items": 9,
+  "current_scope_recovered_items": 9,
+  "current_scope_recovery_rate": 1.0,
+  "future_expansion_target": "storage metabolism / carbohydrate allocation module",
+  "claim_calibration": "Benchmark recovery is interpreted at category/module level. It supports credibility of candidate-prioritization logic but does not validate causal gene function."
+}
