@@ -1,0 +1,5 @@
+step	researcher_input	UGO_operation	case_output
+1	Oryza longistaminata rhizome-associated gene list, QTL interval genes, or expression candidates	Map genes or protein sequences to UGO orthogroups and known-gene anchors	candidate families assigned to meristem/regrowth, hormone regulation, developmental TF, stress resilience, or cell-wall remodeling modules
+2	mapped Oryza candidate families	Rank by calibrated Oryza rhizome actionability score	Tier 1 and Tier 2 candidate-family hypotheses
+3	top-ranked candidate families	Interpret candidates using module role and known-regulator recovery	testable hypotheses for rhizome initiation, elongation, bud activity, and stress-linked regrowth
+4	candidate hypotheses	Design follow-up validation or comparative analysis	prioritized genes or gene families for expression, QTL overlap, transgenic, or association testing

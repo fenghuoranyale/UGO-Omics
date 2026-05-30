@@ -1,0 +1,21 @@
+{
+  "version": "v4.7.0 Oryza rhizome actionability case study",
+  "generated_on": "2026-05-30 19:38:17",
+  "purpose": "Demonstrate how UGO-Omics translates a species-specific rhizome question into ranked candidate-family hypotheses.",
+  "case_study": "Oryza longistaminata rhizome",
+  "candidate_families": 14,
+  "tier1_families": 9,
+  "tier2_families": 2,
+  "module_summaries": 5,
+  "known_regulator_items": 14,
+  "outputs": [
+    "UGO_v4_7_0_oryza_rhizome_actionable_candidate_family_ranking_v1.tsv",
+    "UGO_v4_7_0_oryza_rhizome_module_actionability_summary_v1.tsv",
+    "UGO_v4_7_0_oryza_rhizome_known_regulator_recovery_v1.tsv",
+    "UGO_v4_7_0_oryza_rhizome_practical_workflow_v1.tsv",
+    "UGO_v4_7_0_oryza_rhizome_case_study_qc_v1.tsv",
+    "UGO_Omics_full_manuscript_draft_v4_7_0_oryza_rhizome_case.md",
+    "UGO_v4_7_0_oryza_rhizome_case_study_note_v1.md"
+  ],
+  "claim_calibration": "This case study supports practical candidate-family prioritization and does not claim direct functional evidence for individual Oryza genes."
+}
