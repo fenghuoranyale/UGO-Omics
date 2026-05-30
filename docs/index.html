@@ -481,6 +481,7 @@
   <button onclick="showSection('organCandidates', this)">Find by Organ</button>
   <button onclick="showSection('speciesCandidates', this)">Find by Species</button>
   <button onclick="showSection('validationTargets', this)">Validation Targets</button>
+  <button onclick="showSection('biologicalDiscovery', this)">Biological Discovery</button>
   <button onclick="showSection('evidence', this)">Explore Evidence</button>
   <button onclick="showSection('downloads', this)">Downloads</button>
 </nav>
@@ -676,6 +677,29 @@
   </div>
 </section>
 
+
+<section id="biologicalDiscovery" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Biological Discovery Case</h2>
+      <p>UGO-Omics v1.9 highlights conserved candidate modules that connect multiple underground-organ systems.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    This page presents conserved candidate modules and validation-ready hypotheses derived from UGO-Omics. These outputs are intended for prioritization and hypothesis generation, not functional validation.
+  </div>
+
+  <div class="panel">
+    <img class="figure" src="figures/Figure_8_conserved_module_discovery_case_v1.png" alt="Figure 8 conserved module discovery case">
+  </div>
+
+  <div class="panel">
+    <h3>Conserved candidate modules</h3>
+    <div id="biologicalDiscoveryResults"></div>
+  </div>
+</section>
+
 <section id="downloads" class="section">
   <div class="section-title">
     <div>
@@ -725,6 +749,16 @@
         <p>Version metadata and summary for the v1.8 application-oriented layer.</p>
         <a href="json/ugo_v1_8_application_dashboard_summary_v1.json">Download JSON</a>
       </div>
+      <div class="download-card">
+        <h3>Biological Discovery Cases</h3>
+        <p>Conserved candidate modules and discovery-case evidence for UGO-Omics v1.9.</p>
+        <a href="json/ugo_v1_9_biological_discovery_cases_v1.json">Download JSON</a>
+      </div>
+      <div class="download-card">
+        <h3>Validation-ready Shortlist</h3>
+        <p>Ranked validation-ready candidate modules from the biological discovery case.</p>
+        <a href="json/ugo_v1_9_validation_ready_shortlist_v1.json">Download JSON</a>
+      </div>
     </div>
   </div>
 </section>
@@ -740,6 +774,8 @@ let geneToUGO = [];
 let organCandidates = [];
 let speciesCandidates = [];
 let validationTargets = [];
+let biologicalDiscoveryCases = [];
+let discoveryShortlist = [];
 let scoreData = [];
 let speciesData = [];
 let benchmarkData = [];
@@ -775,6 +811,7 @@ function setSpeciesExample(q) {
 function setValidationExample(q) {
   document.getElementById('validationFilter').value = q;
   renderValidationTargets();
+    renderBiologicalDiscovery();
 }
 
 
@@ -936,6 +973,35 @@ function renderSpeciesCandidates() {
   `).join('');
 }
 
+
+function renderBiologicalDiscovery() {
+  const el = document.getElementById('biologicalDiscoveryResults');
+  if (!el) return;
+
+  const cases = (biologicalDiscoveryCases.cases || biologicalDiscoveryCases || []);
+  if (!cases.length) {
+    el.innerHTML = '<p>No biological discovery cases loaded.</p>';
+    return;
+  }
+
+  el.innerHTML = cases.map((d, i) => {
+    const top = parseFloat(d.validation_priority_score || 0) >= 0.89 ? 'green' : 'orange';
+    return `
+      <div class="result">
+        <span class="top-rank">Rank ${i+1}</span>
+        <span class="tag ${top}">${safe(d.module_theme)}</span>
+        <span class="tag">Priority ${safe(d.validation_priority_score)}</span>
+        <h3>${safe(d.primary_candidate_function)}</h3>
+        <p><b>Orthogroup:</b> ${safe(d.mapped_11species_orthogroup)} | <b>Species support:</b> ${safe(d.species_present_11)}/11 | <b>New species:</b> ${safe(d.new_species_present_2)}/2</p>
+        <p><b>Organ contexts:</b> ${safe(d.organ_support)}</p>
+        <p><b>Suggested system:</b> ${safe(d.suggested_validation_system)}</p>
+        <p class="small">${safe(d.cross_organ_interpretation)}</p>
+        <p class="small"><b>Claim calibration:</b> ${safe(d.claim_calibration)}</p>
+      </div>
+    `;
+  }).join('');
+}
+
 function renderValidationTargets() {
   const cls = document.getElementById('validationClassFilter').value;
   const q = document.getElementById('validationFilter').value.toLowerCase().trim();
@@ -1028,6 +1094,8 @@ async function init() {
     organCandidates = await fetchJSON('json/ugo_v1_8_organ_to_candidates_v1.json');
     speciesCandidates = await fetchJSON('json/ugo_v1_8_species_to_candidates_v1.json');
     validationTargets = await fetchJSON('json/ugo_v1_8_validation_targets_v1.json');
+    biologicalDiscoveryCases = await fetchJSON('json/ugo_v1_9_biological_discovery_cases_v1.json').catch(() => []);
+    discoveryShortlist = await fetchJSON('json/ugo_v1_9_validation_ready_shortlist_v1.json').catch(() => []);
 
     scoreData = await fetchJSON('json/ugo_score_explorer_v1.json').catch(() => []);
     speciesData = await fetchJSON('json/species_browser_v1.json').catch(() => []);
@@ -1046,6 +1114,7 @@ async function init() {
     renderOrganCandidates();
     renderSpeciesCandidates();
     renderValidationTargets();
+    renderBiologicalDiscovery();
 
   } catch(e) {
     document.body.insertAdjacentHTML('afterbegin', `<div class="error">${e.message}</div>`);

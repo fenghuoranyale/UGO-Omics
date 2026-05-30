@@ -1,0 +1,916 @@
+{
+  "generated_on": "2026-05-29 20:12:05",
+  "version": "v1.9 biological discovery case",
+  "interpretation": "Conserved candidate modules and validation-ready hypotheses; not functional validation.",
+  "cases": [
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "headline": "A meristem/regrowth module highlights underground bud and renewal biology.",
+      "primary_candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "benchmark_module": "Meristem_bud_regrowth",
+      "candidate_tier": "Tier_A_supported_main_text_candidate",
+      "mapped_11species_orthogroup": "OG0000863",
+      "ugo_score": "1.0",
+      "species_present_11": "11",
+      "new_species_present_2": "2",
+      "new_species_status": "Present_in_both_new_species",
+      "organ_support_count": "7",
+      "organ_support": "Bulb; Corm; Rhizome; Root crown / regrowth crown; Stolon; Storage root; Tuber",
+      "species_support_count": "11",
+      "species_support": "Beta_vulgaris; Brassica_rapa; Daucus_carota; Dioscorea_rotundata; Manihot_esculenta; Musa_acuminata; Nelumbo_nucifera; Oryza_longistaminata; Panicum_virgatum; Solanum_tuberosum; Zingiber_officinale",
+      "validation_priority_score": "0.95",
+      "validation_priority_class": "Top validation-ready candidate",
+      "suggested_validation_system": "rhizome bud, root crown, or regrowth system",
+      "suggested_assay": "bud activation/regrowth-stage expression analysis followed by perturbation",
+      "cross_organ_interpretation": "Meristem and regrowth-associated candidates provide a mechanistic bridge between rhizome buds, root crowns, stolons, and post-disturbance regeneration.",
+      "claim_calibration": "Orthogroup-level traceability and candidate prioritization; not functional validation."
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "headline": "A stress-resilience module suggests shared survival strategies in underground organs.",
+      "primary_candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "benchmark_module": "Stress_resilience",
+      "candidate_tier": "Tier_A_supported_main_text_candidate",
+      "mapped_11species_orthogroup": "OG0004958",
+      "ugo_score": "1.0",
+      "species_present_11": "11",
+      "new_species_present_2": "2",
+      "new_species_status": "Present_in_both_new_species",
+      "organ_support_count": "7",
+      "organ_support": "Bulb; Corm; Rhizome; Root crown / regrowth crown; Stolon; Storage root; Tuber",
+      "species_support_count": "11",
+      "species_support": "Beta_vulgaris; Brassica_rapa; Daucus_carota; Dioscorea_rotundata; Manihot_esculenta; Musa_acuminata; Nelumbo_nucifera; Oryza_longistaminata; Panicum_virgatum; Solanum_tuberosum; Zingiber_officinale",
+      "validation_priority_score": "0.95",
+      "validation_priority_class": "Top validation-ready candidate",
+      "suggested_validation_system": "regrowth or stress-resilience underground-organ system",
+      "suggested_assay": "stress/regrowth expression profiling and survival/regrowth phenotyping",
+      "cross_organ_interpretation": "Non-symbiotic hemoglobin and stress-resilience candidates may connect underground survival, low-oxygen microenvironments, and regrowth after stress.",
+      "claim_calibration": "Orthogroup-level traceability and candidate prioritization; not functional validation."
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "headline": "A hormone-related module connects underground-organ developmental transitions.",
+      "primary_candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "benchmark_module": "Hormone_regulation",
+      "candidate_tier": "Tier_B_no_new_lotus_ginger_support",
+      "mapped_11species_orthogroup": "OG0006937",
+      "ugo_score": "1.0",
+      "species_present_11": "11",
+      "new_species_present_2": "2",
+      "new_species_status": "Present_in_both_new_species",
+      "organ_support_count": "7",
+      "organ_support": "Bulb; Corm; Rhizome; Root crown / regrowth crown; Stolon; Storage root; Tuber",
+      "species_support_count": "11",
+      "species_support": "Beta_vulgaris; Brassica_rapa; Daucus_carota; Dioscorea_rotundata; Manihot_esculenta; Musa_acuminata; Nelumbo_nucifera; Oryza_longistaminata; Panicum_virgatum; Solanum_tuberosum; Zingiber_officinale",
+      "validation_priority_score": "0.89",
+      "validation_priority_class": "Top validation-ready candidate",
+      "suggested_validation_system": "storage-root/tuber or hormone-responsive underground-organ system",
+      "suggested_assay": "hormone-response expression analysis and candidate perturbation",
+      "cross_organ_interpretation": "Hormone-related candidates may contribute to developmental transitions and storage-organ initiation across tuber, storage-root, bulb, and rhizome systems.",
+      "claim_calibration": "Orthogroup-level traceability and candidate prioritization; not functional validation."
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "headline": "Developmental TF modules provide regulatory entry points for underground-organ candidate discovery.",
+      "primary_candidate_function": "bHLH-like transcriptional regulator",
+      "benchmark_module": "Developmental_TF",
+      "candidate_tier": "Tier_A_plus_core_stable_with_lotus_or_ginger",
+      "mapped_11species_orthogroup": "OG0000273",
+      "ugo_score": "0.678",
+      "species_present_11": "11",
+      "new_species_present_2": "2",
+      "new_species_status": "Present_in_both_new_species",
+      "organ_support_count": "7",
+      "organ_support": "Bulb; Corm; Rhizome; Root crown / regrowth crown; Stolon; Storage root; Tuber",
+      "species_support_count": "11",
+      "species_support": "Beta_vulgaris; Brassica_rapa; Daucus_carota; Dioscorea_rotundata; Manihot_esculenta; Musa_acuminata; Nelumbo_nucifera; Oryza_longistaminata; Panicum_virgatum; Solanum_tuberosum; Zingiber_officinale",
+      "validation_priority_score": "0.821",
+      "validation_priority_class": "Strong validation candidate",
+      "suggested_validation_system": "developmental transition system with clear underground-organ initiation stage",
+      "suggested_assay": "stage-specific expression analysis and targeted perturbation of transcription factor homologs",
+      "cross_organ_interpretation": "Developmental transcription factors provide candidate regulatory nodes for coordinating underground-organ identity, growth, and regeneration.",
+      "claim_calibration": "Orthogroup-level traceability and candidate prioritization; not functional validation."
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "headline": "A cell-wall remodeling module links underground-organ expansion across divergent systems.",
+      "primary_candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "benchmark_module": "Cell_wall_remodeling",
+      "candidate_tier": "Tier_A_plus_core_stable_with_lotus_or_ginger",
+      "mapped_11species_orthogroup": "OG0000154",
+      "ugo_score": "1.0",
+      "species_present_11": "4",
+      "new_species_present_2": "2",
+      "new_species_status": "Present_in_both_new_species",
+      "organ_support_count": "7",
+      "organ_support": "Bulb; Corm; Rhizome; Root crown / regrowth crown; Stolon; Storage root; Tuber",
+      "species_support_count": "4",
+      "species_support": "Beta_vulgaris; Dioscorea_rotundata; Musa_acuminata; Panicum_virgatum",
+      "validation_priority_score": "0.791",
+      "validation_priority_class": "Strong validation candidate",
+      "suggested_validation_system": "rhizome elongation or tuber/storage-organ expansion system",
+      "suggested_assay": "expression profiling across initiation/elongation stages; RNAi/CRISPR or overexpression in a tractable system",
+      "cross_organ_interpretation": "Cell-wall remodeling is a plausible shared process during rhizome elongation, tuber expansion, storage-root thickening, and other underground-organ growth transitions.",
+      "claim_calibration": "Orthogroup-level traceability and candidate prioritization; not functional validation."
+    }
+  ],
+  "species_matrix": [
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Beta_vulgaris",
+      "gene_count": "54",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Brassica_rapa",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Daucus_carota",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Dioscorea_rotundata",
+      "gene_count": "19",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Manihot_esculenta",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Musa_acuminata",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Nelumbo_nucifera",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Oryza_longistaminata",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Panicum_virgatum",
+      "gene_count": "22",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Solanum_tuberosum",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "species": "Zingiber_officinale",
+      "gene_count": "0",
+      "present": "0"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Beta_vulgaris",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Brassica_rapa",
+      "gene_count": "8",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Daucus_carota",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Dioscorea_rotundata",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Manihot_esculenta",
+      "gene_count": "7",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Musa_acuminata",
+      "gene_count": "6",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Nelumbo_nucifera",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Oryza_longistaminata",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Panicum_virgatum",
+      "gene_count": "4",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Solanum_tuberosum",
+      "gene_count": "6",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "species": "Zingiber_officinale",
+      "gene_count": "7",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Beta_vulgaris",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Brassica_rapa",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Daucus_carota",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Dioscorea_rotundata",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Manihot_esculenta",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Musa_acuminata",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Nelumbo_nucifera",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Oryza_longistaminata",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Panicum_virgatum",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Solanum_tuberosum",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "species": "Zingiber_officinale",
+      "gene_count": "4",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Beta_vulgaris",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Brassica_rapa",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Daucus_carota",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Dioscorea_rotundata",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Manihot_esculenta",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Musa_acuminata",
+      "gene_count": "2",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Nelumbo_nucifera",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Oryza_longistaminata",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Panicum_virgatum",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Solanum_tuberosum",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "species": "Zingiber_officinale",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Beta_vulgaris",
+      "gene_count": "1",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Brassica_rapa",
+      "gene_count": "4",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Daucus_carota",
+      "gene_count": "4",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Dioscorea_rotundata",
+      "gene_count": "7",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Manihot_esculenta",
+      "gene_count": "6",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Musa_acuminata",
+      "gene_count": "13",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Nelumbo_nucifera",
+      "gene_count": "5",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Oryza_longistaminata",
+      "gene_count": "7",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Panicum_virgatum",
+      "gene_count": "9",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Solanum_tuberosum",
+      "gene_count": "3",
+      "present": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "species": "Zingiber_officinale",
+      "gene_count": "19",
+      "present": "1"
+    }
+  ],
+  "organ_matrix": [
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "rhizome",
+      "organ_label": "Rhizome",
+      "recommendation_score": "1.296",
+      "matched_terms": "cell-wall; xth",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "tuber",
+      "organ_label": "Tuber",
+      "recommendation_score": "1.216",
+      "matched_terms": "cell-wall",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "storage_root",
+      "organ_label": "Storage root",
+      "recommendation_score": "1.216",
+      "matched_terms": "cell-wall",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "bulb",
+      "organ_label": "Bulb",
+      "recommendation_score": "1.216",
+      "matched_terms": "cell-wall",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "corm",
+      "organ_label": "Corm",
+      "recommendation_score": "1.216",
+      "matched_terms": "cell-wall",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "root_crown",
+      "organ_label": "Root crown / regrowth crown",
+      "recommendation_score": "1.136",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_1_Cell_wall_remodeling",
+      "module_theme": "Cell-wall remodeling module",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "organ_key": "stolon",
+      "organ_label": "Stolon",
+      "recommendation_score": "1.216",
+      "matched_terms": "cell-wall",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "rhizome",
+      "organ_label": "Rhizome",
+      "recommendation_score": "1.44",
+      "matched_terms": "bud; meristem; regrowth",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "tuber",
+      "organ_label": "Tuber",
+      "recommendation_score": "1.28",
+      "matched_terms": "meristem",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "storage_root",
+      "organ_label": "Storage root",
+      "recommendation_score": "1.28",
+      "matched_terms": "meristem",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "bulb",
+      "organ_label": "Bulb",
+      "recommendation_score": "1.36",
+      "matched_terms": "meristem; regrowth",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "corm",
+      "organ_label": "Corm",
+      "recommendation_score": "1.36",
+      "matched_terms": "meristem; regrowth",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "root_crown",
+      "organ_label": "Root crown / regrowth crown",
+      "recommendation_score": "1.44",
+      "matched_terms": "bud; meristem; regrowth",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_2_Meristem_regrowth",
+      "module_theme": "Meristem and regrowth module",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "organ_key": "stolon",
+      "organ_label": "Stolon",
+      "recommendation_score": "1.36",
+      "matched_terms": "meristem; regrowth",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "rhizome",
+      "organ_label": "Rhizome",
+      "recommendation_score": "1.28",
+      "matched_terms": "stress",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "tuber",
+      "organ_label": "Tuber",
+      "recommendation_score": "1.2",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "storage_root",
+      "organ_label": "Storage root",
+      "recommendation_score": "1.28",
+      "matched_terms": "stress",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "bulb",
+      "organ_label": "Bulb",
+      "recommendation_score": "1.2",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "corm",
+      "organ_label": "Corm",
+      "recommendation_score": "1.2",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "root_crown",
+      "organ_label": "Root crown / regrowth crown",
+      "recommendation_score": "1.36",
+      "matched_terms": "hemoglobin; stress",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_3_Stress_resilience",
+      "module_theme": "Stress-resilience module",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "organ_key": "stolon",
+      "organ_label": "Stolon",
+      "recommendation_score": "1.2",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "rhizome",
+      "organ_label": "Rhizome",
+      "recommendation_score": "1.2",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "tuber",
+      "organ_label": "Tuber",
+      "recommendation_score": "1.28",
+      "matched_terms": "hormone",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "storage_root",
+      "organ_label": "Storage root",
+      "recommendation_score": "1.28",
+      "matched_terms": "hormone",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "bulb",
+      "organ_label": "Bulb",
+      "recommendation_score": "1.28",
+      "matched_terms": "hormone",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "corm",
+      "organ_label": "Corm",
+      "recommendation_score": "1.28",
+      "matched_terms": "hormone",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "root_crown",
+      "organ_label": "Root crown / regrowth crown",
+      "recommendation_score": "1.2",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_4_Hormone_regulation",
+      "module_theme": "Hormone-related regulation module",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "organ_key": "stolon",
+      "organ_label": "Stolon",
+      "recommendation_score": "1.28",
+      "matched_terms": "hormone",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "rhizome",
+      "organ_label": "Rhizome",
+      "recommendation_score": "0.958",
+      "matched_terms": "bhlh",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "tuber",
+      "organ_label": "Tuber",
+      "recommendation_score": "0.878",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "storage_root",
+      "organ_label": "Storage root",
+      "recommendation_score": "0.878",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "bulb",
+      "organ_label": "Bulb",
+      "recommendation_score": "0.878",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "corm",
+      "organ_label": "Corm",
+      "recommendation_score": "0.878",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "root_crown",
+      "organ_label": "Root crown / regrowth crown",
+      "recommendation_score": "0.878",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    },
+    {
+      "case_id": "Case_5_Developmental_TF",
+      "module_theme": "Developmental transcription-factor module",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "organ_key": "stolon",
+      "organ_label": "Stolon",
+      "recommendation_score": "0.878",
+      "matched_terms": "broad high-confidence candidate",
+      "present_in_organ_layer": "1"
+    }
+  ]
+}
