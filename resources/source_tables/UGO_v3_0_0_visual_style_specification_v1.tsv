@@ -1,0 +1,8 @@
+visual_element	recommendation	rationale
+overall_style	Clean vector-like scientific figure style; minimal decoration; strong panel hierarchy.	MP-level figures should look like a conceptual and analytical framework, not an automatically generated report.
+font	Use one sans-serif font consistently; panel labels large; species labels readable at print size.	Current functional figures may have small text and uneven visual density.
+color_palette	Use restrained colors for major biological categories; avoid excessive rainbow palettes.	The story is complex; color should guide interpretation, not add noise.
+module_symbols	Use consistent icons or filled circles for five module categories across all figures.	Meristem, stress, hormone, regulatory, and cell-wall modules should become visual anchors.
+tree_matrix_alignment	Align species tree tips directly with the module matrix rows.	This is essential for Figure 2 readability.
+claim_language	Use labels such as candidate module, recurrence signal, toolkit model, and hypothesis-generating framework.	Avoid overclaiming while maintaining high conceptual impact.
+caption_style	Each caption should state the biological question, data layer, interpretation, and limitation.	Captions should help reviewers understand the logic without reading all Methods first.

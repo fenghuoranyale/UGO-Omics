@@ -1,0 +1,6 @@
+rank	action	reason	expected_output
+1	Redraw Figure 2 as final MP-style phylogeny-plus-module matrix.	Figure 2 is the main bridge between species design, phylogeny, and module recurrence.	Figure_2_integrated_evolutionary_framework_v2.pdf/png
+2	Create Figure 4 conceptual regeneration-resilience toolkit model.	Figure 4 is the mechanism figure and should make the article feel like a conceptual advance.	Figure_4_regeneration_resilience_toolkit_model_v1.pdf/png
+3	Create Figure 1 platform overview.	Figure 1 should immediately show that UGO-Omics is a platform, not a file collection.	Figure_1_platform_architecture_v1.pdf/png
+4	Create Figure 5 benchmark and discovery summary.	Figure 5 supports credibility and biological discovery value.	Figure_5_benchmark_discovery_case_v1.pdf/png
+5	Create Figure 3 workflow schematic or clean website screenshot composite.	Figure 3 demonstrates usability and practical value.	Figure_3_discovery_workflows_v1.pdf/png

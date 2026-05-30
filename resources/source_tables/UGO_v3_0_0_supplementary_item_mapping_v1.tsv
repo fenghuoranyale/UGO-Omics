@@ -1,0 +1,11 @@
+supplementary_item	source_file	description	linked_main_figure
+Table S1	UGO_v2_3_0_species_design_table_v1.tsv	Tiered species design and 51-species / 11-species selection logic.	Figure 1; Figure 2
+Table S2	UGO_v2_3_1_relaxed_9of11_BUSCO_supermatrix_summary_v1.txt	Main 9-of-11 BUSCO phylogenetic matrix summary.	Figure 2
+Table S3	UGO_v2_3_1_relaxed_10of11_BUSCO_supermatrix_summary_v1.txt	10-of-11 BUSCO sensitivity matrix summary.	Figure 2
+Table S4	UGO_v2_3_2_module_species_phylogenetic_distribution_v1.tsv	Species-level candidate module distribution across the 11-species backbone.	Figure 2; Figure 4
+Table S5	UGO_v2_5_0_regeneration_resilience_toolkit_module_index_v1.tsv	Module recurrence index and regeneration-resilience toolkit components.	Figure 4
+Table S6	UGO_v2_6_0_known_gene_benchmark_panel_v1.tsv	Known-category benchmark panel.	Figure 5
+Table S7	UGO_v2_6_0_benchmark_overall_recovery_metrics_v1.tsv	Benchmark recovery metrics.	Figure 5
+Table S8	UGO_v2_7_0_high_impact_discovery_case_module_evidence_v1.tsv	Integrated evidence for the high-impact discovery case.	Figure 5
+Table S9	UGO_v2_7_0_high_impact_discovery_case_species_support_v1.tsv	Species-level support for the regeneration-resilience core toolkit.	Figure 5
+Figure S1	UGO_v2_3_1_sensitivity_10of11_BUSCO_species_tree_v1.nwk	10-of-11 BUSCO sensitivity tree.	Figure 2

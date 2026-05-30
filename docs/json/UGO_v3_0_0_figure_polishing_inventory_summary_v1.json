@@ -1,0 +1,15 @@
+{
+  "version": "v3.0.0 figure polishing inventory and MP-level figure plan",
+  "generated_on": "2026-05-30 17:46:02",
+  "purpose": "Inventory existing figures and define an MP-level figure strategy for the UGO-Omics manuscript.",
+  "main_outputs": [
+    "UGO_v3_0_0_existing_figure_inventory_v1.tsv",
+    "UGO_v3_0_0_MP_level_figure_strategy_v1.tsv",
+    "UGO_v3_0_0_visual_style_specification_v1.tsv",
+    "UGO_v3_0_0_figure_caption_drafts_v1.tsv",
+    "UGO_v3_0_0_supplementary_item_mapping_v1.tsv",
+    "UGO_v3_0_0_figure_polishing_priority_actions_v1.tsv"
+  ],
+  "recommended_next_step": "Generate Figure 2 v2 as the final MP-style phylogeny-plus-module matrix, followed by the Figure 4 conceptual model.",
+  "claim_calibration": "Figures should emphasize candidate modules, recurrence signals, and hypothesis-generating evolutionary framework without overclaiming functional validation or definitive origins."
+}
