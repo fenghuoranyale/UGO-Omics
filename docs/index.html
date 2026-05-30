@@ -478,6 +478,7 @@
 <nav>
   <button class="active" onclick="showSection('start', this)">Start Here</button>
   <button onclick="showSection('checkGene', this)">Check a Gene</button>
+  <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
   <button onclick="showSection('organCandidates', this)">Find by Organ</button>
   <button onclick="showSection('speciesCandidates', this)">Find by Species</button>
   <button onclick="showSection('validationTargets', this)">Validation Targets</button>
@@ -531,6 +532,96 @@
 
   <div class="panel app-note">
     UGO-Omics outputs are designed for candidate prioritization and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
+  </div>
+</section>
+
+
+<section id="sequenceToUGO" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Sequence-to-UGO</h2>
+      <p>Map your protein sequence to UGO-Omics orthogroups, candidate modules, UGO scores, biological discovery cases, and validation-priority annotations.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    Use this workflow when you start from a protein sequence rather than a known UGO gene ID. The current version provides a local DIAMOND-based workflow using the UGO 11-species protein search database.
+  </div>
+
+  <div class="workflow-grid">
+    <div class="card workflow-card">
+      <div class="workflow-icon">1</div>
+      <h3>Prepare protein FASTA</h3>
+      <p>Use one or more protein sequences as input. CDS or genomic sequences should be translated before using this version.</p>
+    </div>
+
+    <div class="card workflow-card">
+      <div class="workflow-icon">2</div>
+      <h3>Run DIAMOND search</h3>
+      <p>Search your protein sequence against the UGO 11-species protein database.</p>
+    </div>
+
+    <div class="card workflow-card">
+      <div class="workflow-icon">3</div>
+      <h3>Map hits to UGO</h3>
+      <p>Return orthogroup, candidate module, UGO score, validation-priority class, biological discovery case, and suggested follow-up system.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>One-command local workflow</h3>
+    <pre style="white-space:pre-wrap;background:#f8fafc;border:1px solid #dce6f0;border-radius:12px;padding:14px;">bash scripts/run_sequence_to_UGO.sh examples/example_query_proteins.fa example_results/example_query</pre>
+    <p class="small">The interpreted output is <b>example_results/example_query.sequence_to_UGO.tsv</b>.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Toolkit files</h3>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Full protein search database</h3>
+        <p>The full FASTA, DIAMOND database, and full sequence-to-orthogroup lookup exceed GitHub's file-size limit. They are included in the full release package and Zenodo archive.</p>
+        <a href="json/ugo_v2_0_1_sequence_to_ugo_toolkit_v1.json">View metadata</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Large-file note</h3>
+        <p>GitHub stores scripts, examples, metadata, and compact candidate lookup tables. Full search databases are distributed through the release archive.</p>
+        <a href="../toolkits/P2_v2_0_1_sequence_to_ugo/database/README_large_files.md">Read note</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Candidate module lookup</h3>
+        <p>Maps UGO orthogroups to candidate function, UGO score, validation-priority class, and suggested follow-up system.</p>
+        <a href="../toolkits/P2_v2_0_1_sequence_to_ugo/database/UGO_orthogroup_to_candidate_module_lookup_v1.tsv">Download TSV</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Candidate protein lookup</h3>
+        <p>Protein-level entries belonging to prioritized UGO candidate modules.</p>
+        <a href="../toolkits/P2_v2_0_1_sequence_to_ugo/database/UGO_sequence_to_candidate_module_lookup_v1.tsv">Download TSV</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Toolkit metadata</h3>
+        <p>Summary of database size, files, scripts, and interpretation.</p>
+        <a href="json/ugo_v2_0_1_sequence_to_ugo_toolkit_v1.json">Download JSON</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>What you get back</h3>
+    <table>
+      <tr><th>Output field</th><th>Meaning</th></tr>
+      <tr><td>hit_species</td><td>The closest-matching UGO species.</td></tr>
+      <tr><td>hit_orthogroup</td><td>The closest UGO 11-species orthogroup hit.</td></tr>
+      <tr><td>candidate_function</td><td>Candidate module annotation if the orthogroup is prioritized.</td></tr>
+      <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
+      <tr><td>validation_priority_class</td><td>Recommended follow-up priority class.</td></tr>
+      <tr><td>biological_discovery_case</td><td>Whether the hit belongs to a v1.9 conserved module case.</td></tr>
+      <tr><td>suggested_validation_system</td><td>Suggested biological system for follow-up.</td></tr>
+      <tr><td>UGO_interpretation</td><td>Plain-language interpretation of the match.</td></tr>
+    </table>
   </div>
 </section>
 

@@ -1,0 +1,24 @@
+{
+  "toolkit_version": "v2.0.1 Sequence-to-UGO Toolkit",
+  "species_count": 11,
+  "protein_sequence_count": 408906,
+  "candidate_orthogroup_count": 8,
+  "candidate_protein_count": 375,
+  "github_repository_note": "GitHub stores scripts, examples, metadata, and compact candidate lookup tables. Full protein FASTA, DIAMOND database, and full sequence-to-orthogroup lookup exceed GitHub's single-file size limit and are provided in the full release package and Zenodo archive.",
+  "large_files_in_release_archive": [
+    "UGO_11species_protein_search_database_v1.fa",
+    "UGO_11species_protein_search_database_v1.fa.gz",
+    "UGO_11species_protein_search_database_v1.dmnd",
+    "UGO_sequence_to_orthogroup_lookup_v1.tsv"
+  ],
+  "github_files": {
+    "candidate_lookup": "toolkits/P2_v2_0_1_sequence_to_ugo/database/UGO_orthogroup_to_candidate_module_lookup_v1.tsv",
+    "candidate_protein_lookup": "toolkits/P2_v2_0_1_sequence_to_ugo/database/UGO_sequence_to_candidate_module_lookup_v1.tsv",
+    "metadata": "toolkits/P2_v2_0_1_sequence_to_ugo/database/UGO_sequence_to_ugo_toolkit_metadata_v1.json",
+    "run_script": "toolkits/P2_v2_0_1_sequence_to_ugo/scripts/run_sequence_to_UGO.sh",
+    "mapper_script": "toolkits/P2_v2_0_1_sequence_to_ugo/scripts/map_sequence_hits_to_UGO.py",
+    "example_query": "toolkits/P2_v2_0_1_sequence_to_ugo/examples/example_query_proteins.fa",
+    "example_result": "toolkits/P2_v2_0_1_sequence_to_ugo/example_results/example_sequence_to_UGO_result.tsv"
+  },
+  "interpretation": "Sequence-to-UGO maps user protein queries to UGO 11-species orthogroups and candidate modules. It is a candidate-prioritization tool, not functional validation."
+}
