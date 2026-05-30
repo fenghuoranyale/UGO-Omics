@@ -1,0 +1,15 @@
+{
+  "version": "v2.4.0 integrated evolutionary framework figure",
+  "generated_on": "2026-05-30 17:10:36",
+  "purpose": "Generate a manuscript-style Figure 2 integrating 51-species design, 11-species BUSCO tree, and species-level conserved module distribution.",
+  "input_layers": [
+    "v2.3.0 tiered species design",
+    "v2.3.1 BUSCO-based independent species phylogeny",
+    "v2.3.2 module phylogenetic distribution"
+  ],
+  "figure_outputs": [
+    "Figure_2_integrated_evolutionary_framework_v1.png",
+    "Figure_2_integrated_evolutionary_framework_v1.pdf"
+  ],
+  "claim_calibration": "Figure shows species-level module recurrence in a BUSCO phylogenetic context. Underground-organ categories are species-associated annotations, not formal organ-level recurrence claims."
+}
