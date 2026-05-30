@@ -1356,6 +1356,64 @@ MASS..."></textarea>
     Use this workflow when you start from a list of gene or protein IDs rather than a sequence. Compact mode maps directly to prioritized UGO candidate modules. Full mode can also use the complete sequence-to-orthogroup lookup from the release archive.
   </div>
 
+  <div class="wizard-panel" id="geneListWizard">
+    <div class="wizard-header">
+      <div>
+        <h3>Gene-list-to-UGO interactive workflow</h3>
+        <p>Paste a DEG, QTL, GWAS, or candidate gene list, generate the local command, and inspect a ranked module-summary output. The browser prepares and explains the workflow; the mapping script runs locally or on HPC.</p>
+      </div>
+    </div>
+
+    <div class="wizard-steps">
+      <div class="wizard-step">
+        <h4><span class="wizard-step-number">1</span>Input gene list</h4>
+        <textarea id="geneWizardInput" class="wizard-textarea" placeholder="Paste one gene or protein ID per line, for example:
+Gene_001
+Gene_002
+Gene_003"></textarea>
+        <div class="wizard-button-row">
+          <button class="wizard-btn" onclick="geneWizardLoadExample()">Load example gene list</button>
+          <button class="wizard-btn" onclick="geneWizardClear()">Clear</button>
+        </div>
+        <p class="wizard-note">Use one gene/protein ID per line. Suitable inputs include DEGs, QTL interval genes, GWAS candidates, or manually curated candidate genes.</p>
+      </div>
+
+      <div class="wizard-step">
+        <h4><span class="wizard-step-number">2</span>Generate command</h4>
+        <p>After pasting your gene list, generate the one-command local/HPC workflow.</p>
+        <div class="wizard-button-row">
+          <button class="wizard-btn primary" onclick="geneWizardGenerateCommand()">Generate command</button>
+          <button class="wizard-btn" onclick="geneWizardCopyCommand()">Copy command</button>
+        </div>
+        <div id="geneWizardCommand" class="wizard-output">Command will appear here.</div>
+        <p class="wizard-note">Save your pasted list as <b>my_gene_list.txt</b>, then run this command inside the Gene-list-to-UGO toolkit directory.</p>
+      </div>
+
+      <div class="wizard-step">
+        <h4><span class="wizard-step-number">3</span>Inspect module summary</h4>
+        <p>Open the demo module summary to see how UGO ranks candidate modules from an input gene list.</p>
+        <div class="wizard-button-row">
+          <button class="wizard-btn primary" onclick="geneWizardLoadDemoOutput()">Show demo module summary</button>
+          <a class="wizard-btn" href="toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv" target="_blank" rel="noopener">Open TSV</a>
+        </div>
+        <div id="geneWizardDemoOutput" class="wizard-note">Demo module summary will appear here.</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px;">
+      <h3>How to interpret the output</h3>
+      <table>
+        <tr><th>Output</th><th>Meaning</th></tr>
+        <tr><td>matched_genes.tsv</td><td>Input IDs that matched UGO candidate gene/protein records.</td></tr>
+        <tr><td>module_summary.tsv</td><td>Ranked summary of UGO modules represented in the input gene list.</td></tr>
+        <tr><td>unmatched_genes.tsv</td><td>Input IDs not directly matched in the current lookup table.</td></tr>
+        <tr><td>input_gene_count</td><td>Number of input genes supporting a module.</td></tr>
+        <tr><td>validation_priority_class</td><td>Suggested priority class for follow-up validation.</td></tr>
+      </table>
+    </div>
+  </div>
+
+
   <div class="workflow-grid">
     <a class="card workflow-card clickable-card" href="toolkits/P2_v2_0_2_gene_list_to_ugo/examples/example_gene_list.txt" target="_blank" rel="noopener">
       <div class="workflow-icon">1</div>
@@ -2154,6 +2212,106 @@ async function seqWizardLoadDemoOutput() {
     el.innerHTML = table + '<p class="wizard-note">Showing up to five demo rows. Open the TSV for the complete output.</p>';
   } catch (e) {
     el.innerHTML = '<p>Could not load demo output. Open the TSV link instead.</p>';
+  }
+}
+
+
+async function geneWizardLoadExample() {
+  const box = document.getElementById('geneWizardInput');
+  if (!box) return;
+
+  try {
+    const txt = await fetch('toolkits/P2_v2_0_2_gene_list_to_ugo/examples/example_gene_list.txt').then(r => r.text());
+    box.value = txt.trim();
+  } catch (e) {
+    box.value = 'Gene_001\nGene_002\nGene_003';
+  }
+}
+
+function geneWizardClear() {
+  const box = document.getElementById('geneWizardInput');
+  if (box) box.value = '';
+
+  const cmd = document.getElementById('geneWizardCommand');
+  if (cmd) cmd.textContent = 'Command will appear here.';
+
+  const out = document.getElementById('geneWizardDemoOutput');
+  if (out) out.innerHTML = 'Demo module summary will appear here.';
+}
+
+function geneWizardGenerateCommand() {
+  const box = document.getElementById('geneWizardInput');
+  const cmd = document.getElementById('geneWizardCommand');
+  if (!box || !cmd) return;
+
+  const txt = box.value.trim();
+  const n = txt.split(/\r?\n/).map(x => x.trim()).filter(x => x && !x.startsWith('#')).length;
+
+  const command = [
+    '# Save your pasted IDs as my_gene_list.txt',
+    '# Number of non-comment input IDs detected in the box: ' + n,
+    '',
+    'bash scripts/run_gene_list_to_UGO.sh my_gene_list.txt my_gene_list_to_UGO',
+    '',
+    '# Main outputs:',
+    'my_gene_list_to_UGO.matched_genes.tsv',
+    'my_gene_list_to_UGO.module_summary.tsv',
+    'my_gene_list_to_UGO.unmatched_genes.tsv'
+  ].join('\n');
+
+  cmd.textContent = command;
+}
+
+async function geneWizardCopyCommand() {
+  const cmd = document.getElementById('geneWizardCommand');
+  if (!cmd) return;
+
+  const text = cmd.textContent || '';
+  try {
+    await navigator.clipboard.writeText(text);
+    cmd.textContent = text + '\n\n# Copied to clipboard.';
+  } catch (e) {
+    cmd.textContent = text + '\n\n# Copy failed. Please select and copy manually.';
+  }
+}
+
+async function geneWizardLoadDemoOutput() {
+  const el = document.getElementById('geneWizardDemoOutput');
+  if (!el) return;
+
+  try {
+    const txt = await fetch('toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv').then(r => r.text());
+    const lines = txt.trim().split(/\r?\n/);
+    if (lines.length < 2) {
+      el.innerHTML = '<p>No demo module rows found.</p>';
+      return;
+    }
+
+    const header = lines[0].split('\t');
+    const rows = lines.slice(1, 8).map(line => line.split('\t'));
+
+    const preferred = [
+      'orthogroup',
+      'candidate_function',
+      'benchmark_module',
+      'input_gene_count',
+      'ugo_score',
+      'validation_priority_class',
+      'suggested_validation_system'
+    ];
+
+    const idx = preferred.map(k => header.indexOf(k)).filter(i => i >= 0);
+    const shownHeader = idx.map(i => header[i]);
+
+    let table = '<table class="wizard-result-table"><tr>' + shownHeader.map(h => '<th>' + safe(h) + '</th>').join('') + '</tr>';
+    for (const r of rows) {
+      table += '<tr>' + idx.map(i => '<td>' + safe(r[i] || '') + '</td>').join('') + '</tr>';
+    }
+    table += '</table>';
+
+    el.innerHTML = table + '<p class="wizard-note">Showing up to seven ranked module rows. Open the TSV for the complete output.</p>';
+  } catch (e) {
+    el.innerHTML = '<p>Could not load demo module summary. Open the TSV link instead.</p>';
   }
 }
 
