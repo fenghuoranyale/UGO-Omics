@@ -1,0 +1,15 @@
+{
+  "version": "v3.4.0 Figure 5 benchmark and discovery case summary",
+  "generated_on": "2026-05-30 18:02:57",
+  "purpose": "Generate MP-style Figure 5 integrating known-category benchmark recovery and high-impact biological discovery case.",
+  "outputs": [
+    "Figure_5_benchmark_discovery_case_summary_v1.png",
+    "Figure_5_benchmark_discovery_case_summary_v1.pdf"
+  ],
+  "input_layers": [
+    "v2.6.0 known-category recovery benchmark",
+    "v2.7.0 high-impact biological discovery case",
+    "v3.0.0 figure polishing plan"
+  ],
+  "claim_calibration": "Figure supports candidate-prioritization credibility and biological discovery hypotheses, not functional validation."
+}

@@ -1,0 +1,8 @@
+benchmark_category	benchmark_items	recovered_items	category_recovery_rate	expected_ugo_components	expected_modules	interpretation
+hormone_developmental_switching	2	2	1.0	developmental_state_switching	hormone_regulation	covered by current UGO module layer
+meristem_bud_regrowth	2	2	1.0	regeneration_capacity	meristem_regrowth	covered by current UGO module layer
+organ_identity_and_patterning	1	1	1.0	regulatory_network_control	developmental_tf	covered by current UGO module layer
+storage_metabolism	1	0	0.0	storage_and_resource_allocation	not_yet_primary_v2_5_module	partially covered or future expansion target
+stress_survival_persistence	2	2	1.0	stress_survival	stress_resilience	covered by current UGO module layer
+structural_remodeling	1	1	1.0	structural_remodeling	cell_wall_remodeling	covered by current UGO module layer
+transcriptional_network_control	1	1	1.0	regulatory_network_control	developmental_tf	covered by current UGO module layer
