@@ -734,6 +734,53 @@
 </section>
 
 
+
+<section id="resourceFinder" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Resource Finder</h2>
+      <p>Select a species to see available UGO candidate modules, resource layers, and recommended next steps.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    Use this page when you start from a species rather than a sequence or gene list.
+  </div>
+
+  <div class="panel">
+    <h3>Select species</h3>
+    <select id="resourceSpeciesSelect" onchange="renderResourceFinder()">
+      <option value="">Loading species...</option>
+    </select>
+    <div id="resourceFinderResults" style="margin-top:16px;">
+      <p class="small">Choose a species to see resource cards and candidate-module recommendations.</p>
+    </div>
+  </div>
+</section>
+
+<section id="organKits" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Organ Kits</h2>
+      <p>Select an underground organ type to retrieve candidate modules, suggested workflows, and validation-ready hypotheses.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    Use this page when you start from an organ system such as rhizome, tuber, storage root, bulb, corm, root crown, or stolon.
+  </div>
+
+  <div class="panel">
+    <h3>Select organ</h3>
+    <select id="organKitSelect" onchange="renderOrganKit()">
+      <option value="">Loading organs...</option>
+    </select>
+    <div id="organKitResults" style="margin-top:16px;">
+      <p class="small">Choose an organ type to see an organ-specific candidate kit.</p>
+    </div>
+  </div>
+</section>
+
 <section id="geneListToUGO" class="section">
   <div class="section-title">
     <div>
