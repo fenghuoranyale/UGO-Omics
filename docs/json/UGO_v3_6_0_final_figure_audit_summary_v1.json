@@ -1,0 +1,42 @@
+{
+  "version": "v3.6.0 final figure set audit and manuscript figure-reference update",
+  "generated_on": "2026-05-30 18:23:42",
+  "all_public_repo_figures_present": true,
+  "all_final_package_figures_present": true,
+  "all_captions_present": true,
+  "main_figures": [
+    {
+      "figure": "Figure 1",
+      "title": "UGO-Omics platform architecture and underground-organ atlas",
+      "message": "UGO-Omics is a mature cross-species underground-organ discovery platform."
+    },
+    {
+      "figure": "Figure 2",
+      "title": "Integrated evolutionary framework of UGO-Omics",
+      "message": "The 51-species atlas, 11-species BUSCO tree, and module matrix provide evolutionary context."
+    },
+    {
+      "figure": "Figure 3",
+      "title": "Researcher-facing UGO discovery workflows",
+      "message": "UGO-Omics is usable through sequence, gene-list, species-resource, and organ-kit workflows."
+    },
+    {
+      "figure": "Figure 4",
+      "title": "Regeneration\u2013resilience toolkit model",
+      "message": "Distinct underground organs may repeatedly recruit a conserved regeneration\u2013resilience toolkit."
+    },
+    {
+      "figure": "Figure 5",
+      "title": "Known-category recovery and high-impact biological discovery case",
+      "message": "Benchmark recovery and discovery scoring support a recurrent core toolkit case."
+    }
+  ],
+  "outputs": [
+    "UGO_v3_6_0_final_main_figure_inventory_v1.tsv",
+    "UGO_v3_6_0_final_main_figure_captions_v1.md",
+    "UGO_v3_6_0_final_figure_to_source_table_mapping_v1.tsv",
+    "UGO_v3_6_0_final_supplementary_item_mapping_v1.tsv",
+    "UGO_v3_6_0_main_manuscript_skeleton_with_figure_references_v1.md"
+  ],
+  "claim_calibration": "Final figure set supports platform, evolutionary framework, workflows, mechanism model, benchmark recovery, and discovery case while preserving hypothesis-generating language."
+}

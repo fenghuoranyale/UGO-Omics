@@ -1,0 +1,11 @@
+supplementary_item	source_file	description	linked_main_figure
+Table S1	UGO_v2_3_0_species_design_table_v1.tsv	Tiered 51-species atlas and 11-species backbone selection logic.	Figure 1; Figure 2
+Table S2	Figure2_v2_module_species_distribution.tsv	Species-level candidate module distribution used in Figure 2.	Figure 2
+Table S3	Figure2_v2_main_9of11_BUSCO_species_tree.nwk	Main 9-of-11 BUSCO phylogenetic tree used in Figure 2.	Figure 2
+Table S4	Figure3_usability_workflow_summary.tsv	Summary of researcher-facing UGO workflows.	Figure 3
+Table S5	Figure4_toolkit_module_index.tsv	Regeneration–resilience toolkit module index used in Figure 4.	Figure 4
+Table S6	Figure4_discovery_case_module_evidence.tsv	Module-level discovery evidence used in Figure 4.	Figure 4
+Table S7	Figure5_known_category_benchmark_panel.tsv	Known-category benchmark panel used in Figure 5.	Figure 5
+Table S8	Figure5_benchmark_overall_recovery_metrics.tsv	Overall benchmark recovery metrics used in Figure 5.	Figure 5
+Table S9	Figure5_high_impact_discovery_case_module_evidence.tsv	Integrated discovery case module evidence used in Figure 5.	Figure 5
+Table S10	Figure5_discovery_case_species_support.tsv	Species-level support for the regeneration–resilience core toolkit.	Figure 5

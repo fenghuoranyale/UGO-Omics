@@ -1,0 +1,6 @@
+figure	source_files	source_role
+Figure 1	UGO_v2_3_0_species_design_table_v1.tsv; UGO_v2_8_0_manuscript_story_map_v1.tsv; UGO_v3_0_0_MP_level_figure_strategy_v1.tsv	platform architecture, species design, and figure strategy
+Figure 2	Figure2_v2_main_9of11_BUSCO_species_tree.nwk; Figure2_v2_module_species_distribution.tsv; Figure2_v2_species_design_table.tsv	BUSCO tree, module matrix, and species design
+Figure 3	Figure3_usability_workflow_summary.tsv	usability workflow summary
+Figure 4	Figure4_toolkit_module_index.tsv; Figure4_discovery_case_module_evidence.tsv	toolkit module model and discovery evidence
+Figure 5	Figure5_known_category_benchmark_panel.tsv; Figure5_benchmark_category_recovery_summary.tsv; Figure5_benchmark_module_recovery_summary.tsv; Figure5_benchmark_overall_recovery_metrics.tsv; Figure5_high_impact_discovery_case_module_evidence.tsv; Figure5_discovery_case_species_support.tsv	benchmark recovery and discovery case support
