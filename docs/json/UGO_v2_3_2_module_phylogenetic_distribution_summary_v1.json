@@ -1,7 +1,7 @@
 {
-  "version": "v2.3.2 module phylogenetic distribution",
-  "generated_on": "2026-05-30 16:51:14",
-  "purpose": "Overlay conserved UGO candidate modules onto the 11-species BUSCO phylogenetic context and underground-organ categories.",
+  "version": "v2.3.2.1 module phylogenetic distribution patch",
+  "generated_on": "2026-05-30 16:59:46",
+  "purpose": "Overlay conserved UGO candidate modules onto the 11-species BUSCO phylogenetic context and species-associated underground-organ categories.",
   "input_layers": [
     "v2.3.1 BUSCO-based 11-species phylogeny",
     "v1.8 species-to-candidates layer",
@@ -67,9 +67,11 @@
   ],
   "main_outputs": {
     "module_species_distribution": "UGO_v2_3_2_module_species_phylogenetic_distribution_v1.tsv",
-    "module_organ_recurrence": "UGO_v2_3_2_module_organ_recurrence_v1.tsv",
     "module_recurrence_summary": "UGO_v2_3_2_module_recurrence_summary_v1.tsv",
+    "conserved_module_summary": "UGO_v2_3_2_conserved_module_summary_v1.tsv",
+    "organ_recurrence_table_status": "retained as source table; not used for manuscript-level organ recurrence claims in v2.3.2.1",
     "figure": "Figure_UGO_v2_3_2_module_phylogenetic_distribution_v1.png/pdf"
   },
-  "claim_calibration": "These outputs describe candidate-module recurrence and evolutionary signals consistent with repeated deployment. They are hypothesis-generating and do not demonstrate functional validation."
+  "claim_calibration": "These outputs describe species-level candidate-module recurrence across the BUSCO phylogenetic context. They are hypothesis-generating and do not demonstrate functional validation or definitive underground-organ evolutionary reconstruction.",
+  "patch_note": "Species-level module distribution is retained. Underground-organ categories are treated as species-associated annotations. The organ-level recurrence table is retained as a source table but is not used for manuscript-level organ recurrence claims in v2.3.2.1."
 }
