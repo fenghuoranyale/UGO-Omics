@@ -1,0 +1,11 @@
+{
+  "version": "v3.3.0 Figure 1 platform architecture",
+  "generated_on": "2026-05-30 17:57:51",
+  "purpose": "Generate MP-style Figure 1 showing UGO-Omics as a mature cross-species underground-organ discovery platform.",
+  "outputs": [
+    "Figure_1_UGO_Omics_platform_architecture_v1.png",
+    "Figure_1_UGO_Omics_platform_architecture_v1.pdf"
+  ],
+  "main_message": "UGO-Omics integrates underground-organ biology, tiered cross-species data architecture, researcher-facing tools, and evolution-informed candidate discovery.",
+  "claim_calibration": "Figure presents platform architecture and candidate-prioritization logic, not direct functional validation."
+}
