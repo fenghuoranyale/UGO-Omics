@@ -1,0 +1,6 @@
+model_component	concept	interpretation
+morphological_non_equivalence	Underground organs are not treated as a single homologous organ.	Rhizomes, tubers, storage roots, corms, and root/hypocotyl storage structures may arise from distinct developmental contexts.
+module_level_deep_homology	Distinct underground organs may share conserved functional modules.	The same broad toolkit can be deployed in different organ backgrounds without implying organ-level homology.
+regeneration_resilience_coupling	Underground organs couple regrowth potential with survival capacity.	Meristem/regrowth and stress-resilience modules together provide a plausible functional core for persistence and post-disturbance regeneration.
+regulatory_redeployment	Evolution may act through rewiring of when and where conserved modules are activated.	The recurrence signal is interpreted as candidate regulatory redeployment rather than proof of identical gene function.
+network_level_convergence	Convergence may occur at module or network level rather than at single-gene or organ-homology level.	UGO-Omics prioritizes modules whose recurrence spans phylogenetically divergent species.

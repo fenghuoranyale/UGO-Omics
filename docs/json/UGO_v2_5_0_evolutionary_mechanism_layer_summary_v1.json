@@ -1,0 +1,17 @@
+{
+  "version": "v2.5.0 evolutionary mechanism layer",
+  "generated_on": "2026-05-30 17:25:07",
+  "central_model": "recurrent modular reactivation of a conserved regeneration-resilience toolkit",
+  "purpose": "Convert species-level module recurrence into an explicit evolutionary mechanism model for underground-organ diversification.",
+  "input_layers": [
+    "v2.3.1 BUSCO phylogenetic context",
+    "v2.3.2 module phylogenetic distribution",
+    "v2.4.0 integrated evolutionary framework Figure 2"
+  ],
+  "core_interpretation": "Morphologically distinct underground organs may have evolved repeatedly through recurrent recruitment, regulatory redeployment, and network-level convergence of conserved regeneration, resilience, developmental-state, regulatory, and structural-remodeling modules.",
+  "claim_calibration": "The model is hypothesis-generating. It supports candidate module-level evolutionary signals but does not prove causal function, organ-level homology, or definitive underground-organ origins.",
+  "outputs": {
+    "toolkit_module_index": "UGO_v2_5_0_regeneration_resilience_toolkit_module_index_v1.tsv",
+    "evolutionary_model_table": "UGO_v2_5_0_evolutionary_mechanism_model_v1.tsv"
+  }
+}
