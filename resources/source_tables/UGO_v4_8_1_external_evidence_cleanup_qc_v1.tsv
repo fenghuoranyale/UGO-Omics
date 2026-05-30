@@ -1,0 +1,6 @@
+metric	value	details
+misleading_v4_8_0_public_outputs_removed	yes	
+external_evidence_claim_status	not_ready_for_claim	requires curated independent external input
+safe_templates_generated	2	Oryza expression/module template; QTL/GWAS interval template
+safe_manuscript_generated	UGO_Omics_full_manuscript_draft_v4_8_1_external_evidence_readiness_clean.md	
+claim_calibration	readiness framework only; no overlap/enrichment claimed	

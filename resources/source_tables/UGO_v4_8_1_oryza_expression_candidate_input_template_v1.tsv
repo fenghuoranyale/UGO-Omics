@@ -1,0 +1,2 @@
+species	evidence_source	gene_id	gene_symbol	orthogroup	module_or_cluster	expression_metric	candidate_status	notes
+Oryza_longistaminata	rhizome_expression_or_module	example_gene_id	example_symbol	example_orthogroup	example_rhizome_module	logFC_or_TPM_or_module_membership	rhizome_associated	replace with real Oryza rhizome expression/module candidate table

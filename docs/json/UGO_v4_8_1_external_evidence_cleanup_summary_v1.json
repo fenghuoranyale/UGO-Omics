@@ -1,0 +1,16 @@
+{
+  "version": "v4.8.1 conservative external evidence cleanup",
+  "generated_on": "2026-05-30 19:56:18",
+  "purpose": "Remove misleading v4.8.0 auto-scan outputs and replace them with a conservative external-evidence readiness framework.",
+  "decision": "No QTL/GWAS overlap, Oryza expression enrichment, or independent module recovery claim is made without curated input evidence.",
+  "outputs": [
+    "UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+    "UGO_v4_8_1_oryza_expression_candidate_input_template_v1.tsv",
+    "UGO_v4_8_1_qtl_gwas_interval_input_template_v1.tsv",
+    "UGO_v4_8_1_removed_misleading_v4_8_0_outputs_v1.tsv",
+    "UGO_v4_8_1_external_evidence_cleanup_qc_v1.tsv",
+    "UGO_Omics_full_manuscript_draft_v4_8_1_external_evidence_readiness_clean.md",
+    "UGO_v4_8_1_external_evidence_cleanup_note_v1.md"
+  ],
+  "claim_calibration": "Readiness framework only; no unverified external evidence claim."
+}

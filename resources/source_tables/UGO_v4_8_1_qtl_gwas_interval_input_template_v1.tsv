@@ -1,0 +1,2 @@
+species	trait	study	chr	start_bp	end_bp	peak_bp	candidate_gene_id	candidate_gene_symbol	orthogroup	notes
+species_name	rhizome_or_tuber_or_storage_root_trait	citation_or_accession	chromosome	interval_start	interval_end	optional_peak	optional_gene_in_interval	optional_symbol	optional_orthogroup	replace with real QTL/GWAS interval or candidate table
