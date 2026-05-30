@@ -1,0 +1,9 @@
+{
+  "version": "v4.2.0 detailed Methods",
+  "generated_on": "2026-05-30 18:52:13",
+  "purpose": "Replace broad Methods with a manuscript-ready detailed Methods section covering data sources, software, filtering, BUSCO phylogeny, module scoring, benchmark logic, discovery scoring, and workflows.",
+  "outputs": [
+    "UGO_Omics_full_manuscript_draft_v4_2_0_detailed_methods.md",
+    "UGO_v4_2_0_methods_detail_qc_v1.tsv"
+  ]
+}
