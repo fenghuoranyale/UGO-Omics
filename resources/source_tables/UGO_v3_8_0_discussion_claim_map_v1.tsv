@@ -1,0 +1,7 @@
+discussion_point	core_claim	evidence_source	calibration
+platform_value	UGO-Omics provides a reusable cross-species framework for underground-organ research.	Figure 1; Figure 3	strong platform claim
+evolutionary_context	The BUSCO tree provides phylogenetic context for interpreting candidate module recurrence.	Figure 2	contextual, not definitive origin reconstruction
+mechanism_model	Diverse underground organs may repeatedly recruit a conserved regeneration–resilience toolkit.	Figure 4	hypothesis-generating evolutionary model
+benchmark_support	Known-category recovery supports module-level prioritization credibility.	Figure 5A,B	category/module-level benchmark, not individual-gene validation
+discovery_case	UGO-Omics identifies a recurrent regeneration–resilience core toolkit as a high-priority discovery case.	Figure 5C,D	candidate discovery case for future testing
+limitations	Functional testing, storage-metabolism expansion, and additional evidence layers are future priorities.	Limitations paragraph	transparent limitation

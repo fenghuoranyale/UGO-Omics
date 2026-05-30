@@ -1,0 +1,12 @@
+{
+  "version": "v3.8.0 polished Results 4-8 and Discussion",
+  "generated_on": "2026-05-30 18:30:04",
+  "purpose": "Polish the manuscript sections covering module recurrence, mechanism model, benchmark, discovery case, and discussion.",
+  "outputs": [
+    "UGO_v3_8_0_polished_results_4_to_8_v1.md",
+    "UGO_v3_8_0_polished_discussion_v1.md",
+    "UGO_v3_8_0_polished_results_4_to_8_and_discussion_combined_v1.md",
+    "UGO_v3_8_0_discussion_claim_map_v1.tsv"
+  ],
+  "claim_calibration": "Text preserves hypothesis-generating interpretation and avoids definitive origin or functional-validation claims."
+}
