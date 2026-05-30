@@ -1,0 +1,75 @@
+{
+  "version": "v2.3.2 module phylogenetic distribution",
+  "generated_on": "2026-05-30 16:51:14",
+  "purpose": "Overlay conserved UGO candidate modules onto the 11-species BUSCO phylogenetic context and underground-organ categories.",
+  "input_layers": [
+    "v2.3.1 BUSCO-based 11-species phylogeny",
+    "v1.8 species-to-candidates layer",
+    "v1.8 organ-to-candidates layer",
+    "v1.9 biological discovery cases"
+  ],
+  "modules": [
+    {
+      "module_id": "meristem_regrowth",
+      "module_label": "Meristem / regrowth",
+      "short_label": "Meristem",
+      "orthogroup": "OG0000863",
+      "candidate_function": "Early nodulin-like meristem/regrowth candidate",
+      "priority_or_score_from_v1_9": "0.95",
+      "rank_from_v1_9": "",
+      "interpretation": "candidate module linked to bud/meristem activity and regenerative underground-organ growth",
+      "claim_calibration": "candidate module recurrence; hypothesis-generating, not functional validation"
+    },
+    {
+      "module_id": "stress_resilience",
+      "module_label": "Stress resilience",
+      "short_label": "Stress",
+      "orthogroup": "OG0004958",
+      "candidate_function": "Non-symbiotic hemoglobin / stress-resilience candidate",
+      "priority_or_score_from_v1_9": "0.95",
+      "rank_from_v1_9": "",
+      "interpretation": "candidate module linked to stress resilience and underground-organ persistence",
+      "claim_calibration": "candidate module recurrence; hypothesis-generating, not functional validation"
+    },
+    {
+      "module_id": "hormone_regulation",
+      "module_label": "Hormone-related regulation",
+      "short_label": "Hormone",
+      "orthogroup": "OG0006937",
+      "candidate_function": "Carotenoid cleavage dioxygenase / hormone-related regulation",
+      "priority_or_score_from_v1_9": "0.89",
+      "rank_from_v1_9": "",
+      "interpretation": "candidate module linked to hormone-related regulation and organ developmental state",
+      "claim_calibration": "candidate module recurrence; hypothesis-generating, not functional validation"
+    },
+    {
+      "module_id": "developmental_tf",
+      "module_label": "Developmental TF",
+      "short_label": "TF",
+      "orthogroup": "OG0000273",
+      "candidate_function": "bHLH-like transcriptional regulator",
+      "priority_or_score_from_v1_9": "0.821",
+      "rank_from_v1_9": "",
+      "interpretation": "candidate module linked to developmental transcriptional regulation",
+      "claim_calibration": "candidate module recurrence; hypothesis-generating, not functional validation"
+    },
+    {
+      "module_id": "cell_wall_remodeling",
+      "module_label": "Cell-wall remodeling",
+      "short_label": "Cell wall",
+      "orthogroup": "OG0000154",
+      "candidate_function": "XTH / xyloglucan cell-wall remodeling",
+      "priority_or_score_from_v1_9": "0.791",
+      "rank_from_v1_9": "",
+      "interpretation": "candidate module linked to cell-wall remodeling during underground-organ development",
+      "claim_calibration": "candidate module recurrence; hypothesis-generating, not functional validation"
+    }
+  ],
+  "main_outputs": {
+    "module_species_distribution": "UGO_v2_3_2_module_species_phylogenetic_distribution_v1.tsv",
+    "module_organ_recurrence": "UGO_v2_3_2_module_organ_recurrence_v1.tsv",
+    "module_recurrence_summary": "UGO_v2_3_2_module_recurrence_summary_v1.tsv",
+    "figure": "Figure_UGO_v2_3_2_module_phylogenetic_distribution_v1.png/pdf"
+  },
+  "claim_calibration": "These outputs describe candidate-module recurrence and evolutionary signals consistent with repeated deployment. They are hypothesis-generating and do not demonstrate functional validation."
+}

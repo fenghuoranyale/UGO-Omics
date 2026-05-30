@@ -1,0 +1,41 @@
+module_id	module_label	short_label	orthogroup	organ_category	presence	support_record_count	support_candidate_functions	support_modules
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	rhizome	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	tuber	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	storage_root	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	root_hypocotyl_storage	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	root_crown	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	bulb	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	corm	0	0		
+meristem_regrowth	Meristem / regrowth	Meristem	OG0000863	stolon	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	rhizome	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	tuber	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	storage_root	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	root_hypocotyl_storage	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	root_crown	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	bulb	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	corm	0	0		
+stress_resilience	Stress resilience	Stress	OG0004958	stolon	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	rhizome	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	tuber	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	storage_root	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	root_hypocotyl_storage	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	root_crown	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	bulb	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	corm	0	0		
+hormone_regulation	Hormone-related regulation	Hormone	OG0006937	stolon	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	rhizome	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	tuber	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	storage_root	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	root_hypocotyl_storage	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	root_crown	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	bulb	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	corm	0	0		
+developmental_tf	Developmental TF	TF	OG0000273	stolon	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	rhizome	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	tuber	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	storage_root	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	root_hypocotyl_storage	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	root_crown	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	bulb	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	corm	0	0		
+cell_wall_remodeling	Cell-wall remodeling	Cell wall	OG0000154	stolon	0	0		
