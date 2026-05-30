@@ -1,0 +1,15 @@
+{
+  "version": "v4.4.0 figure aesthetic and submission-quality audit",
+  "generated_on": "2026-05-30 18:53:41",
+  "purpose": "Audit figure dimensions and define manual MP-level aesthetic checks for Figure 1-5.",
+  "highest_priority_figures": [
+    "Figure 2",
+    "Figure 4",
+    "Figure 5"
+  ],
+  "outputs": [
+    "UGO_v4_4_0_figure_dimension_audit_v1.tsv",
+    "UGO_v4_4_0_manual_aesthetic_audit_v1.tsv",
+    "UGO_v4_4_0_figure_aesthetic_audit_note_v1.md"
+  ]
+}
