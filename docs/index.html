@@ -634,6 +634,157 @@
       }
     }
 
+
+    .wizard-panel {
+      background: #ffffff;
+      border: 1px solid #d4e1ec;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 26px rgba(18, 58, 90, 0.08);
+      margin: 22px 0;
+    }
+
+    .wizard-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .wizard-header h3 {
+      margin: 0;
+      color: #123a5a;
+      font-size: 24px;
+    }
+
+    .wizard-header p {
+      margin: 6px 0 0 0;
+      color: #4e6276;
+      max-width: 780px;
+    }
+
+    .wizard-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .wizard-step {
+      border: 1px solid #dce6f0;
+      border-radius: 16px;
+      background: #f8fbfd;
+      padding: 16px;
+    }
+
+    .wizard-step h4 {
+      margin: 0 0 10px 0;
+      color: #123a5a;
+      font-size: 18px;
+    }
+
+    .wizard-step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #123a5a;
+      color: #ffffff;
+      font-weight: 800;
+      margin-right: 8px;
+    }
+
+    .wizard-textarea {
+      width: 100%;
+      min-height: 160px;
+      border: 1px solid #bfd0df;
+      border-radius: 12px;
+      padding: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.45;
+      resize: vertical;
+      box-sizing: border-box;
+      background: #ffffff;
+      color: #102a43;
+    }
+
+    .wizard-output {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #0f2233;
+      color: #e8f1f7;
+      border-radius: 12px;
+      padding: 14px;
+      min-height: 90px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-x: auto;
+    }
+
+    .wizard-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .wizard-btn {
+      border: 1px solid #2b6f8a;
+      background: #ffffff;
+      color: #123a5a;
+      border-radius: 10px;
+      padding: 9px 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.12s ease;
+    }
+
+    .wizard-btn:hover {
+      background: #eef7fb;
+      transform: translateY(-1px);
+    }
+
+    .wizard-btn.primary {
+      background: #123a5a;
+      color: #ffffff;
+      border-color: #123a5a;
+    }
+
+    .wizard-result-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+      overflow-x: auto;
+      display: block;
+    }
+
+    .wizard-result-table th,
+    .wizard-result-table td {
+      border: 1px solid #dce6f0;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      min-width: 120px;
+    }
+
+    .wizard-result-table th {
+      background: #eef7fb;
+      color: #123a5a;
+    }
+
+    .wizard-note {
+      font-size: 13px;
+      color: #5c7084;
+      margin-top: 10px;
+    }
+
 </style>
 </head>
 
@@ -927,6 +1078,63 @@
   <div class="panel app-note">
     Use this workflow when you start from a protein sequence rather than a known UGO gene ID. The current version provides a local DIAMOND-based workflow using the UGO 11-species protein search database.
   </div>
+
+  <div class="wizard-panel" id="sequenceWizard">
+    <div class="wizard-header">
+      <div>
+        <h3>Sequence-to-UGO interactive workflow</h3>
+        <p>Paste a protein sequence, generate the local command, and inspect an example interpreted output. The browser interface prepares and explains the workflow; the DIAMOND search runs locally or on HPC.</p>
+      </div>
+    </div>
+
+    <div class="wizard-steps">
+      <div class="wizard-step">
+        <h4><span class="wizard-step-number">1</span>Input protein FASTA</h4>
+        <textarea id="seqWizardInput" class="wizard-textarea" placeholder="Paste protein FASTA here, for example:
+>my_candidate_protein
+MASS..."></textarea>
+        <div class="wizard-button-row">
+          <button class="wizard-btn" onclick="seqWizardLoadExample()">Load example FASTA</button>
+          <button class="wizard-btn" onclick="seqWizardClear()">Clear</button>
+        </div>
+        <p class="wizard-note">Use protein FASTA. CDS/genomic sequences should be translated before using this workflow.</p>
+      </div>
+
+      <div class="wizard-step">
+        <h4><span class="wizard-step-number">2</span>Generate command</h4>
+        <p>After pasting your sequence, generate the one-command local/HPC workflow.</p>
+        <div class="wizard-button-row">
+          <button class="wizard-btn primary" onclick="seqWizardGenerateCommand()">Generate command</button>
+          <button class="wizard-btn" onclick="seqWizardCopyCommand()">Copy command</button>
+        </div>
+        <div id="seqWizardCommand" class="wizard-output">Command will appear here.</div>
+        <p class="wizard-note">Save your pasted sequence as <b>my_query.fa</b>, then run this command inside the Sequence-to-UGO toolkit directory.</p>
+      </div>
+
+      <div class="wizard-step">
+        <h4><span class="wizard-step-number">3</span>Inspect output</h4>
+        <p>Open the demo interpreted output to see what users get back.</p>
+        <div class="wizard-button-row">
+          <button class="wizard-btn primary" onclick="seqWizardLoadDemoOutput()">Show demo output</button>
+          <a class="wizard-btn" href="toolkits/P2_v2_0_1_sequence_to_ugo/example_results/example_sequence_to_UGO_result.tsv" target="_blank" rel="noopener">Open TSV</a>
+        </div>
+        <div id="seqWizardDemoOutput" class="wizard-note">Demo output will appear here.</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:18px;">
+      <h3>How to interpret the output</h3>
+      <table>
+        <tr><th>Output</th><th>Meaning</th></tr>
+        <tr><td>hit_orthogroup</td><td>The UGO orthogroup most similar to the input protein query.</td></tr>
+        <tr><td>candidate_function</td><td>The prioritized underground-organ candidate module, if matched.</td></tr>
+        <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
+        <tr><td>validation_priority_class</td><td>Suggested priority class for follow-up validation.</td></tr>
+        <tr><td>suggested_validation_system</td><td>Suggested biological system or assay context for follow-up.</td></tr>
+      </table>
+    </div>
+  </div>
+
 
   <div class="workflow-grid">
     <a class="card workflow-card clickable-card" href="toolkits/P2_v2_0_1_sequence_to_ugo/examples/example_query_proteins.fa" target="_blank" rel="noopener">
@@ -1850,6 +2058,102 @@ function gotoUGOSection(sectionId) {
   if (typeof showSection === 'function') {
     showSection(sectionId, btn || null);
     window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+}
+
+
+async function seqWizardLoadExample() {
+  const box = document.getElementById('seqWizardInput');
+  if (!box) return;
+
+  try {
+    const txt = await fetch('toolkits/P2_v2_0_1_sequence_to_ugo/examples/example_query_proteins.fa').then(r => r.text());
+    box.value = txt.trim();
+  } catch (e) {
+    box.value = '>example_candidate_protein\nMASSAMPLESEQUENCEPLACEHOLDER';
+  }
+}
+
+function seqWizardClear() {
+  const box = document.getElementById('seqWizardInput');
+  if (box) box.value = '';
+  const cmd = document.getElementById('seqWizardCommand');
+  if (cmd) cmd.textContent = 'Command will appear here.';
+  const out = document.getElementById('seqWizardDemoOutput');
+  if (out) out.innerHTML = 'Demo output will appear here.';
+}
+
+function seqWizardGenerateCommand() {
+  const box = document.getElementById('seqWizardInput');
+  const cmd = document.getElementById('seqWizardCommand');
+  if (!box || !cmd) return;
+
+  const txt = box.value.trim();
+  const nseq = (txt.match(/^>/gm) || []).length;
+
+  const command = [
+    '# Save your pasted sequence as my_query.fa',
+    '# Number of FASTA records detected in the box: ' + nseq,
+    '',
+    'bash scripts/run_sequence_to_UGO.sh my_query.fa my_sequence_to_UGO_result',
+    '',
+    '# Main interpreted output:',
+    'my_sequence_to_UGO_result.sequence_to_UGO.tsv'
+  ].join('\n');
+
+  cmd.textContent = command;
+}
+
+async function seqWizardCopyCommand() {
+  const cmd = document.getElementById('seqWizardCommand');
+  if (!cmd) return;
+
+  const text = cmd.textContent || '';
+  try {
+    await navigator.clipboard.writeText(text);
+    cmd.textContent = text + '\n\n# Copied to clipboard.';
+  } catch (e) {
+    cmd.textContent = text + '\n\n# Copy failed. Please select and copy manually.';
+  }
+}
+
+async function seqWizardLoadDemoOutput() {
+  const el = document.getElementById('seqWizardDemoOutput');
+  if (!el) return;
+
+  try {
+    const txt = await fetch('toolkits/P2_v2_0_1_sequence_to_ugo/example_results/example_sequence_to_UGO_result.tsv').then(r => r.text());
+    const lines = txt.trim().split(/\r?\n/);
+    if (lines.length < 2) {
+      el.innerHTML = '<p>No demo rows found.</p>';
+      return;
+    }
+
+    const header = lines[0].split('\t');
+    const rows = lines.slice(1, 6).map(line => line.split('\t'));
+
+    const preferred = [
+      'query_id',
+      'hit_orthogroup',
+      'candidate_function',
+      'ugo_score',
+      'validation_priority_class',
+      'suggested_validation_system',
+      'UGO_interpretation'
+    ];
+
+    const idx = preferred.map(k => header.indexOf(k)).filter(i => i >= 0);
+    const shownHeader = idx.map(i => header[i]);
+
+    let table = '<table class="wizard-result-table"><tr>' + shownHeader.map(h => '<th>' + safe(h) + '</th>').join('') + '</tr>';
+    for (const r of rows) {
+      table += '<tr>' + idx.map(i => '<td>' + safe(r[i] || '') + '</td>').join('') + '</tr>';
+    }
+    table += '</table>';
+
+    el.innerHTML = table + '<p class="wizard-note">Showing up to five demo rows. Open the TSV for the complete output.</p>';
+  } catch (e) {
+    el.innerHTML = '<p>Could not load demo output. Open the TSV link instead.</p>';
   }
 }
 
