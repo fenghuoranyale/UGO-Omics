@@ -1,0 +1,42 @@
+{
+  "version": "v2.3.0 species design layer",
+  "generated_on": "2026-05-30 11:33:50",
+  "detected_51_species_source_table": "51-species underground-organ resource triage table from the UGO-Omics broader species atlas",
+  "broader_resource_atlas_species_count": 51,
+  "high_confidence_backbone_species_count": 11,
+  "design_principle": "UGO-Omics separates broad underground-organ resource coverage from high-confidence orthogroup-based analytical transfer.",
+  "why_11_species": "The 11-species backbone was selected to balance underground-organ diversity, phylogenetic breadth, annotation completeness, and computational reliability for orthogroup-based candidate transfer.",
+  "why_not_all_51": "All 51 species were not forced into the orthogroup backbone because heterogeneous genome/proteome completeness and annotation quality can introduce unstable orthogroup inference, false absence, and unreliable candidate-transfer signals.",
+  "role_of_51_species": "The broader species atlas captures underground-organ diversity, resource availability, organ categories, phylogenetic context, and future expansion space.",
+  "role_of_11_species": "The high-confidence backbone supports orthogroup construction, candidate-module transfer, UGO score calculation, and user-facing toolkit workflows.",
+  "organ_counts": {
+    "bulb": 4,
+    "corm": 4,
+    "crown_sucker": 1,
+    "rhizome": 11,
+    "rhizome_basal_shoot": 1,
+    "rhizome_bud": 1,
+    "rhizome_corm": 1,
+    "rhizome_crown": 3,
+    "rhizome_root": 1,
+    "root_crown": 2,
+    "root_crown_taproot": 1,
+    "root_crown_tuberous_root": 1,
+    "stolon": 1,
+    "stolon_crown": 1,
+    "storage_root": 7,
+    "storage_root_hypocotyl": 1,
+    "taproot": 2,
+    "taproot_storage_root": 1,
+    "tuber": 5,
+    "tuber_stolon": 1,
+    "tuberous_root": 1
+  },
+  "clade_counts": {
+    "Eudicot": 28,
+    "Monocot": 23
+  },
+  "resource_counts": {
+    "broader_resource_layer": 51
+  }
+}
