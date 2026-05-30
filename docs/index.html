@@ -731,6 +731,92 @@
   </div>
 </section>
 
+
+<section id="geneListToUGO" class="section">
+  <div class="section-title">
+    <div>
+      <h2>Gene-list-to-UGO</h2>
+      <p>Map DEG, QTL, GWAS, or candidate gene lists to UGO-Omics orthogroups, candidate modules, scores, and validation-priority annotations.</p>
+    </div>
+  </div>
+
+  <div class="panel app-note">
+    Use this workflow when you start from a list of gene or protein IDs rather than a sequence. Compact mode maps directly to prioritized UGO candidate modules. Full mode can also use the complete sequence-to-orthogroup lookup from the release archive.
+  </div>
+
+  <div class="workflow-grid">
+    <a class="card workflow-card clickable-card" href="toolkits/P2_v2_0_2_gene_list_to_ugo/examples/example_gene_list.txt" target="_blank" rel="noopener">
+      <div class="workflow-icon">1</div>
+      <h3>Prepare gene list</h3>
+      <p>Open an example gene list. Replace it with DEG, QTL, GWAS, or manually selected genes from your own study.</p>
+      <span class="card-action">Open example gene list →</span>
+    </a>
+
+    <a class="card workflow-card clickable-card" href="toolkits/P2_v2_0_2_gene_list_to_ugo/scripts/run_gene_list_to_UGO.sh" target="_blank" rel="noopener">
+      <div class="workflow-icon">2</div>
+      <h3>Run Gene-list-to-UGO</h3>
+      <p>Open the one-command shell script that maps your gene list to UGO candidate modules.</p>
+      <span class="card-action">Open run script →</span>
+    </a>
+
+    <a class="card workflow-card clickable-card" href="toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv" target="_blank" rel="noopener">
+      <div class="workflow-icon">3</div>
+      <h3>Inspect module summary</h3>
+      <p>View the ranked UGO module summary generated from the example gene list.</p>
+      <span class="card-action">Open example output →</span>
+    </a>
+  </div>
+
+  <div class="panel">
+    <h3>One-command local workflow</h3>
+    <pre style="white-space:pre-wrap;background:#f8fafc;border:1px solid #dce6f0;border-radius:12px;padding:14px;">bash scripts/run_gene_list_to_UGO.sh examples/example_gene_list.txt example_results/example_gene_list_to_UGO</pre>
+    <p class="small">The most useful output is <b>example_results/example_gene_list_to_UGO.module_summary.tsv</b>.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Toolkit files</h3>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>Candidate gene lookup</h3>
+        <p>Compact candidate-level gene/protein lookup for prioritized UGO modules.</p>
+        <a href="toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv">Download TSV</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Candidate module lookup</h3>
+        <p>Maps orthogroups to candidate functions, UGO scores, validation-priority classes, and suggested follow-up systems.</p>
+        <a href="toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_orthogroup_to_candidate_module_lookup_v1.tsv">Download TSV</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Example module summary</h3>
+        <p>Example output showing how an input gene list is summarized into prioritized UGO modules.</p>
+        <a href="toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv">Open example output</a>
+      </div>
+
+      <div class="download-card">
+        <h3>Toolkit metadata</h3>
+        <p>Summary of files, compact/full modes, and interpretation.</p>
+        <a href="json/ugo_v2_0_2_gene_list_to_ugo_toolkit_v1.json">Download JSON</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>What you get back</h3>
+    <table>
+      <tr><th>Output field</th><th>Meaning</th></tr>
+      <tr><td>orthogroup</td><td>UGO orthogroup matched by one or more input genes.</td></tr>
+      <tr><td>candidate_function</td><td>Candidate module annotation if the orthogroup is prioritized.</td></tr>
+      <tr><td>input_gene_count</td><td>Number of input IDs supporting this module.</td></tr>
+      <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
+      <tr><td>validation_priority_class</td><td>Recommended follow-up priority class.</td></tr>
+      <tr><td>biological_discovery_case</td><td>Whether the module belongs to a v1.9 conserved discovery case.</td></tr>
+      <tr><td>suggested_validation_system</td><td>Suggested biological system for follow-up.</td></tr>
+    </table>
+  </div>
+</section>
+
 <section id="validationTargets" class="section">
   <div class="section-title">
     <div>

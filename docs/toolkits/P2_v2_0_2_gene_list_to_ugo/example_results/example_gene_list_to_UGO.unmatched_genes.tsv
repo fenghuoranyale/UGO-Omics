@@ -1,1 +1,3 @@
 input_id	status	note
+Unmatched_example_gene_001	unmatched	No direct gene/protein match in provided UGO lookup.
+Unmatched_example_gene_002	unmatched	No direct gene/protein match in provided UGO lookup.
