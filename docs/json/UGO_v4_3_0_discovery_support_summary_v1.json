@@ -1,0 +1,11 @@
+{
+  "version": "v4.3.0 biological discovery support layer",
+  "generated_on": "2026-05-30 18:52:49",
+  "purpose": "Strengthen reviewer-facing support for the high-impact biological discovery case without overclaiming functional validation.",
+  "outputs": [
+    "UGO_Omics_full_manuscript_draft_v4_3_0_discovery_supported.md",
+    "UGO_v4_3_0_discovery_support_evidence_matrix_v1.tsv",
+    "UGO_v4_3_0_reviewer_facing_discovery_support_statement_v1.md",
+    "UGO_v4_3_0_discovery_support_qc_v1.tsv"
+  ]
+}

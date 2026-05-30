@@ -1,0 +1,6 @@
+evidence_axis	support	reviewer_value	limitation
+phylogenetic dispersion	Core modules are detected across both monocot and eudicot representatives.	Reduces the chance that the discovery case reflects one narrow lineage or one organ type.	Does not prove identical regulatory mechanisms.
+species breadth	Four core modules are detected across all 11 backbone species.	Shows that the core toolkit is broad within the analytical backbone.	Depends on available omics and annotation quality.
+benchmark recovery	The current module layer recovers all current-scope benchmark categories and nine of ten benchmark items overall.	Provides a credibility check against expected underground-organ biology.	Category-level benchmark, not individual-gene validation.
+biological coherence	Core modules match expected functions: regrowth, stress survival, hormone switching, and regulatory control.	Makes the model biologically interpretable and testable.	Functional roles require experimental testing.
+testable predictions	The model predicts that perturbing core modules should affect regrowth, persistence, or developmental-state switching in underground-organ systems.	Turns the resource into a hypothesis-generating platform.	Predictions remain to be validated.
