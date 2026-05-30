@@ -1,0 +1,5 @@
+workflow_id	workflow_name	user_input	analysis_step	main_output	primary_user_value
+W1	Sequence-to-UGO	protein sequence FASTA	sequence similarity search + UGO mapping	matched UGO orthogroups and candidate modules	connects a new sequence to underground-organ candidate context
+W2	Gene-list-to-UGO	candidate gene list	gene-to-orthogroup mapping + module summary	module-level enrichment and candidate interpretation	turns a gene list into interpretable underground-organ hypotheses
+W3	Resource Finder	species or resource need	species-level resource lookup	downloadable files, annotations, and toolkit links	helps users quickly find usable UGO resources
+W4	Organ Kits	underground-organ category	organ-focused resource grouping	organ-specific datasets, candidates, and use cases	help users start from rhizome, tuber, storage root, or related organ questions

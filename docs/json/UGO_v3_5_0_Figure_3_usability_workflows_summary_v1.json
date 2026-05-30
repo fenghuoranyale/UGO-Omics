@@ -1,0 +1,11 @@
+{
+  "version": "v3.5.0 Figure 3 usability workflows",
+  "generated_on": "2026-05-30 18:19:23",
+  "purpose": "Generate MP-style Figure 3 showing researcher-facing UGO-Omics discovery workflows.",
+  "outputs": [
+    "Figure_3_UGO_Omics_usability_workflows_v1.png",
+    "Figure_3_UGO_Omics_usability_workflows_v1.pdf"
+  ],
+  "main_message": "UGO-Omics supports sequence-, gene-list-, species-, and organ-based discovery workflows.",
+  "claim_calibration": "Workflows support candidate prioritization and hypothesis generation, not functional validation."
+}
