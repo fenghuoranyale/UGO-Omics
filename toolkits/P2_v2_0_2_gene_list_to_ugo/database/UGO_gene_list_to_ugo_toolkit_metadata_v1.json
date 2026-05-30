@@ -1,0 +1,20 @@
+{
+  "toolkit_version": "v2.0.2 Gene-list-to-UGO Toolkit",
+  "candidate_orthogroup_count": 8,
+  "candidate_gene_record_count": 375,
+  "example_gene_count": 7,
+  "github_pages_note": "GitHub Pages provides scripts, examples, metadata, and compact candidate lookup tables. Full sequence-to-orthogroup lookup is distributed through the full release package and Zenodo archive.",
+  "large_files_used_if_available": [
+    "P2_v2_0_1_sequence_to_ugo/database/UGO_sequence_to_orthogroup_lookup_v1.tsv"
+  ],
+  "github_pages_files": {
+    "candidate_gene_lookup": "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_candidate_gene_lookup_compact_v1.tsv",
+    "candidate_module_lookup": "toolkits/P2_v2_0_2_gene_list_to_ugo/database/UGO_orthogroup_to_candidate_module_lookup_v1.tsv",
+    "run_script": "toolkits/P2_v2_0_2_gene_list_to_ugo/scripts/run_gene_list_to_UGO.sh",
+    "mapper_script": "toolkits/P2_v2_0_2_gene_list_to_ugo/scripts/gene_list_to_UGO.py",
+    "example_gene_list": "toolkits/P2_v2_0_2_gene_list_to_ugo/examples/example_gene_list.txt",
+    "example_matched_genes": "toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.matched_genes.tsv",
+    "example_module_summary": "toolkits/P2_v2_0_2_gene_list_to_ugo/example_results/example_gene_list_to_UGO.module_summary.tsv"
+  },
+  "interpretation": "Gene-list-to-UGO maps DEG/QTL/GWAS/candidate gene lists to UGO orthogroups and candidate modules. It is a candidate-prioritization workflow, not functional validation."
+}
