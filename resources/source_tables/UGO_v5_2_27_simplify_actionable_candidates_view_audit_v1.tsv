@@ -1,0 +1,15 @@
+check	status
+deployment_marker_present	pass
+old_v5218_script_removed	pass
+new_script_present	pass
+overview_title_actionable_candidates	pass
+overview_has_only_ranking_entry	pass
+overview_no_known_gene_entry_card	pass
+overview_no_use_cases_entry_card	pass
+overview_no_readiness_entry_card	pass
+known_gene_view_still_present	pass
+species_use_cases_view_still_present	pass
+ranking_view_still_present	pass
+readiness_view_still_present	pass
+start_switcher_still_present	pass
+other_nav_restore_still_present	pass

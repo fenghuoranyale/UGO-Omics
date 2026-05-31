@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_27_SIMPLIFY_ACTIONABLE_CANDIDATES_VIEW 2026-05-31 10:54:25 -->
 <!-- UGO_V5_2_26_FIX_FIND_ORGAN_SPECIES_BLANK 2026-05-31 10:48:45 -->
 <!-- UGO_V5_2_25_SIMPLIFY_START_HERE_ORGAN_SPECIES_INPUTS 2026-05-31 10:42:25 -->
 <!-- UGO_V5_2_24_FIX_START_HERE_ORGAN_SPECIES_BLANK 2026-05-31 10:36:02 -->
@@ -1442,6 +1443,74 @@
     color: #ffffff;
     font-weight: 800;
     cursor: pointer;
+  }
+</style>
+
+
+<style id="ugo-v5-2-27-simplify-actionable-candidates-view-style">
+  #ugo-actionability-live-view {
+    padding: 34px 54px 60px 54px;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-title {
+    margin: 0 0 8px 0;
+    color: #123657;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-subtitle {
+    max-width: 980px;
+    color: #465b73;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 720px));
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 61, 96, 0.18);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-card h3 {
+    margin: 0 0 12px 0;
+    color: #123657;
+    font-size: 1.35rem;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-card p {
+    color: #465b73;
+    line-height: 1.55;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-button {
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #123657;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 800;
+  }
+
+  #ugo-actionability-live-view .ugo-actionability-note {
+    margin-top: 22px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    border-left: 5px solid #0f766e;
+    color: #2c455e;
   }
 </style>
 
@@ -3112,195 +3181,6 @@ async function geneWizardLoadDemoOutput() {
 
 
 
-<script id="ugo-v5-2-18-actionability-inpage-view-switcher-script">
-(function () {
-  const views = {
-    "overview": {
-      title: "Actionability overview",
-      subtitle: "A practical candidate-prioritization layer that connects recurrent UGO modules to known-gene anchors, species use cases, calibrated rankings, and conservative external-evidence readiness.",
-      body: `
-        <div class="ugo-actionability-grid">
-          <div class="ugo-actionability-card">
-            <h3>Actionable Candidates</h3>
-            <p>Explore how UGO-Omics translates recurrent underground-organ modules into practical candidate-family hypotheses.</p>
-            <a class="ugo-actionability-button" href="#" data-ugo-actionability-view="calibrated-ranking">Open calibrated ranking</a>
-          </div>
-          <div class="ugo-actionability-card">
-            <h3>Known-gene Anchors</h3>
-            <p>Connect candidate modules to familiar developmental, hormonal, stress-response, regulatory, cell-wall, and storage-related gene families.</p>
-            <a class="ugo-actionability-button" href="#" data-ugo-actionability-view="known-gene-anchors">Open anchor panel</a>
-          </div>
-          <div class="ugo-actionability-card">
-            <h3>Species Use Cases</h3>
-            <p>View practical use cases for rhizome, tuber, storage-root, and related underground-organ systems.</p>
-            <a class="ugo-actionability-button" href="#" data-ugo-actionability-view="species-use-cases">Open use cases</a>
-          </div>
-          <div class="ugo-actionability-card">
-            <h3>External Evidence Readiness</h3>
-            <p>See which external evidence layers are ready for claims and which require curated input tables.</p>
-            <a class="ugo-actionability-button" href="#" data-ugo-actionability-view="external-evidence-readiness">Open readiness summary</a>
-          </div>
-        </div>
-        <div class="ugo-actionability-note">
-          UGO-Omics prioritizes candidate-family hypotheses. It does not claim direct functional validation for individual genes without independent experimental evidence.
-        </div>
-      `
-    },
-
-    "known-gene-anchors": {
-      title: "Known-gene anchors",
-      subtitle: "Known-gene and gene-family anchors used to interpret recurrent UGO candidate modules.",
-      body: `
-        <div class="ugo-actionability-card">
-          <h3>Known-gene anchor panel</h3>
-          <p>This resource links UGO modules to recognizable gene-family anchors relevant to meristem activity, hormone regulation, stress resilience, developmental regulation, cell-wall remodeling, and storage metabolism.</p>
-          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download full TSV</a>
-        </div>
-      `
-    },
-
-    "species-use-cases": {
-      title: "Species use cases",
-      subtitle: "Practical examples showing how UGO-Omics can be applied to focal underground-organ systems.",
-      body: `
-        <div class="ugo-actionability-card">
-          <h3>Species-specific actionability use cases</h3>
-          <p>Use cases illustrate how users can apply UGO-Omics to rhizome, tuber, storage-root, and related systems.</p>
-          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download full TSV</a>
-        </div>
-      `
-    },
-
-    "calibrated-ranking": {
-      title: "Calibrated candidate ranking",
-      subtitle: "A calibrated candidate-family ranking that balances module support, species breadth, cross-clade support, benchmark recovery, known-gene anchors, and use-case relevance.",
-      body: `
-        <div class="ugo-actionability-card">
-          <h3>Calibrated actionable candidate-family ranking</h3>
-          <p>This ranking is intended for candidate prioritization and hypothesis generation, not as direct functional evidence.</p>
-          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download full TSV</a>
-        </div>
-      `
-    },
-
-    "external-evidence-readiness": {
-      title: "External evidence readiness",
-      subtitle: "A conservative readiness summary for future integration of QTL/GWAS intervals, Oryza rhizome expression candidates, and independent rhizome-associated modules.",
-      body: `
-        <div class="ugo-actionability-card">
-          <h3>External evidence readiness</h3>
-          <p>This page clarifies which external evidence layers are not yet ready for strong manuscript claims without curated independent input tables.</p>
-          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">Download full TSV</a>
-        </div>
-      `
-    }
-  };
-
-  function getNav() {
-    return document.querySelector("nav");
-  }
-
-  function getFooter() {
-    return document.querySelector("footer");
-  }
-
-  function ensureLiveView() {
-    let view = document.getElementById("ugo-actionability-live-view");
-    if (view) return view;
-
-    const nav = getNav();
-    view = document.createElement("main");
-    view.id = "ugo-actionability-live-view";
-    view.setAttribute("data-ugo-dynamic-view", "actionability");
-
-    if (nav && nav.parentNode) {
-      nav.parentNode.insertBefore(view, nav.nextSibling);
-    } else {
-      document.body.prepend(view);
-    }
-
-    return view;
-  }
-
-  function hideMainContentExceptLiveView() {
-    const nav = getNav();
-    const liveView = ensureLiveView();
-    if (!nav) return;
-
-    let node = nav.nextElementSibling;
-    while (node) {
-      const next = node.nextElementSibling;
-      if (node === liveView) {
-        node.style.display = "";
-      } else if (node.tagName && node.tagName.toLowerCase() !== "script" && node.tagName.toLowerCase() !== "style") {
-        node.setAttribute("data-ugo-hidden-by-actionability", "true");
-        node.style.display = "none";
-      }
-      node = next;
-    }
-  }
-
-  function closeDropdowns() {
-    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
-      el.classList.remove("ugo-menu-open");
-    });
-  }
-
-  function renderActionabilityView(viewName, pushState = true) {
-    const viewData = views[viewName] || views["overview"];
-    const liveView = ensureLiveView();
-
-    hideMainContentExceptLiveView();
-
-    liveView.innerHTML = `
-      <h1 class="ugo-actionability-title">${viewData.title}</h1>
-      <p class="ugo-actionability-subtitle">${viewData.subtitle}</p>
-      ${viewData.body}
-    `;
-
-    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
-
-    if (pushState && window.history && window.history.pushState) {
-      const url = new URL(window.location.href);
-      url.searchParams.set("view", "actionability-" + viewName);
-      url.hash = "";
-      window.history.pushState({ ugoActionabilityView: viewName }, "", url.toString());
-    }
-  }
-
-  document.addEventListener("click", function (event) {
-    const actionLink = event.target.closest("[data-ugo-actionability-view]");
-    if (!actionLink) return;
-
-    const viewName = actionLink.getAttribute("data-ugo-actionability-view");
-    if (!viewName) return;
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    closeDropdowns();
-    renderActionabilityView(viewName, true);
-  }, true);
-
-  window.addEventListener("popstate", function () {
-    const params = new URLSearchParams(window.location.search);
-    const view = params.get("view");
-    if (view && view.startsWith("actionability-")) {
-      renderActionabilityView(view.replace("actionability-", ""), false);
-    } else {
-      window.location.reload();
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const view = params.get("view");
-    if (view && view.startsWith("actionability-")) {
-      renderActionabilityView(view.replace("actionability-", ""), false);
-    }
-  });
-})();
-</script>
 
 
 
@@ -3743,6 +3623,182 @@ async function geneWizardLoadDemoOutput() {
 
     callShowSection(sectionId, openButton);
   }, true);
+})();
+</script>
+
+
+<script id="ugo-v5-2-27-simplify-actionable-candidates-view-script">
+(function () {
+  const views = {
+    "overview": {
+      title: "Actionable Candidates",
+      subtitle: "Open the calibrated actionable candidate-family ranking used to prioritize validation-ready UGO candidate hypotheses.",
+      body: `
+        <div class="ugo-actionability-grid">
+          <div class="ugo-actionability-card">
+            <h3>Calibrated actionable candidate ranking</h3>
+            <p>Use this entry to access the prioritized candidate-family ranking. The ranking integrates recurrent UGO module support, known-gene anchors, species-use relevance, and conservative evidence layers for candidate prioritization.</p>
+            <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download full TSV</a>
+          </div>
+        </div>
+        <div class="ugo-actionability-note">
+          UGO-Omics prioritizes candidate-family hypotheses. Candidate-priority scores support follow-up design and do not constitute direct functional validation.
+        </div>
+      `
+    },
+
+    "known-gene-anchors": {
+      title: "Known-gene Anchors",
+      subtitle: "Known-gene and gene-family anchors used to interpret recurrent UGO candidate modules.",
+      body: `
+        <div class="ugo-actionability-card">
+          <h3>Known-gene anchor panel</h3>
+          <p>This resource links UGO modules to recognizable gene-family anchors relevant to meristem activity, hormone regulation, stress resilience, developmental regulation, cell-wall remodeling, and storage metabolism.</p>
+          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download full TSV</a>
+        </div>
+      `
+    },
+
+    "species-use-cases": {
+      title: "Species Use Cases",
+      subtitle: "Practical examples showing how UGO-Omics can be applied to focal underground-organ systems.",
+      body: `
+        <div class="ugo-actionability-card">
+          <h3>Species-specific actionability use cases</h3>
+          <p>Use cases illustrate how users can apply UGO-Omics to rhizome, tuber, storage-root, and related systems.</p>
+          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download full TSV</a>
+        </div>
+      `
+    },
+
+    "calibrated-ranking": {
+      title: "Calibrated Candidate Ranking",
+      subtitle: "A calibrated candidate-family ranking that balances module support, species breadth, cross-clade support, benchmark recovery, known-gene anchors, and use-case relevance.",
+      body: `
+        <div class="ugo-actionability-card">
+          <h3>Calibrated actionable candidate-family ranking</h3>
+          <p>This ranking is intended for candidate prioritization and hypothesis generation, not as direct functional evidence.</p>
+          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download full TSV</a>
+        </div>
+      `
+    },
+
+    "external-evidence-readiness": {
+      title: "External Evidence Readiness",
+      subtitle: "A conservative readiness summary for future integration of QTL/GWAS intervals, Oryza rhizome expression candidates, and independent rhizome-associated modules.",
+      body: `
+        <div class="ugo-actionability-card">
+          <h3>External evidence readiness</h3>
+          <p>This page clarifies which external evidence layers are not yet ready for strong manuscript claims without curated independent input tables.</p>
+          <a class="ugo-actionability-button" href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">Download full TSV</a>
+        </div>
+      `
+    }
+  };
+
+  function getNav() {
+    return document.querySelector("nav");
+  }
+
+  function ensureLiveView() {
+    let view = document.getElementById("ugo-actionability-live-view");
+    if (view) return view;
+
+    const nav = getNav();
+    view = document.createElement("main");
+    view.id = "ugo-actionability-live-view";
+    view.setAttribute("data-ugo-dynamic-view", "actionability");
+
+    if (nav && nav.parentNode) {
+      nav.parentNode.insertBefore(view, nav.nextSibling);
+    } else {
+      document.body.prepend(view);
+    }
+
+    return view;
+  }
+
+  function hideMainContentExceptLiveView() {
+    const nav = getNav();
+    const liveView = ensureLiveView();
+    if (!nav) return;
+
+    let node = nav.nextElementSibling;
+    while (node) {
+      const next = node.nextElementSibling;
+      if (node === liveView) {
+        node.style.display = "";
+      } else if (node.tagName && node.tagName.toLowerCase() !== "script" && node.tagName.toLowerCase() !== "style") {
+        node.setAttribute("data-ugo-hidden-by-actionability", "true");
+        node.style.display = "none";
+      }
+      node = next;
+    }
+  }
+
+  function closeDropdowns() {
+    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
+      el.classList.remove("ugo-menu-open");
+    });
+
+    document.querySelectorAll('[data-ugo-menu-toggle]').forEach(function (btn) {
+      btn.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function renderActionabilityView(viewName, pushState = true) {
+    const viewData = views[viewName] || views["overview"];
+    const liveView = ensureLiveView();
+
+    hideMainContentExceptLiveView();
+
+    liveView.innerHTML = `
+      <h1 class="ugo-actionability-title">${viewData.title}</h1>
+      <p class="ugo-actionability-subtitle">${viewData.subtitle}</p>
+      ${viewData.body}
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+
+    if (pushState && window.history && window.history.pushState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("view", "actionability-" + viewName);
+      url.hash = "";
+      window.history.pushState({ ugoActionabilityView: viewName }, "", url.toString());
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    const actionLink = event.target.closest("[data-ugo-actionability-view]");
+    if (!actionLink) return;
+
+    const viewName = actionLink.getAttribute("data-ugo-actionability-view");
+    if (!viewName) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    closeDropdowns();
+    renderActionabilityView(viewName, true);
+  }, true);
+
+  window.addEventListener("popstate", function () {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get("view");
+    if (view && view.startsWith("actionability-")) {
+      renderActionabilityView(view.replace("actionability-", ""), false);
+    } else {
+      window.location.reload();
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get("view");
+    if (view && view.startsWith("actionability-")) {
+      renderActionabilityView(view.replace("actionability-", ""), false);
+    }
+  });
 })();
 </script>
 

@@ -1,0 +1,67 @@
+{
+  "version": "v5.2.27 simplify Actionable Candidates view",
+  "generated_on": "2026-05-31 10:54:26",
+  "purpose": "Simplify Actionability > Actionable Candidates so it displays only the actionable candidate ranking entry, while preserving the other Actionability submenu views.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5218_script_removed",
+      "status": "pass"
+    },
+    {
+      "check": "new_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "overview_title_actionable_candidates",
+      "status": "pass"
+    },
+    {
+      "check": "overview_has_only_ranking_entry",
+      "status": "pass"
+    },
+    {
+      "check": "overview_no_known_gene_entry_card",
+      "status": "pass"
+    },
+    {
+      "check": "overview_no_use_cases_entry_card",
+      "status": "pass"
+    },
+    {
+      "check": "overview_no_readiness_entry_card",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_view_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_view_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_view_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_view_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "other_nav_restore_still_present",
+      "status": "pass"
+    }
+  ]
+}
