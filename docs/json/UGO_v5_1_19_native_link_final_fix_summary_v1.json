@@ -1,0 +1,81 @@
+{
+  "version": "v5.1.19 native menu link final fix",
+  "generated_on": "2026-05-30 21:42:04",
+  "purpose": "Remove all prior click-intercept scripts and make Start Here / Actionability menu items plain native links with correct public paths.",
+  "linked_source_tables": 5,
+  "modified_files": [
+    "docs/index.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "old_click_scripts_removed",
+      "status": "pass"
+    },
+    {
+      "check": "no_data_ugo_scroll_target",
+      "status": "pass"
+    },
+    {
+      "check": "no_data_scroll_target",
+      "status": "pass"
+    },
+    {
+      "check": "gene_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_absolute_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_parent_relative_source_table_links",
+      "status": "pass"
+    },
+    {
+      "check": "no_plain_relative_source_table_links",
+      "status": "pass"
+    },
+    {
+      "check": "deploy_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "copied_to_docs"
+    }
+  ]
+}

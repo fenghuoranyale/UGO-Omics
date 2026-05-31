@@ -1,3 +1,4 @@
+<!-- UGO_V5_1_19_NATIVE_MENU_LINKS_FIXED 2026-05-30 21:42:03 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1114,6 +1115,21 @@
   }
 </style>
 
+
+<style id="ugo-v5-1-19-native-menu-link-style">
+  .ugo-start-menu,
+  .ugo-actionability-menu {
+    pointer-events: auto !important;
+    z-index: 99999 !important;
+  }
+
+  .ugo-start-menu a,
+  .ugo-actionability-menu a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+</style>
+
 </head>
 
 <body>
@@ -1206,11 +1222,11 @@
           <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="#actionability-layer" data-ugo-scroll-target="actionability-layer">Actionable Candidates</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv" data-ugo-file-link="true">Known-gene Anchors</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv" data-ugo-file-link="true">Species Use Cases</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv" data-ugo-file-link="true">Calibrated Candidate Ranking</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv" data-ugo-file-link="true">External Evidence Readiness</a>
+            <a href="#actionability-layer">Actionable Candidates</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
           </div>
         </div>
 
@@ -2733,137 +2749,10 @@ async function geneWizardLoadDemoOutput() {
 
 </script>
 
-<script id="ugo-v5-1-14-clickable-dropdown-script">
-(function () {
-  function closeAllMenus() {
-    document.querySelectorAll('.ugo-start-nav.ugo-menu-open, .ugo-actionability-nav.ugo-menu-open')
-      .forEach(function (el) {
-        el.classList.remove('ugo-menu-open');
-        var btn = el.querySelector('[data-ugo-menu-toggle]');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-      });
-  }
-
-  document.addEventListener('click', function (event) {
-    var toggle = event.target.closest('[data-ugo-menu-toggle]');
-    var menuLink = event.target.closest('.ugo-start-menu a, .ugo-actionability-menu a');
-
-    if (menuLink) {
-      // Let the link work normally, then close the menu.
-      setTimeout(closeAllMenus, 50);
-      return;
-    }
-
-    if (toggle) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      var container = toggle.closest('.ugo-start-nav, .ugo-actionability-nav');
-      if (!container) return;
-
-      var wasOpen = container.classList.contains('ugo-menu-open');
-      closeAllMenus();
-
-      if (!wasOpen) {
-        container.classList.add('ugo-menu-open');
-        toggle.setAttribute('aria-expanded', 'true');
-      }
-      return;
-    }
-
-    if (!event.target.closest('.ugo-start-nav, .ugo-actionability-nav')) {
-      closeAllMenus();
-    }
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') closeAllMenus();
-  });
-})();
-</script>
 
 
-<script id="ugo-v5-1-17-actionability-link-final-fix-script">
-(function () {
-  document.addEventListener('click', function (event) {
-    var scrollLink = event.target.closest('[data-scroll-target="actionability-layer"]');
-    if (!scrollLink) return;
-
-    var target = document.getElementById('actionability-layer');
-    if (!target) return;
-
-    event.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    if (history && history.pushState) {
-      history.pushState(null, '', '#actionability-layer');
-    } else {
-      location.hash = 'actionability-layer';
-    }
-
-    document.querySelectorAll('.ugo-menu-open').forEach(function (el) {
-      el.classList.remove('ugo-menu-open');
-    });
-  });
-})();
-</script>
 
 
-<script id="ugo-v5-1-18-force-menu-link-navigation-script">
-(function () {
-  function closeCustomMenus() {
-    document.querySelectorAll('.ugo-menu-open').forEach(function (el) {
-      el.classList.remove('ugo-menu-open');
-    });
-
-    document.querySelectorAll('[aria-expanded="true"]').forEach(function (btn) {
-      btn.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  function scrollToId(id) {
-    var target = document.getElementById(id);
-    if (!target) return false;
-
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    if (history && history.pushState) {
-      history.pushState(null, '', '#' + id);
-    } else {
-      window.location.hash = id;
-    }
-
-    return true;
-  }
-
-  document.addEventListener('click', function (event) {
-    var scrollLink = event.target.closest('a[data-ugo-scroll-target]');
-    if (scrollLink) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      var id = scrollLink.getAttribute('data-ugo-scroll-target');
-      closeCustomMenus();
-      scrollToId(id);
-      return;
-    }
-
-    var fileLink = event.target.closest('a[data-ugo-file-link="true"]');
-    if (fileLink) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      var href = fileLink.getAttribute('href');
-      closeCustomMenus();
-
-      if (href) {
-        window.location.href = href;
-      }
-      return;
-    }
-  }, true);
-})();
-</script>
 
 </body>
 </html>
