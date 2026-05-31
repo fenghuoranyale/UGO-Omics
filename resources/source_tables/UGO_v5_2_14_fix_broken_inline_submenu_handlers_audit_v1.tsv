@@ -1,0 +1,12 @@
+check	status
+deployment_marker_present	pass
+nav_present	pass
+broken_onpointerdown_removed	pass
+broken_onmousedown_removed	pass
+actionability_click_script_present	pass
+actionability_click_style_present	pass
+actionability_link_present	pass
+known_gene_link_present	pass
+species_link_present	pass
+ranking_link_present	pass
+readiness_link_present	pass

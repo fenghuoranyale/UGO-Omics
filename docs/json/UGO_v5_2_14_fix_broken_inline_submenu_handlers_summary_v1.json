@@ -1,0 +1,55 @@
+{
+  "version": "v5.2.14 fix broken inline submenu handlers",
+  "generated_on": "2026-05-30 23:03:53",
+  "purpose": "Remove invalid inline onpointerdown/onmousedown handlers from nav links and add a targeted Actionability submenu click handler without changing layout.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "broken_onpointerdown_removed",
+      "status": "pass"
+    },
+    {
+      "check": "broken_onmousedown_removed",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_click_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_click_style_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_link_present",
+      "status": "pass"
+    }
+  ]
+}
