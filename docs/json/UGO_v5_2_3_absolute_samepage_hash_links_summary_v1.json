@@ -1,0 +1,63 @@
+{
+  "version": "v5.2.3 absolute same-page hash links",
+  "generated_on": "2026-05-30 22:13:04",
+  "purpose": "Use absolute same-page URLs with cache-busting query and hash anchors for Start Here and Actionability dropdown items, avoiding JS and button click interference.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_js_removed",
+      "status": "pass"
+    },
+    {
+      "check": "no_menu_nav_buttons",
+      "status": "fail"
+    },
+    {
+      "check": "gene_absolute_hash_link",
+      "status": "fail"
+    },
+    {
+      "check": "actionable_absolute_hash_link",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_absolute_hash_link",
+      "status": "pass"
+    },
+    {
+      "check": "species_absolute_hash_link",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_absolute_hash_link",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_absolute_hash_link",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_panel_exists",
+      "status": "pass"
+    },
+    {
+      "check": "species_panel_exists",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_panel_exists",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_panel_exists",
+      "status": "pass"
+    }
+  ]
+}

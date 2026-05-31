@@ -1,0 +1,14 @@
+check	status
+deployment_marker_present	pass
+old_js_removed	pass
+no_menu_nav_buttons	fail
+gene_absolute_hash_link	fail
+actionable_absolute_hash_link	pass
+known_gene_absolute_hash_link	pass
+species_absolute_hash_link	pass
+ranking_absolute_hash_link	pass
+readiness_absolute_hash_link	pass
+known_gene_panel_exists	pass
+species_panel_exists	pass
+ranking_panel_exists	pass
+readiness_panel_exists	pass
