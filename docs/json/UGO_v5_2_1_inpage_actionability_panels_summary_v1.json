@@ -1,0 +1,81 @@
+{
+  "version": "v5.2.1 in-page Actionability panels",
+  "generated_on": "2026-05-30 21:58:10",
+  "purpose": "Keep Actionability dropdown navigation within the homepage, similar to Analyze Your Data, instead of opening separate Actionability pages.",
+  "inserted_inpage_panels": true,
+  "modified_files": [
+    "docs/index.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "actionability_dropdown_uses_same_page_overview",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_dropdown_uses_same_page_panel",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_dropdown_uses_same_page_panel",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_dropdown_uses_same_page_panel",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_dropdown_uses_same_page_panel",
+      "status": "pass"
+    },
+    {
+      "check": "inpage_panel_section_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "calibrated_ranking_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_actionability_page_link_removed_from_dropdown",
+      "status": "pass"
+    },
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv",
+      "status": "copied_to_docs"
+    }
+  ]
+}
