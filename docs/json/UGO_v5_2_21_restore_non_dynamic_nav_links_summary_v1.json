@@ -1,0 +1,55 @@
+{
+  "version": "v5.2.21 restore non-dynamic nav links",
+  "generated_on": "2026-05-30 23:44:31",
+  "purpose": "Restore clicks for all ordinary navigation submenu links regardless of menu CSS class, while preserving Start Here and Actionability in-page dynamic switchers.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "new_restore_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5220_script_removed",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "broad_nav_selector_present",
+      "status": "pass"
+    },
+    {
+      "check": "explicitly_skips_start_actionability",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_menu_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_menu_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_menu_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_menu_still_present",
+      "status": "pass"
+    }
+  ]
+}

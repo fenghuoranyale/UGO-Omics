@@ -1,0 +1,12 @@
+check	status
+deployment_marker_present	pass
+new_restore_script_present	pass
+old_v5220_script_removed	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+broad_nav_selector_present	pass
+explicitly_skips_start_actionability	pass
+analyze_menu_still_present	pass
+explore_menu_still_present	pass
+evidence_menu_still_present	pass
+help_menu_still_present	pass

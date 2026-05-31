@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_21_RESTORE_NON_DYNAMIC_NAV_LINKS 2026-05-30 23:44:30 -->
 <!-- UGO_V5_2_20_RESTORE_OTHER_SUBMENU_CLICKS_ONLY 2026-05-30 23:39:53 -->
 <!-- UGO_V5_2_19_START_HERE_INPAGE_VIEW_SWITCHER 2026-05-30 23:35:46 -->
 <!-- UGO_V5_2_18_ACTIONABILITY_INPAGE_VIEW_SWITCHER 2026-05-30 23:28:46 -->
@@ -3350,81 +3351,69 @@ async function geneWizardLoadDemoOutput() {
 </script>
 
 
-<script id="ugo-v5-2-20-restore-other-submenu-clicks-script">
+
+
+<script id="ugo-v5-2-21-restore-non-dynamic-nav-links-script">
 (function () {
-  function isDynamicSwitcherLink(link) {
+  function isStartOrActionabilityDynamicLink(link) {
     return link.hasAttribute("data-ugo-start-view") ||
            link.hasAttribute("data-ugo-actionability-view");
   }
 
-  function isOtherDropdownLink(link) {
-    if (!link) return false;
-    if (isDynamicSwitcherLink(link)) return false;
+  function normalizeNavHref(rawHref) {
+    if (!rawHref) return null;
 
-    const menu = link.closest(".dropdown-menu, .ugo-clean-menu, .ugo-actionability-menu");
-    if (!menu) return false;
+    if (rawHref === "#" || rawHref.trim() === "") return null;
 
-    const text = (link.textContent || "").trim();
-
-    // Do not touch Start Here links.
-    const startLabels = new Set([
-      "Gene-centered query",
-      "Organ-centered discovery",
-      "Species-centered exploration",
-      "Candidate prioritization"
-    ]);
-
-    // Do not touch Actionability links.
-    const actionLabels = new Set([
-      "Actionable Candidates",
-      "Known-gene Anchors",
-      "Species Use Cases",
-      "Calibrated Candidate Ranking",
-      "External Evidence Readiness"
-    ]);
-
-    if (startLabels.has(text)) return false;
-    if (actionLabels.has(text)) return false;
-
-    return true;
-  }
-
-  function normalizeHref(href) {
-    if (!href) return null;
-
-    // If it is only a hash, reload homepage with that hash and clear ?view=...
-    if (href.startsWith("#")) {
-      return "/UGO-Omics/?v=5220" + href;
-    }
-
-    // If it is a same-site homepage URL with a view parameter, remove view.
     try {
-      const url = new URL(href, window.location.origin);
-      if (url.origin === window.location.origin && url.pathname.replace(/\/$/, "") === "/UGO-Omics") {
+      var url = new URL(rawHref, window.location.origin);
+
+      // Same homepage/hash navigation: clear dynamic ?view= state and force reload.
+      if (url.origin === window.location.origin &&
+          url.pathname.replace(/\/$/, "") === "/UGO-Omics") {
         url.searchParams.delete("view");
         if (!url.searchParams.has("v")) {
-          url.searchParams.set("v", "5220");
+          url.searchParams.set("v", "5221");
         }
         return url.pathname + url.search + url.hash;
       }
+
       return url.href;
     } catch (e) {
-      return href;
+      if (rawHref.startsWith("#")) {
+        return "/UGO-Omics/?v=5221" + rawHref;
+      }
+      return rawHref;
     }
   }
 
-  document.addEventListener("click", function (event) {
-    const link = event.target.closest("a");
-    if (!isOtherDropdownLink(link)) return;
+  function forceNavigate(link) {
+    if (!link || isStartOrActionabilityDynamicLink(link)) return false;
 
-    const href = normalizeHref(link.getAttribute("href"));
-    if (!href) return;
+    var nav = link.closest("nav");
+    if (!nav) return false;
 
-    event.preventDefault();
-    event.stopPropagation();
+    var href = normalizeNavHref(link.getAttribute("href"));
+    if (!href) return false;
 
-    window.location.href = href;
-  }, true);
+    window.location.assign(href);
+    return true;
+  }
+
+  ["pointerdown", "mousedown", "click"].forEach(function (eventName) {
+    document.addEventListener(eventName, function (event) {
+      var link = event.target.closest("nav a");
+      if (!link) return;
+
+      if (isStartOrActionabilityDynamicLink(link)) return;
+
+      if (forceNavigate(link)) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+      }
+    }, true);
+  });
 })();
 </script>
 
