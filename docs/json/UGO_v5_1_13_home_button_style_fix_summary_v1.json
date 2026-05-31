@@ -1,0 +1,36 @@
+{
+  "version": "v5.1.13 Home button style fix",
+  "generated_on": "2026-05-30 21:17:59",
+  "purpose": "Make the Home link visually match the other navigation buttons without changing any other menu text or structure.",
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "home_has_ugo_home_button_class",
+      "status": "pass"
+    },
+    {
+      "check": "home_no_longer_plain_link",
+      "status": "pass"
+    },
+    {
+      "check": "home_style_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_your_data_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_still_present",
+      "status": "pass"
+    }
+  ]
+}
