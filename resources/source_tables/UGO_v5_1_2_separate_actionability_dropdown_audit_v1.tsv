@@ -1,0 +1,10 @@
+check	status
+separate_actionability_dropdown_present	fail
+old_actionability_menu_item_class_removed	pass
+old_menu_section_label_removed	pass
+actionable_candidates_present	fail
+known_gene_anchors_present	fail
+species_use_cases_present	fail
+calibrated_ranking_present	fail
+external_readiness_present	fail
+inserted_before_help_or_after_evidence	fail

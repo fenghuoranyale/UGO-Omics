@@ -1,0 +1,48 @@
+{
+  "version": "v5.1.2 separate Actionability dropdown",
+  "generated_on": "2026-05-30 20:12:24",
+  "purpose": "Move actionability entries out of Evidence & Discovery into a dedicated top-level Actionability dropdown to avoid raw-link styling and improve user flow.",
+  "inserted": false,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "separate_actionability_dropdown_present",
+      "status": "fail"
+    },
+    {
+      "check": "old_actionability_menu_item_class_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_menu_section_label_removed",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_candidates_present",
+      "status": "fail"
+    },
+    {
+      "check": "known_gene_anchors_present",
+      "status": "fail"
+    },
+    {
+      "check": "species_use_cases_present",
+      "status": "fail"
+    },
+    {
+      "check": "calibrated_ranking_present",
+      "status": "fail"
+    },
+    {
+      "check": "external_readiness_present",
+      "status": "fail"
+    },
+    {
+      "check": "inserted_before_help_or_after_evidence",
+      "status": "fail"
+    }
+  ]
+}
