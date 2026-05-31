@@ -1,0 +1,51 @@
+{
+  "version": "v5.2.24 fix Start Here organ/species blank views",
+  "generated_on": "2026-05-31 10:36:03",
+  "purpose": "Prevent blank Start Here views for organ-centered and species-centered entries by rendering fallback current-page entry panels with real workflow buttons.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5223_script_removed",
+      "status": "pass"
+    },
+    {
+      "check": "new_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "fallback_organ_present",
+      "status": "pass"
+    },
+    {
+      "check": "fallback_species_present",
+      "status": "pass"
+    },
+    {
+      "check": "gene_still_maps_to_checkGene",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_still_maps_to_validationTargets",
+      "status": "pass"
+    },
+    {
+      "check": "start_links_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "other_nav_restore_still_present",
+      "status": "pass"
+    }
+  ]
+}

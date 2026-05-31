@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+old_v5223_script_removed	pass
+new_script_present	pass
+fallback_organ_present	pass
+fallback_species_present	pass
+gene_still_maps_to_checkGene	pass
+candidate_still_maps_to_validationTargets	pass
+start_links_still_present	pass
+actionability_still_present	pass
+other_nav_restore_still_present	pass

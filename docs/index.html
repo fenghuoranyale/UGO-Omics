@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_24_FIX_START_HERE_ORGAN_SPECIES_BLANK 2026-05-31 10:36:02 -->
 <!-- UGO_V5_2_23_START_HERE_REAL_INPUTS 2026-05-31 10:26:37 -->
 <!-- UGO_V5_2_22_RESTORE_NAV_DROPDOWN_BUTTON_CLICKS 2026-05-30 23:52:52 -->
 <!-- UGO_V5_2_21_RESTORE_NON_DYNAMIC_NAV_LINKS 2026-05-30 23:44:30 -->
@@ -1309,6 +1310,83 @@
     border-left: 5px solid #0f766e;
     color: #123657;
     line-height: 1.45;
+  }
+</style>
+
+
+<style id="ugo-v5-2-24-fix-start-here-organ-species-blank-style">
+  #ugo-start-live-view {
+    padding: 34px 54px 60px 54px;
+  }
+
+  .ugo-start-real-section h1 {
+    margin: 0 0 8px 0;
+    color: #123657;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+  }
+
+  .ugo-start-real-subtitle {
+    max-width: 980px;
+    color: #465b73;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .ugo-start-real-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .ugo-start-real-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 61, 96, 0.18);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  .ugo-start-real-card h3 {
+    margin: 0 0 12px 0;
+    color: #123657;
+    font-size: 1.25rem;
+  }
+
+  .ugo-start-real-card p {
+    color: #465b73;
+    line-height: 1.55;
+  }
+
+  .ugo-start-real-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .ugo-start-real-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 0;
+    background: #123657;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .ugo-start-real-note {
+    margin-top: 22px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    border-left: 5px solid #0f766e;
+    color: #2c455e;
   }
 </style>
 
@@ -3245,20 +3323,38 @@ async function geneWizardLoadDemoOutput() {
 </script>
 
 
-<script id="ugo-v5-2-23-start-here-real-inputs-script">
+
+
+<script id="ugo-v5-2-24-fix-start-here-organ-species-blank-script">
 (function () {
   const startToRealSection = {
     "gene-centered-query": "checkGene",
-    "organ-centered-discovery": "findOrgan",
-    "species-centered-exploration": "findSpecies",
     "candidate-prioritization": "validationTargets"
   };
 
-  const startViewLabels = {
-    "gene-centered-query": "Gene-centered query",
-    "organ-centered-discovery": "Organ-centered discovery",
-    "species-centered-exploration": "Species-centered exploration",
-    "candidate-prioritization": "Candidate prioritization"
+  const fallbackViews = {
+    "organ-centered-discovery": {
+      title: "Organ-centered discovery",
+      subtitle: "Select an underground-organ type to identify relevant UGO resources, candidate modules, and biological programs.",
+      cards: [
+        ["Rhizome", "Explore rhizome-associated UGO modules and candidate-family hypotheses."],
+        ["Tuber", "Explore tuber-related storage, developmental, and stress-response candidate programs."],
+        ["Storage root", "Explore storage-root associated candidate modules and transferability patterns."],
+        ["Bulb / corm / stolon", "Use broad underground-organ resources when a specialized organ panel is not available."]
+      ],
+      note: "This entry is designed as an organ-first route into the UGO resource system. Use Explore Resources for full resource tables and downloadable files."
+    },
+    "species-centered-exploration": {
+      title: "Species-centered exploration",
+      subtitle: "Choose a focal species perspective and connect UGO candidate modules to species-level homologs and transferability patterns.",
+      cards: [
+        ["11-species backbone", "Use the high-confidence analytical backbone for cross-species supported candidate modules."],
+        ["51-species resource layer", "Use the broad resource layer to check candidate traceability across a wider species set."],
+        ["New species transfer", "Use Sequence-to-UGO or Gene-list-to-UGO when you bring data from a new or focal species."],
+        ["Species-specific candidates", "Prioritize candidate families that are traceable and interpretable in your study system."]
+      ],
+      note: "This entry is designed as a species-first route. Use Analyze Your Data when you want to bring FASTA sequences or gene lists from a focal species."
+    }
   };
 
   function restoreHiddenHomepageContent() {
@@ -3285,14 +3381,97 @@ async function geneWizardLoadDemoOutput() {
     });
   }
 
-  function callShowSection(sectionId, sourceLink) {
+  function getNav() {
+    return document.querySelector("nav");
+  }
+
+  function ensureStartLiveView() {
+    let view = document.getElementById("ugo-start-live-view");
+    if (view) return view;
+
+    const nav = getNav();
+    view = document.createElement("main");
+    view.id = "ugo-start-live-view";
+    view.setAttribute("data-ugo-dynamic-view", "start-here");
+
+    if (nav && nav.parentNode) {
+      nav.parentNode.insertBefore(view, nav.nextSibling);
+    } else {
+      document.body.prepend(view);
+    }
+
+    return view;
+  }
+
+  function hideMainContentExceptStartLiveView() {
+    const nav = getNav();
+    const liveView = ensureStartLiveView();
+    if (!nav) return;
+
+    let node = nav.nextElementSibling;
+    while (node) {
+      const next = node.nextElementSibling;
+      if (node === liveView) {
+        node.style.display = "";
+      } else if (node.tagName && node.tagName.toLowerCase() !== "script" && node.tagName.toLowerCase() !== "style") {
+        node.setAttribute("data-ugo-hidden-by-start", "true");
+        node.style.display = "none";
+      }
+      node = next;
+    }
+  }
+
+  function renderFallbackView(viewName, pushState) {
+    const data = fallbackViews[viewName];
+    if (!data) return false;
+
+    hideMainContentExceptStartLiveView();
+    const liveView = ensureStartLiveView();
+
+    const cards = data.cards.map(function (item) {
+      return `
+        <div class="ugo-start-real-card">
+          <h3>${item[0]}</h3>
+          <p>${item[1]}</p>
+        </div>
+      `;
+    }).join("");
+
+    liveView.innerHTML = `
+      <section class="ugo-start-real-section">
+        <h1>${data.title}</h1>
+        <p class="ugo-start-real-subtitle">${data.subtitle}</p>
+        <div class="ugo-start-real-grid">${cards}</div>
+        <div class="ugo-start-real-actions">
+          <button type="button" class="ugo-start-real-button" data-ugo-open-section="resourceFinder">Open Resource Finder</button>
+          <button type="button" class="ugo-start-real-button" data-ugo-open-section="organKits">Open Organ Kits</button>
+          <button type="button" class="ugo-start-real-button" data-ugo-open-section="sequenceToUGO">Open Sequence-to-UGO</button>
+          <button type="button" class="ugo-start-real-button" data-ugo-open-section="geneListToUGO">Open Gene-list-to-UGO</button>
+        </div>
+        <div class="ugo-start-real-note">${data.note}</div>
+      </section>
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+
+    if (pushState && window.history && window.history.pushState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("view", "start-" + viewName);
+      url.hash = "";
+      window.history.pushState({ ugoStartView: viewName }, "", url.toString());
+    }
+
+    return true;
+  }
+
+  function callShowSection(sectionId, sourceElement, pushState, viewName) {
     restoreHiddenHomepageContent();
     closeDropdowns();
 
     if (typeof window.showSection === "function") {
-      window.showSection(sectionId, sourceLink);
+      window.showSection(sectionId, sourceElement);
     } else if (typeof showSection === "function") {
-      showSection(sectionId, sourceLink);
+      showSection(sectionId, sourceElement);
     } else {
       var target = document.getElementById(sectionId);
       if (target) {
@@ -3303,27 +3482,25 @@ async function geneWizardLoadDemoOutput() {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  }
 
-  function renderStartRealInput(viewName, pushState = true, sourceLink = null) {
-    const sectionId = startToRealSection[viewName] || "checkGene";
-    callShowSection(sectionId, sourceLink);
-
-    if (pushState && window.history && window.history.pushState) {
+    if (pushState && viewName && window.history && window.history.pushState) {
       const url = new URL(window.location.href);
       url.searchParams.set("view", "start-" + viewName);
       url.hash = "";
       window.history.pushState({ ugoStartView: viewName, ugoSection: sectionId }, "", url.toString());
     }
+  }
 
-    // Add a lightweight contextual label above the real workflow section when possible.
-    const target = document.getElementById(sectionId);
-    if (target && !target.querySelector(".ugo-start-real-input-note")) {
-      const note = document.createElement("div");
-      note.className = "ugo-start-real-input-note";
-      note.innerHTML = "<strong>" + (startViewLabels[viewName] || "Start Here") + "</strong>: this Start Here entry opens the corresponding interactive workflow/input section.";
-      target.insertBefore(note, target.firstChild);
+  function renderStartView(viewName, pushState, sourceElement) {
+    closeDropdowns();
+
+    if (fallbackViews[viewName]) {
+      renderFallbackView(viewName, pushState);
+      return;
     }
+
+    const sectionId = startToRealSection[viewName] || "checkGene";
+    callShowSection(sectionId, sourceElement, pushState, viewName);
   }
 
   document.addEventListener("click", function (event) {
@@ -3336,22 +3513,27 @@ async function geneWizardLoadDemoOutput() {
     event.preventDefault();
     event.stopPropagation();
 
-    renderStartRealInput(viewName, true, startLink);
+    renderStartView(viewName, true, startLink);
   }, true);
 
-  window.addEventListener("popstate", function () {
-    const params = new URLSearchParams(window.location.search);
-    const view = params.get("view");
-    if (view && view.startsWith("start-")) {
-      renderStartRealInput(view.replace("start-", ""), false, null);
-    }
-  });
+  document.addEventListener("click", function (event) {
+    const openButton = event.target.closest("[data-ugo-open-section]");
+    if (!openButton) return;
+
+    const sectionId = openButton.getAttribute("data-ugo-open-section");
+    if (!sectionId) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    callShowSection(sectionId, openButton, false, null);
+  }, true);
 
   document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const view = params.get("view");
     if (view && view.startsWith("start-")) {
-      renderStartRealInput(view.replace("start-", ""), false, null);
+      renderStartView(view.replace("start-", ""), false, null);
     }
   });
 })();
