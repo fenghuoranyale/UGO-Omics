@@ -1,0 +1,12 @@
+check	status
+deployment_marker_present	pass
+old_static_start_script_removed	pass
+new_start_real_inputs_script_present	pass
+start_switcher_links_still_present	pass
+gene_maps_to_checkGene	pass
+organ_maps_to_findOrgan	pass
+species_maps_to_findSpecies	pass
+candidate_maps_to_validationTargets	pass
+calls_showSection	pass
+actionability_switcher_still_present	pass
+other_nav_restore_still_present	pass

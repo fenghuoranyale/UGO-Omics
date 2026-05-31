@@ -1,0 +1,61 @@
+{
+  "version": "v5.2.23 Start Here real inputs",
+  "generated_on": "2026-05-31 10:26:38",
+  "purpose": "Replace static Start Here explanation panels with direct opening of the corresponding real workflow/input sections.",
+  "mapping": {
+    "gene-centered-query": "checkGene",
+    "organ-centered-discovery": "findOrgan",
+    "species-centered-exploration": "findSpecies",
+    "candidate-prioritization": "validationTargets"
+  },
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_static_start_script_removed",
+      "status": "pass"
+    },
+    {
+      "check": "new_start_real_inputs_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_links_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "gene_maps_to_checkGene",
+      "status": "pass"
+    },
+    {
+      "check": "organ_maps_to_findOrgan",
+      "status": "pass"
+    },
+    {
+      "check": "species_maps_to_findSpecies",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_maps_to_validationTargets",
+      "status": "pass"
+    },
+    {
+      "check": "calls_showSection",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "other_nav_restore_still_present",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_23_START_HERE_REAL_INPUTS 2026-05-31 10:26:37 -->
 <!-- UGO_V5_2_22_RESTORE_NAV_DROPDOWN_BUTTON_CLICKS 2026-05-30 23:52:52 -->
 <!-- UGO_V5_2_21_RESTORE_NON_DYNAMIC_NAV_LINKS 2026-05-30 23:44:30 -->
 <!-- UGO_V5_2_20_RESTORE_OTHER_SUBMENU_CLICKS_ONLY 2026-05-30 23:39:53 -->
@@ -1295,6 +1296,19 @@
     background: #ffffff;
     border-left: 5px solid #0f766e;
     color: #2c455e;
+  }
+</style>
+
+
+<style id="ugo-v5-2-23-start-here-real-inputs-style">
+  .ugo-start-real-input-note {
+    margin: 0 0 16px 0;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: #f4fbfc;
+    border-left: 5px solid #0f766e;
+    color: #123657;
+    line-height: 1.45;
   }
 </style>
 
@@ -3156,200 +3170,6 @@ async function geneWizardLoadDemoOutput() {
 </script>
 
 
-<script id="ugo-v5-2-19-start-here-inpage-view-switcher-script">
-(function () {
-  const views = {
-    "gene-centered-query": {
-      title: "Gene-centered query",
-      subtitle: "Search gene IDs, orthogroups, gene families, or annotations to evaluate UGO module membership and candidate-family support.",
-      body: `
-        <div class="ugo-start-grid">
-          <div class="ugo-start-card">
-            <h3>What to enter</h3>
-            <p>Use a gene ID, orthogroup ID, gene-family name, or functional keyword to ask whether it belongs to a UGO candidate module.</p>
-            <p><strong>Examples:</strong> XTH, hemoglobin, NAC, bHLH, OG0000154, Panicum.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>What UGO-Omics returns</h3>
-            <p>Module membership, candidate-family context, known-gene anchor support, and actionability-oriented interpretation for downstream prioritization.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Best use</h3>
-            <p>Use this workflow when you already have a gene, family, orthogroup, or annotation keyword and want to place it in the UGO framework.</p>
-          </div>
-        </div>
-        <div class="ugo-start-note">
-          This workflow is designed for candidate interpretation and hypothesis generation, not direct functional validation.
-        </div>
-      `
-    },
-
-    "organ-centered-discovery": {
-      title: "Organ-centered discovery",
-      subtitle: "Select an underground-organ type to identify enriched candidate modules, biological programs, and prioritized gene-family hypotheses.",
-      body: `
-        <div class="ugo-start-grid">
-          <div class="ugo-start-card">
-            <h3>Supported organ types</h3>
-            <p>Rhizome, tuber, storage root, bulb, corm, root crown, and stolon-focused discovery layers.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Discovery logic</h3>
-            <p>UGO-Omics links organ-associated expression modules, recurrent cross-species support, known-gene anchors, and candidate-family ranking.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Best use</h3>
-            <p>Use this workflow when your biological question starts from an organ type rather than from a known gene.</p>
-          </div>
-        </div>
-      `
-    },
-
-    "species-centered-exploration": {
-      title: "Species-centered exploration",
-      subtitle: "Choose a species and view UGO candidate modules with homologous members and transferability patterns within a focal species.",
-      body: `
-        <div class="ugo-start-grid">
-          <div class="ugo-start-card">
-            <h3>Species-level view</h3>
-            <p>Explore whether UGO candidate families have traceable homologs in a focal species and how strongly they are supported by the cross-species framework.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Transferability</h3>
-            <p>The workflow helps translate multi-species UGO evidence into practical candidate sets for individual study systems.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Best use</h3>
-            <p>Use this workflow when you work on a target species and want to identify candidate families worth follow-up.</p>
-          </div>
-        </div>
-      `
-    },
-
-    "candidate-prioritization": {
-      title: "Candidate prioritization",
-      subtitle: "Generate a ranked shortlist of candidate modules and candidate-family hypotheses for downstream functional follow-up.",
-      body: `
-        <div class="ugo-start-grid">
-          <div class="ugo-start-card">
-            <h3>Prioritization layers</h3>
-            <p>Candidate ranking integrates module support, species breadth, cross-clade evidence, benchmark recovery, known-gene anchors, and use-case relevance.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Output</h3>
-            <p>A practical shortlist of candidate families, with interpretation layers that help decide which candidates are validation-ready.</p>
-          </div>
-          <div class="ugo-start-card">
-            <h3>Best use</h3>
-            <p>Use this workflow when you need a focused candidate list rather than a broad exploratory table.</p>
-          </div>
-        </div>
-        <div class="ugo-start-note">
-          Candidate-priority scores support prioritization and do not constitute functional validation.
-        </div>
-      `
-    }
-  };
-
-  function getNav() {
-    return document.querySelector("nav");
-  }
-
-  function ensureLiveView() {
-    let view = document.getElementById("ugo-start-live-view");
-    if (view) return view;
-
-    const nav = getNav();
-    view = document.createElement("main");
-    view.id = "ugo-start-live-view";
-    view.setAttribute("data-ugo-dynamic-view", "start-here");
-
-    if (nav && nav.parentNode) {
-      nav.parentNode.insertBefore(view, nav.nextSibling);
-    } else {
-      document.body.prepend(view);
-    }
-
-    return view;
-  }
-
-  function hideMainContentExceptLiveView() {
-    const nav = getNav();
-    const liveView = ensureLiveView();
-    if (!nav) return;
-
-    let node = nav.nextElementSibling;
-    while (node) {
-      const next = node.nextElementSibling;
-      if (node === liveView) {
-        node.style.display = "";
-      } else if (node.tagName && node.tagName.toLowerCase() !== "script" && node.tagName.toLowerCase() !== "style") {
-        node.setAttribute("data-ugo-hidden-by-start", "true");
-        node.style.display = "none";
-      }
-      node = next;
-    }
-  }
-
-  function closeDropdowns() {
-    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
-      el.classList.remove("ugo-menu-open");
-    });
-  }
-
-  function renderStartView(viewName, pushState = true) {
-    const viewData = views[viewName] || views["gene-centered-query"];
-    const liveView = ensureLiveView();
-
-    hideMainContentExceptLiveView();
-
-    liveView.innerHTML = `
-      <h1 class="ugo-start-title">${viewData.title}</h1>
-      <p class="ugo-start-subtitle">${viewData.subtitle}</p>
-      ${viewData.body}
-    `;
-
-    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
-
-    if (pushState && window.history && window.history.pushState) {
-      const url = new URL(window.location.href);
-      url.searchParams.set("view", "start-" + viewName);
-      url.hash = "";
-      window.history.pushState({ ugoStartView: viewName }, "", url.toString());
-    }
-  }
-
-  document.addEventListener("click", function (event) {
-    const startLink = event.target.closest("[data-ugo-start-view]");
-    if (!startLink) return;
-
-    const viewName = startLink.getAttribute("data-ugo-start-view");
-    if (!viewName) return;
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    closeDropdowns();
-    renderStartView(viewName, true);
-  }, true);
-
-  window.addEventListener("popstate", function () {
-    const params = new URLSearchParams(window.location.search);
-    const view = params.get("view");
-    if (view && view.startsWith("start-")) {
-      renderStartView(view.replace("start-", ""), false);
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const view = params.get("view");
-    if (view && view.startsWith("start-")) {
-      renderStartView(view.replace("start-", ""), false);
-    }
-  });
-})();
-</script>
 
 
 
@@ -3421,6 +3241,119 @@ async function geneWizardLoadDemoOutput() {
       window.history.replaceState(null, "", url.toString());
     }
   }, true);
+})();
+</script>
+
+
+<script id="ugo-v5-2-23-start-here-real-inputs-script">
+(function () {
+  const startToRealSection = {
+    "gene-centered-query": "checkGene",
+    "organ-centered-discovery": "findOrgan",
+    "species-centered-exploration": "findSpecies",
+    "candidate-prioritization": "validationTargets"
+  };
+
+  const startViewLabels = {
+    "gene-centered-query": "Gene-centered query",
+    "organ-centered-discovery": "Organ-centered discovery",
+    "species-centered-exploration": "Species-centered exploration",
+    "candidate-prioritization": "Candidate prioritization"
+  };
+
+  function restoreHiddenHomepageContent() {
+    document.querySelectorAll('[data-ugo-hidden-by-start="true"], [data-ugo-hidden-by-actionability="true"]').forEach(function (el) {
+      el.style.display = "";
+      el.removeAttribute("data-ugo-hidden-by-start");
+      el.removeAttribute("data-ugo-hidden-by-actionability");
+    });
+
+    var startLive = document.getElementById("ugo-start-live-view");
+    if (startLive) startLive.remove();
+
+    var actionLive = document.getElementById("ugo-actionability-live-view");
+    if (actionLive) actionLive.remove();
+  }
+
+  function closeDropdowns() {
+    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
+      el.classList.remove("ugo-menu-open");
+    });
+
+    document.querySelectorAll('[data-ugo-menu-toggle]').forEach(function (btn) {
+      btn.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function callShowSection(sectionId, sourceLink) {
+    restoreHiddenHomepageContent();
+    closeDropdowns();
+
+    if (typeof window.showSection === "function") {
+      window.showSection(sectionId, sourceLink);
+    } else if (typeof showSection === "function") {
+      showSection(sectionId, sourceLink);
+    } else {
+      var target = document.getElementById(sectionId);
+      if (target) {
+        document.querySelectorAll("main section").forEach(function (sec) {
+          sec.style.display = "none";
+        });
+        target.style.display = "";
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }
+
+  function renderStartRealInput(viewName, pushState = true, sourceLink = null) {
+    const sectionId = startToRealSection[viewName] || "checkGene";
+    callShowSection(sectionId, sourceLink);
+
+    if (pushState && window.history && window.history.pushState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("view", "start-" + viewName);
+      url.hash = "";
+      window.history.pushState({ ugoStartView: viewName, ugoSection: sectionId }, "", url.toString());
+    }
+
+    // Add a lightweight contextual label above the real workflow section when possible.
+    const target = document.getElementById(sectionId);
+    if (target && !target.querySelector(".ugo-start-real-input-note")) {
+      const note = document.createElement("div");
+      note.className = "ugo-start-real-input-note";
+      note.innerHTML = "<strong>" + (startViewLabels[viewName] || "Start Here") + "</strong>: this Start Here entry opens the corresponding interactive workflow/input section.";
+      target.insertBefore(note, target.firstChild);
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    const startLink = event.target.closest("[data-ugo-start-view]");
+    if (!startLink) return;
+
+    const viewName = startLink.getAttribute("data-ugo-start-view");
+    if (!viewName) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    renderStartRealInput(viewName, true, startLink);
+  }, true);
+
+  window.addEventListener("popstate", function () {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get("view");
+    if (view && view.startsWith("start-")) {
+      renderStartRealInput(view.replace("start-", ""), false, null);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get("view");
+    if (view && view.startsWith("start-")) {
+      renderStartRealInput(view.replace("start-", ""), false, null);
+    }
+  });
 })();
 </script>
 
