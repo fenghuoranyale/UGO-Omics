@@ -1,0 +1,12 @@
+check	status
+deployment_marker_present	pass
+start_details_present	pass
+actionability_details_present	pass
+start_absolute_links_present	pass
+actionability_absolute_links_present	pass
+known_gene_panel_link_present	pass
+old_actionability_dropdown_removed	fail
+old_start_nav_removed	fail
+old_click_scripts_removed	pass
+inserted_start	pass
+inserted_actionability	pass

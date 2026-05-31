@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_5_NATIVE_DETAILS_DROPDOWN_FIX 2026-05-30 22:18:44 -->
 <!-- UGO_V5_2_3_ABSOLUTE_SAMEPAGE_HASH_LINKS 2026-05-30 22:13:03 -->
 <!-- UGO_V5_2_2_BUTTON_BASED_INPAGE_NAVIGATION 2026-05-30 22:02:08 -->
 <!-- UGO_V5_2_1_INPAGE_ACTIONABILITY_PANELS 2026-05-30 21:58:09 -->
@@ -1164,43 +1165,59 @@
 </style>
 
 
-<style id="ugo-v5-2-2-button-based-inpage-navigation-style">
-  .ugo-menu-nav-button {
-    display: block !important;
-    width: 100% !important;
-    padding: 10px 11px !important;
-    margin: 2px 0 !important;
-    border: 0 !important;
-    border-radius: 10px !important;
-    background: transparent !important;
-    color: #123657 !important;
-    text-align: left !important;
-    text-decoration: none !important;
-    font-family: inherit !important;
-    font-size: 0.92rem !important;
-    font-weight: 750 !important;
-    line-height: 1.25 !important;
+
+
+
+
+<style id="ugo-v5-2-5-native-details-dropdown-style">
+  .ugo-details-dropdown {
+    position: relative !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+  }
+
+  .ugo-details-dropdown summary {
+    list-style: none !important;
+  }
+
+  .ugo-details-dropdown summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  .ugo-details-summary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     cursor: pointer !important;
-    pointer-events: auto !important;
+    user-select: none !important;
   }
 
-  .ugo-menu-nav-button:hover,
-  .ugo-menu-nav-button:focus {
-    background: rgba(14, 116, 144, 0.10) !important;
-    outline: none !important;
-  }
-
-  .ugo-start-menu,
-  .ugo-actionability-menu {
-    pointer-events: auto !important;
+  .ugo-details-menu {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    min-width: 285px !important;
+    max-width: 360px !important;
+    padding: 12px 10px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18) !important;
     z-index: 99999 !important;
   }
-</style>
 
+  .ugo-details-menu-label {
+    display: block !important;
+    padding: 6px 10px 8px 10px !important;
+    color: #64748b !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+  }
 
-<style id="ugo-v5-2-3-absolute-samepage-hash-style">
-  .ugo-start-menu a,
-  .ugo-actionability-menu a {
+  .ugo-details-menu a {
     display: block !important;
     padding: 10px 11px !important;
     margin: 2px 0 !important;
@@ -1215,8 +1232,7 @@
     cursor: pointer !important;
   }
 
-  .ugo-start-menu a:hover,
-  .ugo-actionability-menu a:hover {
+  .ugo-details-menu a:hover {
     background: rgba(14, 116, 144, 0.10) !important;
     color: #123657 !important;
     text-decoration: none !important;
@@ -1266,21 +1282,16 @@
 
         <a class="nav-btn ugo-home-button" href="#top">Home</a>
 
-<div class="ugo-start-nav">
-          <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
-          <div class="ugo-start-menu" aria-label="Start Here menu">
-            <div class="ugo-start-menu-label">Discovery workflows</div>
-            <a href="#question-workflows"><span id="gene-centered-query"></span>Gene-centered query</a>
-            <a href="#question-workflows"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
-            <a href="#question-workflows"><span id="species-centered-exploration"></span>Species-centered exploration</a>
-            <a href="#question-workflows"><span id="candidate-prioritization"></span>Candidate prioritization</a>
+        <details class="ugo-details-dropdown ugo-start-details">
+          <summary class="nav-btn ugo-details-summary">Start Here ▾</summary>
+          <div class="ugo-details-menu">
+            <div class="ugo-details-menu-label">Discovery workflows</div>
+            <a href="/UGO-Omics/?v=525#gene-centered-query">Gene-centered query</a>
+            <a href="/UGO-Omics/?v=525#organ-centered-discovery">Organ-centered discovery</a>
+            <a href="/UGO-Omics/?v=525#species-centered-exploration">Species-centered exploration</a>
+            <a href="/UGO-Omics/?v=525#candidate-prioritization">Candidate prioritization</a>
           </div>
-        </div>
-
-
-
-        
-
+        </details>
 
 <div class="nav-dropdown">
     <button class="nav-dropbtn" type="button">Analyze Your Data</button>
@@ -1323,17 +1334,18 @@
       <button onclick="showSection('downloads', this)">Downloads</button>
     </div>
   </div>
-<div class="ugo-actionability-nav">
-          <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
-          <div class="ugo-actionability-menu" aria-label="Actionability menu">
-            <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="/UGO-Omics/?v=523#actionability-layer">Actionable Candidates</a>
-            <a href="/UGO-Omics/?v=523#known-gene-anchors-panel">Known-gene Anchors</a>
-            <a href="/UGO-Omics/?v=523#species-use-cases-panel">Species Use Cases</a>
-            <a href="/UGO-Omics/?v=523#calibrated-ranking-panel">Calibrated Candidate Ranking</a>
-            <a href="/UGO-Omics/?v=523#external-evidence-readiness-panel">External Evidence Readiness</a>
+
+        <details class="ugo-details-dropdown ugo-actionability-details">
+          <summary class="nav-btn ugo-details-summary">Actionability ▾</summary>
+          <div class="ugo-details-menu">
+            <div class="ugo-details-menu-label">Candidate prioritization</div>
+            <a href="/UGO-Omics/?v=525#actionability-layer">Actionable Candidates</a>
+            <a href="/UGO-Omics/?v=525#known-gene-anchors-panel">Known-gene Anchors</a>
+            <a href="/UGO-Omics/?v=525#species-use-cases-panel">Species Use Cases</a>
+            <a href="/UGO-Omics/?v=525#calibrated-ranking-panel">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/?v=525#external-evidence-readiness-panel">External Evidence Readiness</a>
           </div>
-        </div>
+        </details>
 
 </nav>
 
@@ -1467,7 +1479,8 @@
   </div>
 
   <div class="info-note">
-    UGO-Omics prioritizes candidate-family hypotheses. These resources support candidate prioritization and hypothesis generation, not direct functional validation for individual genes.
+    UGO-Omics prioritizes candidate-family hypotheses. These resources support
+and hypothesis generation, not direct functional validation for individual genes.
   </div>
 </section>
 
@@ -1479,32 +1492,34 @@
   <div class="section-title">
     <div>
       <h2><span id="question-workflows"></span>Start with your question</h2>
-      <p>UGO-Omics is organized around four practical discovery workflows.</p>
+      <p>UGO-Omics is organized around four practical
+.</p>
     </div>
   </div>
 
   <div class="workflow-grid">
     <div class="card workflow-card" onclick="showSection('checkGene', document.querySelectorAll('nav button')[1])">
       <div class="workflow-icon">🔎</div>
-      <h3>Gene-centered query</h3>
+      <h3><span id="gene-centered-query"></span>Gene-centered query</h3>
       <p>Search gene IDs, orthogroups, gene families, or annotations to evaluate module membership and candidate-family support.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('organCandidates', document.querySelectorAll('nav button')[2])">
       <div class="workflow-icon">🌿</div>
-      <h3>Organ-centered discovery</h3>
+      <h3><span id="organ-centered-discovery"></span>Organ-centered discovery</h3>
       <p>Select an underground-organ type to identify enriched candidate modules, biological programs, and prioritized gene-family hypotheses.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('speciesCandidates', document.querySelectorAll('nav button')[3])">
       <div class="workflow-icon">🧬</div>
-      <h3>Species-centered exploration</h3>
+      <h3><span id="species-centered-exploration"></span>Species-centered exploration</h3>
       <p>Explore candidate modules, homologous members, and transferability patterns within a focal species.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('validationTargets', document.querySelectorAll('nav button')[4])">
       <div class="workflow-icon">✅</div>
-      <h3>Candidate prioritization</h3>
+      <h3>
+</h3>
       <p>Generate a ranked shortlist of candidate modules and candidate-family hypotheses for downstream functional follow-up.</p>
     </div>
   </div>
@@ -1517,7 +1532,8 @@
   </div>
 
   <div class="panel app-note">
-    UGO-Omics outputs are designed for candidate prioritization and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
+    UGO-Omics outputs are designed for
+and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
   </div>
 </section>
 
@@ -1744,7 +1760,8 @@ MASS..."></textarea>
         <tr><th>Output</th><th>Meaning</th></tr>
         <tr><td>hit_orthogroup</td><td>The UGO orthogroup most similar to the input protein query.</td></tr>
         <tr><td>candidate_function</td><td>The prioritized underground-organ candidate module, if matched.</td></tr>
-        <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
+        <tr><td>ugo_score</td><td>Evidence-integration score used for
+.</td></tr>
         <tr><td>validation_priority_class</td><td>Suggested priority class for follow-up validation.</td></tr>
         <tr><td>suggested_validation_system</td><td>Suggested biological system or assay context for follow-up.</td></tr>
       </table>
@@ -1804,7 +1821,8 @@ MASS..."></textarea>
       <tr><td>hit_species</td><td>The closest-matching UGO species.</td></tr>
       <tr><td>hit_orthogroup</td><td>The closest UGO 11-species orthogroup hit.</td></tr>
       <tr><td>candidate_function</td><td>Candidate module annotation if the orthogroup is prioritized.</td></tr>
-      <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
+      <tr><td>ugo_score</td><td>Evidence-integration score used for
+.</td></tr>
       <tr><td>validation_priority_class</td><td>Recommended follow-up priority class.</td></tr>
       <tr><td>biological_discovery_case</td><td>Whether the hit belongs to a v1.9 conserved module case.</td></tr>
       <tr><td>suggested_validation_system</td><td>Suggested biological system for follow-up.</td></tr>
@@ -2057,7 +2075,8 @@ Gene_003"></textarea>
       <tr><td>orthogroup</td><td>UGO orthogroup matched by one or more input genes.</td></tr>
       <tr><td>candidate_function</td><td>Candidate module annotation if the orthogroup is prioritized.</td></tr>
       <tr><td>input_gene_count</td><td>Number of input IDs supporting this module.</td></tr>
-      <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
+      <tr><td>ugo_score</td><td>Evidence-integration score used for
+.</td></tr>
       <tr><td>validation_priority_class</td><td>Recommended follow-up priority class.</td></tr>
       <tr><td>biological_discovery_case</td><td>Whether the module belongs to a v1.9 conserved discovery case.</td></tr>
       <tr><td>suggested_validation_system</td><td>Suggested biological system for follow-up.</td></tr>
@@ -2910,3 +2929,5 @@ async function geneWizardLoadDemoOutput() {
 <span id="toolkits"></span>
 
 <span id="citation"></span>
+
+<span id="candidate-prioritization"></span>

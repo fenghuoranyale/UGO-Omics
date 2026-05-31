@@ -1,0 +1,58 @@
+{
+  "version": "v5.2.5 native details dropdown fix",
+  "generated_on": "2026-05-30 22:18:45",
+  "purpose": "Replace unstable custom Start Here and Actionability dropdowns with native details/summary dropdowns so links are reliably clickable while preserving dropdown behavior.",
+  "inserted_start": true,
+  "inserted_actionability": true,
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_details_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_details_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_absolute_links_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_absolute_links_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_panel_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_actionability_dropdown_removed",
+      "status": "fail"
+    },
+    {
+      "check": "old_start_nav_removed",
+      "status": "fail"
+    },
+    {
+      "check": "old_click_scripts_removed",
+      "status": "pass"
+    },
+    {
+      "check": "inserted_start",
+      "status": "pass"
+    },
+    {
+      "check": "inserted_actionability",
+      "status": "pass"
+    }
+  ]
+}
