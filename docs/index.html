@@ -1,13 +1,3 @@
-<!-- UGO_V5_2_11_SUBMENU_LINK_CLICK_FIX 2026-05-30 22:43:27 -->
-<!-- UGO_V5_2_10_CLEAN_NAVBAR_CLICK_TOGGLE_FIX 2026-05-30 22:40:32 -->
-<!-- UGO_V5_2_9_FIX_CLEAN_NAV_AMPERSAND_AUDIT 2026-05-30 22:35:11 -->
-<!-- UGO_V5_2_8_FINAL_CLEAN_NAVBAR_REBUILD 2026-05-30 22:34:37 -->
-<!-- UGO_V5_2_7_INSERT_ACTIONABILITY_DROPDOWN_ONLY 2026-05-30 22:25:52 -->
-<!-- UGO_V5_2_6_RESTORE_WORKING_DROPDOWNS 2026-05-30 22:23:15 -->
-<!-- UGO_V5_2_5_NATIVE_DETAILS_DROPDOWN_FIX 2026-05-30 22:18:44 -->
-<!-- UGO_V5_2_3_ABSOLUTE_SAMEPAGE_HASH_LINKS 2026-05-30 22:13:03 -->
-<!-- UGO_V5_2_2_BUTTON_BASED_INPAGE_NAVIGATION 2026-05-30 22:02:08 -->
-<!-- UGO_V5_2_1_INPAGE_ACTIONABILITY_PANELS 2026-05-30 21:58:09 -->
 <!-- UGO_V5_2_0_REAL_ACTIONABILITY_PAGES 2026-05-30 21:50:42 -->
 <!-- UGO_V5_1_19_NATIVE_MENU_LINKS_FIXED 2026-05-30 21:42:03 -->
 <!DOCTYPE html>
@@ -879,110 +869,27 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="ugo-v5-2-1-inpage-actionability-panels-style">
-  .ugo-inpage-actionability-panels {
-    scroll-margin-top: 110px;
-  }
-
-  .ugo-inpage-actionability-panels article {
-    scroll-margin-top: 120px;
-  }
-
-  .ugo-inpage-actionability-panels .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    background: #123657;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-weight: 800;
-  }
-
-  .ugo-inpage-actionability-panels .button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.10);
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="ugo-v5-2-8-final-clean-navbar-style">
-  .ugo-clean-nav {
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-    flex-wrap: wrap !important;
-    padding: 14px 28px !important;
-    background: #eef6fb !important;
-    border-bottom: 1px solid rgba(15, 61, 96, 0.15) !important;
-    position: relative !important;
-    z-index: 9999 !important;
-  }
-
-  .ugo-clean-nav-btn {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 40px !important;
-    padding: 0 18px !important;
-    border-radius: 10px !important;
-    border: 1px solid rgba(15, 61, 96, 0.28) !important;
-    background: #ffffff !important;
-    color: #123657 !important;
-    font-family: inherit !important;
-    font-size: 0.94rem !important;
-    font-weight: 800 !important;
-    text-decoration: none !important;
-    box-shadow: 0 3px 8px rgba(15, 23, 42, 0.06) !important;
-    cursor: pointer !important;
-    white-space: nowrap !important;
-  }
-
-  .ugo-clean-home {
-    background: #ffffff !important;
-    color: #123657 !important;
-  }
-
-  .ugo-clean-dropdown {
-    position: relative !important;
+<style id="ugo-v5-1-9-hard-minimal-nav-repair-style">
+  .ugo-home-button,
+  .ugo-start-nav,
+  .ugo-actionability-nav {
     display: inline-block !important;
+    position: relative !important;
+    vertical-align: top !important;
   }
 
-  .ugo-clean-menu {
+  .ugo-home-button {
+    text-decoration: none !important;
+  }
+
+  .ugo-start-menu,
+  .ugo-actionability-menu {
     display: none !important;
     position: absolute !important;
     top: calc(100% + 8px) !important;
     left: 0 !important;
-    min-width: 290px !important;
-    max-width: 380px !important;
+    min-width: 285px !important;
+    max-width: 340px !important;
     padding: 12px 10px !important;
     border-radius: 16px !important;
     background: #ffffff !important;
@@ -991,12 +898,15 @@
     z-index: 99999 !important;
   }
 
-  .ugo-clean-dropdown:hover .ugo-clean-menu,
-  .ugo-clean-dropdown:focus-within .ugo-clean-menu {
+  .ugo-start-nav:hover .ugo-start-menu,
+  .ugo-start-nav:focus-within .ugo-start-menu,
+  .ugo-actionability-nav:hover .ugo-actionability-menu,
+  .ugo-actionability-nav:focus-within .ugo-actionability-menu {
     display: block !important;
   }
 
-  .ugo-clean-menu-label {
+  .ugo-start-menu-label,
+  .ugo-actionability-menu-label {
     display: block !important;
     padding: 6px 10px 8px 10px !important;
     color: #64748b !important;
@@ -1007,7 +917,8 @@
     line-height: 1.1 !important;
   }
 
-  .ugo-clean-menu a {
+  .ugo-start-menu a,
+  .ugo-actionability-menu a {
     display: block !important;
     padding: 10px 11px !important;
     margin: 2px 0 !important;
@@ -1018,66 +929,205 @@
     font-weight: 750 !important;
     line-height: 1.25 !important;
     white-space: normal !important;
-    pointer-events: auto !important;
-    cursor: pointer !important;
   }
 
-  .ugo-clean-menu a:hover {
+  .ugo-start-menu a:hover,
+  .ugo-actionability-menu a:hover {
     background: rgba(14, 116, 144, 0.10) !important;
     color: #123657 !important;
     text-decoration: none !important;
   }
+</style>
 
-  #gene-centered-query,
-  #organ-centered-discovery,
-  #species-centered-exploration,
-  #candidate-prioritization,
-  #sequence-to-ugo,
-  #gene-list-to-ugo,
-  #check-a-gene,
-  #resources,
-  #validation-targets,
-  #biological-discovery,
-  #explore-evidence,
-  #actionability-layer,
-  #known-gene-anchors-panel,
-  #species-use-cases-panel,
-  #calibrated-ranking-panel,
-  #external-evidence-readiness-panel,
-  #downloads,
-  #toolkits,
-  #citation {
-    scroll-margin-top: 120px;
+
+<style id="ugo-v5-1-10-actionability-only-style">
+  .ugo-actionability-nav {
+    position: relative !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+  }
+  .ugo-actionability-menu {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    min-width: 285px !important;
+    max-width: 340px !important;
+    padding: 12px 10px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18) !important;
+    z-index: 99999 !important;
+  }
+  .ugo-actionability-nav:hover .ugo-actionability-menu,
+  .ugo-actionability-nav:focus-within .ugo-actionability-menu {
+    display: block !important;
+  }
+  .ugo-actionability-menu-label {
+    display: block !important;
+    padding: 6px 10px 8px 10px !important;
+    color: #64748b !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
+  }
+  .ugo-actionability-menu a {
+    display: block !important;
+    padding: 10px 11px !important;
+    margin: 2px 0 !important;
+    border-radius: 10px !important;
+    color: #123657 !important;
+    text-decoration: none !important;
+    font-size: 0.92rem !important;
+    font-weight: 750 !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+  }
+  .ugo-actionability-menu a:hover {
+    background: rgba(14, 116, 144, 0.10) !important;
+    color: #123657 !important;
+    text-decoration: none !important;
   }
 </style>
 
 
-<style id="ugo-v5-2-10-clean-navbar-click-toggle-style">
-  .ugo-clean-dropdown.ugo-clean-open > .ugo-clean-menu {
+<style id="ugo-v5-1-11-home-start-order-style">
+  .ugo-home-button,
+  .ugo-start-nav {
+    display: inline-block !important;
+    position: relative !important;
+    vertical-align: top !important;
+  }
+
+  .ugo-home-button {
+    text-decoration: none !important;
+  }
+
+  .ugo-start-menu {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    min-width: 285px !important;
+    max-width: 340px !important;
+    padding: 12px 10px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18) !important;
+    z-index: 99999 !important;
+  }
+
+  .ugo-start-nav:hover .ugo-start-menu,
+  .ugo-start-nav:focus-within .ugo-start-menu {
     display: block !important;
   }
 
-  .ugo-clean-dropdown > .ugo-clean-nav-btn {
-    user-select: none !important;
+  .ugo-start-menu-label {
+    display: block !important;
+    padding: 6px 10px 8px 10px !important;
+    color: #64748b !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    line-height: 1.1 !important;
   }
 
-  .ugo-clean-menu a {
+  .ugo-start-menu a {
+    display: block !important;
+    padding: 10px 11px !important;
+    margin: 2px 0 !important;
+    border-radius: 10px !important;
+    color: #123657 !important;
+    text-decoration: none !important;
+    font-size: 0.92rem !important;
+    font-weight: 750 !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+  }
+
+  .ugo-start-menu a:hover {
+    background: rgba(14, 116, 144, 0.10) !important;
+    color: #123657 !important;
+    text-decoration: none !important;
+  }
+</style>
+
+
+<style id="ugo-v5-1-13-home-button-style">
+  a.ugo-home-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 42px !important;
+    padding: 0 18px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(15, 61, 96, 0.28) !important;
+    background: #ffffff !important;
+    color: #123657 !important;
+    font-size: 0.94rem !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    box-shadow: 0 3px 8px rgba(15, 23, 42, 0.06) !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+  }
+
+  a.ugo-home-button:visited {
+    color: #123657 !important;
+    text-decoration: none !important;
+  }
+
+  a.ugo-home-button:hover {
+    background: #ffffff !important;
+    color: #123657 !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.10) !important;
+  }
+</style>
+
+
+<style id="ugo-v5-1-14-clickable-dropdown-style">
+  .ugo-start-nav,
+  .ugo-actionability-nav {
+    position: relative !important;
+  }
+
+  .ugo-start-menu,
+  .ugo-actionability-menu {
+    pointer-events: auto !important;
+  }
+
+  .ugo-start-nav.ugo-menu-open .ugo-start-menu,
+  .ugo-actionability-nav.ugo-menu-open .ugo-actionability-menu {
+    display: block !important;
+  }
+
+  .ugo-start-menu a,
+  .ugo-actionability-menu a {
     pointer-events: auto !important;
     cursor: pointer !important;
   }
 </style>
 
 
-<style id="ugo-v5-2-11-submenu-link-click-fix-style">
-  .ugo-clean-menu,
-  .ugo-clean-menu a {
+<style id="ugo-v5-1-19-native-menu-link-style">
+  .ugo-start-menu,
+  .ugo-actionability-menu {
     pointer-events: auto !important;
+    z-index: 99999 !important;
   }
 
-  .ugo-clean-menu a {
+  .ugo-start-menu a,
+  .ugo-actionability-menu a {
+    pointer-events: auto !important;
     cursor: pointer !important;
-    position: relative !important;
-    z-index: 100000 !important;
   }
 </style>
 
@@ -1108,79 +1158,80 @@
 </header>
 
 
+<nav class="nav-bar">
+
+        <a class="nav-btn ugo-home-button" href="#top">Home</a>
+
+<div class="ugo-start-nav">
+          <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
+          <div class="ugo-start-menu" aria-label="Start Here menu">
+            <div class="ugo-start-menu-label">Discovery workflows</div>
+            <a href="#question-workflows"><span id="gene-centered-query"></span>Gene-centered query</a>
+            <a href="#question-workflows"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
+            <a href="#question-workflows"><span id="species-centered-exploration"></span>Species-centered exploration</a>
+            <a href="#question-workflows"><span id="candidate-prioritization"></span>Candidate prioritization</a>
+          </div>
+        </div>
 
 
 
-<nav class="ugo-clean-nav" aria-label="UGO-Omics navigation">
-  <a class="ugo-clean-nav-btn ugo-clean-home" href="/UGO-Omics/?v=528">Home</a>
+        
 
-  <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Start Here ▾</button>
-    <div class="ugo-clean-menu">
-      <div class="ugo-clean-menu-label">DISCOVERY WORKFLOWS</div>
-      <a href="/UGO-Omics/?v=528#gene-centered-query">Gene-centered query</a>
-      <a href="/UGO-Omics/?v=528#organ-centered-discovery">Organ-centered discovery</a>
-      <a href="/UGO-Omics/?v=528#species-centered-exploration">Species-centered exploration</a>
-      <a href="/UGO-Omics/?v=528#candidate-prioritization">Candidate prioritization</a>
+
+<div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Analyze Your Data</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">Bring your own data</span>
+      <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
+      <button onclick="showSection('geneListToUGO', this)">Gene-list-to-UGO</button>
+      <button onclick="showSection('checkGene', this)">Check a Gene</button>
     </div>
   </div>
 
-  <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Analyze Your Data ▾</button>
-    <div class="ugo-clean-menu">
-      <div class="ugo-clean-menu-label">BRING YOUR OWN DATA</div>
-      <a href="/UGO-Omics/?v=528#sequence-to-ugo"><span id="sequence-to-ugo"></span>Sequence-to-UGO</a>
-      <a href="/UGO-Omics/?v=528#gene-list-to-ugo"><span id="gene-list-to-ugo"></span>Gene-list-to-UGO</a>
-      <a href="/UGO-Omics/?v=528#check-a-gene"><span id="check-a-gene"></span>Check a Gene</a>
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Explore Resources</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">Species and organs</span>
+      <button onclick="showSection('resourceFinder', this)">Resource Finder</button>
+      <button onclick="showSection('organKits', this)">Organ Kits</button>
+      <button onclick="showSection('findOrgan', this)">Find by Organ</button>
+      <button onclick="showSection('findSpecies', this)">Find by Species</button>
     </div>
   </div>
 
-  <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Explore Resources ▾</button>
-    <div class="ugo-clean-menu">
-      <div class="ugo-clean-menu-label">RESOURCE LAYERS</div>
-      <a href="/UGO-Omics/?v=528#resources">Resource overview</a>
-      <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene anchor panel</a>
-      <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv">Module-to-anchor summary</a>
-      <a href="/UGO-Omics/resources/source_tables/UGO_v4_6_0_known_regulator_recovery_summary_v1.tsv">Known-regulator recovery</a>
-    </div>
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Evidence & Discovery</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">Prioritization layers</span>
+      <button onclick="showSection('validationTargets', this)">Validation Targets</button>
+      <button onclick="showSection('biologicalDiscovery', this)">Biological Discovery</button>
+      <button onclick="showSection('exploreEvidence', this)">Explore Evidence</button>
+</div>
   </div>
 
-  <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Evidence &amp; Discovery ▾</button>
-    <div class="ugo-clean-menu">
-      <div class="ugo-clean-menu-label">PRIORITIZATION LAYERS</div>
-      <a href="/UGO-Omics/?v=528#validation-targets"><span id="validation-targets"></span>Validation Targets</a>
-      <a href="/UGO-Omics/?v=528#biological-discovery"><span id="biological-discovery"></span>Biological Discovery</a>
-      <a href="/UGO-Omics/?v=528#explore-evidence"><span id="explore-evidence"></span>Explore Evidence</a>
+  <div class="nav-dropdown">
+    <button class="nav-dropbtn" type="button">Help & Downloads</button>
+    <div class="nav-dropdown-content">
+      <span class="nav-group-note">First-time users</span>
+      <button onclick="showSection('quickStartGuide', this)">Quick Guide</button>
+      <button onclick="showSection('demoResults', this)">Demo Results</button>
+      <button onclick="showSection('useCases', this)">Use Cases</button>
+      <button onclick="showSection('downloads', this)">Downloads</button>
     </div>
   </div>
+<div class="ugo-actionability-nav">
+          <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
+          <div class="ugo-actionability-menu" aria-label="Actionability menu">
+            <div class="ugo-actionability-menu-label">Candidate prioritization</div>
+            <a href="/UGO-Omics/actionability/">Actionable Candidates</a>
+            <a href="/UGO-Omics/actionability/known-gene-anchors.html">Known-gene Anchors</a>
+            <a href="/UGO-Omics/actionability/species-use-cases.html">Species Use Cases</a>
+            <a href="/UGO-Omics/actionability/calibrated-ranking.html">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/actionability/external-evidence-readiness.html">External Evidence Readiness</a>
+          </div>
+        </div>
 
-  <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Actionability ▾</button>
-    <div class="ugo-clean-menu">
-      <div class="ugo-clean-menu-label">CANDIDATE PRIORITIZATION</div>
-      <a href="/UGO-Omics/?v=528#actionability-layer">Actionable Candidates</a>
-      <a href="/UGO-Omics/?v=528#known-gene-anchors-panel">Known-gene Anchors</a>
-      <a href="/UGO-Omics/?v=528#species-use-cases-panel">Species Use Cases</a>
-      <a href="/UGO-Omics/?v=528#calibrated-ranking-panel">Calibrated Candidate Ranking</a>
-      <a href="/UGO-Omics/?v=528#external-evidence-readiness-panel">External Evidence Readiness</a>
-    </div>
-  </div>
-
-  <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Help &amp; Downloads ▾</button>
-    <div class="ugo-clean-menu">
-      <div class="ugo-clean-menu-label">HELP &amp; DOWNLOADS</div>
-      <a href="/UGO-Omics/?v=528#downloads">Downloads</a>
-      <a href="/UGO-Omics/?v=528#toolkits">Toolkits</a>
-      <a href="/UGO-Omics/?v=528#citation">Citation</a>
-    </div>
-  </div>
 </nav>
-
-
-
 
 
 <main>
@@ -1277,82 +1328,38 @@
   </div>
 </section>
 
-<section id="ugo-inpage-actionability-panels" class="section ugo-inpage-actionability-panels">
-  <h2>Actionability resources</h2>
-  <p class="section-subtitle">Use these in-page resources to move from recurrent UGO modules to practical candidate-family hypotheses, known-gene anchors, species use cases, calibrated rankings, and conservative external-evidence readiness.</p>
-
-  <div class="card-grid">
-    <article id="known-gene-anchors-panel" class="workflow-card">
-      <div class="card-icon">🧬</div>
-      <h3>Known-gene Anchors</h3>
-      <p>Connect UGO candidate modules to recognizable developmental, hormonal, stress-response, regulatory, cell-wall, and storage-related gene-family anchors.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
-    </article>
-
-    <article id="species-use-cases-panel" class="workflow-card">
-      <div class="card-icon">🌿</div>
-      <h3>Species Use Cases</h3>
-      <p>View practical species and organ use cases for rhizome, tuber, storage-root, and related underground-organ systems.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
-    </article>
-
-    <article id="calibrated-ranking-panel" class="workflow-card">
-      <div class="card-icon">📊</div>
-      <h3>Calibrated Candidate Ranking</h3>
-      <p>Prioritize candidate families using calibrated support from module recurrence, cross-species evidence, benchmark recovery, known-gene anchors, and use-case relevance.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download ranking</a>
-    </article>
-
-    <article id="external-evidence-readiness-panel" class="workflow-card">
-      <div class="card-icon">🧾</div>
-      <h3>External Evidence Readiness</h3>
-      <p>Check which QTL/GWAS, expression-candidate, and independent module-recovery layers are ready for claim support and which require curated input tables.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">Download readiness summary</a>
-    </article>
-  </div>
-
-  <div class="info-note">
-    UGO-Omics prioritizes candidate-family hypotheses. These resources support
-and hypothesis generation, not direct functional validation for individual genes.
-  </div>
-</section>
-
-
-
 
 
 <section id="start" class="section active">
   <div class="section-title">
     <div>
       <h2><span id="question-workflows"></span>Start with your question</h2>
-      <p>UGO-Omics is organized around four practical
-.</p>
+      <p>UGO-Omics is organized around four practical discovery workflows.</p>
     </div>
   </div>
 
   <div class="workflow-grid">
     <div class="card workflow-card" onclick="showSection('checkGene', document.querySelectorAll('nav button')[1])">
       <div class="workflow-icon">🔎</div>
-      <h3><span id="gene-centered-query"></span>Gene-centered query</h3>
+      <h3>Gene-centered query</h3>
       <p>Search gene IDs, orthogroups, gene families, or annotations to evaluate module membership and candidate-family support.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('organCandidates', document.querySelectorAll('nav button')[2])">
       <div class="workflow-icon">🌿</div>
-      <h3><span id="organ-centered-discovery"></span>Organ-centered discovery</h3>
+      <h3>Organ-centered discovery</h3>
       <p>Select an underground-organ type to identify enriched candidate modules, biological programs, and prioritized gene-family hypotheses.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('speciesCandidates', document.querySelectorAll('nav button')[3])">
       <div class="workflow-icon">🧬</div>
-      <h3><span id="species-centered-exploration"></span>Species-centered exploration</h3>
+      <h3>Species-centered exploration</h3>
       <p>Explore candidate modules, homologous members, and transferability patterns within a focal species.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('validationTargets', document.querySelectorAll('nav button')[4])">
       <div class="workflow-icon">✅</div>
-      <h3>
-</h3>
+      <h3>Candidate prioritization</h3>
       <p>Generate a ranked shortlist of candidate modules and candidate-family hypotheses for downstream functional follow-up.</p>
     </div>
   </div>
@@ -1365,8 +1372,7 @@ and hypothesis generation, not direct functional validation for individual genes
   </div>
 
   <div class="panel app-note">
-    UGO-Omics outputs are designed for
-and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
+    UGO-Omics outputs are designed for candidate prioritization and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
   </div>
 </section>
 
@@ -1593,8 +1599,7 @@ MASS..."></textarea>
         <tr><th>Output</th><th>Meaning</th></tr>
         <tr><td>hit_orthogroup</td><td>The UGO orthogroup most similar to the input protein query.</td></tr>
         <tr><td>candidate_function</td><td>The prioritized underground-organ candidate module, if matched.</td></tr>
-        <tr><td>ugo_score</td><td>Evidence-integration score used for
-.</td></tr>
+        <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
         <tr><td>validation_priority_class</td><td>Suggested priority class for follow-up validation.</td></tr>
         <tr><td>suggested_validation_system</td><td>Suggested biological system or assay context for follow-up.</td></tr>
       </table>
@@ -1654,8 +1659,7 @@ MASS..."></textarea>
       <tr><td>hit_species</td><td>The closest-matching UGO species.</td></tr>
       <tr><td>hit_orthogroup</td><td>The closest UGO 11-species orthogroup hit.</td></tr>
       <tr><td>candidate_function</td><td>Candidate module annotation if the orthogroup is prioritized.</td></tr>
-      <tr><td>ugo_score</td><td>Evidence-integration score used for
-.</td></tr>
+      <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
       <tr><td>validation_priority_class</td><td>Recommended follow-up priority class.</td></tr>
       <tr><td>biological_discovery_case</td><td>Whether the hit belongs to a v1.9 conserved module case.</td></tr>
       <tr><td>suggested_validation_system</td><td>Suggested biological system for follow-up.</td></tr>
@@ -1908,8 +1912,7 @@ Gene_003"></textarea>
       <tr><td>orthogroup</td><td>UGO orthogroup matched by one or more input genes.</td></tr>
       <tr><td>candidate_function</td><td>Candidate module annotation if the orthogroup is prioritized.</td></tr>
       <tr><td>input_gene_count</td><td>Number of input IDs supporting this module.</td></tr>
-      <tr><td>ugo_score</td><td>Evidence-integration score used for
-.</td></tr>
+      <tr><td>ugo_score</td><td>Evidence-integration score used for candidate prioritization.</td></tr>
       <tr><td>validation_priority_class</td><td>Recommended follow-up priority class.</td></tr>
       <tr><td>biological_discovery_case</td><td>Whether the module belongs to a v1.9 conserved discovery case.</td></tr>
       <tr><td>suggested_validation_system</td><td>Suggested biological system for follow-up.</td></tr>
@@ -2752,123 +2755,6 @@ async function geneWizardLoadDemoOutput() {
 
 
 
-
-
-
-<script id="ugo-v5-2-10-clean-navbar-click-toggle-script">
-(function () {
-  function closeAllCleanDropdowns(except) {
-    document.querySelectorAll('.ugo-clean-dropdown.ugo-clean-open').forEach(function (dropdown) {
-      if (except && dropdown === except) return;
-      dropdown.classList.remove('ugo-clean-open');
-      var btn = dropdown.querySelector('.ugo-clean-nav-btn');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  document.addEventListener('click', function (event) {
-    var button = event.target.closest('.ugo-clean-dropdown > .ugo-clean-nav-btn');
-
-    if (button) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      var dropdown = button.closest('.ugo-clean-dropdown');
-      if (!dropdown) return;
-
-      var isOpen = dropdown.classList.contains('ugo-clean-open');
-      closeAllCleanDropdowns(dropdown);
-
-      if (isOpen) {
-        dropdown.classList.remove('ugo-clean-open');
-        button.setAttribute('aria-expanded', 'false');
-      } else {
-        dropdown.classList.add('ugo-clean-open');
-        button.setAttribute('aria-expanded', 'true');
-      }
-      return;
-    }
-
-    var menuLink = event.target.closest('.ugo-clean-menu a');
-    if (menuLink) {
-      // Do not prevent default. Let the real href work normally.
-      setTimeout(function () {
-        closeAllCleanDropdowns(null);
-      }, 50);
-      return;
-    }
-
-    if (!event.target.closest('.ugo-clean-dropdown')) {
-      closeAllCleanDropdowns(null);
-    }
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closeAllCleanDropdowns(null);
-    }
-  });
-})();
-</script>
-
-
-<script id="ugo-v5-2-11-submenu-link-click-fix-script">
-(function () {
-  function closeCleanMenus() {
-    document.querySelectorAll('.ugo-clean-dropdown.ugo-clean-open').forEach(function (el) {
-      el.classList.remove('ugo-clean-open');
-      var btn = el.querySelector('.ugo-clean-nav-btn');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  function scrollToHash(hash) {
-    if (!hash || hash.length < 2) return false;
-    var id = decodeURIComponent(hash.slice(1));
-    var target = document.getElementById(id);
-    if (!target) return false;
-
-    var y = target.getBoundingClientRect().top + window.pageYOffset - 120;
-    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
-
-    if (window.history && window.history.pushState) {
-      window.history.pushState(null, '', hash);
-    } else {
-      window.location.hash = hash;
-    }
-    return true;
-  }
-
-  document.addEventListener('click', function (event) {
-    var link = event.target.closest('.ugo-clean-menu a');
-    if (!link) return;
-
-    var href = link.getAttribute('href');
-    if (!href) return;
-
-    event.preventDefault();
-    event.stopPropagation();
-    closeCleanMenus();
-
-    try {
-      var url = new URL(href, window.location.origin);
-
-      var sameHost = url.origin === window.location.origin;
-      var currentPath = window.location.pathname.replace(/\/$/, '');
-      var targetPath = url.pathname.replace(/\/$/, '');
-
-      if (sameHost && currentPath === targetPath && url.hash) {
-        if (scrollToHash(url.hash)) return;
-      }
-
-      window.location.href = url.href;
-    } catch (e) {
-      window.location.href = href;
-    }
-  }, true);
-})();
-</script>
-
 </body>
 </html>
 
@@ -2877,9 +2763,3 @@ async function geneWizardLoadDemoOutput() {
 <span id="toolkits"></span>
 
 <span id="citation"></span>
-
-
-
-
-
-<span id="candidate-prioritization"></span>
