@@ -1,0 +1,69 @@
+{
+  "version": "v5.2.19 Start Here in-page view switcher",
+  "generated_on": "2026-05-30 23:35:47",
+  "purpose": "Keep the top header and navbar unchanged, but render Start Here submenu content dynamically inside the current homepage content area, matching the Actionability in-page switcher behavior.",
+  "replace_counts": {
+    "Gene-centered query": 1,
+    "Organ-centered discovery": 1,
+    "Species-centered exploration": 1,
+    "Candidate prioritization": 1
+  },
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_dropdown_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "gene_view_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_view_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_view_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_view_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_view_switcher_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_view_switcher_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:Gene-centered query",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:Organ-centered discovery",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:Species-centered exploration",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:Candidate prioritization",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_19_START_HERE_INPAGE_VIEW_SWITCHER 2026-05-30 23:35:46 -->
 <!-- UGO_V5_2_18_ACTIONABILITY_INPAGE_VIEW_SWITCHER 2026-05-30 23:28:46 -->
 <!-- UGO_V5_2_17_ACTIONABILITY_REDIRECT_CACHE_BUST 2026-05-30 23:22:11 -->
 <!-- UGO_V5_2_16_REDIRECT_ACTIONABILITY_PAGES_TO_HOMEPAGE_PANELS 2026-05-30 23:16:48 -->
@@ -1226,6 +1227,74 @@
   }
 </style>
 
+
+<style id="ugo-v5-2-19-start-here-inpage-view-switcher-style">
+  #ugo-start-live-view {
+    padding: 34px 54px 60px 54px;
+  }
+
+  #ugo-start-live-view .ugo-start-title {
+    margin: 0 0 8px 0;
+    color: #123657;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+  }
+
+  #ugo-start-live-view .ugo-start-subtitle {
+    max-width: 980px;
+    color: #465b73;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  #ugo-start-live-view .ugo-start-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  #ugo-start-live-view .ugo-start-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 61, 96, 0.18);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  #ugo-start-live-view .ugo-start-card h3 {
+    margin: 0 0 12px 0;
+    color: #123657;
+    font-size: 1.35rem;
+  }
+
+  #ugo-start-live-view .ugo-start-card p {
+    color: #465b73;
+    line-height: 1.55;
+  }
+
+  #ugo-start-live-view .ugo-start-button {
+    display: inline-flex;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #123657;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 800;
+  }
+
+  #ugo-start-live-view .ugo-start-note {
+    margin-top: 22px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: #ffffff;
+    border-left: 5px solid #0f766e;
+    color: #2c455e;
+  }
+</style>
+
 </head>
 
 <body>
@@ -1261,10 +1330,10 @@
           <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
           <div class="ugo-start-menu" aria-label="Start Here menu">
             <div class="ugo-start-menu-label">Discovery workflows</div>
-            <a href="#question-workflows"><span id="gene-centered-query"></span>Gene-centered query</a>
-            <a href="#question-workflows"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
-            <a href="#question-workflows"><span id="species-centered-exploration"></span>Species-centered exploration</a>
-            <a href="#question-workflows"><span id="candidate-prioritization"></span>Candidate prioritization</a>
+            <a href="/UGO-Omics/?view=start-gene-centered-query" data-ugo-start-view="gene-centered-query">Gene-centered query</a>
+            <a href="/UGO-Omics/?view=start-organ-centered-discovery" data-ugo-start-view="organ-centered-discovery">Organ-centered discovery</a>
+            <a href="/UGO-Omics/?view=start-species-centered-exploration" data-ugo-start-view="species-centered-exploration">Species-centered exploration</a>
+            <a href="/UGO-Omics/?view=start-candidate-prioritization" data-ugo-start-view="candidate-prioritization">Candidate prioritization</a>
           </div>
         </div>
 
@@ -3078,6 +3147,202 @@ async function geneWizardLoadDemoOutput() {
     const view = params.get("view");
     if (view && view.startsWith("actionability-")) {
       renderActionabilityView(view.replace("actionability-", ""), false);
+    }
+  });
+})();
+</script>
+
+
+<script id="ugo-v5-2-19-start-here-inpage-view-switcher-script">
+(function () {
+  const views = {
+    "gene-centered-query": {
+      title: "Gene-centered query",
+      subtitle: "Search gene IDs, orthogroups, gene families, or annotations to evaluate UGO module membership and candidate-family support.",
+      body: `
+        <div class="ugo-start-grid">
+          <div class="ugo-start-card">
+            <h3>What to enter</h3>
+            <p>Use a gene ID, orthogroup ID, gene-family name, or functional keyword to ask whether it belongs to a UGO candidate module.</p>
+            <p><strong>Examples:</strong> XTH, hemoglobin, NAC, bHLH, OG0000154, Panicum.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>What UGO-Omics returns</h3>
+            <p>Module membership, candidate-family context, known-gene anchor support, and actionability-oriented interpretation for downstream prioritization.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Best use</h3>
+            <p>Use this workflow when you already have a gene, family, orthogroup, or annotation keyword and want to place it in the UGO framework.</p>
+          </div>
+        </div>
+        <div class="ugo-start-note">
+          This workflow is designed for candidate interpretation and hypothesis generation, not direct functional validation.
+        </div>
+      `
+    },
+
+    "organ-centered-discovery": {
+      title: "Organ-centered discovery",
+      subtitle: "Select an underground-organ type to identify enriched candidate modules, biological programs, and prioritized gene-family hypotheses.",
+      body: `
+        <div class="ugo-start-grid">
+          <div class="ugo-start-card">
+            <h3>Supported organ types</h3>
+            <p>Rhizome, tuber, storage root, bulb, corm, root crown, and stolon-focused discovery layers.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Discovery logic</h3>
+            <p>UGO-Omics links organ-associated expression modules, recurrent cross-species support, known-gene anchors, and candidate-family ranking.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Best use</h3>
+            <p>Use this workflow when your biological question starts from an organ type rather than from a known gene.</p>
+          </div>
+        </div>
+      `
+    },
+
+    "species-centered-exploration": {
+      title: "Species-centered exploration",
+      subtitle: "Choose a species and view UGO candidate modules with homologous members and transferability patterns within a focal species.",
+      body: `
+        <div class="ugo-start-grid">
+          <div class="ugo-start-card">
+            <h3>Species-level view</h3>
+            <p>Explore whether UGO candidate families have traceable homologs in a focal species and how strongly they are supported by the cross-species framework.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Transferability</h3>
+            <p>The workflow helps translate multi-species UGO evidence into practical candidate sets for individual study systems.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Best use</h3>
+            <p>Use this workflow when you work on a target species and want to identify candidate families worth follow-up.</p>
+          </div>
+        </div>
+      `
+    },
+
+    "candidate-prioritization": {
+      title: "Candidate prioritization",
+      subtitle: "Generate a ranked shortlist of candidate modules and candidate-family hypotheses for downstream functional follow-up.",
+      body: `
+        <div class="ugo-start-grid">
+          <div class="ugo-start-card">
+            <h3>Prioritization layers</h3>
+            <p>Candidate ranking integrates module support, species breadth, cross-clade evidence, benchmark recovery, known-gene anchors, and use-case relevance.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Output</h3>
+            <p>A practical shortlist of candidate families, with interpretation layers that help decide which candidates are validation-ready.</p>
+          </div>
+          <div class="ugo-start-card">
+            <h3>Best use</h3>
+            <p>Use this workflow when you need a focused candidate list rather than a broad exploratory table.</p>
+          </div>
+        </div>
+        <div class="ugo-start-note">
+          Candidate-priority scores support prioritization and do not constitute functional validation.
+        </div>
+      `
+    }
+  };
+
+  function getNav() {
+    return document.querySelector("nav");
+  }
+
+  function ensureLiveView() {
+    let view = document.getElementById("ugo-start-live-view");
+    if (view) return view;
+
+    const nav = getNav();
+    view = document.createElement("main");
+    view.id = "ugo-start-live-view";
+    view.setAttribute("data-ugo-dynamic-view", "start-here");
+
+    if (nav && nav.parentNode) {
+      nav.parentNode.insertBefore(view, nav.nextSibling);
+    } else {
+      document.body.prepend(view);
+    }
+
+    return view;
+  }
+
+  function hideMainContentExceptLiveView() {
+    const nav = getNav();
+    const liveView = ensureLiveView();
+    if (!nav) return;
+
+    let node = nav.nextElementSibling;
+    while (node) {
+      const next = node.nextElementSibling;
+      if (node === liveView) {
+        node.style.display = "";
+      } else if (node.tagName && node.tagName.toLowerCase() !== "script" && node.tagName.toLowerCase() !== "style") {
+        node.setAttribute("data-ugo-hidden-by-start", "true");
+        node.style.display = "none";
+      }
+      node = next;
+    }
+  }
+
+  function closeDropdowns() {
+    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
+      el.classList.remove("ugo-menu-open");
+    });
+  }
+
+  function renderStartView(viewName, pushState = true) {
+    const viewData = views[viewName] || views["gene-centered-query"];
+    const liveView = ensureLiveView();
+
+    hideMainContentExceptLiveView();
+
+    liveView.innerHTML = `
+      <h1 class="ugo-start-title">${viewData.title}</h1>
+      <p class="ugo-start-subtitle">${viewData.subtitle}</p>
+      ${viewData.body}
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+
+    if (pushState && window.history && window.history.pushState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("view", "start-" + viewName);
+      url.hash = "";
+      window.history.pushState({ ugoStartView: viewName }, "", url.toString());
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    const startLink = event.target.closest("[data-ugo-start-view]");
+    if (!startLink) return;
+
+    const viewName = startLink.getAttribute("data-ugo-start-view");
+    if (!viewName) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    closeDropdowns();
+    renderStartView(viewName, true);
+  }, true);
+
+  window.addEventListener("popstate", function () {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get("view");
+    if (view && view.startsWith("start-")) {
+      renderStartView(view.replace("start-", ""), false);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const view = params.get("view");
+    if (view && view.startsWith("start-")) {
+      renderStartView(view.replace("start-", ""), false);
     }
   });
 })();

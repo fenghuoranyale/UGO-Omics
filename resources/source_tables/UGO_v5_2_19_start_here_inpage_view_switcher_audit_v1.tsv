@@ -1,0 +1,14 @@
+check	status
+deployment_marker_present	pass
+start_here_dropdown_still_present	pass
+gene_view_link_present	pass
+organ_view_link_present	pass
+species_view_link_present	pass
+candidate_view_link_present	pass
+start_view_switcher_script_present	pass
+start_view_switcher_css_present	pass
+actionability_switcher_still_present	pass
+replace_count:Gene-centered query	pass
+replace_count:Organ-centered discovery	pass
+replace_count:Species-centered exploration	pass
+replace_count:Candidate prioritization	pass
