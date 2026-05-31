@@ -1,0 +1,9 @@
+check	status
+inserted_actionability	pass
+method	before_nav_close
+actionability_button_present	pass
+actionability_menu_present	pass
+actionability_before_help	fail
+actionable_candidates_present	pass
+known_gene_anchors_present	pass
+external_readiness_present	pass

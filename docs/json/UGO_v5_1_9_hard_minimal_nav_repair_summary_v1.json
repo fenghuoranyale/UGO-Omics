@@ -1,0 +1,82 @@
+{
+  "version": "v5.1.9 hard minimal nav repair",
+  "generated_on": "2026-05-30 20:55:01",
+  "purpose": "Repair only Home, Start Here, and Actionability controls while leaving existing Analyze, Explore, Evidence, and Help dropdowns untouched.",
+  "inserted_home_start": true,
+  "inserted_actionability": false,
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "inserted_home_start",
+      "status": "pass"
+    },
+    {
+      "check": "inserted_actionability",
+      "status": "fail"
+    },
+    {
+      "check": "home_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_custom_nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_menu_hidden_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_custom_nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "fail"
+    },
+    {
+      "check": "analyze_your_data_untouched_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_resources_untouched_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_discovery_untouched_present",
+      "status": "fail"
+    },
+    {
+      "check": "help_downloads_present",
+      "status": "fail"
+    },
+    {
+      "check": "no_orphan_discovery_workflows",
+      "status": "pass"
+    },
+    {
+      "check": "no_naked_home_link",
+      "status": "pass"
+    },
+    {
+      "check": "gene_centered_query_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_centered_discovery_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_centered_exploration_present",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_prioritization_present",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "version": "v5.1.10 insert Actionability only",
+  "generated_on": "2026-05-30 20:57:20",
+  "purpose": "Add only the Actionability dropdown before Help & Downloads after v5.1.9 repaired Home and Start Here.",
+  "inserted": true,
+  "method": "before_nav_close",
+  "button_class_used": "nav-btn",
+  "audit": [
+    {
+      "check": "inserted_actionability",
+      "status": "pass"
+    },
+    {
+      "check": "method",
+      "status": "before_nav_close"
+    },
+    {
+      "check": "actionability_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_menu_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "fail"
+    },
+    {
+      "check": "actionable_candidates_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchors_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_present",
+      "status": "pass"
+    }
+  ]
+}
