@@ -951,7 +951,19 @@
 
 
 <nav class="nav-bar">
-  <button class="active" onclick="showSection('start', this)">Start Here</button>
+  <a class="nav-btn active" href="#top">Home</a>
+
+        <div class="dropdown">
+          <button class="nav-btn">Start Here ▾</button>
+          <div class="dropdown-menu">
+            <div class="dropdown-section">DISCOVERY WORKFLOWS</div>
+            <a href="#question-workflows">Gene-centered query</a>
+            <a href="#question-workflows">Organ-centered discovery</a>
+            <a href="#question-workflows">Species-centered exploration</a>
+            <a href="#question-workflows">Candidate prioritization</a>
+          </div>
+        </div>
+
 
   <div class="nav-dropdown">
     <button class="nav-dropbtn" type="button">Analyze Your Data</button>
@@ -994,19 +1006,6 @@
       <button onclick="showSection('downloads', this)">Downloads</button>
     </div>
   </div>
-
-        <div class="ugo-actionability-nav">
-          <button class="nav-btn ugo-actionability-button" type="button">Actionability ▾</button>
-          <div class="ugo-actionability-menu" aria-label="Actionability menu">
-            <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="#actionability-layer">Actionable Candidates</a>
-            <a href="../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
-            <a href="../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
-            <a href="../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
-            <a href="../resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
-          </div>
-        </div>
-
 </nav>
 
 
@@ -1109,7 +1108,7 @@
 <section id="start" class="section active">
   <div class="section-title">
     <div>
-      <h2>Start with your question</h2>
+      <h2><span id="question-workflows"></span>Start with your question</h2>
       <p>UGO-Omics is organized around four practical discovery workflows.</p>
     </div>
   </div>
@@ -1117,26 +1116,26 @@
   <div class="workflow-grid">
     <div class="card workflow-card" onclick="showSection('checkGene', document.querySelectorAll('nav button')[1])">
       <div class="workflow-icon">🔎</div>
-      <h3>I have a gene</h3>
-      <p>Search a gene ID, orthogroup, gene family, or annotation keyword to see whether it belongs to a UGO candidate module.</p>
+      <h3>Gene-centered query</h3>
+      <p>Search gene IDs, orthogroups, gene families, or annotations to evaluate module membership and candidate-family support.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('organCandidates', document.querySelectorAll('nav button')[2])">
       <div class="workflow-icon">🌿</div>
-      <h3>I study an organ</h3>
-      <p>Select rhizome, tuber, storage root, bulb, corm, root crown, or stolon to identify top candidate modules.</p>
+      <h3>Organ-centered discovery</h3>
+      <p>Select an underground-organ type to identify enriched candidate modules, biological programs, and prioritized gene-family hypotheses.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('speciesCandidates', document.querySelectorAll('nav button')[3])">
       <div class="workflow-icon">🧬</div>
-      <h3>I study a species</h3>
-      <p>Choose a species and view UGO candidate modules with homologous members in that species.</p>
+      <h3>Species-centered exploration</h3>
+      <p>Explore candidate modules, homologous members, and transferability patterns within a focal species.</p>
     </div>
 
     <div class="card workflow-card" onclick="showSection('validationTargets', document.querySelectorAll('nav button')[4])">
       <div class="workflow-icon">✅</div>
-      <h3>I want validation targets</h3>
-      <p>Get a prioritized shortlist of candidate modules with suggested validation systems and assays.</p>
+      <h3>Candidate prioritization</h3>
+      <p>Generate a ranked shortlist of candidate modules and candidate-family hypotheses for downstream functional follow-up.</p>
     </div>
   </div>
 
@@ -1183,7 +1182,7 @@
 
     <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('resourceFinder'); return false;">
       <span class="demo-badge">Species</span>
-      <h3>I study a species</h3>
+      <h3>Species-centered exploration</h3>
       <p>Use Resource Finder to retrieve species-centered candidate modules, resource layers, and recommended workflows.</p>
       <span class="card-action">Go to Resource Finder →</span>
     </a>

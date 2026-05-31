@@ -1,0 +1,71 @@
+{
+  "version": "v5.1.6 navigation wording refinement",
+  "generated_on": "2026-05-30 20:38:40",
+  "purpose": "Add Home button, convert Start Here into a dropdown, academicize workflow-card wording, and place Actionability before Help & Downloads.",
+  "button_class_used": "nav-btn",
+  "replaced_start": true,
+  "reordered_actionability_before_help": false,
+  "nav_order_ok": false,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "home_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_dropdown_present",
+      "status": "pass"
+    },
+    {
+      "check": "gene_centered_query_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_centered_discovery_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_centered_exploration_present",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_prioritization_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_have_a_gene_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_study_an_organ_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_study_a_species_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_validation_targets_card_removed",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "fail"
+    },
+    {
+      "check": "nav_order_ok",
+      "status": "fail"
+    },
+    {
+      "check": "reordered_actionability_help",
+      "status": "fail"
+    },
+    {
+      "check": "question_workflows_anchor_present",
+      "status": "pass"
+    }
+  ]
+}
