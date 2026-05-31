@@ -1206,11 +1206,11 @@
           <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="#actionability-layer">Actionable Candidates</a>
-            <a href="resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
-            <a href="resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
-            <a href="resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
-            <a href="resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
+            <a href="#actionability-layer" data-scroll-target="actionability-layer">Actionable Candidates</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
           </div>
         </div>
 
@@ -1276,7 +1276,7 @@
         Connects UGO modules to familiar developmental, hormonal, stress-response,
         regulatory, cell-wall, and storage-related gene families.
       </p>
-      <a href="resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
+      <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
     </div>
 
     <div class="ugo-v5-card">
@@ -1286,7 +1286,7 @@
         Ranks candidate families using module support, species breadth, cross-clade support,
         benchmark recovery, anchor specificity, and use-case relevance.
       </p>
-      <a href="resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download calibrated ranking</a>
+      <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download calibrated ranking</a>
     </div>
 
     <div class="ugo-v5-card">
@@ -1296,7 +1296,7 @@
         Practical examples for Oryza rhizome, Solanum tuber, Manihot storage root,
         and Beta storage-root/hypocotyl systems.
       </p>
-      <a href="resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
+      <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
     </div>
 
     <div class="ugo-v5-card">
@@ -1306,7 +1306,7 @@
         Summarizes how core and supporting UGO modules connect to candidate-family
         hypotheses and future storage-metabolism expansion.
       </p>
-      <a href="resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv">Download module summary</a>
+      <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv">Download module summary</a>
     </div>
   </div>
 </section>
@@ -2778,6 +2778,32 @@ async function geneWizardLoadDemoOutput() {
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') closeAllMenus();
+  });
+})();
+</script>
+
+
+<script id="ugo-v5-1-17-actionability-link-final-fix-script">
+(function () {
+  document.addEventListener('click', function (event) {
+    var scrollLink = event.target.closest('[data-scroll-target="actionability-layer"]');
+    if (!scrollLink) return;
+
+    var target = document.getElementById('actionability-layer');
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (history && history.pushState) {
+      history.pushState(null, '', '#actionability-layer');
+    } else {
+      location.hash = 'actionability-layer';
+    }
+
+    document.querySelectorAll('.ugo-menu-open').forEach(function (el) {
+      el.classList.remove('ugo-menu-open');
+    });
   });
 })();
 </script>

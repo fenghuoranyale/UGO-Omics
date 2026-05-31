@@ -1,0 +1,57 @@
+{
+  "version": "v5.1.17 actionability link final fix",
+  "generated_on": "2026-05-30 21:33:10",
+  "purpose": "Fix Actionability dropdown links: Actionable Candidates scrolls to the page section, and TSV links use GitHub Pages project-root absolute paths instead of local/relative paths.",
+  "linked_source_tables": 5,
+  "modified_files": [
+    "docs/index.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "actionability_anchor_exists",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_candidates_has_scroll_attr",
+      "status": "pass"
+    },
+    {
+      "check": "final_scroll_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_relative_parent_source_table_links",
+      "status": "pass"
+    },
+    {
+      "check": "no_plain_relative_source_table_links",
+      "status": "pass"
+    },
+    {
+      "check": "project_root_links_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "copied_to_docs"
+    }
+  ]
+}
