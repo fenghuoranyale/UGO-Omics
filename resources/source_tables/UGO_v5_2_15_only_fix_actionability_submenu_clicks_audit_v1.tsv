@@ -1,0 +1,19 @@
+check	status
+deployment_marker_present	pass
+actionability_dropdown_still_present	pass
+actionable_replaced_once	pass
+known_gene_replaced_once	pass
+species_replaced_once	pass
+ranking_replaced_once	pass
+readiness_replaced_once	pass
+valid_actionability_onclick_present	pass
+valid_known_gene_onclick_present	pass
+no_double_quote_broken_handler	pass
+no_old_v5214_script	pass
+actionability_anchor_exists	pass
+known_gene_anchor_exists	pass
+replace_count:Actionable Candidates	1
+replace_count:Known-gene Anchors	1
+replace_count:Species Use Cases	1
+replace_count:Calibrated Candidate Ranking	1
+replace_count:External Evidence Readiness	1

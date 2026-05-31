@@ -1,0 +1,90 @@
+{
+  "version": "v5.2.15 only fix Actionability submenu clicks",
+  "generated_on": "2026-05-30 23:09:03",
+  "purpose": "Only fix Actionability submenu click activation using valid inline handlers; do not alter navbar layout, other menus, or visual style.",
+  "replace_counts": {
+    "Actionable Candidates": 1,
+    "Known-gene Anchors": 1,
+    "Species Use Cases": 1,
+    "Calibrated Candidate Ranking": 1,
+    "External Evidence Readiness": 1
+  },
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_dropdown_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "species_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "valid_actionability_onclick_present",
+      "status": "pass"
+    },
+    {
+      "check": "valid_known_gene_onclick_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_double_quote_broken_handler",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_v5214_script",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_exists",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchor_exists",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:Actionable Candidates",
+      "status": "1"
+    },
+    {
+      "check": "replace_count:Known-gene Anchors",
+      "status": "1"
+    },
+    {
+      "check": "replace_count:Species Use Cases",
+      "status": "1"
+    },
+    {
+      "check": "replace_count:Calibrated Candidate Ranking",
+      "status": "1"
+    },
+    {
+      "check": "replace_count:External Evidence Readiness",
+      "status": "1"
+    }
+  ]
+}
