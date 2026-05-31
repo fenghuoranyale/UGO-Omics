@@ -1,0 +1,9 @@
+check	status
+start_toggle_attr_present	pass
+actionability_toggle_attr_present	pass
+clickable_css_present	pass
+clickable_js_present	pass
+start_menu_open_class_supported	pass
+actionability_menu_open_class_supported	pass
+menu_links_preserved	pass
+no_prevent_default_on_menu_links	pass

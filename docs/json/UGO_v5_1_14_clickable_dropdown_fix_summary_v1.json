@@ -1,0 +1,43 @@
+{
+  "version": "v5.1.14 clickable dropdown fix",
+  "generated_on": "2026-05-30 21:21:58",
+  "purpose": "Make Start Here and Actionability dropdown menus click-controlled so their menu items can be clicked reliably.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "start_toggle_attr_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_toggle_attr_present",
+      "status": "pass"
+    },
+    {
+      "check": "clickable_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "clickable_js_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_menu_open_class_supported",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_menu_open_class_supported",
+      "status": "pass"
+    },
+    {
+      "check": "menu_links_preserved",
+      "status": "pass"
+    },
+    {
+      "check": "no_prevent_default_on_menu_links",
+      "status": "pass"
+    }
+  ]
+}

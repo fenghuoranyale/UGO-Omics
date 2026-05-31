@@ -1090,6 +1090,30 @@
   }
 </style>
 
+
+<style id="ugo-v5-1-14-clickable-dropdown-style">
+  .ugo-start-nav,
+  .ugo-actionability-nav {
+    position: relative !important;
+  }
+
+  .ugo-start-menu,
+  .ugo-actionability-menu {
+    pointer-events: auto !important;
+  }
+
+  .ugo-start-nav.ugo-menu-open .ugo-start-menu,
+  .ugo-actionability-nav.ugo-menu-open .ugo-actionability-menu {
+    display: block !important;
+  }
+
+  .ugo-start-menu a,
+  .ugo-actionability-menu a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+</style>
+
 </head>
 
 <body>
@@ -1122,7 +1146,7 @@
         <a class="nav-btn ugo-home-button" href="#top">Home</a>
 
 <div class="ugo-start-nav">
-          <button class="nav-btn ugo-start-button" type="button">Start Here ▾</button>
+          <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
           <div class="ugo-start-menu" aria-label="Start Here menu">
             <div class="ugo-start-menu-label">Discovery workflows</div>
             <a href="#question-workflows">Gene-centered query</a>
@@ -1179,7 +1203,7 @@
     </div>
   </div>
 <div class="ugo-actionability-nav">
-          <button class="nav-btn ugo-actionability-button" type="button">Actionability ▾</button>
+          <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
             <a href="#actionability-layer">Actionable Candidates</a>
@@ -2708,5 +2732,55 @@ async function geneWizardLoadDemoOutput() {
 }
 
 </script>
+
+<script id="ugo-v5-1-14-clickable-dropdown-script">
+(function () {
+  function closeAllMenus() {
+    document.querySelectorAll('.ugo-start-nav.ugo-menu-open, .ugo-actionability-nav.ugo-menu-open')
+      .forEach(function (el) {
+        el.classList.remove('ugo-menu-open');
+        var btn = el.querySelector('[data-ugo-menu-toggle]');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+  }
+
+  document.addEventListener('click', function (event) {
+    var toggle = event.target.closest('[data-ugo-menu-toggle]');
+    var menuLink = event.target.closest('.ugo-start-menu a, .ugo-actionability-menu a');
+
+    if (menuLink) {
+      // Let the link work normally, then close the menu.
+      setTimeout(closeAllMenus, 50);
+      return;
+    }
+
+    if (toggle) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var container = toggle.closest('.ugo-start-nav, .ugo-actionability-nav');
+      if (!container) return;
+
+      var wasOpen = container.classList.contains('ugo-menu-open');
+      closeAllMenus();
+
+      if (!wasOpen) {
+        container.classList.add('ugo-menu-open');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      return;
+    }
+
+    if (!event.target.closest('.ugo-start-nav, .ugo-actionability-nav')) {
+      closeAllMenus();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeAllMenus();
+  });
+})();
+</script>
+
 </body>
 </html>
