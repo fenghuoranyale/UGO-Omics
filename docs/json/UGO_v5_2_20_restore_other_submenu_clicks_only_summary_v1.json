@@ -1,0 +1,51 @@
+{
+  "version": "v5.2.20 restore other submenu clicks only",
+  "generated_on": "2026-05-30 23:39:55",
+  "purpose": "Restore click behavior for non-Start-Here and non-Actionability dropdown submenu links by forcing normal navigation and clearing dynamic view state.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "restore_other_submenu_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "does_not_touch_start_labels",
+      "status": "pass"
+    },
+    {
+      "check": "does_not_touch_actionability_labels",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_menu_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_menu_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_menu_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_menu_still_present",
+      "status": "pass"
+    }
+  ]
+}

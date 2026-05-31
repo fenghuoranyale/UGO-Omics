@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+restore_other_submenu_script_present	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+does_not_touch_start_labels	pass
+does_not_touch_actionability_labels	pass
+analyze_menu_still_present	pass
+explore_menu_still_present	pass
+evidence_menu_still_present	pass
+help_menu_still_present	pass
