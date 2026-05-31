@@ -1,0 +1,82 @@
+{
+  "version": "v5.2.7 insert Actionability dropdown only",
+  "generated_on": "2026-05-30 22:25:53",
+  "purpose": "Only insert the Actionability dropdown using the same native dropdown structure as the working navigation menus; leave Start Here and all other menus unchanged.",
+  "inserted": true,
+  "method": "before_help_dropdown",
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "inserted_actionability",
+      "status": "pass"
+    },
+    {
+      "check": "method_before_help_or_nav",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_native_dropdown_present",
+      "status": "pass"
+    },
+    {
+      "check": "absolute_actionability_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "absolute_known_gene_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "absolute_species_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "absolute_ranking_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "absolute_readiness_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "fail"
+    },
+    {
+      "check": "actionability_anchor_after_nav",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchor_after_nav",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_still_present",
+      "status": "fail"
+    },
+    {
+      "check": "insert_method",
+      "status": "before_help_dropdown"
+    },
+    {
+      "check": "button_class_used",
+      "status": "nav-btn"
+    }
+  ]
+}
