@@ -1,0 +1,36 @@
+{
+  "version": "v5.1.1 dropdown visual polish",
+  "generated_on": "2026-05-30 20:08:07",
+  "purpose": "Style the newly added actionability dropdown entries so they match the website navigation design instead of appearing as raw browser links.",
+  "replaced_raw_links": true,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "css_polish_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_section_label_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_items_styled",
+      "status": "pass"
+    },
+    {
+      "check": "default_blue_link_risk_reduced",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchor_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_link_present",
+      "status": "pass"
+    }
+  ]
+}
