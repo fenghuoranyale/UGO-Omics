@@ -1,0 +1,78 @@
+{
+  "version": "v5.1.11 Home and Start order fix",
+  "generated_on": "2026-05-30 21:02:26",
+  "purpose": "Move Home and Start Here to the front of the navigation bar and style Home consistently with other navigation buttons.",
+  "inserted": true,
+  "method": "after_nav_open",
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "inserted_home_start",
+      "status": "pass"
+    },
+    {
+      "check": "insert_method",
+      "status": "after_nav_open"
+    },
+    {
+      "check": "home_button_styled",
+      "status": "pass"
+    },
+    {
+      "check": "start_custom_nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_menu_hidden_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_before_start",
+      "status": "pass"
+    },
+    {
+      "check": "start_before_analyze",
+      "status": "pass"
+    },
+    {
+      "check": "home_at_front_of_nav",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_present",
+      "status": "fail"
+    },
+    {
+      "check": "actionability_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_present",
+      "status": "fail"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "fail"
+    },
+    {
+      "check": "no_orphan_discovery_workflows",
+      "status": "pass"
+    },
+    {
+      "check": "no_naked_home_link",
+      "status": "pass"
+    }
+  ]
+}

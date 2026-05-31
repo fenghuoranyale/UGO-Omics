@@ -1,0 +1,17 @@
+check	status
+inserted_home_start	pass
+insert_method	after_nav_open
+home_button_styled	pass
+start_custom_nav_present	pass
+start_menu_hidden_css_present	pass
+home_before_start	pass
+start_before_analyze	pass
+home_at_front_of_nav	pass
+analyze_present	pass
+explore_present	pass
+evidence_present	fail
+actionability_present	pass
+help_present	fail
+actionability_before_help	fail
+no_orphan_discovery_workflows	pass
+no_naked_home_link	pass
