@@ -1,0 +1,8 @@
+metric	value	details
+known_regulator_items	14	
+recovered_by_known_anchor_panel	14	14/14
+recovered_by_calibrated_actionability_ranking	14	14/14
+tier1_high_actionability_recovered	11	
+tier2_actionable_recovered	2	
+future_expansion_recovered	1	storage metabolism retained as explicit future expansion target
+overall_recovery_interpretation	known regulators and gene-family representatives are recovered by the UGO actionability layer	supports candidate-family prioritization, not direct functional evidence

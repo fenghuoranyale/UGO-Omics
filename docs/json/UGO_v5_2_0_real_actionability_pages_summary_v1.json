@@ -1,0 +1,92 @@
+{
+  "version": "v5.2.0 real Actionability pages",
+  "generated_on": "2026-05-30 21:50:43",
+  "purpose": "Create real GitHub Pages subpages for Actionability dropdown entries instead of linking only to homepage anchors or raw TSV files.",
+  "pages": [
+    "docs/actionability/index.html",
+    "docs/actionability/known-gene-anchors.html",
+    "docs/actionability/species-use-cases.html",
+    "docs/actionability/calibrated-ranking.html",
+    "docs/actionability/external-evidence-readiness.html"
+  ],
+  "modified_files": [
+    "docs/index.html",
+    "docs/actionability/*.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "page_exists:index.html",
+      "status": "pass"
+    },
+    {
+      "check": "page_exists:known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "page_exists:species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "page_exists:calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "page_exists:external-evidence-readiness.html",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_link:Actionable Candidates",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_link:Known-gene Anchors",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_link:Species Use Cases",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_link:Calibrated Candidate Ranking",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_link:External Evidence Readiness",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_6_0_known_regulator_recovery_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_7_0_oryza_rhizome_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    }
+  ]
+}
