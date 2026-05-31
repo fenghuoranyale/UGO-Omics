@@ -1,0 +1,134 @@
+{
+  "version": "v5.2.17 Actionability redirect cache bust",
+  "generated_on": "2026-05-30 23:22:13",
+  "purpose": "Keep the currently clickable Actionability dropdown links, but add cache-busting query strings to the linked pages and make those pages aggressively redirect to homepage panels.",
+  "replace_counts": {
+    "/UGO-Omics/actionability/": 2,
+    "/UGO-Omics/actionability/known-gene-anchors.html": 1,
+    "/UGO-Omics/actionability/species-use-cases.html": 1,
+    "/UGO-Omics/actionability/calibrated-ranking.html": 1,
+    "/UGO-Omics/actionability/external-evidence-readiness.html": 1
+  },
+  "redirect_targets": {
+    "index.html": "/UGO-Omics/?v=5217#actionability-layer",
+    "known-gene-anchors.html": "/UGO-Omics/?v=5217#known-gene-anchors-panel",
+    "species-use-cases.html": "/UGO-Omics/?v=5217#species-use-cases-panel",
+    "calibrated-ranking.html": "/UGO-Omics/?v=5217#calibrated-ranking-panel",
+    "external-evidence-readiness.html": "/UGO-Omics/?v=5217#external-evidence-readiness-panel"
+  },
+  "modified_files": [
+    "docs/index.html",
+    "docs/actionability/*.html",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_dropdown_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "overview_link_cache_busted",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_link_cache_busted",
+      "status": "pass"
+    },
+    {
+      "check": "species_link_cache_busted",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_link_cache_busted",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_link_cache_busted",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:index.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:index.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_no_cache:index.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_no_cache:known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_no_cache:species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_no_cache:calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:external-evidence-readiness.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:external-evidence-readiness.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_no_cache:external-evidence-readiness.html",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:/UGO-Omics/actionability/",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:/UGO-Omics/actionability/known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:/UGO-Omics/actionability/species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:/UGO-Omics/actionability/calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "replace_count:/UGO-Omics/actionability/external-evidence-readiness.html",
+      "status": "pass"
+    }
+  ]
+}
