@@ -1,0 +1,15 @@
+check	status
+inserted	pass
+method	before_nav_close
+actionability_button_present	pass
+custom_wrapper_present	pass
+custom_menu_present	pass
+final_css_present	pass
+old_actionability_menu_item_removed	pass
+old_menu_section_label_removed	pass
+default_raw_link_removed	pass
+actionable_candidates_present	pass
+known_gene_anchors_present	pass
+species_use_cases_present	pass
+calibrated_ranking_present	pass
+external_readiness_present	pass

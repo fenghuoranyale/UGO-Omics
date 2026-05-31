@@ -1,0 +1,70 @@
+{
+  "version": "v5.1.4 final Actionability dropdown fix",
+  "generated_on": "2026-05-30 20:23:10",
+  "purpose": "Replace failed raw Actionability dropdown with a fully scoped, independent, hidden-until-hover top-level dropdown.",
+  "inserted": true,
+  "method": "before_nav_close",
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "inserted",
+      "status": "pass"
+    },
+    {
+      "check": "method",
+      "status": "before_nav_close"
+    },
+    {
+      "check": "actionability_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "custom_wrapper_present",
+      "status": "pass"
+    },
+    {
+      "check": "custom_menu_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_actionability_menu_item_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_menu_section_label_removed",
+      "status": "pass"
+    },
+    {
+      "check": "default_raw_link_removed",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_candidates_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchors_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_present",
+      "status": "pass"
+    },
+    {
+      "check": "calibrated_ranking_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_present",
+      "status": "pass"
+    }
+  ]
+}
