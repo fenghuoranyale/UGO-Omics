@@ -1,0 +1,52 @@
+{
+  "version": "v5.2.9 fix clean nav ampersand audit",
+  "generated_on": "2026-05-30 22:35:12",
+  "purpose": "Encode ampersands in clean navbar labels so audit correctly recognizes Evidence & Discovery and Help & Downloads.",
+  "nav_order_ok": true,
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "clean_nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_order_ok",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_ampersand_encoded",
+      "status": "pass"
+    },
+    {
+      "check": "help_ampersand_encoded",
+      "status": "pass"
+    },
+    {
+      "check": "help_downloads_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "pass"
+    },
+    {
+      "check": "no_exposed_candidate_prioritization_text_in_nav",
+      "status": "pass"
+    },
+    {
+      "check": "gene_anchor_after_nav",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_after_nav",
+      "status": "pass"
+    }
+  ]
+}

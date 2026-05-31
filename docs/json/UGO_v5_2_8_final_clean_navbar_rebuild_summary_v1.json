@@ -1,0 +1,60 @@
+{
+  "version": "v5.2.8 final clean navbar rebuild",
+  "generated_on": "2026-05-30 22:34:39",
+  "purpose": "Replace the corrupted navigation block with a clean, stable dropdown navigation system using consistent menu structure and correct in-page/public links.",
+  "nav_order_ok": false,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "clean_nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_order_ok",
+      "status": "fail"
+    },
+    {
+      "check": "no_exposed_candidate_prioritization_text_in_nav",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_details_dropdown",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_actionability_custom",
+      "status": "pass"
+    },
+    {
+      "check": "start_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_downloads_present",
+      "status": "fail"
+    },
+    {
+      "check": "gene_anchor_after_nav",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_after_nav",
+      "status": "pass"
+    }
+  ]
+}

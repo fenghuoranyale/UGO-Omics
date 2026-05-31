@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+clean_nav_present	pass
+nav_order_ok	fail
+no_exposed_candidate_prioritization_text_in_nav	pass
+no_old_details_dropdown	pass
+no_old_actionability_custom	pass
+start_link_present	pass
+actionability_link_present	pass
+known_gene_link_present	pass
+help_downloads_present	fail
+gene_anchor_after_nav	pass
+actionability_anchor_after_nav	pass
