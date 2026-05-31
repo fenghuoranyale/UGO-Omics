@@ -885,6 +885,13 @@
   }
 </style>
 
+
+<style id="ugo-v5-1-3-actionability-dropdown-style">
+  .dropdown-menu {
+    min-width: 250px;
+  }
+</style>
+
 </head>
 
 <body>
@@ -954,6 +961,19 @@
       <button onclick="showSection('downloads', this)">Downloads</button>
     </div>
   </div>
+
+        <div class="dropdown">
+          <button class="nav-btn">Actionability ▾</button>
+          <div class="dropdown-menu">
+            <div class="dropdown-section">CANDIDATE PRIORITIZATION</div>
+            <a href="#actionability-layer">Actionable Candidates</a>
+            <a href="../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
+            <a href="../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
+            <a href="../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
+            <a href="../resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
+          </div>
+        </div>
+
 </nav>
 
 

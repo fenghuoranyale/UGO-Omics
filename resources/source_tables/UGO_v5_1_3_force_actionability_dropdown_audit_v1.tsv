@@ -1,0 +1,12 @@
+check	status
+inserted	pass
+insert_method_not_none	pass
+actionability_button_present	pass
+actionable_candidates_present	pass
+known_gene_anchors_present	pass
+species_use_cases_present	pass
+calibrated_ranking_present	pass
+external_readiness_present	pass
+evidence_dropdown_still_clean	fail
+insert_method	before_nav_close
+button_class_used	nav-btn

@@ -1,0 +1,58 @@
+{
+  "version": "v5.1.3 force Actionability dropdown insertion",
+  "generated_on": "2026-05-30 20:18:53",
+  "purpose": "Force insertion of a dedicated top-level Actionability dropdown before Help & Downloads using the native nav button class.",
+  "inserted": true,
+  "method": "before_nav_close",
+  "button_class_used": "nav-btn",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "inserted",
+      "status": "pass"
+    },
+    {
+      "check": "insert_method_not_none",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_candidates_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchors_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_present",
+      "status": "pass"
+    },
+    {
+      "check": "calibrated_ranking_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_dropdown_still_clean",
+      "status": "fail"
+    },
+    {
+      "check": "insert_method",
+      "status": "before_nav_close"
+    },
+    {
+      "check": "button_class_used",
+      "status": "nav-btn"
+    }
+  ]
+}
