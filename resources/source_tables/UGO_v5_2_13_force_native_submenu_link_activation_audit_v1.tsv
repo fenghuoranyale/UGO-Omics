@@ -1,0 +1,9 @@
+check	status
+deployment_marker_present	pass
+nav_present	pass
+forced_submenu_links_present	pass
+force_style_present	pass
+old_click_scripts_removed	pass
+actionability_homepage_anchor_still_present	pass
+known_gene_homepage_anchor_still_present	pass
+forced_link_count	9

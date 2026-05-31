@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_13_FORCE_NATIVE_SUBMENU_LINK_ACTIVATION 2026-05-30 22:58:35 -->
 <!-- UGO_V5_2_12_ONLY_ACTIONABILITY_INPAGE_PANELS 2026-05-30 22:53:03 -->
 <!-- UGO_V5_2_0_REAL_ACTIONABILITY_PAGES 2026-05-30 21:50:42 -->
 <!-- UGO_V5_1_19_NATIVE_MENU_LINKS_FIXED 2026-05-30 21:42:03 -->
@@ -1156,6 +1157,26 @@
   }
 </style>
 
+
+<style id="ugo-v5-2-13-force-native-submenu-link-activation-style">
+  .dropdown-menu,
+  .dropdown-menu a,
+  .ugo-actionability-menu,
+  .ugo-actionability-menu a,
+  .ugo-clean-menu,
+  .ugo-clean-menu a {
+    pointer-events: auto !important;
+  }
+
+  .dropdown-menu a,
+  .ugo-actionability-menu a,
+  .ugo-clean-menu a {
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 100000 !important;
+  }
+</style>
+
 </head>
 
 <body>
@@ -1191,10 +1212,10 @@
           <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
           <div class="ugo-start-menu" aria-label="Start Here menu">
             <div class="ugo-start-menu-label">Discovery workflows</div>
-            <a href="#question-workflows"><span id="gene-centered-query"></span>Gene-centered query</a>
-            <a href="#question-workflows"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
-            <a href="#question-workflows"><span id="species-centered-exploration"></span>Species-centered exploration</a>
-            <a href="#question-workflows"><span id="candidate-prioritization"></span>Candidate prioritization</a>
+            <a href="#question-workflows" onpointerdown="window.location.href="#question-workflows"; return false;" onmousedown="window.location.href="#question-workflows"; return false;"><span id="gene-centered-query"></span>Gene-centered query</a>
+            <a href="#question-workflows" onpointerdown="window.location.href="#question-workflows"; return false;" onmousedown="window.location.href="#question-workflows"; return false;"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
+            <a href="#question-workflows" onpointerdown="window.location.href="#question-workflows"; return false;" onmousedown="window.location.href="#question-workflows"; return false;"><span id="species-centered-exploration"></span>Species-centered exploration</a>
+            <a href="#question-workflows" onpointerdown="window.location.href="#question-workflows"; return false;" onmousedown="window.location.href="#question-workflows"; return false;"><span id="candidate-prioritization"></span>Candidate prioritization</a>
           </div>
         </div>
 
@@ -1248,11 +1269,11 @@
           <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="/UGO-Omics/?v=5212#actionability-layer">Actionable Candidates</a>
-            <a href="/UGO-Omics/?v=5212#known-gene-anchors-panel">Known-gene Anchors</a>
-            <a href="/UGO-Omics/?v=5212#species-use-cases-panel">Species Use Cases</a>
-            <a href="/UGO-Omics/?v=5212#calibrated-ranking-panel">Calibrated Candidate Ranking</a>
-            <a href="/UGO-Omics/?v=5212#external-evidence-readiness-panel">External Evidence Readiness</a>
+            <a href="/UGO-Omics/?v=5212#actionability-layer" onpointerdown="window.location.href="/UGO-Omics/?v=5212#actionability-layer"; return false;" onmousedown="window.location.href="/UGO-Omics/?v=5212#actionability-layer"; return false;">Actionable Candidates</a>
+            <a href="/UGO-Omics/?v=5212#known-gene-anchors-panel" onpointerdown="window.location.href="/UGO-Omics/?v=5212#known-gene-anchors-panel"; return false;" onmousedown="window.location.href="/UGO-Omics/?v=5212#known-gene-anchors-panel"; return false;">Known-gene Anchors</a>
+            <a href="/UGO-Omics/?v=5212#species-use-cases-panel" onpointerdown="window.location.href="/UGO-Omics/?v=5212#species-use-cases-panel"; return false;" onmousedown="window.location.href="/UGO-Omics/?v=5212#species-use-cases-panel"; return false;">Species Use Cases</a>
+            <a href="/UGO-Omics/?v=5212#calibrated-ranking-panel" onpointerdown="window.location.href="/UGO-Omics/?v=5212#calibrated-ranking-panel"; return false;" onmousedown="window.location.href="/UGO-Omics/?v=5212#calibrated-ranking-panel"; return false;">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/?v=5212#external-evidence-readiness-panel" onpointerdown="window.location.href="/UGO-Omics/?v=5212#external-evidence-readiness-panel"; return false;" onmousedown="window.location.href="/UGO-Omics/?v=5212#external-evidence-readiness-panel"; return false;">External Evidence Readiness</a>
           </div>
         </div>
 

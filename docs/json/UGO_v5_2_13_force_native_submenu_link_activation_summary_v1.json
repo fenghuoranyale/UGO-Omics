@@ -1,0 +1,44 @@
+{
+  "version": "v5.2.13 force native submenu link activation",
+  "generated_on": "2026-05-30 22:58:37",
+  "purpose": "Do not alter navbar layout. Add direct pointer/mousedown navigation to submenu links so expanded dropdown menu items activate reliably.",
+  "forced_link_count": 9,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "forced_submenu_links_present",
+      "status": "pass"
+    },
+    {
+      "check": "force_style_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_click_scripts_removed",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_homepage_anchor_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_homepage_anchor_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "forced_link_count",
+      "status": "9"
+    }
+  ]
+}
