@@ -1,0 +1,14 @@
+{
+  "version": "v5.1.15 public link fix",
+  "generated_on": "2026-05-30 21:25:42",
+  "purpose": "Fix GitHub Pages 404 errors by publishing linked source tables under docs/resources/source_tables and replacing ../resources/source_tables links with resources/source_tables links.",
+  "linked_source_tables": 5,
+  "copied_source_tables": 5,
+  "missing_source_tables": 0,
+  "broken_links_after_patch": 4,
+  "modified_files": [
+    "docs/index.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ]
+}

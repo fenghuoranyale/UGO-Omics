@@ -1,0 +1,4 @@
+metric	value	details
+empty_hash_links_replaced	4	"href=""#"" replaced with href=""#top"""
+broken_links_after_fix	0	
+top_anchor_present	yes	

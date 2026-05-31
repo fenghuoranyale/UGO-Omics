@@ -1207,10 +1207,10 @@
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
             <a href="#actionability-layer">Actionable Candidates</a>
-            <a href="../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
-            <a href="../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
-            <a href="../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
-            <a href="../resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
+            <a href="resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
+            <a href="resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
+            <a href="resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
+            <a href="resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
           </div>
         </div>
 
@@ -1276,7 +1276,7 @@
         Connects UGO modules to familiar developmental, hormonal, stress-response,
         regulatory, cell-wall, and storage-related gene families.
       </p>
-      <a href="../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
+      <a href="resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
     </div>
 
     <div class="ugo-v5-card">
@@ -1286,7 +1286,7 @@
         Ranks candidate families using module support, species breadth, cross-clade support,
         benchmark recovery, anchor specificity, and use-case relevance.
       </p>
-      <a href="../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download calibrated ranking</a>
+      <a href="resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download calibrated ranking</a>
     </div>
 
     <div class="ugo-v5-card">
@@ -1296,7 +1296,7 @@
         Practical examples for Oryza rhizome, Solanum tuber, Manihot storage root,
         and Beta storage-root/hypocotyl systems.
       </p>
-      <a href="../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
+      <a href="resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
     </div>
 
     <div class="ugo-v5-card">
@@ -1306,7 +1306,7 @@
         Summarizes how core and supporting UGO modules connect to candidate-family
         hypotheses and future storage-metabolism expansion.
       </p>
-      <a href="../resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv">Download module summary</a>
+      <a href="resources/source_tables/UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv">Download module summary</a>
     </div>
   </div>
 </section>
@@ -1374,28 +1374,28 @@
   </div>
 
   <div class="usability-grid">
-    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('sequenceToUGO'); return false;">
+    <a class="usability-card clickable-card" href="#top" onclick="gotoUGOSection('sequenceToUGO'); return false;">
       <span class="demo-badge">Protein sequence</span>
       <h3>I have a protein sequence</h3>
       <p>Use Sequence-to-UGO to map protein FASTA queries to UGO orthogroups, candidate modules, UGO scores, and validation-priority annotations.</p>
       <span class="card-action">Go to Sequence-to-UGO →</span>
     </a>
 
-    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('geneListToUGO'); return false;">
+    <a class="usability-card clickable-card" href="#top" onclick="gotoUGOSection('geneListToUGO'); return false;">
       <span class="demo-badge">Gene list</span>
       <h3>I have DEG/QTL/GWAS genes</h3>
       <p>Use Gene-list-to-UGO to map gene lists to prioritized candidate modules and ranked module summaries.</p>
       <span class="card-action">Go to Gene-list-to-UGO →</span>
     </a>
 
-    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('resourceFinder'); return false;">
+    <a class="usability-card clickable-card" href="#top" onclick="gotoUGOSection('resourceFinder'); return false;">
       <span class="demo-badge">Species</span>
       <h3>Species-centered exploration</h3>
       <p>Use Resource Finder to retrieve species-centered candidate modules, resource layers, and recommended workflows.</p>
       <span class="card-action">Go to Resource Finder →</span>
     </a>
 
-    <a class="usability-card clickable-card" href="#" onclick="gotoUGOSection('organKits'); return false;">
+    <a class="usability-card clickable-card" href="#top" onclick="gotoUGOSection('organKits'); return false;">
       <span class="demo-badge">Organ system</span>
       <h3>I study an underground organ</h3>
       <p>Use Organ Kits to retrieve organ-centered modules, workflows, and validation-focused hypotheses.</p>
@@ -2784,3 +2784,9 @@ async function geneWizardLoadDemoOutput() {
 
 </body>
 </html>
+
+<span id="resources"></span>
+
+<span id="toolkits"></span>
+
+<span id="citation"></span>

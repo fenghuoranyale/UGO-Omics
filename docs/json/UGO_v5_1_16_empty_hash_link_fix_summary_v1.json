@@ -1,0 +1,16 @@
+{
+  "version": "v5.1.16 empty hash link fix",
+  "generated_on": "2026-05-30 21:27:47",
+  "purpose": "Replace placeholder href='#' links with href='#top' so local link audit is clean.",
+  "empty_hash_links_replaced": 4,
+  "broken_links_after_fix": 0,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "outputs": [
+    "UGO_v5_1_16_link_audit_after_empty_hash_fix_v1.tsv",
+    "UGO_v5_1_16_broken_links_after_empty_hash_fix_v1.tsv",
+    "UGO_v5_1_16_empty_hash_link_fix_qc_v1.tsv"
+  ]
+}
