@@ -1,0 +1,68 @@
+{
+  "version": "v5.2.28 swap Actionability and Help nav order",
+  "generated_on": "2026-05-31 11:01:14",
+  "purpose": "Move Actionability before Help & Downloads so Help & Downloads is the final navigation button, without changing any links, behavior, or styling.",
+  "swapped": true,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "swapped_or_already_correct",
+      "status": "pass"
+    },
+    {
+      "check": "help_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "pass"
+    },
+    {
+      "check": "nav_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_links_preserved",
+      "status": "pass"
+    },
+    {
+      "check": "help_buttons_preserved",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    }
+  ]
+}

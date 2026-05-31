@@ -1,0 +1,15 @@
+check	status
+deployment_marker_present	pass
+swapped_or_already_correct	pass
+help_present	pass
+actionability_present	pass
+actionability_before_help	pass
+nav_valid	pass
+start_here_still_present	pass
+analyze_still_present	pass
+explore_still_present	pass
+evidence_still_present	pass
+actionability_links_preserved	pass
+help_buttons_preserved	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
