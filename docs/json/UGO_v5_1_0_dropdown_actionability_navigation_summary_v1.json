@@ -1,0 +1,37 @@
+{
+  "version": "v5.1.0 dropdown actionability navigation",
+  "generated_on": "2026-05-30 20:02:56",
+  "purpose": "Add Actionable Candidates, Known-gene Anchors, Species Use Cases, Calibrated Candidate Ranking, and External Evidence Readiness entries to the website dropdown navigation.",
+  "inserted": true,
+  "entries": [
+    {
+      "label": "Actionable Candidates",
+      "href": "#actionability-layer",
+      "description": "Open the actionability layer"
+    },
+    {
+      "label": "Known-gene Anchors",
+      "href": "../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "description": "Download known-gene anchor panel"
+    },
+    {
+      "label": "Species Use Cases",
+      "href": "../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "description": "Download species-specific use cases"
+    },
+    {
+      "label": "Calibrated Candidate Ranking",
+      "href": "../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "description": "Download calibrated candidate-family ranking"
+    },
+    {
+      "label": "External Evidence Readiness",
+      "href": "../resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "description": "Download conservative external-evidence readiness summary"
+    }
+  ],
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ]
+}

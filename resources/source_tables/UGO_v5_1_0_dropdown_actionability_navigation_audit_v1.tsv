@@ -1,0 +1,6 @@
+entry_label	href	html_status	target_status
+Actionable Candidates	#actionability-layer	present	anchor_link
+Known-gene Anchors	../resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv	present	file_exists
+Species Use Cases	../resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv	present	file_exists
+Calibrated Candidate Ranking	../resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv	present	file_exists
+External Evidence Readiness	../resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv	present	file_exists
