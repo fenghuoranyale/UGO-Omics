@@ -1,0 +1,12 @@
+check	status
+deployment_marker_present	pass
+old_v5224_script_removed	pass
+new_script_present	pass
+organ_input_select_present	pass
+species_input_present	pass
+no_old_organ_cards	pass
+gene_still_maps_to_checkGene	pass
+candidate_still_maps_to_validationTargets	pass
+start_links_still_present	pass
+actionability_still_present	pass
+other_nav_restore_still_present	pass

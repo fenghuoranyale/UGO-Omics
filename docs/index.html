@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_25_SIMPLIFY_START_HERE_ORGAN_SPECIES_INPUTS 2026-05-31 10:42:25 -->
 <!-- UGO_V5_2_24_FIX_START_HERE_ORGAN_SPECIES_BLANK 2026-05-31 10:36:02 -->
 <!-- UGO_V5_2_23_START_HERE_REAL_INPUTS 2026-05-31 10:26:37 -->
 <!-- UGO_V5_2_22_RESTORE_NAV_DROPDOWN_BUTTON_CLICKS 2026-05-30 23:52:52 -->
@@ -1314,79 +1315,68 @@
 </style>
 
 
-<style id="ugo-v5-2-24-fix-start-here-organ-species-blank-style">
+
+
+<style id="ugo-v5-2-25-simplify-start-here-organ-species-inputs-style">
   #ugo-start-live-view {
     padding: 34px 54px 60px 54px;
   }
 
-  .ugo-start-real-section h1 {
+  .ugo-start-input-section h1 {
     margin: 0 0 8px 0;
     color: #123657;
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     line-height: 1.1;
   }
 
-  .ugo-start-real-subtitle {
-    max-width: 980px;
+  .ugo-start-input-subtitle {
+    max-width: 780px;
     color: #465b73;
     font-size: 1.02rem;
     line-height: 1.55;
     margin-bottom: 22px;
   }
 
-  .ugo-start-real-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    margin-top: 22px;
-  }
-
-  .ugo-start-real-card {
+  .ugo-start-input-card {
+    max-width: 760px;
     background: #ffffff;
     border: 1px solid rgba(15, 61, 96, 0.18);
     border-radius: 18px;
-    padding: 22px;
+    padding: 24px;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   }
 
-  .ugo-start-real-card h3 {
-    margin: 0 0 12px 0;
+  .ugo-start-input-card label {
+    display: block;
     color: #123657;
-    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 8px;
   }
 
-  .ugo-start-real-card p {
-    color: #465b73;
-    line-height: 1.55;
+  .ugo-start-input-card select,
+  .ugo-start-input-card input {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid rgba(15, 61, 96, 0.28);
+    border-radius: 12px;
+    padding: 0 14px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #123657;
+    background: #ffffff;
   }
 
-  .ugo-start-real-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
-  }
-
-  .ugo-start-real-button {
+  .ugo-start-input-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 14px;
+    padding: 11px 16px;
     border-radius: 10px;
     border: 0;
     background: #123657;
     color: #ffffff;
     font-weight: 800;
     cursor: pointer;
-  }
-
-  .ugo-start-real-note {
-    margin-top: 22px;
-    padding: 16px 18px;
-    border-radius: 14px;
-    background: #ffffff;
-    border-left: 5px solid #0f766e;
-    color: #2c455e;
   }
 </style>
 
@@ -3325,36 +3315,13 @@ async function geneWizardLoadDemoOutput() {
 
 
 
-<script id="ugo-v5-2-24-fix-start-here-organ-species-blank-script">
+
+
+<script id="ugo-v5-2-25-simplify-start-here-organ-species-inputs-script">
 (function () {
   const startToRealSection = {
     "gene-centered-query": "checkGene",
     "candidate-prioritization": "validationTargets"
-  };
-
-  const fallbackViews = {
-    "organ-centered-discovery": {
-      title: "Organ-centered discovery",
-      subtitle: "Select an underground-organ type to identify relevant UGO resources, candidate modules, and biological programs.",
-      cards: [
-        ["Rhizome", "Explore rhizome-associated UGO modules and candidate-family hypotheses."],
-        ["Tuber", "Explore tuber-related storage, developmental, and stress-response candidate programs."],
-        ["Storage root", "Explore storage-root associated candidate modules and transferability patterns."],
-        ["Bulb / corm / stolon", "Use broad underground-organ resources when a specialized organ panel is not available."]
-      ],
-      note: "This entry is designed as an organ-first route into the UGO resource system. Use Explore Resources for full resource tables and downloadable files."
-    },
-    "species-centered-exploration": {
-      title: "Species-centered exploration",
-      subtitle: "Choose a focal species perspective and connect UGO candidate modules to species-level homologs and transferability patterns.",
-      cards: [
-        ["11-species backbone", "Use the high-confidence analytical backbone for cross-species supported candidate modules."],
-        ["51-species resource layer", "Use the broad resource layer to check candidate traceability across a wider species set."],
-        ["New species transfer", "Use Sequence-to-UGO or Gene-list-to-UGO when you bring data from a new or focal species."],
-        ["Species-specific candidates", "Prioritize candidate families that are traceable and interpretable in your study system."]
-      ],
-      note: "This entry is designed as a species-first route. Use Analyze Your Data when you want to bring FASTA sequences or gene lists from a focal species."
-    }
   };
 
   function restoreHiddenHomepageContent() {
@@ -3421,49 +3388,6 @@ async function geneWizardLoadDemoOutput() {
     }
   }
 
-  function renderFallbackView(viewName, pushState) {
-    const data = fallbackViews[viewName];
-    if (!data) return false;
-
-    hideMainContentExceptStartLiveView();
-    const liveView = ensureStartLiveView();
-
-    const cards = data.cards.map(function (item) {
-      return `
-        <div class="ugo-start-real-card">
-          <h3>${item[0]}</h3>
-          <p>${item[1]}</p>
-        </div>
-      `;
-    }).join("");
-
-    liveView.innerHTML = `
-      <section class="ugo-start-real-section">
-        <h1>${data.title}</h1>
-        <p class="ugo-start-real-subtitle">${data.subtitle}</p>
-        <div class="ugo-start-real-grid">${cards}</div>
-        <div class="ugo-start-real-actions">
-          <button type="button" class="ugo-start-real-button" data-ugo-open-section="resourceFinder">Open Resource Finder</button>
-          <button type="button" class="ugo-start-real-button" data-ugo-open-section="organKits">Open Organ Kits</button>
-          <button type="button" class="ugo-start-real-button" data-ugo-open-section="sequenceToUGO">Open Sequence-to-UGO</button>
-          <button type="button" class="ugo-start-real-button" data-ugo-open-section="geneListToUGO">Open Gene-list-to-UGO</button>
-        </div>
-        <div class="ugo-start-real-note">${data.note}</div>
-      </section>
-    `;
-
-    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
-
-    if (pushState && window.history && window.history.pushState) {
-      const url = new URL(window.location.href);
-      url.searchParams.set("view", "start-" + viewName);
-      url.hash = "";
-      window.history.pushState({ ugoStartView: viewName }, "", url.toString());
-    }
-
-    return true;
-  }
-
   function callShowSection(sectionId, sourceElement, pushState, viewName) {
     restoreHiddenHomepageContent();
     closeDropdowns();
@@ -3491,11 +3415,84 @@ async function geneWizardLoadDemoOutput() {
     }
   }
 
+  function renderOrganInput(pushState) {
+    hideMainContentExceptStartLiveView();
+
+    const liveView = ensureStartLiveView();
+    liveView.innerHTML = `
+      <section class="ugo-start-input-section">
+        <h1>Organ-centered discovery</h1>
+        <p class="ugo-start-input-subtitle">Choose an underground-organ type to open the relevant UGO resource entry.</p>
+
+        <div class="ugo-start-input-card">
+          <label for="ugo-organ-input-select">Select organ type</label>
+          <select id="ugo-organ-input-select">
+            <option value="rhizome">Rhizome</option>
+            <option value="tuber">Tuber</option>
+            <option value="storage root">Storage root</option>
+            <option value="bulb">Bulb</option>
+            <option value="corm">Corm</option>
+            <option value="root crown">Root crown</option>
+            <option value="stolon">Stolon</option>
+          </select>
+
+          <button type="button" class="ugo-start-input-button" data-ugo-open-section="resourceFinder">
+            Open organ resource search
+          </button>
+        </div>
+      </section>
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+
+    if (pushState && window.history && window.history.pushState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("view", "start-organ-centered-discovery");
+      url.hash = "";
+      window.history.pushState({ ugoStartView: "organ-centered-discovery" }, "", url.toString());
+    }
+  }
+
+  function renderSpeciesInput(pushState) {
+    hideMainContentExceptStartLiveView();
+
+    const liveView = ensureStartLiveView();
+    liveView.innerHTML = `
+      <section class="ugo-start-input-section">
+        <h1>Species-centered exploration</h1>
+        <p class="ugo-start-input-subtitle">Enter or choose a species name to open the relevant UGO species-resource entry.</p>
+
+        <div class="ugo-start-input-card">
+          <label for="ugo-species-input">Species name or keyword</label>
+          <input id="ugo-species-input" type="text" placeholder="Example: Oryza, Panicum, Dioscorea, potato..." />
+
+          <button type="button" class="ugo-start-input-button" data-ugo-open-section="resourceFinder">
+            Open species resource search
+          </button>
+        </div>
+      </section>
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+
+    if (pushState && window.history && window.history.pushState) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("view", "start-species-centered-exploration");
+      url.hash = "";
+      window.history.pushState({ ugoStartView: "species-centered-exploration" }, "", url.toString());
+    }
+  }
+
   function renderStartView(viewName, pushState, sourceElement) {
     closeDropdowns();
 
-    if (fallbackViews[viewName]) {
-      renderFallbackView(viewName, pushState);
+    if (viewName === "organ-centered-discovery") {
+      renderOrganInput(pushState);
+      return;
+    }
+
+    if (viewName === "species-centered-exploration") {
+      renderSpeciesInput(pushState);
       return;
     }
 

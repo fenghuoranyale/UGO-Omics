@@ -1,0 +1,55 @@
+{
+  "version": "v5.2.25 simplify Start Here organ/species inputs",
+  "generated_on": "2026-05-31 10:42:26",
+  "purpose": "Simplify Start Here organ-centered and species-centered entries to show only functional input/search entrances rather than explanatory card panels.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5224_script_removed",
+      "status": "pass"
+    },
+    {
+      "check": "new_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_input_select_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_input_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_organ_cards",
+      "status": "pass"
+    },
+    {
+      "check": "gene_still_maps_to_checkGene",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_still_maps_to_validationTargets",
+      "status": "pass"
+    },
+    {
+      "check": "start_links_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "other_nav_restore_still_present",
+      "status": "pass"
+    }
+  ]
+}
