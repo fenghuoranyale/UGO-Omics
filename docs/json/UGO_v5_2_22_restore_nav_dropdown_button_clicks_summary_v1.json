@@ -1,0 +1,67 @@
+{
+  "version": "v5.2.22 restore nav dropdown button clicks",
+  "generated_on": "2026-05-30 23:52:53",
+  "purpose": "Restore clicks for the real current nav-dropdown button structure while preserving Start Here and Actionability dynamic in-page switchers.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "new_button_restore_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5220_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5221_removed",
+      "status": "pass"
+    },
+    {
+      "check": "targets_nav_dropdown_buttons",
+      "status": "pass"
+    },
+    {
+      "check": "restores_start_hidden_content",
+      "status": "pass"
+    },
+    {
+      "check": "restores_actionability_hidden_content",
+      "status": "pass"
+    },
+    {
+      "check": "calls_showSection",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_buttons_exist",
+      "status": "pass"
+    },
+    {
+      "check": "explore_buttons_exist",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_buttons_exist",
+      "status": "pass"
+    },
+    {
+      "check": "help_buttons_exist",
+      "status": "pass"
+    }
+  ]
+}

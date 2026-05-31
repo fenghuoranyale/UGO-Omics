@@ -1,0 +1,15 @@
+check	status
+deployment_marker_present	pass
+new_button_restore_script_present	pass
+old_v5220_removed	pass
+old_v5221_removed	pass
+targets_nav_dropdown_buttons	pass
+restores_start_hidden_content	pass
+restores_actionability_hidden_content	pass
+calls_showSection	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+analyze_buttons_exist	pass
+explore_buttons_exist	pass
+evidence_buttons_exist	pass
+help_buttons_exist	pass

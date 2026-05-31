@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_22_RESTORE_NAV_DROPDOWN_BUTTON_CLICKS 2026-05-30 23:52:52 -->
 <!-- UGO_V5_2_21_RESTORE_NON_DYNAMIC_NAV_LINKS 2026-05-30 23:44:30 -->
 <!-- UGO_V5_2_20_RESTORE_OTHER_SUBMENU_CLICKS_ONLY 2026-05-30 23:39:53 -->
 <!-- UGO_V5_2_19_START_HERE_INPAGE_VIEW_SWITCHER 2026-05-30 23:35:46 -->
@@ -3353,67 +3354,73 @@ async function geneWizardLoadDemoOutput() {
 
 
 
-<script id="ugo-v5-2-21-restore-non-dynamic-nav-links-script">
+
+
+<script id="ugo-v5-2-22-restore-nav-dropdown-button-clicks-script">
 (function () {
-  function isStartOrActionabilityDynamicLink(link) {
-    return link.hasAttribute("data-ugo-start-view") ||
-           link.hasAttribute("data-ugo-actionability-view");
+  function restoreHiddenHomepageContent() {
+    document.querySelectorAll('[data-ugo-hidden-by-start="true"], [data-ugo-hidden-by-actionability="true"]').forEach(function (el) {
+      el.style.display = "";
+      el.removeAttribute("data-ugo-hidden-by-start");
+      el.removeAttribute("data-ugo-hidden-by-actionability");
+    });
+
+    var startLive = document.getElementById("ugo-start-live-view");
+    if (startLive) startLive.remove();
+
+    var actionLive = document.getElementById("ugo-actionability-live-view");
+    if (actionLive) actionLive.remove();
   }
 
-  function normalizeNavHref(rawHref) {
-    if (!rawHref) return null;
+  function getShowSectionId(button) {
+    var onclick = button.getAttribute("onclick") || "";
+    var match = onclick.match(/showSection\(['"]([^'"]+)['"]/);
+    return match ? match[1] : null;
+  }
 
-    if (rawHref === "#" || rawHref.trim() === "") return null;
+  function closeMenus() {
+    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
+      el.classList.remove("ugo-menu-open");
+    });
+  }
 
-    try {
-      var url = new URL(rawHref, window.location.origin);
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest("nav .nav-dropdown-content button[onclick*='showSection']");
+    if (!button) return;
 
-      // Same homepage/hash navigation: clear dynamic ?view= state and force reload.
-      if (url.origin === window.location.origin &&
-          url.pathname.replace(/\/$/, "") === "/UGO-Omics") {
-        url.searchParams.delete("view");
-        if (!url.searchParams.has("v")) {
-          url.searchParams.set("v", "5221");
-        }
-        return url.pathname + url.search + url.hash;
+    var sectionId = getShowSectionId(button);
+    if (!sectionId) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+
+    restoreHiddenHomepageContent();
+    closeMenus();
+
+    if (typeof window.showSection === "function") {
+      window.showSection(sectionId, button);
+    } else if (typeof showSection === "function") {
+      showSection(sectionId, button);
+    } else {
+      var target = document.getElementById(sectionId);
+      if (target) {
+        document.querySelectorAll(".tool-section, .resource-section, .wizard-section").forEach(function (el) {
+          el.style.display = "none";
+        });
+        target.style.display = "";
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-
-      return url.href;
-    } catch (e) {
-      if (rawHref.startsWith("#")) {
-        return "/UGO-Omics/?v=5221" + rawHref;
-      }
-      return rawHref;
     }
-  }
 
-  function forceNavigate(link) {
-    if (!link || isStartOrActionabilityDynamicLink(link)) return false;
-
-    var nav = link.closest("nav");
-    if (!nav) return false;
-
-    var href = normalizeNavHref(link.getAttribute("href"));
-    if (!href) return false;
-
-    window.location.assign(href);
-    return true;
-  }
-
-  ["pointerdown", "mousedown", "click"].forEach(function (eventName) {
-    document.addEventListener(eventName, function (event) {
-      var link = event.target.closest("nav a");
-      if (!link) return;
-
-      if (isStartOrActionabilityDynamicLink(link)) return;
-
-      if (forceNavigate(link)) {
-        event.preventDefault();
-        event.stopPropagation();
-        if (event.stopImmediatePropagation) event.stopImmediatePropagation();
-      }
-    }, true);
-  });
+    if (window.history && window.history.replaceState) {
+      var url = new URL(window.location.href);
+      url.searchParams.delete("view");
+      url.searchParams.set("v", "5222");
+      url.hash = "";
+      window.history.replaceState(null, "", url.toString());
+    }
+  }, true);
 })();
 </script>
 
