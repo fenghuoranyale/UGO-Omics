@@ -1,7 +1,3 @@
-<!-- UGO_V5_2_15_ONLY_FIX_ACTIONABILITY_SUBMENU_CLICKS 2026-05-30 23:09:02 -->
-<!-- UGO_V5_2_14_FIX_BROKEN_INLINE_SUBMENU_HANDLERS 2026-05-30 23:03:51 -->
-<!-- UGO_V5_2_13_FORCE_NATIVE_SUBMENU_LINK_ACTIVATION 2026-05-30 22:58:35 -->
-<!-- UGO_V5_2_12_ONLY_ACTIONABILITY_INPAGE_PANELS 2026-05-30 22:53:03 -->
 <!-- UGO_V5_2_0_REAL_ACTIONABILITY_PAGES 2026-05-30 21:50:42 -->
 <!-- UGO_V5_1_19_NATIVE_MENU_LINKS_FIXED 2026-05-30 21:42:03 -->
 <!DOCTYPE html>
@@ -1135,92 +1131,6 @@
   }
 </style>
 
-
-<style id="ugo-v5-2-12-only-actionability-inpage-panels-style">
-  #actionability-layer,
-  #known-gene-anchors-panel,
-  #species-use-cases-panel,
-  #calibrated-ranking-panel,
-  #external-evidence-readiness-panel {
-    scroll-margin-top: 120px;
-  }
-
-  .ugo-inpage-actionability-panels .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    background: #123657;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-weight: 800;
-  }
-</style>
-
-
-<style id="ugo-v5-2-13-force-native-submenu-link-activation-style">
-  .dropdown-menu,
-  .dropdown-menu a,
-  .ugo-actionability-menu,
-  .ugo-actionability-menu a,
-  .ugo-clean-menu,
-  .ugo-clean-menu a {
-    pointer-events: auto !important;
-  }
-
-  .dropdown-menu a,
-  .ugo-actionability-menu a,
-  .ugo-clean-menu a {
-    cursor: pointer !important;
-    position: relative !important;
-    z-index: 100000 !important;
-  }
-</style>
-
-
-<style id="ugo-v5-2-14-actionability-submenu-click-fix-style">
-  .ugo-actionability-menu,
-  .ugo-actionability-menu a,
-  .dropdown-menu,
-  .dropdown-menu a {
-    pointer-events: auto !important;
-  }
-
-  .ugo-actionability-menu a,
-  .dropdown-menu a[href*="actionability-layer"],
-  .dropdown-menu a[href*="known-gene-anchors-panel"],
-  .dropdown-menu a[href*="species-use-cases-panel"],
-  .dropdown-menu a[href*="calibrated-ranking-panel"],
-  .dropdown-menu a[href*="external-evidence-readiness-panel"] {
-    cursor: pointer !important;
-    position: relative !important;
-    z-index: 100000 !important;
-  }
-</style>
-
-
-<style id="ugo-v5-2-15-only-actionability-click-style">
-  .ugo-actionability-menu,
-  .ugo-actionability-menu a,
-  .dropdown-menu,
-  .dropdown-menu a {
-    pointer-events: auto !important;
-  }
-
-  .ugo-actionability-menu a,
-  .dropdown-menu a[href*="actionability-layer"],
-  .dropdown-menu a[href*="known-gene-anchors-panel"],
-  .dropdown-menu a[href*="species-use-cases-panel"],
-  .dropdown-menu a[href*="calibrated-ranking-panel"],
-  .dropdown-menu a[href*="external-evidence-readiness-panel"] {
-    cursor: pointer !important;
-    position: relative !important;
-    z-index: 100000 !important;
-  }
-</style>
-
 </head>
 
 <body>
@@ -1256,10 +1166,10 @@
           <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
           <div class="ugo-start-menu" aria-label="Start Here menu">
             <div class="ugo-start-menu-label">Discovery workflows</div>
-            <a href="#question-workflows">Gene-centered query</a>
-            <a href="#question-workflows">Organ-centered discovery</a>
-            <a href="#question-workflows">Species-centered exploration</a>
-            <a href="#question-workflows">Candidate prioritization</a>
+            <a href="#question-workflows"><span id="gene-centered-query"></span>Gene-centered query</a>
+            <a href="#question-workflows"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
+            <a href="#question-workflows"><span id="species-centered-exploration"></span>Species-centered exploration</a>
+            <a href="#question-workflows"><span id="candidate-prioritization"></span>Candidate prioritization</a>
           </div>
         </div>
 
@@ -1272,9 +1182,9 @@
     <button class="nav-dropbtn" type="button">Analyze Your Data</button>
     <div class="nav-dropdown-content">
       <span class="nav-group-note">Bring your own data</span>
-      <button>Sequence-to-UGO</button>
-      <button>Gene-list-to-UGO</button>
-      <button>Check a Gene</button>
+      <button onclick="showSection('sequenceToUGO', this)">Sequence-to-UGO</button>
+      <button onclick="showSection('geneListToUGO', this)">Gene-list-to-UGO</button>
+      <button onclick="showSection('checkGene', this)">Check a Gene</button>
     </div>
   </div>
 
@@ -1282,10 +1192,10 @@
     <button class="nav-dropbtn" type="button">Explore Resources</button>
     <div class="nav-dropdown-content">
       <span class="nav-group-note">Species and organs</span>
-      <button>Resource Finder</button>
-      <button>Organ Kits</button>
-      <button>Find by Organ</button>
-      <button>Find by Species</button>
+      <button onclick="showSection('resourceFinder', this)">Resource Finder</button>
+      <button onclick="showSection('organKits', this)">Organ Kits</button>
+      <button onclick="showSection('findOrgan', this)">Find by Organ</button>
+      <button onclick="showSection('findSpecies', this)">Find by Species</button>
     </div>
   </div>
 
@@ -1293,9 +1203,9 @@
     <button class="nav-dropbtn" type="button">Evidence & Discovery</button>
     <div class="nav-dropdown-content">
       <span class="nav-group-note">Prioritization layers</span>
-      <button>Validation Targets</button>
-      <button>Biological Discovery</button>
-      <button>Explore Evidence</button>
+      <button onclick="showSection('validationTargets', this)">Validation Targets</button>
+      <button onclick="showSection('biologicalDiscovery', this)">Biological Discovery</button>
+      <button onclick="showSection('exploreEvidence', this)">Explore Evidence</button>
 </div>
   </div>
 
@@ -1303,21 +1213,21 @@
     <button class="nav-dropbtn" type="button">Help & Downloads</button>
     <div class="nav-dropdown-content">
       <span class="nav-group-note">First-time users</span>
-      <button>Quick Guide</button>
-      <button>Demo Results</button>
-      <button>Use Cases</button>
-      <button>Downloads</button>
+      <button onclick="showSection('quickStartGuide', this)">Quick Guide</button>
+      <button onclick="showSection('demoResults', this)">Demo Results</button>
+      <button onclick="showSection('useCases', this)">Use Cases</button>
+      <button onclick="showSection('downloads', this)">Downloads</button>
     </div>
   </div>
 <div class="ugo-actionability-nav">
           <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="/UGO-Omics/?v=5215#actionability-layer" onpointerdown='window.location.assign("/UGO-Omics/?v=5215#actionability-layer"); return false;' onmousedown='window.location.assign("/UGO-Omics/?v=5215#actionability-layer"); return false;' onclick='window.location.assign("/UGO-Omics/?v=5215#actionability-layer"); return false;'>Actionable Candidates</a>
-            <a href="/UGO-Omics/?v=5215#known-gene-anchors-panel" onpointerdown='window.location.assign("/UGO-Omics/?v=5215#known-gene-anchors-panel"); return false;' onmousedown='window.location.assign("/UGO-Omics/?v=5215#known-gene-anchors-panel"); return false;' onclick='window.location.assign("/UGO-Omics/?v=5215#known-gene-anchors-panel"); return false;'>Known-gene Anchors</a>
-            <a href="/UGO-Omics/?v=5215#species-use-cases-panel" onpointerdown='window.location.assign("/UGO-Omics/?v=5215#species-use-cases-panel"); return false;' onmousedown='window.location.assign("/UGO-Omics/?v=5215#species-use-cases-panel"); return false;' onclick='window.location.assign("/UGO-Omics/?v=5215#species-use-cases-panel"); return false;'>Species Use Cases</a>
-            <a href="/UGO-Omics/?v=5215#calibrated-ranking-panel" onpointerdown='window.location.assign("/UGO-Omics/?v=5215#calibrated-ranking-panel"); return false;' onmousedown='window.location.assign("/UGO-Omics/?v=5215#calibrated-ranking-panel"); return false;' onclick='window.location.assign("/UGO-Omics/?v=5215#calibrated-ranking-panel"); return false;'>Calibrated Candidate Ranking</a>
-            <a href="/UGO-Omics/?v=5215#external-evidence-readiness-panel" onpointerdown='window.location.assign("/UGO-Omics/?v=5215#external-evidence-readiness-panel"); return false;' onmousedown='window.location.assign("/UGO-Omics/?v=5215#external-evidence-readiness-panel"); return false;' onclick='window.location.assign("/UGO-Omics/?v=5215#external-evidence-readiness-panel"); return false;'>External Evidence Readiness</a>
+            <a href="/UGO-Omics/actionability/">Actionable Candidates</a>
+            <a href="/UGO-Omics/actionability/known-gene-anchors.html">Known-gene Anchors</a>
+            <a href="/UGO-Omics/actionability/species-use-cases.html">Species Use Cases</a>
+            <a href="/UGO-Omics/actionability/calibrated-ranking.html">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/actionability/external-evidence-readiness.html">External Evidence Readiness</a>
           </div>
         </div>
 
@@ -2159,48 +2069,6 @@ Gene_003"></textarea>
   </div>
 </section>
 
-
-
-<section id="ugo-inpage-actionability-panels" class="section ugo-inpage-actionability-panels">
-  <span id="actionability-layer"></span>
-  <h2>Actionability resources</h2>
-  <p class="section-subtitle">Use these homepage resources to move from UGO candidate modules to known-gene anchors, species use cases, calibrated rankings, and conservative external-evidence readiness.</p>
-
-  <div class="card-grid">
-    <article id="known-gene-anchors-panel" class="workflow-card">
-      <div class="card-icon">🧬</div>
-      <h3>Known-gene Anchors</h3>
-      <p>Connect UGO candidate modules to recognizable developmental, hormonal, stress-response, regulatory, cell-wall, and storage-related gene-family anchors.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
-    </article>
-
-    <article id="species-use-cases-panel" class="workflow-card">
-      <div class="card-icon">🌿</div>
-      <h3>Species Use Cases</h3>
-      <p>View practical species and underground-organ use cases for rhizome, tuber, storage-root, and related systems.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
-    </article>
-
-    <article id="calibrated-ranking-panel" class="workflow-card">
-      <div class="card-icon">📊</div>
-      <h3>Calibrated Candidate Ranking</h3>
-      <p>Prioritize candidate families using calibrated support from module recurrence, cross-species evidence, benchmark recovery, known-gene anchors, and use-case relevance.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download ranking</a>
-    </article>
-
-    <article id="external-evidence-readiness-panel" class="workflow-card">
-      <div class="card-icon">🧾</div>
-      <h3>External Evidence Readiness</h3>
-      <p>Check which QTL/GWAS, expression-candidate, and independent module-recovery layers are ready for claim support and which require curated input tables.</p>
-      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">Download readiness summary</a>
-    </article>
-  </div>
-
-  <div class="info-note">
-    UGO-Omics prioritizes candidate-family hypotheses. These resources support candidate prioritization and hypothesis generation, not direct functional validation for individual genes.
-  </div>
-</section>
-
 <footer>
   UGO-Omics v1.8 application-oriented static platform. Outputs are candidate-prioritization resources, not functional validation.
 </footer>
@@ -2881,8 +2749,6 @@ async function geneWizardLoadDemoOutput() {
 }
 
 </script>
-
-
 
 
 
