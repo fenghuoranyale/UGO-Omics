@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+jump_function_present	pass
+menu_buttons_present	fail
+start_buttons_present	fail
+actionability_buttons_present	pass
+known_gene_button_present	pass
+known_gene_panel_exists	pass
+species_panel_exists	pass
+ranking_panel_exists	pass
+readiness_panel_exists	pass

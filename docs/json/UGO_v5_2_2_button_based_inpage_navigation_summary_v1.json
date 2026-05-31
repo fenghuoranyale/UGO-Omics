@@ -1,0 +1,51 @@
+{
+  "version": "v5.2.2 button-based in-page navigation",
+  "generated_on": "2026-05-30 22:02:09",
+  "purpose": "Replace Start Here and Actionability dropdown links with explicit buttons that scroll to in-page panels, avoiding native anchor/dropdown click interference.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "jump_function_present",
+      "status": "pass"
+    },
+    {
+      "check": "menu_buttons_present",
+      "status": "fail"
+    },
+    {
+      "check": "start_buttons_present",
+      "status": "fail"
+    },
+    {
+      "check": "actionability_buttons_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_panel_exists",
+      "status": "pass"
+    },
+    {
+      "check": "species_panel_exists",
+      "status": "pass"
+    },
+    {
+      "check": "ranking_panel_exists",
+      "status": "pass"
+    },
+    {
+      "check": "readiness_panel_exists",
+      "status": "pass"
+    }
+  ]
+}

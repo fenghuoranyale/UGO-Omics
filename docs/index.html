@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_2_BUTTON_BASED_INPAGE_NAVIGATION 2026-05-30 22:02:08 -->
 <!-- UGO_V5_2_1_INPAGE_ACTIONABILITY_PANELS 2026-05-30 21:58:09 -->
 <!-- UGO_V5_2_0_REAL_ACTIONABILITY_PAGES 2026-05-30 21:50:42 -->
 <!-- UGO_V5_1_19_NATIVE_MENU_LINKS_FIXED 2026-05-30 21:42:03 -->
@@ -1161,6 +1162,40 @@
   }
 </style>
 
+
+<style id="ugo-v5-2-2-button-based-inpage-navigation-style">
+  .ugo-menu-nav-button {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 11px !important;
+    margin: 2px 0 !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: transparent !important;
+    color: #123657 !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    font-family: inherit !important;
+    font-size: 0.92rem !important;
+    font-weight: 750 !important;
+    line-height: 1.25 !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+
+  .ugo-menu-nav-button:hover,
+  .ugo-menu-nav-button:focus {
+    background: rgba(14, 116, 144, 0.10) !important;
+    outline: none !important;
+  }
+
+  .ugo-start-menu,
+  .ugo-actionability-menu {
+    pointer-events: auto !important;
+    z-index: 99999 !important;
+  }
+</style>
+
 </head>
 
 <body>
@@ -1253,11 +1288,11 @@
           <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="#actionability-layer">Actionable Candidates</a>
-            <a href="#known-gene-anchors-panel">Known-gene Anchors</a>
-            <a href="#species-use-cases-panel">Species Use Cases</a>
-            <a href="#calibrated-ranking-panel">Calibrated Candidate Ranking</a>
-            <a href="#external-evidence-readiness-panel">External Evidence Readiness</a>
+            <button type="button" class="ugo-menu-nav-button" onclick="return ugoJumpToSection(event, 'actionability-layer');">Actionable Candidates</button>
+            <button type="button" class="ugo-menu-nav-button" onclick="return ugoJumpToSection(event, 'known-gene-anchors-panel');">Known-gene Anchors</button>
+            <button type="button" class="ugo-menu-nav-button" onclick="return ugoJumpToSection(event, 'species-use-cases-panel');">Species Use Cases</button>
+            <button type="button" class="ugo-menu-nav-button" onclick="return ugoJumpToSection(event, 'calibrated-ranking-panel');">Calibrated Candidate Ranking</button>
+            <button type="button" class="ugo-menu-nav-button" onclick="return ugoJumpToSection(event, 'external-evidence-readiness-panel');">External Evidence Readiness</button>
           </div>
         </div>
 
@@ -2825,6 +2860,38 @@ async function geneWizardLoadDemoOutput() {
 
 
 
+
+
+<script id="ugo-v5-2-2-button-based-inpage-navigation-script">
+function ugoJumpToSection(event, targetId) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  var target = document.getElementById(targetId);
+  if (!target) {
+    console.warn("UGO-Omics target not found:", targetId);
+    return false;
+  }
+
+  var headerOffset = 110;
+  var rect = target.getBoundingClientRect();
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var targetY = rect.top + scrollTop - headerOffset;
+
+  window.scrollTo({
+    top: Math.max(targetY, 0),
+    behavior: "smooth"
+  });
+
+  if (window.history && window.history.pushState) {
+    window.history.pushState(null, "", "#" + targetId);
+  }
+
+  return false;
+}
+</script>
 
 </body>
 </html>
