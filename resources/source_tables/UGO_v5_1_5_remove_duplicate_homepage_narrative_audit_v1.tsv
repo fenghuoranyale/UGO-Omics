@@ -1,0 +1,7 @@
+check	status
+duplicate_homepage_narrative_removed	pass
+top_hero_title_still_present	pass
+start_with_question_still_present	pass
+actionability_dropdown_still_present	pass
+actionability_section_still_present	pass
+sections_removed_count	1

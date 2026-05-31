@@ -1,0 +1,37 @@
+{
+  "version": "v5.1.5 remove duplicate homepage narrative",
+  "generated_on": "2026-05-30 20:28:02",
+  "purpose": "Remove the lower duplicate dark-blue homepage narrative block so the page keeps only the top hero and proceeds directly to practical workflows.",
+  "removed_section_id": "ugo-v5-homepage-narrative",
+  "sections_removed_count": 1,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "duplicate_homepage_narrative_removed",
+      "status": "pass"
+    },
+    {
+      "check": "top_hero_title_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_with_question_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_dropdown_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_section_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "sections_removed_count",
+      "status": "1"
+    }
+  ]
+}
