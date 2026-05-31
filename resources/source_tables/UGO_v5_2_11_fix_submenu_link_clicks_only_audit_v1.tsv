@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+clean_nav_present	pass
+submenu_click_script_present	pass
+submenu_click_style_present	pass
+capture_phase_present	pass
+submenu_selector_present	pass
+does_not_modify_nav_structure	pass
+actionability_link_present	pass
+known_gene_link_present	pass
+actionability_anchor_exists	pass

@@ -1,3 +1,5 @@
+<!-- UGO_V5_2_11_SUBMENU_LINK_CLICK_FIX 2026-05-30 22:43:27 -->
+<!-- UGO_V5_2_10_CLEAN_NAVBAR_CLICK_TOGGLE_FIX 2026-05-30 22:40:32 -->
 <!-- UGO_V5_2_9_FIX_CLEAN_NAV_AMPERSAND_AUDIT 2026-05-30 22:35:11 -->
 <!-- UGO_V5_2_8_FINAL_CLEAN_NAVBAR_REBUILD 2026-05-30 22:34:37 -->
 <!-- UGO_V5_2_7_INSERT_ACTIONABILITY_DROPDOWN_ONLY 2026-05-30 22:25:52 -->
@@ -1049,6 +1051,36 @@
   }
 </style>
 
+
+<style id="ugo-v5-2-10-clean-navbar-click-toggle-style">
+  .ugo-clean-dropdown.ugo-clean-open > .ugo-clean-menu {
+    display: block !important;
+  }
+
+  .ugo-clean-dropdown > .ugo-clean-nav-btn {
+    user-select: none !important;
+  }
+
+  .ugo-clean-menu a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+</style>
+
+
+<style id="ugo-v5-2-11-submenu-link-click-fix-style">
+  .ugo-clean-menu,
+  .ugo-clean-menu a {
+    pointer-events: auto !important;
+  }
+
+  .ugo-clean-menu a {
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 100000 !important;
+  }
+</style>
+
 </head>
 
 <body>
@@ -1083,7 +1115,7 @@
   <a class="ugo-clean-nav-btn ugo-clean-home" href="/UGO-Omics/?v=528">Home</a>
 
   <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button">Start Here ▾</button>
+    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Start Here ▾</button>
     <div class="ugo-clean-menu">
       <div class="ugo-clean-menu-label">DISCOVERY WORKFLOWS</div>
       <a href="/UGO-Omics/?v=528#gene-centered-query">Gene-centered query</a>
@@ -1094,7 +1126,7 @@
   </div>
 
   <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button">Analyze Your Data ▾</button>
+    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Analyze Your Data ▾</button>
     <div class="ugo-clean-menu">
       <div class="ugo-clean-menu-label">BRING YOUR OWN DATA</div>
       <a href="/UGO-Omics/?v=528#sequence-to-ugo"><span id="sequence-to-ugo"></span>Sequence-to-UGO</a>
@@ -1104,7 +1136,7 @@
   </div>
 
   <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button">Explore Resources ▾</button>
+    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Explore Resources ▾</button>
     <div class="ugo-clean-menu">
       <div class="ugo-clean-menu-label">RESOURCE LAYERS</div>
       <a href="/UGO-Omics/?v=528#resources">Resource overview</a>
@@ -1115,7 +1147,7 @@
   </div>
 
   <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button">Evidence &amp; Discovery ▾</button>
+    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Evidence &amp; Discovery ▾</button>
     <div class="ugo-clean-menu">
       <div class="ugo-clean-menu-label">PRIORITIZATION LAYERS</div>
       <a href="/UGO-Omics/?v=528#validation-targets"><span id="validation-targets"></span>Validation Targets</a>
@@ -1125,7 +1157,7 @@
   </div>
 
   <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button">Actionability ▾</button>
+    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Actionability ▾</button>
     <div class="ugo-clean-menu">
       <div class="ugo-clean-menu-label">CANDIDATE PRIORITIZATION</div>
       <a href="/UGO-Omics/?v=528#actionability-layer">Actionable Candidates</a>
@@ -1137,7 +1169,7 @@
   </div>
 
   <div class="ugo-clean-dropdown">
-    <button class="ugo-clean-nav-btn" type="button">Help &amp; Downloads ▾</button>
+    <button class="ugo-clean-nav-btn" type="button" aria-expanded="false">Help &amp; Downloads ▾</button>
     <div class="ugo-clean-menu">
       <div class="ugo-clean-menu-label">HELP &amp; DOWNLOADS</div>
       <a href="/UGO-Omics/?v=528#downloads">Downloads</a>
@@ -2721,6 +2753,121 @@ async function geneWizardLoadDemoOutput() {
 
 
 
+
+
+<script id="ugo-v5-2-10-clean-navbar-click-toggle-script">
+(function () {
+  function closeAllCleanDropdowns(except) {
+    document.querySelectorAll('.ugo-clean-dropdown.ugo-clean-open').forEach(function (dropdown) {
+      if (except && dropdown === except) return;
+      dropdown.classList.remove('ugo-clean-open');
+      var btn = dropdown.querySelector('.ugo-clean-nav-btn');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('.ugo-clean-dropdown > .ugo-clean-nav-btn');
+
+    if (button) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var dropdown = button.closest('.ugo-clean-dropdown');
+      if (!dropdown) return;
+
+      var isOpen = dropdown.classList.contains('ugo-clean-open');
+      closeAllCleanDropdowns(dropdown);
+
+      if (isOpen) {
+        dropdown.classList.remove('ugo-clean-open');
+        button.setAttribute('aria-expanded', 'false');
+      } else {
+        dropdown.classList.add('ugo-clean-open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+      return;
+    }
+
+    var menuLink = event.target.closest('.ugo-clean-menu a');
+    if (menuLink) {
+      // Do not prevent default. Let the real href work normally.
+      setTimeout(function () {
+        closeAllCleanDropdowns(null);
+      }, 50);
+      return;
+    }
+
+    if (!event.target.closest('.ugo-clean-dropdown')) {
+      closeAllCleanDropdowns(null);
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeAllCleanDropdowns(null);
+    }
+  });
+})();
+</script>
+
+
+<script id="ugo-v5-2-11-submenu-link-click-fix-script">
+(function () {
+  function closeCleanMenus() {
+    document.querySelectorAll('.ugo-clean-dropdown.ugo-clean-open').forEach(function (el) {
+      el.classList.remove('ugo-clean-open');
+      var btn = el.querySelector('.ugo-clean-nav-btn');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function scrollToHash(hash) {
+    if (!hash || hash.length < 2) return false;
+    var id = decodeURIComponent(hash.slice(1));
+    var target = document.getElementById(id);
+    if (!target) return false;
+
+    var y = target.getBoundingClientRect().top + window.pageYOffset - 120;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+
+    if (window.history && window.history.pushState) {
+      window.history.pushState(null, '', hash);
+    } else {
+      window.location.hash = hash;
+    }
+    return true;
+  }
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('.ugo-clean-menu a');
+    if (!link) return;
+
+    var href = link.getAttribute('href');
+    if (!href) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    closeCleanMenus();
+
+    try {
+      var url = new URL(href, window.location.origin);
+
+      var sameHost = url.origin === window.location.origin;
+      var currentPath = window.location.pathname.replace(/\/$/, '');
+      var targetPath = url.pathname.replace(/\/$/, '');
+
+      if (sameHost && currentPath === targetPath && url.hash) {
+        if (scrollToHash(url.hash)) return;
+      }
+
+      window.location.href = url.href;
+    } catch (e) {
+      window.location.href = href;
+    }
+  }, true);
+})();
+</script>
 
 </body>
 </html>

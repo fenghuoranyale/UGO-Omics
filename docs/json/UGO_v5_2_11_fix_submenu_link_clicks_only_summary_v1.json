@@ -1,0 +1,51 @@
+{
+  "version": "v5.2.11 fix submenu link clicks only",
+  "generated_on": "2026-05-30 22:43:28",
+  "purpose": "Force submenu links in the clean navbar to execute navigation/scrolling while preserving the existing navbar structure and menu text.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "clean_nav_present",
+      "status": "pass"
+    },
+    {
+      "check": "submenu_click_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "submenu_click_style_present",
+      "status": "pass"
+    },
+    {
+      "check": "capture_phase_present",
+      "status": "pass"
+    },
+    {
+      "check": "submenu_selector_present",
+      "status": "pass"
+    },
+    {
+      "check": "does_not_modify_nav_structure",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_link_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_exists",
+      "status": "pass"
+    }
+  ]
+}
