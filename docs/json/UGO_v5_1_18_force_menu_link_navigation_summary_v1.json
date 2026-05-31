@@ -1,0 +1,77 @@
+{
+  "version": "v5.1.18 force menu link navigation",
+  "generated_on": "2026-05-30 21:37:46",
+  "purpose": "Force Start Here and Actionability menu items to navigate reliably by adding explicit scroll/file-link handlers.",
+  "linked_source_tables": 5,
+  "modified_files": [
+    "docs/index.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "force_navigation_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "gene_centered_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_centered_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_centered_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_prioritization_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_links_have_scroll_targets",
+      "status": "fail"
+    },
+    {
+      "check": "file_links_have_data_attr",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_candidates_scroll_target_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_anchor_absolute_path_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_parent_relative_source_table_links",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_module_to_known_anchor_summary_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "copied_to_docs"
+    }
+  ]
+}

@@ -1149,10 +1149,10 @@
           <button class="nav-btn ugo-start-button" type="button" data-ugo-menu-toggle="start" aria-expanded="false">Start Here ▾</button>
           <div class="ugo-start-menu" aria-label="Start Here menu">
             <div class="ugo-start-menu-label">Discovery workflows</div>
-            <a href="#question-workflows">Gene-centered query</a>
-            <a href="#question-workflows">Organ-centered discovery</a>
-            <a href="#question-workflows">Species-centered exploration</a>
-            <a href="#question-workflows">Candidate prioritization</a>
+            <a href="#question-workflows"><span id="gene-centered-query"></span>Gene-centered query</a>
+            <a href="#question-workflows"><span id="organ-centered-discovery"></span>Organ-centered discovery</a>
+            <a href="#question-workflows"><span id="species-centered-exploration"></span>Species-centered exploration</a>
+            <a href="#question-workflows"><span id="candidate-prioritization"></span>Candidate prioritization</a>
           </div>
         </div>
 
@@ -1206,11 +1206,11 @@
           <button class="nav-btn ugo-actionability-button" type="button" data-ugo-menu-toggle="actionability" aria-expanded="false">Actionability ▾</button>
           <div class="ugo-actionability-menu" aria-label="Actionability menu">
             <div class="ugo-actionability-menu-label">Candidate prioritization</div>
-            <a href="#actionability-layer" data-scroll-target="actionability-layer">Actionable Candidates</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Known-gene Anchors</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Species Use Cases</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Calibrated Candidate Ranking</a>
-            <a href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">External Evidence Readiness</a>
+            <a href="#actionability-layer" data-ugo-scroll-target="actionability-layer">Actionable Candidates</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv" data-ugo-file-link="true">Known-gene Anchors</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv" data-ugo-file-link="true">Species Use Cases</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv" data-ugo-file-link="true">Calibrated Candidate Ranking</a>
+            <a href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv" data-ugo-file-link="true">External Evidence Readiness</a>
           </div>
         </div>
 
@@ -2805,6 +2805,63 @@ async function geneWizardLoadDemoOutput() {
       el.classList.remove('ugo-menu-open');
     });
   });
+})();
+</script>
+
+
+<script id="ugo-v5-1-18-force-menu-link-navigation-script">
+(function () {
+  function closeCustomMenus() {
+    document.querySelectorAll('.ugo-menu-open').forEach(function (el) {
+      el.classList.remove('ugo-menu-open');
+    });
+
+    document.querySelectorAll('[aria-expanded="true"]').forEach(function (btn) {
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function scrollToId(id) {
+    var target = document.getElementById(id);
+    if (!target) return false;
+
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (history && history.pushState) {
+      history.pushState(null, '', '#' + id);
+    } else {
+      window.location.hash = id;
+    }
+
+    return true;
+  }
+
+  document.addEventListener('click', function (event) {
+    var scrollLink = event.target.closest('a[data-ugo-scroll-target]');
+    if (scrollLink) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var id = scrollLink.getAttribute('data-ugo-scroll-target');
+      closeCustomMenus();
+      scrollToId(id);
+      return;
+    }
+
+    var fileLink = event.target.closest('a[data-ugo-file-link="true"]');
+    if (fileLink) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var href = fileLink.getAttribute('href');
+      closeCustomMenus();
+
+      if (href) {
+        window.location.href = href;
+      }
+      return;
+    }
+  }, true);
 })();
 </script>
 
