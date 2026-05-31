@@ -1,0 +1,77 @@
+{
+  "version": "v5.1.8 minimal navigation fix",
+  "generated_on": "2026-05-30 20:50:35",
+  "purpose": "Restore existing navigation content after v5.1.7 overreach; only add Home, convert Start Here to dropdown, academicize workflow cards, and keep Actionability before Help.",
+  "start_replacements": 0,
+  "actionability_reordered_before_help": false,
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "home_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_dropdown_present",
+      "status": "pass"
+    },
+    {
+      "check": "only_start_replaced",
+      "status": "fail"
+    },
+    {
+      "check": "analyze_your_data_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_resources_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_discovery_still_present",
+      "status": "fail"
+    },
+    {
+      "check": "help_downloads_still_present",
+      "status": "fail"
+    },
+    {
+      "check": "actionability_before_help",
+      "status": "fail"
+    },
+    {
+      "check": "gene_centered_query_present",
+      "status": "pass"
+    },
+    {
+      "check": "organ_centered_discovery_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_centered_exploration_present",
+      "status": "pass"
+    },
+    {
+      "check": "candidate_prioritization_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_have_a_gene_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_study_an_organ_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_study_a_species_removed",
+      "status": "pass"
+    },
+    {
+      "check": "old_i_want_validation_removed",
+      "status": "pass"
+    }
+  ]
+}

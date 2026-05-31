@@ -1,0 +1,17 @@
+check	status
+home_button_present	pass
+start_here_dropdown_present	pass
+only_start_replaced	fail
+analyze_your_data_still_present	pass
+explore_resources_still_present	pass
+evidence_discovery_still_present	fail
+help_downloads_still_present	fail
+actionability_before_help	fail
+gene_centered_query_present	pass
+organ_centered_discovery_present	pass
+species_centered_exploration_present	pass
+candidate_prioritization_present	pass
+old_i_have_a_gene_removed	pass
+old_i_study_an_organ_removed	pass
+old_i_study_a_species_removed	pass
+old_i_want_validation_removed	pass
