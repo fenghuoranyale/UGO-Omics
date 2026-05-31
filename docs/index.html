@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_26_FIX_FIND_ORGAN_SPECIES_BLANK 2026-05-31 10:48:45 -->
 <!-- UGO_V5_2_25_SIMPLIFY_START_HERE_ORGAN_SPECIES_INPUTS 2026-05-31 10:42:25 -->
 <!-- UGO_V5_2_24_FIX_START_HERE_ORGAN_SPECIES_BLANK 2026-05-31 10:36:02 -->
 <!-- UGO_V5_2_23_START_HERE_REAL_INPUTS 2026-05-31 10:26:37 -->
@@ -1367,6 +1368,70 @@
   }
 
   .ugo-start-input-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 16px;
+    border-radius: 10px;
+    border: 0;
+    background: #123657;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+  }
+</style>
+
+
+<style id="ugo-v5-2-26-fix-find-organ-species-blank-style">
+  #ugo-resource-live-view {
+    padding: 34px 54px 60px 54px;
+  }
+
+  .ugo-resource-input-section h1 {
+    margin: 0 0 8px 0;
+    color: #123657;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+  }
+
+  .ugo-resource-input-subtitle {
+    max-width: 780px;
+    color: #465b73;
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .ugo-resource-input-card {
+    max-width: 760px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 61, 96, 0.18);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  .ugo-resource-input-card label {
+    display: block;
+    color: #123657;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .ugo-resource-input-card select,
+  .ugo-resource-input-card input {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid rgba(15, 61, 96, 0.28);
+    border-radius: 12px;
+    padding: 0 14px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #123657;
+    background: #ffffff;
+  }
+
+  .ugo-resource-input-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3244,73 +3309,6 @@ async function geneWizardLoadDemoOutput() {
 
 
 
-<script id="ugo-v5-2-22-restore-nav-dropdown-button-clicks-script">
-(function () {
-  function restoreHiddenHomepageContent() {
-    document.querySelectorAll('[data-ugo-hidden-by-start="true"], [data-ugo-hidden-by-actionability="true"]').forEach(function (el) {
-      el.style.display = "";
-      el.removeAttribute("data-ugo-hidden-by-start");
-      el.removeAttribute("data-ugo-hidden-by-actionability");
-    });
-
-    var startLive = document.getElementById("ugo-start-live-view");
-    if (startLive) startLive.remove();
-
-    var actionLive = document.getElementById("ugo-actionability-live-view");
-    if (actionLive) actionLive.remove();
-  }
-
-  function getShowSectionId(button) {
-    var onclick = button.getAttribute("onclick") || "";
-    var match = onclick.match(/showSection\(['"]([^'"]+)['"]/);
-    return match ? match[1] : null;
-  }
-
-  function closeMenus() {
-    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
-      el.classList.remove("ugo-menu-open");
-    });
-  }
-
-  document.addEventListener("click", function (event) {
-    var button = event.target.closest("nav .nav-dropdown-content button[onclick*='showSection']");
-    if (!button) return;
-
-    var sectionId = getShowSectionId(button);
-    if (!sectionId) return;
-
-    event.preventDefault();
-    event.stopPropagation();
-    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
-
-    restoreHiddenHomepageContent();
-    closeMenus();
-
-    if (typeof window.showSection === "function") {
-      window.showSection(sectionId, button);
-    } else if (typeof showSection === "function") {
-      showSection(sectionId, button);
-    } else {
-      var target = document.getElementById(sectionId);
-      if (target) {
-        document.querySelectorAll(".tool-section, .resource-section, .wizard-section").forEach(function (el) {
-          el.style.display = "none";
-        });
-        target.style.display = "";
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-
-    if (window.history && window.history.replaceState) {
-      var url = new URL(window.location.href);
-      url.searchParams.delete("view");
-      url.searchParams.set("v", "5222");
-      url.hash = "";
-      window.history.replaceState(null, "", url.toString());
-    }
-  }, true);
-})();
-</script>
 
 
 
@@ -3533,6 +3531,218 @@ async function geneWizardLoadDemoOutput() {
       renderStartView(view.replace("start-", ""), false, null);
     }
   });
+})();
+</script>
+
+
+<script id="ugo-v5-2-26-fix-find-organ-species-blank-script">
+(function () {
+  function restoreHiddenHomepageContent() {
+    document.querySelectorAll('[data-ugo-hidden-by-start="true"], [data-ugo-hidden-by-actionability="true"]').forEach(function (el) {
+      el.style.display = "";
+      el.removeAttribute("data-ugo-hidden-by-start");
+      el.removeAttribute("data-ugo-hidden-by-actionability");
+    });
+
+    var startLive = document.getElementById("ugo-start-live-view");
+    if (startLive) startLive.remove();
+
+    var actionLive = document.getElementById("ugo-actionability-live-view");
+    if (actionLive) actionLive.remove();
+
+    var resourceLive = document.getElementById("ugo-resource-live-view");
+    if (resourceLive) resourceLive.remove();
+  }
+
+  function closeMenus() {
+    document.querySelectorAll(".ugo-menu-open").forEach(function (el) {
+      el.classList.remove("ugo-menu-open");
+    });
+
+    document.querySelectorAll('[data-ugo-menu-toggle]').forEach(function (btn) {
+      btn.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function getShowSectionId(button) {
+    var onclick = button.getAttribute("onclick") || "";
+    var match = onclick.match(/showSection\(['"]([^'"]+)['"]/);
+    return match ? match[1] : null;
+  }
+
+  function getNav() {
+    return document.querySelector("nav");
+  }
+
+  function ensureResourceLiveView() {
+    let view = document.getElementById("ugo-resource-live-view");
+    if (view) return view;
+
+    const nav = getNav();
+    view = document.createElement("main");
+    view.id = "ugo-resource-live-view";
+    view.setAttribute("data-ugo-dynamic-view", "resource-finder");
+
+    if (nav && nav.parentNode) {
+      nav.parentNode.insertBefore(view, nav.nextSibling);
+    } else {
+      document.body.prepend(view);
+    }
+
+    return view;
+  }
+
+  function hideMainContentExceptResourceLiveView() {
+    const nav = getNav();
+    const liveView = ensureResourceLiveView();
+    if (!nav) return;
+
+    let node = nav.nextElementSibling;
+    while (node) {
+      const next = node.nextElementSibling;
+      if (node === liveView) {
+        node.style.display = "";
+      } else if (node.tagName && node.tagName.toLowerCase() !== "script" && node.tagName.toLowerCase() !== "style") {
+        node.setAttribute("data-ugo-hidden-by-resource", "true");
+        node.style.display = "none";
+      }
+      node = next;
+    }
+  }
+
+  function restoreResourceHiddenContent() {
+    document.querySelectorAll('[data-ugo-hidden-by-resource="true"]').forEach(function (el) {
+      el.style.display = "";
+      el.removeAttribute("data-ugo-hidden-by-resource");
+    });
+
+    var resourceLive = document.getElementById("ugo-resource-live-view");
+    if (resourceLive) resourceLive.remove();
+  }
+
+  function callShowSection(sectionId, sourceElement) {
+    restoreHiddenHomepageContent();
+    restoreResourceHiddenContent();
+    closeMenus();
+
+    if (typeof window.showSection === "function") {
+      window.showSection(sectionId, sourceElement);
+    } else if (typeof showSection === "function") {
+      showSection(sectionId, sourceElement);
+    } else {
+      var target = document.getElementById(sectionId);
+      if (target) {
+        document.querySelectorAll("main section").forEach(function (sec) {
+          sec.style.display = "none";
+        });
+        target.style.display = "";
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    if (window.history && window.history.replaceState) {
+      var url = new URL(window.location.href);
+      url.searchParams.delete("view");
+      url.searchParams.set("v", "5226");
+      url.hash = "";
+      window.history.replaceState(null, "", url.toString());
+    }
+  }
+
+  function renderFindOrgan() {
+    restoreHiddenHomepageContent();
+    hideMainContentExceptResourceLiveView();
+    closeMenus();
+
+    const liveView = ensureResourceLiveView();
+    liveView.innerHTML = `
+      <section class="ugo-resource-input-section">
+        <h1>Find by Organ</h1>
+        <p class="ugo-resource-input-subtitle">Select an underground-organ type to open the resource finder.</p>
+
+        <div class="ugo-resource-input-card">
+          <label for="ugo-find-organ-select">Organ type</label>
+          <select id="ugo-find-organ-select">
+            <option value="rhizome">Rhizome</option>
+            <option value="tuber">Tuber</option>
+            <option value="storage root">Storage root</option>
+            <option value="bulb">Bulb</option>
+            <option value="corm">Corm</option>
+            <option value="root crown">Root crown</option>
+            <option value="stolon">Stolon</option>
+          </select>
+
+          <button type="button" class="ugo-resource-input-button" data-ugo-open-real-section="resourceFinder">
+            Open Resource Finder
+          </button>
+        </div>
+      </section>
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+  }
+
+  function renderFindSpecies() {
+    restoreHiddenHomepageContent();
+    hideMainContentExceptResourceLiveView();
+    closeMenus();
+
+    const liveView = ensureResourceLiveView();
+    liveView.innerHTML = `
+      <section class="ugo-resource-input-section">
+        <h1>Find by Species</h1>
+        <p class="ugo-resource-input-subtitle">Enter a species, genus, or keyword to open the resource finder.</p>
+
+        <div class="ugo-resource-input-card">
+          <label for="ugo-find-species-input">Species name or keyword</label>
+          <input id="ugo-find-species-input" type="text" placeholder="Example: Oryza, Panicum, Dioscorea, potato..." />
+
+          <button type="button" class="ugo-resource-input-button" data-ugo-open-real-section="resourceFinder">
+            Open Resource Finder
+          </button>
+        </div>
+      </section>
+    `;
+
+    window.scrollTo({ top: liveView.offsetTop - 90, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest("nav .nav-dropdown-content button[onclick*='showSection']");
+    if (!button) return;
+
+    var sectionId = getShowSectionId(button);
+    if (!sectionId) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+
+    if (sectionId === "findOrgan") {
+      renderFindOrgan();
+      return;
+    }
+
+    if (sectionId === "findSpecies") {
+      renderFindSpecies();
+      return;
+    }
+
+    callShowSection(sectionId, button);
+  }, true);
+
+  document.addEventListener("click", function (event) {
+    var openButton = event.target.closest("[data-ugo-open-real-section]");
+    if (!openButton) return;
+
+    var sectionId = openButton.getAttribute("data-ugo-open-real-section");
+    if (!sectionId) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    callShowSection(sectionId, openButton);
+  }, true);
 })();
 </script>
 

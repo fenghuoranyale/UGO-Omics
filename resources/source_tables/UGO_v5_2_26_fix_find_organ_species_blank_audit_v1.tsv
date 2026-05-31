@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+old_v5222_removed	pass
+new_script_present	pass
+find_organ_button_still_exists	pass
+find_species_button_still_exists	pass
+renders_find_organ	pass
+renders_find_species	pass
+other_buttons_still_call_showSection	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass

@@ -1,0 +1,51 @@
+{
+  "version": "v5.2.26 fix Find by Organ / Species blank views",
+  "generated_on": "2026-05-31 10:48:47",
+  "purpose": "Prevent blank Explore Resources views for Find by Organ and Find by Species by rendering simple input entry panels, while keeping all other nav-dropdown buttons on showSection behavior.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_v5222_removed",
+      "status": "pass"
+    },
+    {
+      "check": "new_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_button_still_exists",
+      "status": "pass"
+    },
+    {
+      "check": "find_species_button_still_exists",
+      "status": "pass"
+    },
+    {
+      "check": "renders_find_organ",
+      "status": "pass"
+    },
+    {
+      "check": "renders_find_species",
+      "status": "pass"
+    },
+    {
+      "check": "other_buttons_still_call_showSection",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    }
+  ]
+}
