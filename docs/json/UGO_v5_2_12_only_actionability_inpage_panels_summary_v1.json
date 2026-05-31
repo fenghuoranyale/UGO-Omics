@@ -1,0 +1,92 @@
+{
+  "version": "v5.2.12 only Actionability in-page panels",
+  "generated_on": "2026-05-30 22:53:05",
+  "purpose": "Only change Actionability dropdown targets from separate pages to homepage in-page panels; do not alter any other navigation menu.",
+  "replace_counts": {
+    "Actionable Candidates": 1,
+    "Known-gene Anchors": 1,
+    "Species Use Cases": 1,
+    "Calibrated Candidate Ranking": 1,
+    "External Evidence Readiness": 1
+  },
+  "inserted_panel": true,
+  "modified_files": [
+    "docs/index.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "navbar_still_has_actionability_dropdown",
+      "status": "pass"
+    },
+    {
+      "check": "actionable_candidates_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "calibrated_ranking_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_replaced_once",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_link_now_homepage_anchor",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_link_now_homepage_anchor",
+      "status": "pass"
+    },
+    {
+      "check": "inpage_panel_inserted",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "calibrated_ranking_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "copied_to_docs"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "copied_to_docs"
+    }
+  ]
+}
