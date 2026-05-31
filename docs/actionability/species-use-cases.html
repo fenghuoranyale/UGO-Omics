@@ -2,175 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=/UGO-Omics/?v=5216#species-use-cases-panel">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Species use cases | UGO-Omics</title>
-
+<title>Redirecting | UGO-Omics</title>
+<script>
+window.location.replace("/UGO-Omics/?v=5216#species-use-cases-panel");
+</script>
 <style>
-  :root {
-    --ugo-blue: #123657;
-    --ugo-teal: #0f766e;
-    --ugo-bg: #f3f7fb;
-    --ugo-border: rgba(15, 61, 96, 0.18);
-  }
-
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: var(--ugo-bg);
-    color: var(--ugo-blue);
-  }
-
-  .ugo-page-hero {
-    padding: 44px 54px;
-    background: linear-gradient(120deg, #123657, #2f7d5f);
-    color: white;
-  }
-
-  .ugo-page-hero a {
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-  }
-
-  .ugo-page-hero h1 {
-    margin: 18px 0 10px 0;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.1;
-  }
-
-  .ugo-page-hero p {
-    max-width: 980px;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    opacity: 0.92;
-  }
-
-  .ugo-page-nav {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    padding: 16px 54px;
-    background: #eef6fb;
-    border-bottom: 1px solid var(--ugo-border);
-  }
-
-  .ugo-page-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 38px;
-    padding: 0 16px;
-    border-radius: 10px;
-    border: 1px solid rgba(15, 61, 96, 0.25);
-    background: white;
-    color: var(--ugo-blue);
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  main {
-    padding: 34px 54px 60px 54px;
-  }
-
-  .ugo-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    margin-top: 22px;
-  }
-
-  .ugo-card {
-    background: white;
-    border: 1px solid var(--ugo-border);
-    border-radius: 18px;
-    padding: 22px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  }
-
-  .ugo-card h2, .ugo-card h3 {
-    margin-top: 0;
-  }
-
-  .ugo-card p {
-    color: #465b73;
-    line-height: 1.55;
-  }
-
-  .ugo-button {
-    display: inline-flex;
-    margin-top: 10px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    background: #123657;
-    color: white !important;
-    text-decoration: none;
-    font-weight: 800;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 20px;
-    font-size: 0.92rem;
-  }
-
-  th, td {
-    border-bottom: 1px solid rgba(15, 61, 96, 0.12);
-    padding: 10px 12px;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  th {
-    background: #eaf3f8;
-  }
-
-  .note {
-    margin-top: 22px;
-    padding: 16px 18px;
-    border-radius: 14px;
-    background: #ffffff;
-    border-left: 5px solid #0f766e;
-    color: #2c455e;
-  }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 40px;
+  color: #123657;
+  background: #f3f7fb;
+}
+a {
+  color: #123657;
+  font-weight: 800;
+}
 </style>
-
 </head>
 <body>
-<header class="ugo-page-hero">
-  <a href="/UGO-Omics/">← Back to UGO-Omics</a>
-  <h1>Species use cases</h1>
-  <p>Practical examples showing how UGO-Omics can be applied to focal underground-organ systems.</p>
-</header>
-
-<nav class="ugo-page-nav">
-  <a href="/UGO-Omics/">Home</a>
-  <a href="/UGO-Omics/actionability/">Actionability overview</a>
-  <a href="/UGO-Omics/actionability/known-gene-anchors.html">Known-gene anchors</a>
-  <a href="/UGO-Omics/actionability/species-use-cases.html">Species use cases</a>
-  <a href="/UGO-Omics/actionability/calibrated-ranking.html">Calibrated ranking</a>
-  <a href="/UGO-Omics/actionability/external-evidence-readiness.html">External evidence readiness</a>
-</nav>
-
-<main>
-
-<div class="ugo-card">
-  <h2>Species-specific actionability use cases</h2>
-  <p>Use cases illustrate how users can apply UGO-Omics to rhizome, tuber, storage-root, and related systems.</p>
-  <a class="ugo-button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download full TSV</a>
-</div>
-<table>
-<thead><tr><th>use_case_id</th><th>species</th><th>organ_context</th><th>user_question</th><th>top_modules</th><th>top_candidate_families</th><th>practical_output</th><th>testable_prediction</th></tr></thead>
-<tbody>
-<tr><td>USECASE_ORYZA_RHIZOME</td><td>Oryza longistaminata</td><td>rhizome</td><td>Which candidate families should be prioritized for rhizome initiation, elongation, and regenerative underground shoot growth?</td><td>meristem_regrowth; hormone_regulation; developmental_tf; stress_resilience</td><td>KNOX/STM; WOX/WUS; auxin transport/response; GA metabolism/signaling; BRC1/TB1/MAX; stress TFs</td><td>A researcher can start from rhizome-associated expression or QTL genes and ask whether they fall into these UGO-prioritized families.</td><td>Perturbing meristem/regrowth or hormone-switching candidates should affect rhizome initiation, elongation, bud activity, or post-stress regrowth.</td></tr>
-<tr><td>USECASE_SOLANUM_TUBER</td><td>Solanum tuberosum</td><td>stem tuber</td><td>Which candidate families connect developmental switching, storage-organ formation, and structural remodeling?</td><td>hormone_regulation; developmental_tf; cell_wall_remodeling; future_storage_metabolism</td><td>GA metabolism/signaling; auxin response; MADS-box; GRAS/DELLA; expansin/XTH; SWEET/SUT/SUS/AGPase</td><td>A tuber researcher can prioritize developmental-switching and structural-remodeling candidates, while treating storage metabolism as a future UGO expansion target.</td><td>Hormone-switching and regulatory candidates should be associated with tuber induction/state transitions, while cell-wall candidates should affect expansion or morphology.</td></tr>
-<tr><td>USECASE_MANIHOT_STORAGE_ROOT</td><td>Manihot esculenta</td><td>storage root</td><td>Which candidate families should be prioritized for root-derived storage-organ expansion and developmental reprogramming?</td><td>meristem_regrowth; hormone_regulation; developmental_tf; cell_wall_remodeling; future_storage_metabolism</td><td>LBD; WOX; auxin response; cytokinin signaling; GRAS/SHR/SCR; PME/PMEI; SWEET/SUT/SUS/AGPase</td><td>A storage-root researcher can use UGO modules to separate developmental reprogramming candidates from expansion and metabolism candidates.</td><td>Root developmental regulators and wall-remodeling genes should be enriched among candidates affecting storage-root initiation or thickening.</td></tr>
-<tr><td>USECASE_BETA_STORAGE_ROOT</td><td>Beta vulgaris</td><td>storage root / hypocotyl-root storage system</td><td>Which candidate families connect root/hypocotyl developmental remodeling with storage-organ growth?</td><td>hormone_regulation; developmental_tf; cell_wall_remodeling; future_storage_metabolism</td><td>auxin response; cytokinin signaling; GRAS/SHR/SCR; expansin/XTH; PME/PMEI; carbohydrate transport/metabolism</td><td>A researcher can prioritize hormone-development and wall-remodeling candidates for storage-root/hypocotyl growth hypotheses.</td><td>Hormone-response and cell-wall remodeling candidates should be linked to storage-root architecture and expansion.</td></tr>
-</tbody></table>
-
-</main>
+<p>Redirecting to the homepage Actionability panel: <a href="/UGO-Omics/?v=5216#species-use-cases-panel">Species Use Cases</a></p>
 </body>
 </html>

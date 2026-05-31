@@ -1,0 +1,109 @@
+{
+  "version": "v5.2.16 redirect Actionability pages to homepage panels",
+  "generated_on": "2026-05-30 23:16:50",
+  "purpose": "Keep the currently working Actionability dropdown links unchanged, but make the linked Actionability pages immediately redirect to homepage in-page panels.",
+  "navbar_unchanged": true,
+  "redirect_targets": {
+    "index.html": "/UGO-Omics/?v=5216#actionability-layer",
+    "known-gene-anchors.html": "/UGO-Omics/?v=5216#known-gene-anchors-panel",
+    "species-use-cases.html": "/UGO-Omics/?v=5216#species-use-cases-panel",
+    "calibrated-ranking.html": "/UGO-Omics/?v=5216#calibrated-ranking-panel",
+    "external-evidence-readiness.html": "/UGO-Omics/?v=5216#external-evidence-readiness-panel"
+  },
+  "modified_files": [
+    "docs/index.html",
+    "docs/actionability/*.html",
+    "docs/resources/source_tables/*",
+    "final_package/website/*"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "navbar_unchanged",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "known_gene_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "species_use_cases_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "calibrated_ranking_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "external_readiness_panel_present",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:index.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:index.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:known-gene-anchors.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:species-use-cases.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:calibrated-ranking.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_page_exists:external-evidence-readiness.html",
+      "status": "pass"
+    },
+    {
+      "check": "redirect_target:external-evidence-readiness.html",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_known_gene_anchor_panel_v1.tsv",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv",
+      "status": "pass"
+    },
+    {
+      "check": "source_table:UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv",
+      "status": "pass"
+    }
+  ]
+}

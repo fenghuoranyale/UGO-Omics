@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_16_REDIRECT_ACTIONABILITY_PAGES_TO_HOMEPAGE_PANELS 2026-05-30 23:16:48 -->
 <!-- UGO_V5_2_0_REAL_ACTIONABILITY_PAGES 2026-05-30 21:50:42 -->
 <!-- UGO_V5_1_19_NATIVE_MENU_LINKS_FIXED 2026-05-30 21:42:03 -->
 <!DOCTYPE html>
@@ -1131,6 +1132,30 @@
   }
 </style>
 
+
+<style id="ugo-v5-2-16-homepage-actionability-panels-style">
+  #actionability-layer,
+  #known-gene-anchors-panel,
+  #species-use-cases-panel,
+  #calibrated-ranking-panel,
+  #external-evidence-readiness-panel {
+    scroll-margin-top: 120px;
+  }
+
+  .ugo-inpage-actionability-panels .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #123657;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: 800;
+  }
+</style>
+
 </head>
 
 <body>
@@ -2066,6 +2091,48 @@ Gene_003"></textarea>
         <a href="json/ugo_v1_9_validation_ready_shortlist_v1.json">Download JSON</a>
       </div>
     </div>
+  </div>
+</section>
+
+
+
+<section id="ugo-inpage-actionability-panels" class="section ugo-inpage-actionability-panels">
+  <span id="actionability-layer"></span>
+  <h2>Actionability resources</h2>
+  <p class="section-subtitle">Use these homepage resources to move from UGO candidate modules to known-gene anchors, species use cases, calibrated rankings, and conservative external-evidence readiness.</p>
+
+  <div class="card-grid">
+    <article id="known-gene-anchors-panel" class="workflow-card">
+      <div class="card-icon">🧬</div>
+      <h3>Known-gene Anchors</h3>
+      <p>Connect UGO candidate modules to recognizable developmental, hormonal, stress-response, regulatory, cell-wall, and storage-related gene-family anchors.</p>
+      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_known_gene_anchor_panel_v1.tsv">Download anchor panel</a>
+    </article>
+
+    <article id="species-use-cases-panel" class="workflow-card">
+      <div class="card-icon">🌿</div>
+      <h3>Species Use Cases</h3>
+      <p>View practical species and underground-organ use cases for rhizome, tuber, storage-root, and related systems.</p>
+      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_0_species_specific_actionability_use_cases_v1.tsv">Download use cases</a>
+    </article>
+
+    <article id="calibrated-ranking-panel" class="workflow-card">
+      <div class="card-icon">📊</div>
+      <h3>Calibrated Candidate Ranking</h3>
+      <p>Prioritize candidate families using calibrated support from module recurrence, cross-species evidence, benchmark recovery, known-gene anchors, and use-case relevance.</p>
+      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_5_1_calibrated_actionable_candidate_family_ranking_v1.tsv">Download ranking</a>
+    </article>
+
+    <article id="external-evidence-readiness-panel" class="workflow-card">
+      <div class="card-icon">🧾</div>
+      <h3>External Evidence Readiness</h3>
+      <p>Check which QTL/GWAS, expression-candidate, and independent module-recovery layers are ready for claim support and which require curated input tables.</p>
+      <a class="button" href="/UGO-Omics/resources/source_tables/UGO_v4_8_1_external_evidence_conservative_readiness_summary_v1.tsv">Download readiness summary</a>
+    </article>
+  </div>
+
+  <div class="info-note">
+    UGO-Omics prioritizes candidate-family hypotheses. These resources support candidate prioritization and hypothesis generation, not direct functional validation for individual genes.
   </div>
 </section>
 
