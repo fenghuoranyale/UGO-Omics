@@ -1,0 +1,14 @@
+check	status
+deployment_marker_present	pass
+source_pdf_exists	pass
+hero_pdf_source_copied	pass
+hero_png_exists_if_converted	pass
+fallback_pdf_object_allowed	pass
+hero_media_inserted	pass
+about_button_inserted	pass
+about_section_inserted	pass
+simple_hero_text_present	pass
+nav_still_valid	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+convert_method	pdf_object_fallback

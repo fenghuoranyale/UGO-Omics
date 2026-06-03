@@ -1,0 +1,69 @@
+{
+  "version": "v5.2.29 homepage hero image + About",
+  "generated_on": "2026-06-03 11:22:46",
+  "purpose": "Simplify homepage hero text, add About entry, and display the user-provided home.pdf as a hero visual; use PNG if conversion is available, otherwise embed PDF fallback.",
+  "source_pdf": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home.pdf",
+  "hero_png": null,
+  "hero_pdf": "docs/assets/ugo_home_hero_organs_source.pdf",
+  "convert_method": "pdf_object_fallback",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_organs_source.pdf",
+    "docs/assets/ugo_home_hero_organs.png if conversion available",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_pdf_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_pdf_source_copied",
+      "status": "pass"
+    },
+    {
+      "check": "hero_png_exists_if_converted",
+      "status": "pass"
+    },
+    {
+      "check": "fallback_pdf_object_allowed",
+      "status": "pass"
+    },
+    {
+      "check": "hero_media_inserted",
+      "status": "pass"
+    },
+    {
+      "check": "about_button_inserted",
+      "status": "pass"
+    },
+    {
+      "check": "about_section_inserted",
+      "status": "pass"
+    },
+    {
+      "check": "simple_hero_text_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "convert_method",
+      "status": "pdf_object_fallback"
+    }
+  ]
+}
