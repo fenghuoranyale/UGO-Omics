@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_30_CLEAN_3DGDP_STYLE_HOME_HEAD 2026-06-03 11:45:53 -->
 <!-- UGO_V5_2_29_HOMEPAGE_HERO_IMAGE_ABOUT 2026-06-03 11:22:44 -->
 <!-- UGO_V5_2_28_SWAP_ACTIONABILITY_HELP_NAV_ORDER 2026-05-31 11:01:12 -->
 <!-- UGO_V5_2_27_SIMPLIFY_ACTIONABLE_CANDIDATES_VIEW 2026-05-31 10:54:25 -->
@@ -1517,60 +1518,109 @@
 </style>
 
 
-<style id="ugo-v5-2-29-homepage-hero-image-about-style">
-  .ugo-v5-2-29-hero-subtitle {
-    max-width: 780px !important;
-    font-size: 1.08rem !important;
-    line-height: 1.5 !important;
+
+
+<style id="ugo-v5-2-30-clean-3dgdp-style-home-head-style">
+  .ugo-v5-2-30-clean-hero {
+    padding: 34px 54px 32px 54px !important;
+    min-height: auto !important;
   }
 
-  .ugo-v5-2-29-hero-actions {
+  .ugo-v5-2-30-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.35fr);
+    align-items: center;
+    gap: 32px;
+    max-width: 1280px;
+  }
+
+  .ugo-v5-2-30-brand-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    align-items: center;
+    gap: 16px;
   }
 
-  .ugo-v5-2-29-about-button {
+  .ugo-v5-2-30-brand-row .logo-mark {
+    flex: 0 0 auto;
+  }
+
+  .ugo-v5-2-30-brand-row h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: -0.04em;
+  }
+
+  .ugo-v5-2-30-tagline {
+    margin: 8px 0 0 0;
+    color: #ffffff;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .ugo-v5-2-30-one-line {
+    margin: 18px 0 0 0;
+    max-width: 680px;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .ugo-v5-2-30-about-button {
     display: inline-flex;
+    margin-top: 16px;
     align-items: center;
     justify-content: center;
-    padding: 11px 16px;
+    padding: 10px 16px;
     border-radius: 999px;
     background: #123657;
     color: #ffffff !important;
     text-decoration: none !important;
     font-weight: 800;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.16);
   }
 
-  .ugo-v5-2-29-hero-organ-figure {
-    margin: 22px auto 0 auto;
-    max-width: 720px;
+  .ugo-v5-2-30-hero-right {
+    display: flex;
+    justify-content: flex-end;
   }
 
-  .ugo-v5-2-29-hero-organ-figure img,
-  .ugo-v5-2-29-hero-organ-figure object {
+  .ugo-v5-2-30-hero-right img {
     width: 100%;
+    max-width: 760px;
+    max-height: 190px;
+    object-fit: cover;
+    object-position: center;
     display: block;
-    border-radius: 24px;
-    border: 1px solid rgba(15, 61, 96, 0.16);
-    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.16);
-    background: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 
-  .ugo-v5-2-29-hero-organ-figure object {
-    height: 420px;
-  }
-
-  .ugo-v5-2-29-about-section {
+  .ugo-v5-2-30-about-section {
     padding-top: 34px;
     padding-bottom: 30px;
   }
 
-  .ugo-v5-2-29-about-section .section-header p {
+  .ugo-v5-2-30-about-section .section-header p {
     max-width: 980px;
+  }
+
+  @media (max-width: 900px) {
+    .ugo-v5-2-30-hero-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .ugo-v5-2-30-hero-right {
+      justify-content: flex-start;
+    }
+
+    .ugo-v5-2-30-hero-right img {
+      max-height: 160px;
+    }
   }
 </style>
 
@@ -1579,40 +1629,27 @@
 <body>
 <span id="top"></span>
 
-<header>
-  <div class="brand">
-    <div class="logo">🌱</div>
-    <div>
-      <h1>UGO-Omics</h1>
-<p class="hero-subtitle ugo-v5-2-29-hero-subtitle">Start with a gene, organ, species, or candidate-prioritization question.</p>
 
-<div class="ugo-v5-2-29-hero-actions">
-  <a class="ugo-v5-2-29-about-button" href="#about-ugo">About</a>
-</div>
+<header class="hero ugo-v5-2-30-clean-hero">
+  <div class="ugo-v5-2-30-hero-inner">
+    <div class="ugo-v5-2-30-hero-left">
+      <div class="ugo-v5-2-30-brand-row">
+        <div class="logo-mark">🌱</div>
+        <div>
+          <h1>UGO-Omics</h1>
+          <p class="ugo-v5-2-30-tagline">Underground-organ and storage-system candidate discovery platform</p>
+        </div>
+      </div>
+      <p class="ugo-v5-2-30-one-line">Start with a gene, organ, species, or candidate-prioritization question.</p>
+      <a class="ugo-v5-2-30-about-button" href="#about-ugo">About</a>
+    </div>
 
-
-<figure class="ugo-v5-2-29-hero-organ-figure ugo-v5-2-29-hero-pdf-figure">
-  <object data="/UGO-Omics/assets/ugo_home_hero_organs_source.pdf" type="application/pdf" aria-label="Representative underground storage and regenerative organs used in UGO-Omics">
-    <a href="/UGO-Omics/assets/ugo_home_hero_organs_source.pdf">View underground-organ hero image PDF</a>
-  </object>
-</figure>
-
-
-      <div class="subtitle">Application-oriented candidate discovery platform for underground-organ biology</div>
+    <div class="ugo-v5-2-30-hero-right">
+      <img src="/UGO-Omics/assets/ugo_home_hero_organs.png" alt="Representative underground organs and storage structures">
     </div>
   </div>
-  <p class="hero-text">
-    Start with your biological question. UGO-Omics helps users check whether a gene belongs to an underground-organ candidate module,
-    find candidate modules for a target organ or species, and prioritize validation-ready candidates for functional follow-up.
-  </p>
-  <div class="hero-badges">
-    <span class="hero-badge">11-species high-confidence transfer backbone</span>
-    <span class="hero-badge">51-species resource layer</span>
-    <span class="hero-badge">8/8 candidates remapped</span>
-    <span class="hero-badge">7/8 traceable in both new species</span>
-    <span class="hero-badge">Application-first interface</span>
-  </div>
 </header>
+
 
 
 <nav class="nav-bar">
@@ -1696,7 +1733,7 @@
 
 <main>
 
-<section id="about-ugo" class="section ugo-v5-2-29-about-section">
+<section id="about-ugo" class="section ugo-v5-2-30-about-section">
   <div class="section-header">
     <span class="eyebrow">About</span>
     <h2>What is UGO-Omics?</h2>

@@ -1,0 +1,14 @@
+check	status
+deployment_marker_present	pass
+hero_png_exists	pass
+hero_pdf_archived	pass
+no_pdf_object_in_hero	pass
+clean_hero_class_present	pass
+hero_image_present	pass
+about_button_present	pass
+about_section_present	pass
+old_long_intro_removed_from_header	pass
+nav_still_valid	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+convert_method	pymupdf

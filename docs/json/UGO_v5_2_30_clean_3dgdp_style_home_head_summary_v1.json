@@ -1,0 +1,69 @@
+{
+  "version": "v5.2.30 clean 3D-GDP-style home head",
+  "generated_on": "2026-06-03 11:45:54",
+  "purpose": "Replace the oversized/PDF-viewer hero with a compact left-text/right-image-strip header inspired by database homepages such as 3D-GDP.",
+  "source_pdf": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home.pdf",
+  "hero_png": "docs/assets/ugo_home_hero_organs.png",
+  "hero_pdf": "docs/assets/ugo_home_hero_organs_source.pdf",
+  "convert_method": "pymupdf",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_organs.png",
+    "docs/assets/ugo_home_hero_organs_source.pdf",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_png_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_pdf_archived",
+      "status": "pass"
+    },
+    {
+      "check": "no_pdf_object_in_hero",
+      "status": "pass"
+    },
+    {
+      "check": "clean_hero_class_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_image_present",
+      "status": "pass"
+    },
+    {
+      "check": "about_button_present",
+      "status": "pass"
+    },
+    {
+      "check": "about_section_present",
+      "status": "pass"
+    },
+    {
+      "check": "old_long_intro_removed_from_header",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "convert_method",
+      "status": "pymupdf"
+    }
+  ]
+}
