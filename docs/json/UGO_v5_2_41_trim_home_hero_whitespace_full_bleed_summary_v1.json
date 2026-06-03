@@ -1,0 +1,98 @@
+{
+  "version": "v5.2.41 trim home hero whitespace full bleed",
+  "generated_on": "2026-06-03 17:13:08",
+  "purpose": "Trim white margins from the user-provided narrow home_final.png and display it as a full-bleed homepage header with no top/side whitespace.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_original_asset": "docs/assets/ugo_home_hero_final_direct.png",
+  "hero_trimmed_asset": "docs/assets/ugo_home_hero_final_trimmed.png",
+  "trim_bbox": [
+    14,
+    181,
+    2162,
+    537
+  ],
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final_direct.png",
+    "docs/assets/ugo_home_hero_final_trimmed.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_original_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_trimmed_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_trimmed_image",
+      "status": "pass"
+    },
+    {
+      "check": "full_bleed_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "body_margin_zero",
+      "status": "pass"
+    },
+    {
+      "check": "image_width_100vw",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_width",
+      "status": "2172"
+    },
+    {
+      "check": "source_height",
+      "status": "724"
+    },
+    {
+      "check": "trim_bbox_left_top_right_bottom",
+      "status": "14,181,2162,537"
+    },
+    {
+      "check": "trimmed_width",
+      "status": "2148"
+    },
+    {
+      "check": "trimmed_height",
+      "status": "356"
+    },
+    {
+      "check": "hero_trimmed_size_bytes",
+      "status": "1200466"
+    }
+  ]
+}
