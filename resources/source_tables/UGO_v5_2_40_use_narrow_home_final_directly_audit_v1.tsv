@@ -1,0 +1,15 @@
+check	status
+deployment_marker_present	pass
+source_image_exists	pass
+hero_direct_asset_exists	pass
+header_uses_direct_image	pass
+no_old_text_overlay	pass
+direct_hero_css_present	pass
+no_old_crop_images_in_header	pass
+image_height_auto	pass
+image_object_fit_contain	pass
+nav_still_valid	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+find_organ_species_fix_still_present	pass
+hero_direct_size_bytes	1896072
