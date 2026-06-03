@@ -1,0 +1,85 @@
+{
+  "version": "v5.2.34 refresh hero image and refine visual",
+  "generated_on": "2026-06-03 13:03:01",
+  "purpose": "Refresh homepage hero image from updated home.pdf and refine the hero color/typography for a more polished database-style head.",
+  "source_pdf": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home.pdf",
+  "hero_png": "docs/assets/ugo_home_hero_organs.png",
+  "hero_pdf": "docs/assets/ugo_home_hero_organs_source.pdf",
+  "convert_method": "pymupdf",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_organs.png",
+    "docs/assets/ugo_home_hero_organs_source.pdf",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_png_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_pdf_archived",
+      "status": "pass"
+    },
+    {
+      "check": "new_hero_class_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_image_present",
+      "status": "pass"
+    },
+    {
+      "check": "only_full_name_under_title",
+      "status": "pass"
+    },
+    {
+      "check": "no_leaf_logo_in_header",
+      "status": "pass"
+    },
+    {
+      "check": "old_tagline_removed_from_header",
+      "status": "pass"
+    },
+    {
+      "check": "start_sentence_removed_from_header",
+      "status": "pass"
+    },
+    {
+      "check": "hero_height_210",
+      "status": "pass"
+    },
+    {
+      "check": "right_image_grid_65",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "convert_method",
+      "status": "pymupdf"
+    },
+    {
+      "check": "hero_png_size_bytes",
+      "status": "7323147"
+    }
+  ]
+}
