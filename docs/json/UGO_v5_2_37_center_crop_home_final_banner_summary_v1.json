@@ -1,0 +1,103 @@
+{
+  "version": "v5.2.37 center-crop home_final banner",
+  "generated_on": "2026-06-03 15:45:18",
+  "purpose": "Create a center-cropped, slim banner from home_final.png and use it in the homepage head to avoid oversized full-image display while preserving central content.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_full_asset": "docs/assets/ugo_home_hero_final.png",
+  "hero_banner_asset": "docs/assets/ugo_home_hero_final_banner.png",
+  "target_ratio": 5.0,
+  "crop_box": [
+    0,
+    266,
+    1774,
+    620
+  ],
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final.png",
+    "docs/assets/ugo_home_hero_final_banner.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_full_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_banner_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_cropped_banner",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "cropped_banner_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "object_position_center",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_width",
+      "status": "1774"
+    },
+    {
+      "check": "source_height",
+      "status": "887"
+    },
+    {
+      "check": "crop_box_left_top_right_bottom",
+      "status": "0,266,1774,620"
+    },
+    {
+      "check": "target_ratio",
+      "status": "5.0"
+    },
+    {
+      "check": "banner_width",
+      "status": "2200"
+    },
+    {
+      "check": "banner_height",
+      "status": "440"
+    },
+    {
+      "check": "hero_banner_size_bytes",
+      "status": "1341245"
+    }
+  ]
+}
