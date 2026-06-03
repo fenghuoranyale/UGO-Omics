@@ -1,0 +1,110 @@
+{
+  "version": "v5.2.39 remove middle band home hero",
+  "generated_on": "2026-06-03 15:53:32",
+  "purpose": "Remove the middle horizontal band between two guide lines from home_final.png, stitch the upper and lower important regions together, and use the resulting narrower hero banner.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_full_asset": "docs/assets/ugo_home_hero_final.png",
+  "hero_removed_middle_band_asset": "docs/assets/ugo_home_hero_final_removed_middle_band.png",
+  "remove_top_ratio": 0.32,
+  "remove_bottom_ratio": 0.62,
+  "removed_band_y1_y2": [
+    283,
+    549
+  ],
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final.png",
+    "docs/assets/ugo_home_hero_final_removed_middle_band.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_full_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_removed_middle_band_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_removed_middle_band_image",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "remove_middle_band_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "object_position_center",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_width",
+      "status": "1774"
+    },
+    {
+      "check": "source_height",
+      "status": "887"
+    },
+    {
+      "check": "remove_top_ratio",
+      "status": "0.32"
+    },
+    {
+      "check": "remove_bottom_ratio",
+      "status": "0.62"
+    },
+    {
+      "check": "removed_band_y1_y2",
+      "status": "283,549"
+    },
+    {
+      "check": "new_stitched_height_before_resize",
+      "status": "621"
+    },
+    {
+      "check": "web_banner_width",
+      "status": "2200"
+    },
+    {
+      "check": "web_banner_height",
+      "status": "770"
+    },
+    {
+      "check": "hero_removed_middle_band_size_bytes",
+      "status": "1496698"
+    }
+  ]
+}
