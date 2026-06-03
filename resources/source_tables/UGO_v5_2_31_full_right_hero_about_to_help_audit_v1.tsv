@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+hero_image_still_present	pass
+start_sentence_removed_from_header	pass
+about_button_removed_from_header	pass
+standalone_about_section_removed	pass
+about_added_to_help_nav	pass
+about_hidden_section_present	pass
+right_image_full_css_present	pass
+nav_still_valid	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+find_organ_species_fix_still_present	pass

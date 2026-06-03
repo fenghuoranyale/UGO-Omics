@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_31_FULL_RIGHT_HERO_ABOUT_TO_HELP 2026-06-03 12:09:48 -->
 <!-- UGO_V5_2_30_CLEAN_3DGDP_STYLE_HOME_HEAD 2026-06-03 11:45:53 -->
 <!-- UGO_V5_2_29_HOMEPAGE_HERO_IMAGE_ABOUT 2026-06-03 11:22:44 -->
 <!-- UGO_V5_2_28_SWAP_ACTIONABILITY_HELP_NAV_ORDER 2026-05-31 11:01:12 -->
@@ -1624,6 +1625,99 @@
   }
 </style>
 
+
+<style id="ugo-v5-2-31-full-right-hero-about-to-help-style">
+  .ugo-v5-2-30-clean-hero {
+    padding: 0 !important;
+    min-height: 260px !important;
+    overflow: hidden !important;
+  }
+
+  .ugo-v5-2-30-hero-inner {
+    display: grid !important;
+    grid-template-columns: 34% 66% !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+    min-height: 260px !important;
+  }
+
+  .ugo-v5-2-30-hero-left {
+    padding: 44px 40px 40px 54px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .ugo-v5-2-30-brand-row {
+    align-items: center !important;
+  }
+
+  .ugo-v5-2-30-brand-row h1 {
+    font-size: clamp(2.6rem, 4.6vw, 4.4rem) !important;
+  }
+
+  .ugo-v5-2-30-tagline {
+    max-width: 430px !important;
+    font-size: clamp(1.05rem, 1.55vw, 1.35rem) !important;
+    line-height: 1.22 !important;
+  }
+
+  .ugo-v5-2-30-one-line,
+  .ugo-v5-2-30-about-button {
+    display: none !important;
+  }
+
+  .ugo-v5-2-30-hero-right {
+    display: block !important;
+    width: 100% !important;
+    height: 260px !important;
+    overflow: hidden !important;
+  }
+
+  .ugo-v5-2-30-hero-right img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  .ugo-v5-2-31-about-help-section {
+    padding: 34px 54px 60px 54px;
+  }
+
+  .ugo-v5-2-31-about-help-section h2 {
+    color: #123657;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 12px;
+  }
+
+  .ugo-v5-2-31-about-help-section p {
+    max-width: 980px;
+    color: #465b73;
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .ugo-v5-2-30-hero-inner {
+      grid-template-columns: 1fr !important;
+    }
+
+    .ugo-v5-2-30-hero-left {
+      padding: 34px 28px !important;
+    }
+
+    .ugo-v5-2-30-hero-right {
+      height: 160px !important;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -1640,9 +1734,7 @@
           <p class="ugo-v5-2-30-tagline">Underground-organ and storage-system candidate discovery platform</p>
         </div>
       </div>
-      <p class="ugo-v5-2-30-one-line">Start with a gene, organ, species, or candidate-prioritization question.</p>
-      <a class="ugo-v5-2-30-about-button" href="#about-ugo">About</a>
-    </div>
+</div>
 
     <div class="ugo-v5-2-30-hero-right">
       <img src="/UGO-Omics/assets/ugo_home_hero_organs.png" alt="Representative underground organs and storage structures">
@@ -1722,6 +1814,7 @@
       <button onclick="showSection('quickStartGuide', this)">Quick Guide</button>
       <button onclick="showSection('demoResults', this)">Demo Results</button>
       <button onclick="showSection('useCases', this)">Use Cases</button>
+          <button onclick="showSection('aboutUGO', this)">About UGO-Omics</button>
       <button onclick="showSection('downloads', this)">Downloads</button>
     </div>
   </div>
@@ -1732,19 +1825,6 @@
 
 
 <main>
-
-<section id="about-ugo" class="section ugo-v5-2-30-about-section">
-  <div class="section-header">
-    <span class="eyebrow">About</span>
-    <h2>What is UGO-Omics?</h2>
-    <p>
-      UGO-Omics is a candidate discovery platform for underground-organ and storage-system biology.
-      It connects cross-species omics resources, underground-organ modules, known-gene anchors,
-      and actionability-oriented candidate prioritization.
-    </p>
-  </div>
-</section>
-
 <section id="platform-value" class="section">
   <div class="section-header">
     <span class="eyebrow">Platform logic</span>
@@ -2618,6 +2698,20 @@ Gene_003"></textarea>
 
   <div class="info-note">
     UGO-Omics prioritizes candidate-family hypotheses. These resources support candidate prioritization and hypothesis generation, not direct functional validation for individual genes.
+  </div>
+</section>
+
+
+
+<section id="aboutUGO" class="tool-section ugo-v5-2-31-about-help-section" style="display:none;">
+  <h2>About UGO-Omics</h2>
+  <p>
+    UGO-Omics is a candidate discovery platform for underground-organ and storage-system biology.
+    It connects cross-species omics resources, underground-organ modules, known-gene anchors,
+    and actionability-oriented candidate prioritization.
+  </p>
+  <div class="info-note">
+    UGO-Omics outputs are designed for candidate prioritization and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
   </div>
 </section>
 

@@ -1,0 +1,59 @@
+{
+  "version": "v5.2.31 full-right hero image + About moved to Help",
+  "generated_on": "2026-06-03 12:09:49",
+  "purpose": "Make the hero image occupy the full right side of the head, remove the short Start sentence, and move About content into Help & Downloads.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_image_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_sentence_removed_from_header",
+      "status": "pass"
+    },
+    {
+      "check": "about_button_removed_from_header",
+      "status": "pass"
+    },
+    {
+      "check": "standalone_about_section_removed",
+      "status": "pass"
+    },
+    {
+      "check": "about_added_to_help_nav",
+      "status": "pass"
+    },
+    {
+      "check": "about_hidden_section_present",
+      "status": "pass"
+    },
+    {
+      "check": "right_image_full_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    }
+  ]
+}
