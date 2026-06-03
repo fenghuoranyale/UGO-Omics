@@ -1,0 +1,59 @@
+{
+  "version": "v5.2.33 refine home head visual",
+  "generated_on": "2026-06-03 12:47:03",
+  "purpose": "Refine the homepage head: make it slightly narrower, remove the leaf icon, use a more polished left gradient, and keep only UGO-Omics plus its full name.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "new_refined_hero_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_image_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_leaf_logo_in_header",
+      "status": "pass"
+    },
+    {
+      "check": "only_full_name_under_title",
+      "status": "pass"
+    },
+    {
+      "check": "old_tagline_removed",
+      "status": "pass"
+    },
+    {
+      "check": "start_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "hero_height_220",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    }
+  ]
+}

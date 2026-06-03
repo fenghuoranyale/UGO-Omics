@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+new_refined_hero_present	pass
+hero_image_present	pass
+no_leaf_logo_in_header	pass
+only_full_name_under_title	pass
+old_tagline_removed	pass
+start_sentence_removed	pass
+hero_height_220	pass
+nav_still_valid	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+find_organ_species_fix_still_present	pass
