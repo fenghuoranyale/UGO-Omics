@@ -1,0 +1,52 @@
+{
+  "version": "v5.2.32 refresh home hero image only",
+  "generated_on": "2026-06-03 12:30:47",
+  "purpose": "Replace the homepage hero image asset using the updated home.pdf without changing homepage layout, navigation, or scripts.",
+  "source_pdf": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home.pdf",
+  "hero_png": "docs/assets/ugo_home_hero_organs.png",
+  "hero_pdf": "docs/assets/ugo_home_hero_organs_source.pdf",
+  "convert_method": "pymupdf",
+  "modified_files": [
+    "docs/assets/ugo_home_hero_organs.png",
+    "docs/assets/ugo_home_hero_organs_source.pdf",
+    "final_package/website/assets/ugo_home_hero_organs.png"
+  ],
+  "audit": [
+    {
+      "check": "source_pdf_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_pdf_updated",
+      "status": "pass"
+    },
+    {
+      "check": "hero_png_updated",
+      "status": "pass"
+    },
+    {
+      "check": "homepage_references_png",
+      "status": "pass"
+    },
+    {
+      "check": "no_pdf_object_required",
+      "status": "pass"
+    },
+    {
+      "check": "v5231_layout_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "convert_method",
+      "status": "pymupdf"
+    },
+    {
+      "check": "hero_png_size_bytes",
+      "status": "5701473"
+    },
+    {
+      "check": "hero_pdf_size_bytes",
+      "status": "1382939"
+    }
+  ]
+}

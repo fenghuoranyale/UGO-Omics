@@ -1,0 +1,10 @@
+check	status
+source_pdf_exists	pass
+hero_pdf_updated	pass
+hero_png_updated	pass
+homepage_references_png	pass
+no_pdf_object_required	pass
+v5231_layout_still_present	pass
+convert_method	pymupdf
+hero_png_size_bytes	5701473
+hero_pdf_size_bytes	1382939
