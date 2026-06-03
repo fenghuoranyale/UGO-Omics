@@ -1,0 +1,70 @@
+{
+  "version": "v5.2.36 show home_final.png without crop",
+  "generated_on": "2026-06-03 15:39:58",
+  "purpose": "Display the finalized homepage banner image exactly as designed, without CSS cropping or fixed-height cover behavior.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_asset": "docs/assets/ugo_home_hero_final.png",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_final_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_final_image",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "no_fixed_hero_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "image_height_auto",
+      "status": "pass"
+    },
+    {
+      "check": "image_object_fit_contain",
+      "status": "pass"
+    },
+    {
+      "check": "final_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_final_size_bytes",
+      "status": "1890768"
+    }
+  ]
+}
