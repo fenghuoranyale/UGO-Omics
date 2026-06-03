@@ -1,0 +1,62 @@
+{
+  "version": "v5.2.35 replace hero with home_final.png",
+  "generated_on": "2026-06-03 15:31:28",
+  "purpose": "Replace the homepage hero with the finalized full banner image home_final.png, without changing navigation or dropdown behavior.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_asset": "docs/assets/ugo_home_hero_final.png",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_final_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_final_image",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_hero_text_overlay",
+      "status": "fail"
+    },
+    {
+      "check": "final_hero_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_final_size_bytes",
+      "status": "1890768"
+    }
+  ]
+}
