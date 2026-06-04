@@ -1,0 +1,99 @@
+{
+  "version": "v5.2.46 force homepage key results visible",
+  "generated_on": "2026-06-03 23:08:04",
+  "purpose": "Force the homepage key-result cards to render visibly near the top of the homepage by inserting them immediately after main/nav rather than inside a potentially hidden workflow section.",
+  "phylogeny_source": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_phylogeny.png",
+  "modules_source": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_modules.png",
+  "assets": [
+    "docs/assets/ugo_home_key_result_51species_phylogeny.png",
+    "docs/assets/ugo_home_key_result_recurrent_modules.png"
+  ],
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_key_result_51species_phylogeny.png",
+    "docs/assets/ugo_home_key_result_recurrent_modules.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "key_results_section_present",
+      "status": "pass"
+    },
+    {
+      "check": "key_results_inserted_after_main_or_nav",
+      "status": "pass"
+    },
+    {
+      "check": "visible_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "forced_display_block",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_card_present",
+      "status": "pass"
+    },
+    {
+      "check": "modules_card_present",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_source",
+      "status": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_phylogeny.png"
+    },
+    {
+      "check": "modules_source",
+      "status": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_modules.png"
+    },
+    {
+      "check": "phylogeny_asset_size_bytes",
+      "status": "72520"
+    },
+    {
+      "check": "modules_asset_size_bytes",
+      "status": "93412"
+    },
+    {
+      "check": "home_key_results_position",
+      "status": "43777"
+    },
+    {
+      "check": "main_position",
+      "status": "43760"
+    }
+  ]
+}
