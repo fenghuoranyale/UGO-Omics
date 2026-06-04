@@ -1,3 +1,4 @@
+<!-- UGO_V5_3_10_CLEAN_HOME_KEY_RESULTS_TEXT_ONLY 2026-06-04 12:51:46 -->
 <!-- UGO_V5_3_9_PUBLISH_CLEAN_51SPECIES_HOME_IMAGE 2026-06-04 12:40:35 -->
 <!-- UGO_V5_3_2_USE_51SPECIES_ATLAS_OVERVIEW_ON_HOME 2026-06-04 12:03:46 -->
 <!-- UGO_V5_2_52_HOME_VISIBILITY_AND_RETURN 2026-06-04 10:24:22 -->
@@ -1779,6 +1780,48 @@ a.nav-btn.ugo-home-button:active {
 /* v5.2.52: hide Home key-results only when a non-Home view is active */
 body.ugo-v5-2-52-non-home-view #home-key-results {
   display: none !important;
+}
+</style>
+
+
+<style id="ugo-v5-3-10-clean-home-key-results-text-only-style">
+/* ============================================================
+   v5.3.10: clean Home key-results text only.
+   Scope: #home-key-results only.
+   This hides text below the navigation while preserving the images.
+   ============================================================ */
+
+#home-key-results .section-header {
+  display: none !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-text {
+  display: none !important;
+}
+
+#home-key-results {
+  padding-top: 34px !important;
+  padding-bottom: 58px !important;
+}
+
+#home-key-results .ugo-v5-2-51-results-grid {
+  margin-top: 0 !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-card {
+  overflow: hidden !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-image {
+  height: 500px !important;
+  border-bottom: none !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
 }
 </style>
 

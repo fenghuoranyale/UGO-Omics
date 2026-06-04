@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+clean_home_style_present	pass
+home_key_results_present	pass
+section_header_hidden_by_css	pass
+figure_card_text_hidden_by_css	pass
+phylogeny_image_reference_present	pass
+module_image_reference_present	pass
+navigation_still_present	pass
+no_git_used_by_script	pass
+final_package_synced	pass

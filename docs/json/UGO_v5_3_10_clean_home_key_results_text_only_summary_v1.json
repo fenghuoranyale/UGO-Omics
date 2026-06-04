@@ -1,0 +1,52 @@
+{
+  "version": "v5.3.10 clean Home key-results text only",
+  "generated_on": "2026-06-04 12:51:47",
+  "purpose": "Hide all visible text in the Home key-results section below the navigation while keeping the phylogeny and recurrent-module images.",
+  "important_note": "This patch only adds scoped CSS for #home-key-results. It does not modify navigation, dropdown logic, other pages, or git state.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "clean_home_style_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "section_header_hidden_by_css",
+      "status": "pass"
+    },
+    {
+      "check": "figure_card_text_hidden_by_css",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_git_used_by_script",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
