@@ -1,0 +1,11 @@
+check	status
+deployment_marker_present	pass
+maximize_style_present	pass
+home_key_results_present	pass
+home_padding_reduced	pass
+home_phylogeny_height_increased	pass
+footer_sentence_removed	pass
+home_phylogeny_reference_present	pass
+module_image_reference_present	pass
+navigation_still_present	pass
+final_package_synced	pass

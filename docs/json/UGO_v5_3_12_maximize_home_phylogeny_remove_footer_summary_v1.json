@@ -1,0 +1,52 @@
+{
+  "version": "v5.3.12 maximize Home phylogeny and remove footer",
+  "generated_on": "2026-06-04 13:09:53",
+  "purpose": "Reduce Home whitespace, enlarge the phylogeny image area, and remove the footer platform sentence.",
+  "important_note": "This patch only adds scoped CSS and removes the exact footer sentence. It does not modify navigation/dropdown behavior.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "maximize_style_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_padding_reduced",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_height_increased",
+      "status": "pass"
+    },
+    {
+      "check": "footer_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
