@@ -1,0 +1,58 @@
+{
+  "version": "v5.3.26 remove analysis-layer legend only",
+  "generated_on": "2026-06-04 15:59:30",
+  "purpose": "Remove only the small Analysis layer legend from the Home phylogeny image while preserving all other image and layout content.",
+  "current_source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5325.png",
+  "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5326.png",
+  "current_asset_name": "ugo_home_key_result_51species_phylogeny_v5325.png",
+  "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5326.png",
+  "edited_region_pixels": {
+    "x0": 2280,
+    "y0": 3448,
+    "x1": 3177,
+    "y1": 3902
+  },
+  "image_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "important_note": "This patch only changes the Home phylogeny image asset and its filename reference. It does not change layout CSS.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_current_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_clean_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5326_asset",
+      "status": "pass"
+    },
+    {
+      "check": "old_current_asset_no_longer_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
