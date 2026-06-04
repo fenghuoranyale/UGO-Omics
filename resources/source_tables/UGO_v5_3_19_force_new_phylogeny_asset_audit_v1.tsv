@@ -1,0 +1,16 @@
+check	status
+deployment_marker_present	pass
+style_present	pass
+source_phylogeny_with_legend_exists	pass
+new_versioned_phylogeny_created	pass
+versioned_home_asset_exists	pass
+index_uses_versioned_asset	pass
+old_unversioned_asset_not_referenced	pass
+home_key_results_present	pass
+equal_grid_present	pass
+object_position_left_weighted_present	pass
+card_height_increased	pass
+module_image_reference_present	pass
+footer_sentence_removed	pass
+navigation_still_present	pass
+final_package_synced	pass
