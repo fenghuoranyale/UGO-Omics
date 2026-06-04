@@ -1,3 +1,4 @@
+<!-- UGO_V5_3_23_RESTORE_SAFE_ORIGINAL_PHYLOGENY 2026-06-04 15:40:43 -->
 <!-- UGO_V5_3_22_CLEAN_TEXT_ABOVE_LEGEND_ONLY 2026-06-04 15:35:47 -->
 <!-- UGO_V5_3_21_RESTORE_FULL_LEGEND_FROM_ORIGINAL 2026-06-04 15:31:55 -->
 <!-- UGO_V5_3_20_FORCE_REAL_HOME_PHYLOGENY_UPDATE 2026-06-04 15:22:10 -->
@@ -1817,11 +1818,13 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
 
 
 
-<style id="ugo-v5-3-21-restore-full-legend-from-original-style">
+
+
+<style id="ugo-v5-3-23-restore-safe-original-phylogeny-style">
 /* ============================================================
-   v5.3.21: restore complete organ legend from original figure.
+   v5.3.23: safe restore of complete original Home phylogeny.
+   No image cropping/masking; preserve complete legend and all labels.
    Scope: Home key-results and footer only.
-   Does not modify navigation, dropdowns, or non-Home page logic.
    ============================================================ */
 
 #home-key-results {
@@ -1837,7 +1840,6 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   display: none !important;
 }
 
-/* Equal-width cards */
 #home-key-results .ugo-v5-2-51-results-grid {
   width: calc(100vw - 64px) !important;
   max-width: none !important;
@@ -1863,10 +1865,9 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   overflow: hidden !important;
 }
 
-/* Use available vertical space */
 #home-key-results .ugo-v5-2-51-result-image {
-  height: calc(100vh - 42px) !important;
-  min-height: 1120px !important;
+  height: calc(100vh - 64px) !important;
+  min-height: 980px !important;
   max-height: none !important;
   width: 100% !important;
   padding: 0 !important;
@@ -1878,12 +1879,11 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   justify-content: center !important;
 }
 
-/* Left image: full phylogeny + complete organ legend */
 #home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
-  object-position: 40% center !important;
+  object-position: center center !important;
   display: block !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -1891,7 +1891,6 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   transform: none !important;
 }
 
-/* Right image matched */
 #home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
@@ -1904,7 +1903,6 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   transform: none !important;
 }
 
-/* remove footer line and whitespace */
 footer,
 .site-footer,
 .footer {
@@ -2903,7 +2901,7 @@ Gene_003"></textarea>
   <div class="ugo-v5-2-51-results-grid">
     <article class="ugo-v5-2-51-result-card">
       <div class="ugo-v5-2-51-result-image">
-        <img src="/UGO-Omics/assets/ugo_home_key_result_51species_phylogeny_v5322.png" alt="51-species atlas phylogeny-style overview for UGO-Omics underground-organ resources">
+        <img src="/UGO-Omics/assets/ugo_home_key_result_51species_phylogeny_v5323.png" alt="51-species atlas phylogeny-style overview for UGO-Omics underground-organ resources">
       </div>
       <div class="ugo-v5-2-51-result-text">
         <h3>51-species atlas phylogeny overview</h3>
