@@ -1,0 +1,73 @@
+{
+  "version": "v5.3.13 bigger white-background Home phylogeny",
+  "generated_on": "2026-06-04 13:14:59",
+  "purpose": "Remove the pale background from the Home phylogeny image, crop it tighter, and enlarge it substantially in the Home card.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_3_remove_home_atlas_extra_labels/figures/home_51species_atlas_overview_clean_no_extra_labels.png",
+  "tight_white_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_phylogeny_fill_card/P5_v5_3_13_bigger_white_phylogeny_home/figures/home_51species_atlas_phylogeny_tight_white_no_legend.png",
+  "home_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny.png",
+  "crop_box_pixels": {
+    "left": 0,
+    "top": 377,
+    "right": 2616,
+    "bottom": 3937
+  },
+  "source_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "tight_canvas_size": {
+    "width": 2636,
+    "height": 3588
+  },
+  "important_note": "This patch only changes the Home phylogeny image asset and scoped Home CSS.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "style_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_phylogeny_exists",
+      "status": "pass"
+    },
+    {
+      "check": "tight_white_phylogeny_created",
+      "status": "pass"
+    },
+    {
+      "check": "home_asset_replaced",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "scale_134_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_height_900_present",
+      "status": "pass"
+    },
+    {
+      "check": "footer_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}

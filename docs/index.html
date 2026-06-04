@@ -1,3 +1,4 @@
+<!-- UGO_V5_3_13_BIGGER_WHITE_PHYLOGENY_HOME 2026-06-04 13:14:50 -->
 <!-- UGO_V5_3_12_MAXIMIZE_HOME_PHYLOGENY_REMOVE_FOOTER 2026-06-04 13:09:47 -->
 <!-- UGO_V5_3_11_CROP_PHYLOGENY_FILL_HOME_CARD 2026-06-04 12:59:41 -->
 <!-- UGO_V5_3_10_CLEAN_HOME_KEY_RESULTS_TEXT_ONLY 2026-06-04 12:51:46 -->
@@ -1830,20 +1831,50 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
 
 
 
-<style id="ugo-v5-3-11-home-phylogeny-fill-card-style">
+
+
+
+
+<style id="ugo-v5-3-13-bigger-white-phylogeny-home-style">
 /* ============================================================
-   v5.3.11: make the Home phylogeny image occupy the left card.
-   Scope: first Home key-result card only.
-   Does not modify navigation, dropdowns, or other pages.
+   v5.3.13: bigger white-background Home phylogeny.
+   Scope: Home key-results and footer only.
+   Does not modify navigation, dropdowns, or non-Home page logic.
    ============================================================ */
 
-#home-key-results .ugo-v5-2-51-result-card:first-child {
-  padding: 0 !important;
+#home-key-results {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  background: #f7fafc !important;
 }
 
-#home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image {
-  height: 650px !important;
-  min-height: 650px !important;
+#home-key-results .section-header,
+#home-key-results .ugo-v5-2-51-result-text {
+  display: none !important;
+}
+
+#home-key-results .ugo-v5-2-51-results-grid {
+  margin-top: 0 !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+/* Clean white cards */
+#home-key-results .ugo-v5-2-51-result-card {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+/* Make both cards use almost the full visible Home area */
+#home-key-results .ugo-v5-2-51-result-image {
+  height: calc(100vh - 92px) !important;
+  min-height: 900px !important;
+  max-height: none !important;
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: none !important;
@@ -1853,7 +1884,22 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   justify-content: center !important;
 }
 
+/* Enlarge the phylogeny aggressively while hiding remaining margins */
 #home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+  transform: scale(1.34) !important;
+  transform-origin: center center !important;
+}
+
+/* Keep module image normal, only align card height */
+#home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
@@ -1864,94 +1910,17 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   background: #ffffff !important;
 }
 
-#home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-text {
-  display: none !important;
-}
-</style>
-
-
-<style id="ugo-v5-3-12-maximize-home-phylogeny-remove-footer-style">
-/* ============================================================
-   v5.3.12: maximize Home phylogeny and remove footer text.
-   Scope: Home key-results and footer only.
-   Does not modify navigation, dropdowns, or non-Home page logic.
-   ============================================================ */
-
-/* remove large whitespace above/below the Home figure area */
-#home-key-results {
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* keep the previous clean Home: no text below navigation */
-#home-key-results .section-header,
-#home-key-results .ugo-v5-2-51-result-text {
-  display: none !important;
-}
-
-#home-key-results .ugo-v5-2-51-results-grid {
-  margin-top: 0 !important;
-  gap: 20px !important;
-}
-
-/* make cards start immediately and look clean */
-#home-key-results .ugo-v5-2-51-result-card {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-}
-
-/* enlarge the phylogeny card substantially */
-#home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image {
-  height: calc(100vh - 155px) !important;
-  min-height: 760px !important;
-  max-height: 980px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border-bottom: none !important;
-  background: #ffffff !important;
-  display: flex !important;
-  align-items: stretch !important;
-  justify-content: center !important;
-}
-
-/* make the phylogeny use all available vertical space */
-#home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  display: block !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background: #ffffff !important;
-}
-
-/* keep the recurrent module card aligned with the enlarged left card */
-#home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image {
-  height: calc(100vh - 155px) !important;
-  min-height: 760px !important;
-  max-height: 980px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border-bottom: none !important;
-  background: #ffffff !important;
-}
-
-/* remove the footer sentence and shrink footer space */
+/* Remove footer line and its whitespace */
 footer,
 .site-footer,
 .footer {
+  display: none !important;
   min-height: 0 !important;
   height: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
   border: none !important;
   overflow: hidden !important;
-  display: none !important;
 }
 </style>
 

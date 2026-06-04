@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+style_present	pass
+source_phylogeny_exists	pass
+tight_white_phylogeny_created	pass
+home_asset_replaced	pass
+home_key_results_present	pass
+home_phylogeny_reference_present	pass
+scale_134_present	pass
+home_height_900_present	pass
+footer_sentence_removed	pass
+navigation_still_present	pass
+final_package_synced	pass
