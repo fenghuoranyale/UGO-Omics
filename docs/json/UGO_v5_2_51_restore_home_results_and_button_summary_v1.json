@@ -1,0 +1,130 @@
+{
+  "version": "v5.2.51 restore Home results and Home button",
+  "generated_on": "2026-06-04 10:07:57",
+  "purpose": "Restore Home key results as two cards, 51-species phylogeny and recurrent UGO modules, and keep the Home navigation item visually matched to other buttons.",
+  "important_note": "This patch does not rebuild navigation, does not change dropdown labels or links, and does not restore the removed Start-with-your-question cards.",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_key_result_51species_phylogeny.png",
+    "docs/assets/ugo_home_key_result_recurrent_modules.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_results_and_button_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_visibility_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_anchor_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_anchor_has_nav_btn",
+      "status": "pass"
+    },
+    {
+      "check": "home_anchor_has_ugo_home_button",
+      "status": "pass"
+    },
+    {
+      "check": "home_anchor_has_no_inline_style",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_only_visibility_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_with_your_question_absent",
+      "status": "pass"
+    },
+    {
+      "check": "title_uses_51_species_phylogeny",
+      "status": "pass"
+    },
+    {
+      "check": "no_11_species_phylogeny_label",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_nav_text_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_nav_text_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_resources_nav_text_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_downloads_nav_text_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_nav_text_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_replacement_count",
+      "status": "1"
+    },
+    {
+      "check": "phylogeny_source_used",
+      "status": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_phylogeny.png"
+    },
+    {
+      "check": "modules_source_used",
+      "status": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_modules.png"
+    },
+    {
+      "check": "phylogeny_asset_size_bytes",
+      "status": "72520"
+    },
+    {
+      "check": "modules_asset_size_bytes",
+      "status": "93412"
+    }
+  ]
+}
