@@ -1,0 +1,52 @@
+major_clade	organ_raw	organ_key	organ	species	is_backbone	y	assigned_color
+Monocot	rhizome	rhizome	Rhizome	Oryza longistaminata	True	53.0	#2f8a3d
+Monocot	rhizome	rhizome	Rhizome	Zingiber officinale	True	52.0	#2f8a3d
+Monocot	rhizome	rhizome	Rhizome	Miscanthus floridulus	False	51.0	#2f8a3d
+Monocot	rhizome	rhizome	Rhizome	Phragmites australis	False	50.0	#2f8a3d
+Monocot	rhizome	rhizome	Rhizome	Phyllostachys edulis	False	49.0	#2f8a3d
+Monocot	rhizome	rhizome	Rhizome	Sorghum halepense	False	48.0	#2f8a3d
+Monocot	rhizome	rhizome	Rhizome	Zizania latifolia	False	47.0	#2f8a3d
+Monocot	rhizome_corm	rhizome_corm	Rhizome / corm	Musa acuminata	True	46.0	#5fa35f
+Monocot	rhizome_crown	rhizome_crown	Rhizome / crown	Panicum virgatum	True	45.0	#7db742
+Monocot	rhizome_crown	rhizome_crown	Rhizome / crown	Brachypodium sylvaticum	False	44.0	#7db742
+Monocot	rhizome_bud	rhizome_bud	Rhizome / bud	Saccharum spontaneum	False	43.0	#98cf63
+Monocot	tuber	tuber	Tuber	Dioscorea rotundata	True	42.0	#9a6230
+Monocot	tuber	tuber	Tuber	Dioscorea alata	False	41.0	#9a6230
+Monocot	corm	corm	Corm	Colocasia esculenta	False	40.0	#7250a6
+Monocot	corm	corm	Corm	Crocus sativus	False	39.0	#7250a6
+Monocot	corm	corm	Corm	Gladiolus hybridus	False	38.0	#7250a6
+Monocot	corm	corm	Corm	Xanthosoma sagittifolium	False	37.0	#7250a6
+Monocot	bulb	bulb	Bulb	Allium cepa	False	36.0	#8f64bd
+Monocot	bulb	bulb	Bulb	Allium sativum	False	35.0	#8f64bd
+Monocot	bulb	bulb	Bulb	Lilium longiflorum	False	34.0	#8f64bd
+Monocot	bulb	bulb	Bulb	Tulipa gesneriana	False	33.0	#8f64bd
+Monocot	crown_sucker	crown_sucker	Crown / sucker	Ananas comosus	False	32.0	#2f7dae
+Monocot	rhizome_basal_shoot	rhizome_basal_shoot	Rhizome Basal Shoot	Agave tequilana	False	31.0	#009688
+Eudicot	rhizome	rhizome	Rhizome	Nelumbo nucifera	True	28.0	#2f8a3d
+Eudicot	rhizome	rhizome	Rhizome	Cardamine amara	False	27.0	#2f8a3d
+Eudicot	rhizome	rhizome	Rhizome	Mimulus guttatus	False	26.0	#2f8a3d
+Eudicot	rhizome	rhizome	Rhizome	Nymphaea colorata	False	25.0	#2f8a3d
+Eudicot	rhizome_crown	rhizome_crown	Rhizome / crown	Arabidopsis halleri	False	24.0	#7db742
+Eudicot	tuber	tuber	Tuber	Apios americana	False	23.0	#9a6230
+Eudicot	tuber	tuber	Tuber	Cyclamen persicum	False	22.0	#9a6230
+Eudicot	tuber	tuber	Tuber	Helianthus tuberosus	False	21.0	#9a6230
+Eudicot	tuber_stolon	tuber_stolon	Tuber / stolon	Solanum tuberosum	True	20.0	#bd7a34
+Eudicot	storage_root	storage_root	Storage root	Brassica rapa	True	19.0	#e58524
+Eudicot	storage_root	storage_root	Storage root	Manihot esculenta	True	18.0	#e58524
+Eudicot	storage_root	storage_root	Storage root	Arracacia xanthorrhiza	False	17.0	#e58524
+Eudicot	storage_root	storage_root	Storage root	Ipomoea batatas	False	16.0	#e58524
+Eudicot	storage_root	storage_root	Storage root	Pachyrhizus erosus	False	15.0	#e58524
+Eudicot	storage_root	storage_root	Storage root	Raphanus sativus	False	14.0	#e58524
+Eudicot	storage_root	storage_root	Storage root	Smallanthus sonchifolius	False	13.0	#e58524
+Eudicot	taproot_storage_root	taproot_storage_root	Taproot / storage root	Daucus carota	True	12.0	#f2a23a
+Eudicot	root_crown	root_crown	Root crown	Eutrema salsugineum	False	11.0	#4e83b4
+Eudicot	root_crown	root_crown	Root crown	Medicago sativa	False	10.0	#4e83b4
+Eudicot	storage_root_hypocotyl	storage_root_hypocotyl	Storage Root Hypocotyl	Beta vulgaris	True	9.0	#00a6c8
+Eudicot	taproot	taproot	Taproot	Cichorium intybus	False	8.0	#f28e2b
+Eudicot	taproot	taproot	Taproot	Taraxacum kok-saghyz	False	7.0	#f28e2b
+Eudicot	tuberous_root	tuberous_root	Tuberous Root	Dahlia pinnata	False	6.0	#d45d5d
+Eudicot	stolon_crown	stolon_crown	Stolon Crown	Fragaria vesca	False	5.0	#d65db1
+Eudicot	rhizome_root	rhizome_root	Rhizome Root	Glycyrrhiza uralensis	False	4.0	#4caf50
+Eudicot	root_crown_tuberous_root	root_crown_tuberous_root	Root Crown Tuberous Root	Paeonia lactiflora	False	3.0	#7e57c2
+Eudicot	root_crown_taproot	root_crown_taproot	Root Crown Taproot	Trifolium pratense	False	2.0	#3f51b5
+Eudicot	stolon	stolon	Stolon	Trifolium repens	False	1.0	#8bc34a

@@ -1,0 +1,74 @@
+{
+  "version": "v5.3.35 force expanded organ palette directly",
+  "generated_on": "2026-06-04 17:24:53",
+  "purpose": "Directly rebuild the Home 51-species atlas overview with non-gray colors for formerly gray organ categories.",
+  "source_plot_table": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_0_home_51species_atlas_overview/tables/UGO_v5_3_0_home_51species_atlas_overview_plot_table_v1.tsv",
+  "rebuilt_png": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_35_force_expanded_palette_direct/figures/home_51species_atlas_force_expanded_palette_v5335.png",
+  "website_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5335.png",
+  "website_asset_name": "ugo_home_key_result_51species_phylogeny_v5335.png",
+  "old_v5334_md5": "b745acc2893c42d9052816fcb8fcaa67",
+  "new_v5335_md5": "5ec35176355441faf6ac656a45bccf32",
+  "formerly_gray_colors": {
+    "Rhizome Basal Shoot": "#009688",
+    "Storage Root Hypocotyl": "#00a6c8",
+    "Taproot": "#f28e2b",
+    "Tuberous Root": "#d45d5d",
+    "Stolon Crown": "#d65db1",
+    "Rhizome Root": "#4caf50",
+    "Root Crown Tuberous Root": "#7e57c2",
+    "Root Crown Taproot": "#3f51b5",
+    "Stolon": "#8bc34a"
+  },
+  "n_species": 51,
+  "n_backbone_species": 11,
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_plot_table_exists",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_png_created",
+      "status": "pass"
+    },
+    {
+      "check": "website_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5335_asset",
+      "status": "pass"
+    },
+    {
+      "check": "n_species_51",
+      "status": "pass"
+    },
+    {
+      "check": "has_backbone_11",
+      "status": "pass"
+    },
+    {
+      "check": "formerly_gray_organs_have_non_gray_colors",
+      "status": "pass"
+    },
+    {
+      "check": "v5335_differs_from_v5334",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
