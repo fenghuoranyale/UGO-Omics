@@ -1,0 +1,74 @@
+{
+  "version": "v5.3.15 single rotated phylogeny Home layout",
+  "generated_on": "2026-06-04 13:53:41",
+  "purpose": "Rotate the 51-species atlas phylogeny 90 degrees clockwise, remove the right Home result card, and display only the rotated phylogeny as a single wide Home image.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_phylogeny_fill_card/P5_v5_3_11_crop_phylogeny_fill_home_card/figures/home_51species_atlas_phylogeny_tight_no_legend.png",
+  "rotated_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_phylogeny_fill_card/P5_v5_3_15_single_rotated_phylogeny_home/figures/home_51species_atlas_phylogeny_rotated_right_90_single_home.png",
+  "home_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny.png",
+  "rotation": "clockwise_90_degrees",
+  "crop_box_after_rotation_pixels": {
+    "left": 127,
+    "top": 50,
+    "right": 3649,
+    "bottom": 2523
+  },
+  "source_size": {
+    "width": 2541,
+    "height": 3778
+  },
+  "rotated_canvas_size": {
+    "width": 3556,
+    "height": 2497
+  },
+  "important_note": "This patch only changes the Home phylogeny image asset and scoped Home CSS.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "style_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_phylogeny_exists",
+      "status": "pass"
+    },
+    {
+      "check": "rotated_phylogeny_created",
+      "status": "pass"
+    },
+    {
+      "check": "home_asset_replaced",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "single_column_layout_present",
+      "status": "pass"
+    },
+    {
+      "check": "right_module_card_hidden",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "footer_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
