@@ -1,0 +1,111 @@
+{
+  "version": "v5.3.32 clean rebuild of Home 51-species atlas overview",
+  "generated_on": "2026-06-04 17:03:52",
+  "purpose": "Rebuild the Home 51-species atlas overview directly from the v5.3.0 plot table instead of editing PNGs.",
+  "source_plot_table": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_0_home_51species_atlas_overview/tables/UGO_v5_3_0_home_51species_atlas_overview_plot_table_v1.tsv",
+  "rebuilt_png": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_32_home_51species_atlas_clean_rebuild/figures/home_51species_atlas_clean_rebuild_v5332.png",
+  "rebuilt_pdf": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_32_home_51species_atlas_clean_rebuild/figures/home_51species_atlas_clean_rebuild_v5332.pdf",
+  "rebuilt_svg": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_32_home_51species_atlas_clean_rebuild/figures/home_51species_atlas_clean_rebuild_v5332.svg",
+  "website_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5332.png",
+  "website_asset_name": "ugo_home_key_result_51species_phylogeny_v5332.png",
+  "n_species": 51,
+  "n_backbone_species": 0,
+  "major_clades": [
+    "Monocot",
+    "Eudicot"
+  ],
+  "organ_legend_categories": [
+    "rhizome",
+    "rhizome_corm",
+    "rhizome_crown",
+    "rhizome_bud",
+    "tuber",
+    "corm",
+    "bulb",
+    "crown_sucker",
+    "rhizome_basal_shoot",
+    "tuber_stolon",
+    "storage_root",
+    "taproot_storage_root",
+    "root_crown",
+    "storage_root_hypocotyl",
+    "taproot",
+    "tuberous_root",
+    "stolon_crown",
+    "rhizome_root",
+    "root_crown_tuberous_root",
+    "root_crown_taproot",
+    "stolon"
+  ],
+  "important_note": "This figure is regenerated from data. It has no title, subtitle, column headers, bottom note, or analysis-layer legend, and keeps the full organ legend.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_plot_table_exists",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_png_created",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_pdf_created",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_svg_created",
+      "status": "pass"
+    },
+    {
+      "check": "website_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5332_asset",
+      "status": "pass"
+    },
+    {
+      "check": "n_species_51",
+      "status": "pass"
+    },
+    {
+      "check": "has_monocot_and_eudicot",
+      "status": "pass"
+    },
+    {
+      "check": "has_full_organ_legend_categories",
+      "status": "pass"
+    },
+    {
+      "check": "has_backbone_star_species",
+      "status": "fail"
+    },
+    {
+      "check": "no_analysis_layer_legend_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "no_title_subtitle_column_headers_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "pure_white_background_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
