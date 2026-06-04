@@ -1,0 +1,87 @@
+{
+  "version": "v5.2.47 move key results into home-only section",
+  "generated_on": "2026-06-04 09:29:37",
+  "purpose": "Move homepage key-result cards out of the global main area and into the Home-only Start-with-your-question section, without modifying navigation/dropdown behavior.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "key_results_section_present",
+      "status": "pass"
+    },
+    {
+      "check": "key_results_after_home_title",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "no_global_v46_section_class",
+      "status": "pass"
+    },
+    {
+      "check": "no_v46_visible_css",
+      "status": "pass"
+    },
+    {
+      "check": "home_only_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_nav_text_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_title_position",
+      "status": "47902"
+    },
+    {
+      "check": "home_key_results_position",
+      "status": "50205"
+    },
+    {
+      "check": "phylogeny_asset_size_bytes",
+      "status": "72520"
+    },
+    {
+      "check": "modules_asset_size_bytes",
+      "status": "93412"
+    }
+  ]
+}
