@@ -1,3 +1,4 @@
+<!-- UGO_V5_3_18_FULL_LEGEND_BIGGER_PHYLOGENY 2026-06-04 15:11:11 -->
 <!-- UGO_V5_3_17_RESTORE_PHYLOGENY_LEGEND_SHIFT_LEFT 2026-06-04 14:06:47 -->
 <!-- UGO_V5_3_16_EQUAL_CARDS_SHIFT_PHYLOGENY_LEFT 2026-06-04 14:01:31 -->
 <!-- UGO_V5_3_14_ENLARGE_HOME_PHYLOGENY_BOARD 2026-06-04 13:18:56 -->
@@ -1804,9 +1805,11 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
 
 
 
-<style id="ugo-v5-3-17-restore-phylogeny-legend-shift-left-style">
+
+
+<style id="ugo-v5-3-18-full-legend-bigger-phylogeny-style">
 /* ============================================================
-   v5.3.17: restore phylogeny legend and shift image left.
+   v5.3.18: full legend + bigger Home phylogeny.
    Scope: Home key-results and footer only.
    Does not modify navigation, dropdowns, or non-Home page logic.
    ============================================================ */
@@ -1826,10 +1829,10 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
 
 /* two equal white cards */
 #home-key-results .ugo-v5-2-51-results-grid {
-  width: calc(100vw - 72px) !important;
+  width: calc(100vw - 64px) !important;
   max-width: none !important;
-  margin-left: calc(50% - 50vw + 36px) !important;
-  margin-right: calc(50% - 50vw + 36px) !important;
+  margin-left: calc(50% - 50vw + 32px) !important;
+  margin-right: calc(50% - 50vw + 32px) !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   display: grid !important;
@@ -1850,10 +1853,10 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   overflow: hidden !important;
 }
 
-/* equal card heights */
+/* Use the bottom space by making both boards taller */
 #home-key-results .ugo-v5-2-51-result-image {
-  height: calc(100vh - 92px) !important;
-  min-height: 900px !important;
+  height: calc(100vh - 54px) !important;
+  min-height: 1040px !important;
   max-height: none !important;
   width: 100% !important;
   padding: 0 !important;
@@ -1865,12 +1868,12 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   justify-content: center !important;
 }
 
-/* Shift the full phylogeny+legend image slightly left within the card */
+/* Full phylogeny + legend image, slightly left-weighted but not clipped */
 #home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
-  object-position: 38% center !important;
+  object-position: 42% center !important;
   display: block !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -1878,7 +1881,7 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   transform: none !important;
 }
 
-/* keep recurrent module card visually matched */
+/* Keep the recurrent module card matched */
 #home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
