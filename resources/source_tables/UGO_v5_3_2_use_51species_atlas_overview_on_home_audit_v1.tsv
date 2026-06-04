@@ -1,0 +1,12 @@
+check	status
+deployment_marker_present	pass
+source_figure_exists	pass
+home_asset_replaced	pass
+home_key_results_present	pass
+section_heading_updated	pass
+left_card_title_updated	pass
+does_not_call_home_left_card_BUSCO	pass
+recurrent_modules_still_present	pass
+home_image_reference_still_present	pass
+module_image_reference_still_present	pass
+navigation_still_present	pass
