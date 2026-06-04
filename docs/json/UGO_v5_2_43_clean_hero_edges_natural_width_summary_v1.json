@@ -1,0 +1,111 @@
+{
+  "version": "v5.2.43 clean hero edges natural width",
+  "generated_on": "2026-06-03 22:10:57",
+  "purpose": "Trim remaining white/black edge artifacts from home_final.png and display the cleaned banner at natural full width without cover-cropping or horizontal overflow.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_source_copy": "docs/assets/ugo_home_hero_final_source.png",
+  "hero_clean_asset": "docs/assets/ugo_home_hero_final_clean.png",
+  "trim_bbox": [
+    0,
+    0,
+    3973,
+    522
+  ],
+  "bottom_artifact_rows_removed": 8,
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final_source.png",
+    "docs/assets/ugo_home_hero_final_clean.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_source_copy_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_clean_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_clean_image",
+      "status": "pass"
+    },
+    {
+      "check": "natural_width_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_width_100vw",
+      "status": "pass"
+    },
+    {
+      "check": "no_fixed_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "image_height_auto",
+      "status": "pass"
+    },
+    {
+      "check": "image_object_fit_contain",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_width",
+      "status": "3973"
+    },
+    {
+      "check": "source_height",
+      "status": "522"
+    },
+    {
+      "check": "trim_bbox_left_top_right_bottom",
+      "status": "0,0,3973,522"
+    },
+    {
+      "check": "bottom_artifact_rows_removed",
+      "status": "8"
+    },
+    {
+      "check": "clean_width",
+      "status": "2400"
+    },
+    {
+      "check": "clean_height",
+      "status": "310"
+    },
+    {
+      "check": "hero_clean_size_bytes",
+      "status": "1095830"
+    }
+  ]
+}
