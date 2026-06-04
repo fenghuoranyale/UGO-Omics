@@ -1,0 +1,61 @@
+{
+  "version": "v5.3.25 restore tree and remove title only",
+  "generated_on": "2026-06-04 15:54:13",
+  "purpose": "Restore the complete phylogeny after v5.3.24 over-deleted tree labels, then remove only the very top title/subtitle zone.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5323.png",
+  "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5325.png",
+  "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5325.png",
+  "edited_regions_pixels": [
+    {
+      "x0": 0,
+      "y0": 0,
+      "x1": 2579,
+      "y1": 206
+    },
+    {
+      "x0": 0,
+      "y0": 206,
+      "x1": 3738,
+      "y1": 338
+    }
+  ],
+  "important_note": "This patch does not remove column labels because the previous deeper removal damaged phylogeny labels.",
+  "image_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_safe_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_clean_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5325_asset",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
