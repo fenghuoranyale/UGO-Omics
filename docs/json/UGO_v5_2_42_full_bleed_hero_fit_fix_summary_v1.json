@@ -1,6 +1,6 @@
 {
   "version": "v5.2.42 full-bleed hero fit fix",
-  "generated_on": "2026-06-03 21:54:19",
+  "generated_on": "2026-06-03 22:04:55",
   "purpose": "Remove remaining top/side whitespace and horizontal overflow by making the homepage hero image fill the full header area with width:100%, height:100%, and object-fit:cover.",
   "hero_src": "/UGO-Omics/assets/ugo_home_hero_final_trimmed.png",
   "modified_files": [
