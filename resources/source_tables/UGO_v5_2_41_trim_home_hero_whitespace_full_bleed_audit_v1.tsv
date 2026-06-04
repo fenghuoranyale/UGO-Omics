@@ -12,9 +12,9 @@ nav_still_valid	pass
 start_switcher_still_present	pass
 actionability_switcher_still_present	pass
 find_organ_species_fix_still_present	pass
-source_width	2172
-source_height	724
-trim_bbox_left_top_right_bottom	14,181,2162,537
-trimmed_width	2148
-trimmed_height	356
-hero_trimmed_size_bytes	1200466
+source_width	3891
+source_height	522
+trim_bbox_left_top_right_bottom	0,0,3891,522
+trimmed_width	3891
+trimmed_height	522
+hero_trimmed_size_bytes	2459290
