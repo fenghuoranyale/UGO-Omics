@@ -1,0 +1,115 @@
+{
+  "version": "v5.3.34 expanded organ-color palette for Home 51-species atlas overview",
+  "generated_on": "2026-06-04 17:12:08",
+  "purpose": "Rebuild the Home 51-species atlas overview with an expanded organ color palette so formerly gray categories are visually distinct.",
+  "source_plot_table": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_0_home_51species_atlas_overview/tables/UGO_v5_3_0_home_51species_atlas_overview_plot_table_v1.tsv",
+  "rebuilt_png": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_34_home_51species_atlas_expanded_palette/figures/home_51species_atlas_expanded_palette_v5334.png",
+  "rebuilt_pdf": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_34_home_51species_atlas_expanded_palette/figures/home_51species_atlas_expanded_palette_v5334.pdf",
+  "rebuilt_svg": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_34_home_51species_atlas_expanded_palette/figures/home_51species_atlas_expanded_palette_v5334.svg",
+  "website_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5334.png",
+  "website_asset_name": "ugo_home_key_result_51species_phylogeny_v5334.png",
+  "n_species": 51,
+  "n_backbone_species": 11,
+  "major_clades": [
+    "Monocot",
+    "Eudicot"
+  ],
+  "organ_legend_categories": [
+    "Rhizome",
+    "Rhizome / corm",
+    "Rhizome / crown",
+    "Rhizome / bud",
+    "Tuber",
+    "Tuber / stolon",
+    "Storage root",
+    "Taproot / storage root",
+    "Corm",
+    "Bulb",
+    "Crown / sucker",
+    "Root crown",
+    "Rhizome Basal Shoot",
+    "Storage Root Hypocotyl",
+    "Taproot",
+    "Tuberous Root",
+    "Stolon Crown",
+    "Rhizome Root",
+    "Root Crown Tuberous Root",
+    "Root Crown Taproot",
+    "Stolon"
+  ],
+  "important_note": "This figure is regenerated from data. It uses an expanded organ color palette and readable organ labels, with no title/subtitle/column headers/bottom note/analysis-layer legend.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_plot_table_exists",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_png_created",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_pdf_created",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_svg_created",
+      "status": "pass"
+    },
+    {
+      "check": "website_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5333_asset",
+      "status": "pass"
+    },
+    {
+      "check": "n_species_51",
+      "status": "pass"
+    },
+    {
+      "check": "has_monocot_and_eudicot",
+      "status": "pass"
+    },
+    {
+      "check": "organ_labels_are_display_names",
+      "status": "pass"
+    },
+    {
+      "check": "organ_palette_has_expanded_colors",
+      "status": "pass"
+    },
+    {
+      "check": "has_backbone_star_species",
+      "status": "pass"
+    },
+    {
+      "check": "no_analysis_layer_legend_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "no_title_subtitle_column_headers_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "pure_white_background_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
