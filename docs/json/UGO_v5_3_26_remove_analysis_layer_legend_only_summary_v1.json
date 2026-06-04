@@ -1,10 +1,10 @@
 {
   "version": "v5.3.26 remove analysis-layer legend only",
-  "generated_on": "2026-06-04 15:59:30",
+  "generated_on": "2026-06-04 15:59:53",
   "purpose": "Remove only the small Analysis layer legend from the Home phylogeny image while preserving all other image and layout content.",
-  "current_source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5325.png",
+  "current_source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5326.png",
   "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5326.png",
-  "current_asset_name": "ugo_home_key_result_51species_phylogeny_v5325.png",
+  "current_asset_name": "ugo_home_key_result_51species_phylogeny_v5326.png",
   "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5326.png",
   "edited_region_pixels": {
     "x0": 2280,
@@ -36,7 +36,7 @@
     },
     {
       "check": "old_current_asset_no_longer_referenced",
-      "status": "pass"
+      "status": "fail"
     },
     {
       "check": "home_key_results_present",

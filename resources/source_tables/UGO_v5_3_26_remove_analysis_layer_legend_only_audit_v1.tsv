@@ -3,7 +3,7 @@ deployment_marker_present	pass
 source_current_asset_exists	pass
 new_clean_asset_created	pass
 index_uses_v5326_asset	pass
-old_current_asset_no_longer_referenced	pass
+old_current_asset_no_longer_referenced	fail
 home_key_results_present	pass
 module_image_reference_present	pass
 navigation_still_present	pass
