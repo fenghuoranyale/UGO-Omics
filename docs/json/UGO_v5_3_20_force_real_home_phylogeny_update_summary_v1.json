@@ -1,0 +1,77 @@
+{
+  "version": "v5.3.20 force real Home phylogeny update",
+  "generated_on": "2026-06-04 15:22:12",
+  "purpose": "Force a visible Home update by using a new versioned phylogeny asset filename, preserving the full legend and applying final scoped Home CSS.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_3_remove_home_atlas_extra_labels/figures/home_51species_atlas_overview_clean_no_extra_labels.png",
+  "new_phylogeny_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_phylogeny_fill_card/P5_v5_3_20_force_real_home_phylogeny_update/figures/ugo_home_key_result_51species_phylogeny_v5320.png",
+  "home_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5320.png",
+  "home_asset_name": "ugo_home_key_result_51species_phylogeny_v5320.png",
+  "crop_box_pixels": {
+    "left": 0,
+    "top": 385,
+    "right": 3306,
+    "bottom": 3929
+  },
+  "source_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "new_canvas_size": {
+    "width": 3493,
+    "height": 3558
+  },
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "style_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_phylogeny_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_versioned_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5320_asset",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "equal_grid_present",
+      "status": "pass"
+    },
+    {
+      "check": "object_position_left_present",
+      "status": "pass"
+    },
+    {
+      "check": "height_1120_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "footer_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
