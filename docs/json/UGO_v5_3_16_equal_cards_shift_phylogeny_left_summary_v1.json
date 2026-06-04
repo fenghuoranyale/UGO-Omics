@@ -1,0 +1,77 @@
+{
+  "version": "v5.3.16 equal Home cards and shift phylogeny left",
+  "generated_on": "2026-06-04 14:01:32",
+  "purpose": "Make the two Home result cards equal in size and shift the 51-species phylogeny image left so it fully displays without clipped legend remnants.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_3_remove_home_atlas_extra_labels/figures/home_51species_atlas_overview_clean_no_extra_labels.png",
+  "new_phylogeny_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_phylogeny_fill_card/P5_v5_3_16_equal_cards_shift_phylogeny_left/figures/home_51species_atlas_phylogeny_no_legend_equal_card.png",
+  "home_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny.png",
+  "crop_box_pixels": {
+    "left": 0,
+    "top": 358,
+    "right": 2168,
+    "bottom": 3962
+  },
+  "source_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "new_canvas_size": {
+    "width": 2194,
+    "height": 3646
+  },
+  "important_note": "This patch changes the Home phylogeny image asset and scoped Home CSS only.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "style_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_phylogeny_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_phylogeny_created",
+      "status": "pass"
+    },
+    {
+      "check": "home_asset_replaced",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "equal_grid_present",
+      "status": "pass"
+    },
+    {
+      "check": "object_position_shift_left_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "footer_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
