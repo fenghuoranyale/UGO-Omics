@@ -1,0 +1,57 @@
+{
+  "version": "v5.3.27 remove blue background only",
+  "generated_on": "2026-06-04 16:09:43",
+  "purpose": "Replace only the pale blue/gray background pixels in the Home phylogeny image with pure white, without changing layout or image content.",
+  "current_source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5326.png",
+  "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5327.png",
+  "current_asset_name": "ugo_home_key_result_51species_phylogeny_v5326.png",
+  "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5327.png",
+  "background_reference_rgb": [
+    251,
+    252,
+    254
+  ],
+  "image_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "important_note": "This patch changes only the Home phylogeny image background color and filename reference. It does not crop, move, resize, or erase content.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_current_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_white_background_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5327_asset",
+      "status": "pass"
+    },
+    {
+      "check": "old_current_asset_no_longer_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
