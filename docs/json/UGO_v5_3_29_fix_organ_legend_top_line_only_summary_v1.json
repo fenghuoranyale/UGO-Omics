@@ -1,0 +1,55 @@
+{
+  "version": "v5.3.29 fix organ legend top line only",
+  "generated_on": "2026-06-04 16:52:15",
+  "purpose": "Clean only the small dirty strip above the organ-category legend and redraw only the missing top border line.",
+  "source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5327.png",
+  "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5329.png",
+  "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5329.png",
+  "clean_rect_pixels": {
+    "x0": 1943,
+    "y0": 74,
+    "x1": 2915,
+    "y1": 392
+  },
+  "top_line_pixels": {
+    "x0": 1999,
+    "y0": 462,
+    "x1": 2859,
+    "y1": 462
+  },
+  "important_note": "This patch does not crop, resize, move, or erase biological content. It only edits the small legend-top area.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5329_asset",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
