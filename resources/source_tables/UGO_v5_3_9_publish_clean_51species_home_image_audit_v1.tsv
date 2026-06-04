@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+source_clean_image_exists	pass
+home_asset_exists	pass
+home_asset_matches_source_size	pass
+home_key_results_present	pass
+section_heading_accurate	pass
+left_card_title_accurate	pass
+does_not_call_51_species_BUSCO	pass
+home_image_reference_present	pass
+module_image_reference_present	pass
+navigation_still_present	pass
+final_package_synced	pass

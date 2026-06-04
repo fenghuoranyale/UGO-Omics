@@ -1,0 +1,63 @@
+{
+  "version": "v5.3.9 publish cleaned 51-species Home image",
+  "generated_on": "2026-06-04 12:40:37",
+  "purpose": "Use the cleaned 51-species atlas overview image with large bottom note as the Home left result image.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_8b_add_bottom_note_max_size_fontfix/figures/home_51species_atlas_overview_clean_bottom_note_max_size_fontfix.png",
+  "home_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny.png",
+  "important_note": "This patch only replaces the Home left result image asset and keeps wording as atlas overview, not 51-species BUSCO phylogeny.",
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_key_result_51species_phylogeny.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_clean_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "home_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "home_asset_matches_source_size",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "section_heading_accurate",
+      "status": "pass"
+    },
+    {
+      "check": "left_card_title_accurate",
+      "status": "pass"
+    },
+    {
+      "check": "does_not_call_51_species_BUSCO",
+      "status": "pass"
+    },
+    {
+      "check": "home_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
