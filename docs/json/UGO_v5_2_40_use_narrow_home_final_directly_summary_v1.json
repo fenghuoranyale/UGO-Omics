@@ -1,6 +1,6 @@
 {
   "version": "v5.2.40 use narrow home_final directly",
-  "generated_on": "2026-06-03 21:45:57",
+  "generated_on": "2026-06-03 22:02:40",
   "purpose": "Use the user-provided narrow home_final.png directly as the homepage hero, without cropping, stitching, or overlaying text.",
   "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
   "hero_asset": "docs/assets/ugo_home_hero_final_direct.png",
@@ -64,7 +64,7 @@
     },
     {
       "check": "hero_direct_size_bytes",
-      "status": "2992495"
+      "status": "2996537"
     }
   ]
 }
