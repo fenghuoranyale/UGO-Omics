@@ -1,0 +1,55 @@
+{
+  "version": "v5.3.30 repair legend from safe v5327",
+  "generated_on": "2026-06-04 16:55:50",
+  "purpose": "Recover from the bad v5.3.29 legend-line edit by starting from safe v5327 and cleaning only the tiny strip above the organ legend.",
+  "source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5327.png",
+  "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5330.png",
+  "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5330.png",
+  "clean_rect_pixels": {
+    "x0": 1943,
+    "y0": 74,
+    "x1": 3065,
+    "y1": 206
+  },
+  "top_line_pixels": {
+    "x0": 1999,
+    "y0": 256,
+    "x1": 2934,
+    "y1": 256
+  },
+  "important_note": "This patch does not crop, resize, move, or erase legend text. It starts from v5327 and only touches the small region above the organ legend.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "safe_source_v5327_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5330_asset",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
