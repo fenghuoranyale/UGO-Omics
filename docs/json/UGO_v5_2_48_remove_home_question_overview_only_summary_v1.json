@@ -1,0 +1,10 @@
+{
+  "version": "v5.2.48 remove Home question overview only",
+  "purpose": "Remove only the Home-page Start-with-your-question overview block, without modifying navigation/dropdown behavior or other page views.",
+  "note": "The workflow labels remain in the Start Here dropdown menu by design; they are not Home overview cards.",
+  "modified_files": [
+    "docs/index.html",
+    "resources/source_tables/UGO_v5_2_48_remove_home_question_overview_only_audit_v1.tsv",
+    "docs/json/UGO_v5_2_48_remove_home_question_overview_only_summary_v1.json"
+  ]
+}

@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_48_REMOVE_HOME_QUESTION_OVERVIEW_ONLY 2026-06-04 09:40:05 -->
 <!-- UGO_V5_2_47_MOVE_KEY_RESULTS_INTO_HOME_ONLY 2026-06-04 09:29:35 -->
 <!-- UGO_V5_2_46_FORCE_HOME_KEY_RESULTS_VISIBLE 2026-06-03 23:08:02 -->
 <!-- UGO_V5_2_45_ADD_HOME_KEY_RESULTS 2026-06-03 22:54:42 -->
@@ -1618,96 +1619,6 @@
 
 
 
-<style id="ugo-v5-2-47-home-only-key-results-style">
-  .ugo-v5-2-47-home-only-key-results {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin-top: 38px !important;
-    padding-top: 34px !important;
-    border-top: 1px solid rgba(15, 61, 96, 0.12) !important;
-  }
-
-  .ugo-v5-2-47-home-only-key-results .section-header {
-    max-width: 1120px !important;
-  }
-
-  .ugo-v5-2-47-home-only-key-results .section-header h2 {
-    color: #123657 !important;
-    font-size: clamp(1.85rem, 2.8vw, 2.55rem) !important;
-    line-height: 1.08 !important;
-    margin-bottom: 10px !important;
-    letter-spacing: -0.035em !important;
-  }
-
-  .ugo-v5-2-47-home-only-key-results .section-header p {
-    max-width: 980px !important;
-    color: #4a6077 !important;
-    font-size: 1.02rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .ugo-v5-2-47-key-results-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 24px !important;
-    margin-top: 26px !important;
-  }
-
-  .ugo-v5-2-47-result-card {
-    background: #ffffff !important;
-    border: 1px solid rgba(15, 61, 96, 0.16) !important;
-    border-radius: 22px !important;
-    overflow: hidden !important;
-    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08) !important;
-  }
-
-  .ugo-v5-2-47-result-image {
-    width: 100% !important;
-    height: 400px !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid rgba(15, 61, 96, 0.10) !important;
-    overflow: hidden !important;
-  }
-
-  .ugo-v5-2-47-result-image img {
-    width: 100% !important;
-    height: 100% !important;
-    display: block !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    background: #ffffff !important;
-  }
-
-  .ugo-v5-2-47-result-text {
-    padding: 20px 22px 24px 22px !important;
-  }
-
-  .ugo-v5-2-47-result-text h3 {
-    margin: 0 0 9px 0 !important;
-    color: #123657 !important;
-    font-size: 1.30rem !important;
-    line-height: 1.18 !important;
-    letter-spacing: -0.025em !important;
-  }
-
-  .ugo-v5-2-47-result-text p {
-    margin: 0 !important;
-    color: #465b73 !important;
-    font-size: 0.98rem !important;
-    line-height: 1.52 !important;
-  }
-
-  @media (max-width: 980px) {
-    .ugo-v5-2-47-key-results-grid {
-      grid-template-columns: 1fr !important;
-    }
-
-    .ugo-v5-2-47-result-image {
-      height: 320px !important;
-    }
-  }
-</style>
 
 </head>
 
@@ -1931,85 +1842,8 @@
 
 
 
-<section id="start" class="section active">
-  <div class="section-title">
-    <div>
-      <h2><span id="question-workflows"></span>Start with your question</h2>
-      <p>UGO-Omics is organized around four practical discovery workflows.</p>
-    </div>
-  </div>
-
-  <div class="workflow-grid">
-    <div class="card workflow-card" onclick="showSection('checkGene', document.querySelectorAll('nav button')[1])">
-      <div class="workflow-icon">🔎</div>
-      <h3>Gene-centered query</h3>
-      <p>Search gene IDs, orthogroups, gene families, or annotations to evaluate module membership and candidate-family support.</p>
-    </div>
-
-    <div class="card workflow-card" onclick="showSection('organCandidates', document.querySelectorAll('nav button')[2])">
-      <div class="workflow-icon">🌿</div>
-      <h3>Organ-centered discovery</h3>
-      <p>Select an underground-organ type to identify enriched candidate modules, biological programs, and prioritized gene-family hypotheses.</p>
-    </div>
-
-    <div class="card workflow-card" onclick="showSection('speciesCandidates', document.querySelectorAll('nav button')[3])">
-      <div class="workflow-icon">🧬</div>
-      <h3>Species-centered exploration</h3>
-      <p>Explore candidate modules, homologous members, and transferability patterns within a focal species.</p>
-    </div>
-
-    <div class="card workflow-card" onclick="showSection('validationTargets', document.querySelectorAll('nav button')[4])">
-      <div class="workflow-icon">✅</div>
-      <h3>Candidate prioritization</h3>
-      <p>Generate a ranked shortlist of candidate modules and candidate-family hypotheses for downstream functional follow-up.</p>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="card"><div class="metric">11</div><div class="label">species in high-confidence transfer backbone</div></div>
-    <div class="card"><div class="metric">30,121</div><div class="label">orthogroups in the 11-species backbone</div></div>
-    <div class="card"><div class="metric">8/8</div><div class="label">prioritized candidates remapped</div></div>
-    <div class="card"><div class="metric">7/8</div><div class="label">candidates traceable in both new species</div></div>
-  </div>
-
-  <div class="panel app-note">
-    UGO-Omics outputs are designed for candidate prioritization and hypothesis generation. Candidate traceability and validation-priority scores do not constitute functional validation.
-  </div>
 
 
-  <div id="home-key-results" class="ugo-v5-2-47-home-only-key-results">
-    <div class="section-header">
-      <span class="eyebrow">Key results</span>
-      <h2>From broad underground-organ diversity to recurrent candidate modules</h2>
-      <p>
-        UGO-Omics links phylogenetic coverage across underground-organ systems with recurrent candidate modules and actionability-oriented hypotheses.
-      </p>
-    </div>
-
-    <div class="ugo-v5-2-47-key-results-grid">
-      <article class="ugo-v5-2-47-result-card">
-        <div class="ugo-v5-2-47-result-image">
-          <img src="/UGO-Omics/assets/ugo_home_key_result_51species_phylogeny.png" alt="51-species underground-organ phylogenetic coverage">
-        </div>
-        <div class="ugo-v5-2-47-result-text">
-          <h3>51-species underground-organ atlas</h3>
-          <p>Phylogenetic coverage across underground-organ and storage-system diversity.</p>
-        </div>
-      </article>
-
-      <article class="ugo-v5-2-47-result-card">
-        <div class="ugo-v5-2-47-result-image">
-          <img src="/UGO-Omics/assets/ugo_home_key_result_recurrent_modules.png" alt="Recurrent UGO candidate modules">
-        </div>
-        <div class="ugo-v5-2-47-result-text">
-          <h3>Recurrent UGO candidate modules</h3>
-          <p>Phylogenetic module mapping highlights recurrent underground-organ candidate programs.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-
-</section>
 <section id="quickStartGuide" class="section">
   <div class="section-title">
     <div>

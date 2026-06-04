@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+start_with_your_question_removed	pass
+home_question_overview_section_removed	pass
+home_key_results_removed	pass
+nav_still_valid	pass
+analyze_nav_text_still_present	pass
+start_here_nav_text_still_present	pass
+actionability_nav_text_still_present	pass
+help_downloads_nav_text_still_present	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+note	Home overview block was removed; workflow labels remain only in the Start Here dropdown menu and should not be removed.
