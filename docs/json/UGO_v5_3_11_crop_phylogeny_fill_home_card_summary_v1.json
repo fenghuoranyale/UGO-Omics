@@ -1,0 +1,65 @@
+{
+  "version": "v5.3.11 crop phylogeny and fill Home card",
+  "generated_on": "2026-06-04 12:59:13",
+  "purpose": "Crop the Home 51-species atlas phylogeny image to remove legend/extra whitespace and enlarge it within the left Home card.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_3_remove_home_atlas_extra_labels/figures/home_51species_atlas_overview_clean_no_extra_labels.png",
+  "cropped_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_phylogeny_fill_card/P5_v5_3_11_crop_phylogeny_fill_home_card/figures/home_51species_atlas_phylogeny_tight_no_legend.png",
+  "home_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny.png",
+  "crop_box_pixels": {
+    "left": 0,
+    "top": 323,
+    "right": 2467,
+    "bottom": 3991
+  },
+  "source_size": {
+    "width": 3738,
+    "height": 4130
+  },
+  "cropped_canvas_size": {
+    "width": 2541,
+    "height": 3778
+  },
+  "important_note": "This patch only changes the Home phylogeny image asset and Home phylogeny-card CSS.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_phylogeny_exists",
+      "status": "pass"
+    },
+    {
+      "check": "cropped_phylogeny_created",
+      "status": "pass"
+    },
+    {
+      "check": "home_asset_replaced",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_fill_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_card_height_650",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
