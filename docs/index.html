@@ -1,4 +1,3 @@
-<!-- UGO_V5_3_15_SINGLE_ROTATED_PHYLOGENY_HOME 2026-06-04 13:53:39 -->
 <!-- UGO_V5_3_14_ENLARGE_HOME_PHYLOGENY_BOARD 2026-06-04 13:18:56 -->
 <!-- UGO_V5_3_13_BIGGER_WHITE_PHYLOGENY_HOME 2026-06-04 13:14:50 -->
 <!-- UGO_V5_3_12_MAXIMIZE_HOME_PHYLOGENY_REMOVE_FOOTER 2026-06-04 13:09:47 -->
@@ -1789,25 +1788,64 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
 </style>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<style id="ugo-v5-3-15-single-rotated-phylogeny-home-style">
+<style id="ugo-v5-3-10-clean-home-key-results-text-only-style">
 /* ============================================================
-   v5.3.15: single rotated phylogeny Home layout.
+   v5.3.10: clean Home key-results text only.
+   Scope: #home-key-results only.
+   This hides text below the navigation while preserving the images.
+   ============================================================ */
+
+#home-key-results .section-header {
+  display: none !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-text {
+  display: none !important;
+}
+
+#home-key-results {
+  padding-top: 34px !important;
+  padding-bottom: 58px !important;
+}
+
+#home-key-results .ugo-v5-2-51-results-grid {
+  margin-top: 0 !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-card {
+  overflow: hidden !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-image {
+  height: 500px !important;
+  border-bottom: none !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<style id="ugo-v5-3-14-enlarge-home-phylogeny-board-style">
+/* ============================================================
+   v5.3.14: enlarge the Home phylogeny white board/card.
    Scope: Home key-results and footer only.
    Does not modify navigation, dropdowns, or non-Home page logic.
    ============================================================ */
 
+/* remove text and whitespace below navigation */
 #home-key-results {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -1821,41 +1859,36 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   display: none !important;
 }
 
-/* Only one card: the rotated 51-species atlas phylogeny */
+/* make the result area wider and let the left card dominate */
 #home-key-results .ugo-v5-2-51-results-grid {
-  width: calc(100vw - 56px) !important;
+  width: calc(100vw - 72px) !important;
   max-width: none !important;
-  margin-left: calc(50% - 50vw + 28px) !important;
-  margin-right: calc(50% - 50vw + 28px) !important;
+  margin-left: calc(50% - 50vw + 36px) !important;
+  margin-right: calc(50% - 50vw + 36px) !important;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  gap: 24px !important;
   display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 0 !important;
+  grid-template-columns: minmax(980px, 1.75fr) minmax(520px, 0.95fr) !important;
+  align-items: stretch !important;
 }
 
-/* Hide the recurrent module card on Home */
-#home-key-results .ugo-v5-2-51-result-card:nth-child(2) {
-  display: none !important;
-}
-
-#home-key-results .ugo-v5-2-51-result-card:first-child {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* bigger, cleaner white boards */
+#home-key-results .ugo-v5-2-51-result-card {
   background: #ffffff !important;
   border-radius: 22px !important;
   border: 1px solid rgba(15, 61, 96, 0.14) !important;
   box-shadow: 0 18px 46px rgba(15, 23, 42, 0.07) !important;
+  margin: 0 !important;
+  padding: 0 !important;
   overflow: hidden !important;
 }
 
+/* left white board: substantially taller */
 #home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image {
-  width: 100% !important;
   height: calc(100vh - 82px) !important;
-  min-height: 900px !important;
+  min-height: 980px !important;
   max-height: none !important;
+  width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: none !important;
@@ -1865,7 +1898,7 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   justify-content: center !important;
 }
 
-/* The image itself is already rotated and cropped; let it fill the single board */
+/* no hard over-zoom; let the enlarged white board make the image bigger naturally */
 #home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
@@ -1878,7 +1911,29 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   transform: none !important;
 }
 
-/* Remove footer line and its whitespace */
+/* right card aligned but not controlling layout */
+#home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image {
+  height: calc(100vh - 82px) !important;
+  min-height: 980px !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-bottom: none !important;
+  background: #ffffff !important;
+}
+
+#home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+}
+
+/* remove footer line and its whitespace */
 footer,
 .site-footer,
 .footer {
