@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_52_HOME_VISIBILITY_AND_RETURN 2026-06-04 10:24:22 -->
 <!-- UGO_V5_2_51_RESTORE_HOME_RESULTS_AND_BUTTON 2026-06-04 10:07:55 -->
 <!-- UGO_V5_2_48_REMOVE_HOME_QUESTION_OVERVIEW_ONLY 2026-06-04 09:40:05 -->
 <!-- UGO_V5_2_47_MOVE_KEY_RESULTS_INTO_HOME_ONLY 2026-06-04 09:29:35 -->
@@ -1768,6 +1769,14 @@ a.nav-btn.ugo-home-button:active {
   .ugo-v5-2-51-result-image {
     height: 320px !important;
   }
+}
+</style>
+
+
+<style id="ugo-v5-2-52-home-visibility-and-return-style">
+/* v5.2.52: hide Home key-results only when a non-Home view is active */
+body.ugo-v5-2-52-non-home-view #home-key-results {
+  display: none !important;
 }
 </style>
 
@@ -4085,28 +4094,92 @@ async function geneWizardLoadDemoOutput() {
 </script>
 
 
-<script id="ugo-v5-2-51-home-results-visibility-script">
+
+
+<script id="ugo-v5-2-52-home-visibility-and-return-script">
   (function () {
-    function updateHomeResultsVisibility() {
-      var section = document.querySelector('[data-ugo-home-only="true"]');
-      if (!section) return;
-
-      var params = new URLSearchParams(window.location.search);
-      var view = params.get("view");
-
-      if (view && view.trim() !== "") {
-        section.style.display = "none";
-      } else {
-        section.style.display = "block";
+    function setHomeResultsVisible(isHome) {
+      document.body.classList.toggle("ugo-v5-2-52-non-home-view", !isHome);
+      var homeResults = document.getElementById("home-key-results");
+      if (homeResults) {
+        homeResults.style.display = isHome ? "block" : "none";
       }
     }
 
-    updateHomeResultsVisibility();
-    window.addEventListener("popstate", updateHomeResultsVisibility);
+    function urlHasNonHomeView() {
+      var params = new URLSearchParams(window.location.search);
+      var view = params.get("view");
+      return !!(view && view.trim() !== "");
+    }
 
-    document.addEventListener("click", function () {
-      window.setTimeout(updateHomeResultsVisibility, 30);
+    function visibleNonHomeContentDetected() {
+      var bodyText = document.body ? document.body.innerText || "" : "";
+      var triggers = [
+        "Check a candidate gene",
+        "Search by gene ID, gene family",
+        "Try: XTH, hemoglobin",
+        "Enter a gene ID, orthogroup ID",
+        "Organ-centered discovery",
+        "Species-centered exploration",
+        "Candidate prioritization"
+      ];
+
+      for (var i = 0; i < triggers.length; i++) {
+        if (bodyText.indexOf(triggers[i]) !== -1) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function updateHomeResultsVisibility() {
+      if (urlHasNonHomeView() || visibleNonHomeContentDetected()) {
+        setHomeResultsVisible(false);
+      } else {
+        setHomeResultsVisible(true);
+      }
+    }
+
+    function goHome(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      var cleanHome = window.location.origin + window.location.pathname + "?v=5252";
+      window.location.href = cleanHome;
+    }
+
+    document.addEventListener("click", function (event) {
+      var homeButton = event.target.closest && event.target.closest("a.ugo-home-button");
+      if (homeButton) {
+        goHome(event);
+        return;
+      }
+
+      var nonHomeTrigger = event.target.closest && event.target.closest(
+        "[data-ugo-start-view], " +
+        "[data-ugo-actionability-view], " +
+        "a[href*='?view='], " +
+        "a[href*='&view='], " +
+        ".ugo-start-menu a, " +
+        ".ugo-actionability-menu a"
+      );
+
+      if (nonHomeTrigger) {
+        window.setTimeout(function () {
+          setHomeResultsVisible(false);
+        }, 20);
+      }
+    }, true);
+
+    window.addEventListener("popstate", updateHomeResultsVisibility);
+    window.addEventListener("load", function () {
+      window.setTimeout(updateHomeResultsVisibility, 80);
     });
+
+    updateHomeResultsVisibility();
+    window.setTimeout(updateHomeResultsVisibility, 120);
   })();
 </script>
 

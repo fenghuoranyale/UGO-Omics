@@ -1,0 +1,88 @@
+{
+  "version": "v5.2.52 home visibility and home return",
+  "generated_on": "2026-06-04 10:24:23",
+  "purpose": "Fix only two homepage behavior issues: hide Home key-results when non-Home views are opened, and make the Home button return to the clean Home page.",
+  "important_note": "This patch does not modify dropdown labels, links, Home content, or figure assets.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_visibility_style_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_visibility_script_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_button_return_logic_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "title_uses_51_species_phylogeny",
+      "status": "pass"
+    },
+    {
+      "check": "no_11_species_phylogeny_label",
+      "status": "pass"
+    },
+    {
+      "check": "start_with_your_question_absent",
+      "status": "pass"
+    },
+    {
+      "check": "phylogeny_asset_still_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "modules_asset_still_referenced",
+      "status": "pass"
+    },
+    {
+      "check": "home_button_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_here_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "analyze_nav_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "explore_resources_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "evidence_discovery_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "help_downloads_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    }
+  ]
+}
