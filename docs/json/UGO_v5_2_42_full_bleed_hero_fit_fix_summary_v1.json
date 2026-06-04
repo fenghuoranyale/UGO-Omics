@@ -1,0 +1,68 @@
+{
+  "version": "v5.2.42 full-bleed hero fit fix",
+  "generated_on": "2026-06-03 21:54:19",
+  "purpose": "Remove remaining top/side whitespace and horizontal overflow by making the homepage hero image fill the full header area with width:100%, height:100%, and object-fit:cover.",
+  "hero_src": "/UGO-Omics/assets/ugo_home_hero_final_trimmed.png",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_existing_hero_image",
+      "status": "pass"
+    },
+    {
+      "check": "full_bleed_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "width_100_not_100vw",
+      "status": "pass"
+    },
+    {
+      "check": "overflow_x_hidden",
+      "status": "pass"
+    },
+    {
+      "check": "hero_fixed_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "image_object_fit_cover",
+      "status": "pass"
+    },
+    {
+      "check": "image_height_100",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "hero_src",
+      "status": "/UGO-Omics/assets/ugo_home_hero_final_trimmed.png"
+    }
+  ]
+}

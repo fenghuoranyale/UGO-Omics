@@ -1,0 +1,15 @@
+check	status
+deployment_marker_present	pass
+header_uses_existing_hero_image	pass
+full_bleed_css_present	pass
+width_100_not_100vw	pass
+overflow_x_hidden	pass
+hero_fixed_height_260	pass
+image_object_fit_cover	pass
+image_height_100	pass
+no_old_text_overlay	pass
+nav_still_valid	pass
+start_switcher_still_present	pass
+actionability_switcher_still_present	pass
+find_organ_species_fix_still_present	pass
+hero_src	/UGO-Omics/assets/ugo_home_hero_final_trimmed.png

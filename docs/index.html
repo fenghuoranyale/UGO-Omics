@@ -1,3 +1,4 @@
+<!-- UGO_V5_2_42_FULL_BLEED_HERO_FIT_FIX 2026-06-03 21:54:18 -->
 <!-- UGO_V5_2_41_TRIM_HOME_HERO_WHITESPACE_FULL_BLEED 2026-06-03 21:48:34 -->
 <!-- UGO_V5_2_40_USE_NARROW_HOME_FINAL_DIRECTLY 2026-06-03 21:45:55 -->
 <!-- UGO_V5_2_39_REMOVE_MIDDLE_BAND_HOME_HERO 2026-06-03 15:53:30 -->
@@ -1555,43 +1556,66 @@
 
 
 
-<style id="ugo-v5-2-41-full-bleed-trimmed-hero-style">
+
+
+<style id="ugo-v5-2-42-full-bleed-fit-hero-style">
   html,
   body {
     margin: 0 !important;
     padding: 0 !important;
+    overflow-x: hidden !important;
   }
 
-  .ugo-v5-2-41-full-bleed-trimmed-hero {
+  body {
+    width: 100% !important;
+  }
+
+  .ugo-v5-2-42-full-bleed-fit-hero {
+    display: block !important;
+    box-sizing: border-box !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
+    height: 260px !important;
+    min-height: 260px !important;
+    max-height: 260px !important;
     line-height: 0 !important;
     overflow: hidden !important;
     background: #071b2d !important;
     border: none !important;
+    border-radius: 0 !important;
   }
 
-  .ugo-v5-2-41-full-bleed-trimmed-hero img {
+  .ugo-v5-2-42-full-bleed-fit-hero img {
     display: block !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: auto !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: none !important;
     max-height: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    object-fit: contain !important;
-    object-position: top center !important;
+    object-fit: cover !important;
+    object-position: center center !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     background: #071b2d !important;
   }
 
-  body > header.ugo-v5-2-41-full-bleed-trimmed-hero {
-    margin-top: 0 !important;
+  @media (max-width: 900px) {
+    .ugo-v5-2-42-full-bleed-fit-hero {
+      height: 180px !important;
+      min-height: 180px !important;
+      max-height: 180px !important;
+    }
+
+    .ugo-v5-2-42-full-bleed-fit-hero img {
+      object-fit: cover !important;
+      object-position: center center !important;
+    }
   }
 </style>
 
@@ -1613,9 +1637,11 @@
 
 
 
-<header class="hero ugo-v5-2-41-full-bleed-trimmed-hero">
+
+<header class="hero ugo-v5-2-42-full-bleed-fit-hero">
   <img src="/UGO-Omics/assets/ugo_home_hero_final_trimmed.png" alt="UGO-Omics homepage banner">
 </header>
+
 
 
 
