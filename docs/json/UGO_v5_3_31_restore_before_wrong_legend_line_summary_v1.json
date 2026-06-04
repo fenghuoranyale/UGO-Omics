@@ -1,0 +1,43 @@
+{
+  "version": "v5.3.31 restore before wrong legend line",
+  "generated_on": "2026-06-04 16:58:51",
+  "purpose": "Undo the incorrectly placed legend-top line by restoring the Home phylogeny image from safe v5327 without any pixel edits.",
+  "source_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5327.png",
+  "new_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5331.png",
+  "new_asset_name": "ugo_home_key_result_51species_phylogeny_v5331.png",
+  "important_note": "This patch only changes the Home phylogeny image asset reference. It does not crop, draw, mask, move, resize, or change layout.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "safe_source_v5327_exists",
+      "status": "pass"
+    },
+    {
+      "check": "new_restored_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5331_asset",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
