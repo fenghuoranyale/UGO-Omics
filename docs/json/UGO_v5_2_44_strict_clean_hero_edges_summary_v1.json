@@ -1,0 +1,128 @@
+{
+  "version": "v5.2.44 strict clean hero edges",
+  "generated_on": "2026-06-03 22:16:34",
+  "purpose": "Strictly remove right-side white margin and bottom black/white artifact lines from home_final.png, then display the cleaned hero image at natural full width.",
+  "source_image": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/home_final.png",
+  "hero_source_copy": "docs/assets/ugo_home_hero_final_source.png",
+  "hero_clean_asset": "docs/assets/ugo_home_hero_final_strict_clean.png",
+  "crop_box": [
+    3,
+    2,
+    3830,
+    504
+  ],
+  "removed_px": {
+    "left": 3,
+    "top": 2,
+    "right": 143,
+    "bottom": 18
+  },
+  "modified_files": [
+    "docs/index.html",
+    "docs/assets/ugo_home_hero_final_source.png",
+    "docs/assets/ugo_home_hero_final_strict_clean.png",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_image_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_source_copy_exists",
+      "status": "pass"
+    },
+    {
+      "check": "hero_clean_asset_exists",
+      "status": "pass"
+    },
+    {
+      "check": "header_uses_strict_clean_image",
+      "status": "pass"
+    },
+    {
+      "check": "strict_clean_css_present",
+      "status": "pass"
+    },
+    {
+      "check": "no_width_100vw",
+      "status": "pass"
+    },
+    {
+      "check": "no_fixed_height_260",
+      "status": "pass"
+    },
+    {
+      "check": "image_height_auto",
+      "status": "pass"
+    },
+    {
+      "check": "image_object_fit_contain",
+      "status": "pass"
+    },
+    {
+      "check": "no_old_text_overlay",
+      "status": "pass"
+    },
+    {
+      "check": "nav_still_valid",
+      "status": "pass"
+    },
+    {
+      "check": "start_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "actionability_switcher_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "find_organ_species_fix_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_width",
+      "status": "3973"
+    },
+    {
+      "check": "source_height",
+      "status": "522"
+    },
+    {
+      "check": "crop_left_top_right_bottom",
+      "status": "3,2,3830,504"
+    },
+    {
+      "check": "removed_left_px",
+      "status": "3"
+    },
+    {
+      "check": "removed_top_px",
+      "status": "2"
+    },
+    {
+      "check": "removed_right_px",
+      "status": "143"
+    },
+    {
+      "check": "removed_bottom_px",
+      "status": "18"
+    },
+    {
+      "check": "clean_width",
+      "status": "2400"
+    },
+    {
+      "check": "clean_height",
+      "status": "314"
+    },
+    {
+      "check": "hero_clean_size_bytes",
+      "status": "1157492"
+    }
+  ]
+}
