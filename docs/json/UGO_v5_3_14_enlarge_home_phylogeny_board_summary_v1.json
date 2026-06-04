@@ -1,0 +1,60 @@
+{
+  "version": "v5.3.14 enlarge Home phylogeny board",
+  "generated_on": "2026-06-04 13:18:57",
+  "purpose": "Enlarge the Home left white board/card so the phylogeny appears larger naturally, while keeping navigation and dropdown logic unchanged.",
+  "important_note": "This patch only changes scoped Home key-results CSS and removes the footer sentence if present.",
+  "modified_files": [
+    "docs/index.html",
+    "final_package/website/index.html"
+  ],
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "style_present",
+      "status": "pass"
+    },
+    {
+      "check": "home_key_results_present",
+      "status": "pass"
+    },
+    {
+      "check": "grid_width_expanded",
+      "status": "pass"
+    },
+    {
+      "check": "left_board_dominates_grid",
+      "status": "pass"
+    },
+    {
+      "check": "home_board_min_height_980",
+      "status": "pass"
+    },
+    {
+      "check": "hard_scale_removed",
+      "status": "pass"
+    },
+    {
+      "check": "footer_sentence_removed",
+      "status": "pass"
+    },
+    {
+      "check": "home_phylogeny_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}

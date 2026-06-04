@@ -1,3 +1,4 @@
+<!-- UGO_V5_3_14_ENLARGE_HOME_PHYLOGENY_BOARD 2026-06-04 13:18:56 -->
 <!-- UGO_V5_3_13_BIGGER_WHITE_PHYLOGENY_HOME 2026-06-04 13:14:50 -->
 <!-- UGO_V5_3_12_MAXIMIZE_HOME_PHYLOGENY_REMOVE_FOOTER 2026-06-04 13:09:47 -->
 <!-- UGO_V5_3_11_CROP_PHYLOGENY_FILL_HOME_CARD 2026-06-04 12:59:41 -->
@@ -1835,13 +1836,16 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
 
 
 
-<style id="ugo-v5-3-13-bigger-white-phylogeny-home-style">
+
+
+<style id="ugo-v5-3-14-enlarge-home-phylogeny-board-style">
 /* ============================================================
-   v5.3.13: bigger white-background Home phylogeny.
+   v5.3.14: enlarge the Home phylogeny white board/card.
    Scope: Home key-results and footer only.
    Does not modify navigation, dropdowns, or non-Home page logic.
    ============================================================ */
 
+/* remove text and whitespace below navigation */
 #home-key-results {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -1855,26 +1859,36 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   display: none !important;
 }
 
+/* make the result area wider and let the left card dominate */
 #home-key-results .ugo-v5-2-51-results-grid {
+  width: calc(100vw - 72px) !important;
+  max-width: none !important;
+  margin-left: calc(50% - 50vw + 36px) !important;
+  margin-right: calc(50% - 50vw + 36px) !important;
   margin-top: 0 !important;
-  gap: 20px !important;
+  gap: 24px !important;
+  display: grid !important;
+  grid-template-columns: minmax(980px, 1.75fr) minmax(520px, 0.95fr) !important;
   align-items: stretch !important;
 }
 
-/* Clean white cards */
+/* bigger, cleaner white boards */
 #home-key-results .ugo-v5-2-51-result-card {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  background: #ffffff !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(15, 61, 96, 0.14) !important;
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.07) !important;
+  margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
-  background: #ffffff !important;
 }
 
-/* Make both cards use almost the full visible Home area */
-#home-key-results .ugo-v5-2-51-result-image {
-  height: calc(100vh - 92px) !important;
-  min-height: 900px !important;
+/* left white board: substantially taller */
+#home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image {
+  height: calc(100vh - 82px) !important;
+  min-height: 980px !important;
   max-height: none !important;
+  width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
   border-bottom: none !important;
@@ -1884,7 +1898,7 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   justify-content: center !important;
 }
 
-/* Enlarge the phylogeny aggressively while hiding remaining margins */
+/* no hard over-zoom; let the enlarged white board make the image bigger naturally */
 #home-key-results .ugo-v5-2-51-result-card:first-child .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
@@ -1894,11 +1908,20 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   padding: 0 !important;
   margin: 0 !important;
   background: #ffffff !important;
-  transform: scale(1.34) !important;
-  transform-origin: center center !important;
+  transform: none !important;
 }
 
-/* Keep module image normal, only align card height */
+/* right card aligned but not controlling layout */
+#home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image {
+  height: calc(100vh - 82px) !important;
+  min-height: 980px !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-bottom: none !important;
+  background: #ffffff !important;
+}
+
 #home-key-results .ugo-v5-2-51-result-card:nth-child(2) .ugo-v5-2-51-result-image img {
   width: 100% !important;
   height: 100% !important;
@@ -1910,7 +1933,7 @@ body.ugo-v5-2-52-non-home-view #home-key-results {
   background: #ffffff !important;
 }
 
-/* Remove footer line and its whitespace */
+/* remove footer line and its whitespace */
 footer,
 .site-footer,
 .footer {

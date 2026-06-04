@@ -1,0 +1,13 @@
+check	status
+deployment_marker_present	pass
+style_present	pass
+home_key_results_present	pass
+grid_width_expanded	pass
+left_board_dominates_grid	pass
+home_board_min_height_980	pass
+hard_scale_removed	pass
+footer_sentence_removed	pass
+home_phylogeny_reference_present	pass
+module_image_reference_present	pass
+navigation_still_present	pass
+final_package_synced	pass
