@@ -1,0 +1,16 @@
+check	status
+deployment_marker_present	pass
+source_plot_table_exists	pass
+rebuilt_png_created	pass
+website_asset_created	pass
+index_uses_v5337_asset	pass
+n_species_51	pass
+has_backbone_11	pass
+font_species_larger_than_v5335	pass
+font_organ_larger_than_v5335	pass
+font_legend_larger_than_v5335	pass
+same_figure_geometry_by_design	pass
+same_color_palette_by_design	pass
+module_image_reference_present	pass
+navigation_still_present	pass
+final_package_synced	pass

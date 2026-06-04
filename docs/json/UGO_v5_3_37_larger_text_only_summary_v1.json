@@ -1,0 +1,82 @@
+{
+  "version": "v5.3.37 larger text only",
+  "generated_on": "2026-06-04 17:39:15",
+  "purpose": "Regenerate the Home 51-species atlas overview with larger text while preserving structure, colors, layout, and content.",
+  "source_plot_table": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_0_home_51species_atlas_overview/tables/UGO_v5_3_0_home_51species_atlas_overview_plot_table_v1.tsv",
+  "rebuilt_png": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/18_species_broad_layer/P5_v5_3_home_51species_atlas_overview/P5_v5_3_37_larger_text_only/figures/home_51species_atlas_larger_text_only_v5337.png",
+  "website_asset": "/vast/palmer/scratch/coughlan/hc858/UGO_Omics/20_public_repository/UGO-Omics/docs/assets/ugo_home_key_result_51species_phylogeny_v5337.png",
+  "website_asset_name": "ugo_home_key_result_51species_phylogeny_v5337.png",
+  "font_sizes": {
+    "resource_label": 10.6,
+    "clade_label": 10.8,
+    "organ_label": 8.2,
+    "species_label": 8.6,
+    "legend": 8.0,
+    "legend_title": 8.8
+  },
+  "n_species": 51,
+  "n_backbone_species": 11,
+  "important_note": "Only text sizes were intentionally increased; colors, tree structure, organ order, and website layout were preserved.",
+  "audit": [
+    {
+      "check": "deployment_marker_present",
+      "status": "pass"
+    },
+    {
+      "check": "source_plot_table_exists",
+      "status": "pass"
+    },
+    {
+      "check": "rebuilt_png_created",
+      "status": "pass"
+    },
+    {
+      "check": "website_asset_created",
+      "status": "pass"
+    },
+    {
+      "check": "index_uses_v5337_asset",
+      "status": "pass"
+    },
+    {
+      "check": "n_species_51",
+      "status": "pass"
+    },
+    {
+      "check": "has_backbone_11",
+      "status": "pass"
+    },
+    {
+      "check": "font_species_larger_than_v5335",
+      "status": "pass"
+    },
+    {
+      "check": "font_organ_larger_than_v5335",
+      "status": "pass"
+    },
+    {
+      "check": "font_legend_larger_than_v5335",
+      "status": "pass"
+    },
+    {
+      "check": "same_figure_geometry_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "same_color_palette_by_design",
+      "status": "pass"
+    },
+    {
+      "check": "module_image_reference_present",
+      "status": "pass"
+    },
+    {
+      "check": "navigation_still_present",
+      "status": "pass"
+    },
+    {
+      "check": "final_package_synced",
+      "status": "pass"
+    }
+  ]
+}
